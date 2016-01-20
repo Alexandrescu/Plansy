@@ -1,0 +1,75 @@
+﻿@using MaProgramez.Repository.Entities
+@model MaProgramez.Repository.Models.CategoryParameters
+
+@{
+    ViewBag.Title = Resource.CreateSchedule;
+
+    var providers = (List<ApplicationUser>)ViewBag.Providers;
+    var cities = (List<City>)ViewBag.Cities;
+}
+
+@section Scripts {
+   
+<script>
+    new AnimOnScroll(document.getElementById('grid'), {
+        minDuration: 0.4,
+        maxDuration: 0.7,
+        viewportFactor: 0.2
+    });
+</script>
+
+}
+
+@using (Html.BeginForm("ProvidersList", "Schedule", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.CategoryId)
+
+    <section class="filtre">
+        <div class="container">
+            <div class="col-lg-4">
+                <div class="input-group">
+                    @Html.TextBoxFor(m => m.SearchText, new { @class = "form-control cautare", style = "border: none !important;", placeholder = @Resource.Search })
+                    <span class="input-group-btn">
+                        <button class="btn btn-default btn-cautare" type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-3 pasi">
+                <div class="cerc unu bifat">1</div><div class="arrow">-</div><div class="cerc bifat">2</div><div class="arrow">-</div><div class="cerc">3</div>
+            </div>
+            <div class="col-lg-3">
+                @Html.DropDownListFor(m => m.CityId, new SelectList(cities, "Id", "Name"), Resource.ViewAll, new { @class = "selectpicker", placeholder = Resource.SelectCity })
+            </div>
+            <div class="col-md-2">
+                <input type="submit" class="btn btn-primary float-right" value=@Resource.Filter />
+            </div>
+        </div>
+
+    </section>
+    <div class="up-toticket">
+        &nbsp;
+    </div>
+}
+
+<section class="sectiune-cat">
+    <div class="container">
+        <h1 class="h3">@Resource.PickTheProvider</h1>
+        <ul class="grid effect-6 centrat-cat" id="grid">
+            @for (var i = 0; i < providers.Count; i++)
+            {
+                <li>
+                    <div class="effec marji-cat">
+                        <h2>@providers[i].CompanyName</h2>
+                        <div class="border2"></div>
+                        <center><img src="~/Content/images/1 (8).png" class="img-responsive"></center>
+                        <p class="centrat-cat">@providers[i].FullDescription</p>
+                        <p class="centrat-cat"><a class="btn btn-primary btn-lg buton2" href="@Url.Action(MVC.Schedule.Add(providers[i].Id, Model.CategoryId))" role="button">@Resource.Choose</a></p>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</section>

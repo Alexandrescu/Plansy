@@ -1,0 +1,129 @@
+﻿@using MaProgramez.Repository.Entities
+@using MaProgramez.Resources
+@model MaProgramez.Repository.Entities.InvoiceLine
+
+@{
+    ViewBag.Title = Resource.Invoice_AddLine;
+}
+
+@using (Html.BeginForm(MVC.Invoice.AddInvoiceLine(), FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.InvoiceHeaderId)
+
+
+
+    <section class="filtre">
+
+        <div class="container">
+            <div class="col-lg-3 schedule">
+                <h4>@ViewBag.Title</h4>
+            </div><!-- /.col-lg-3 -->
+        </div>
+    </section>
+    <div class="up-toticket">
+        &nbsp;
+    </div>
+
+    <section class="sectiune-cat stilizat-cat">
+        <div class="container stilizat">
+
+            
+            @if (!Html.ViewData.ModelState.IsValid)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger form-validation" role="alert">
+                        @Html.ValidationSummary()
+                    </div>
+                </div>
+                <div class="clear"></div>
+            }
+
+            <div class="form-group">
+                @Html.Label(Resource.Description, new { @class = "form-label col-md-3" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(m => m.LineDescription, new { @class = "form-control input-sm" })
+                </div>
+
+                @Html.Label(Resource.Price, new { @class = "form-label col-md-2" })
+                <div class="col-md-3">
+                    @Html.TextBoxFor(m => m.Price, new { @class = "form-control input-sm" })
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.Label(@Resource.UnityMeasure, new { @class = "form-label col-md-3" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(m => m.UnitOfMeasurement, new { @class = "form-control input-sm" })
+                </div>
+
+                @Html.Label(Resource.Quantity, new { @class = "form-label col-md-2" })
+                <div class="col-md-3">
+                    @Html.TextBoxFor(m => m.Quantity, new { @class = "form-control input-sm" })
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="line"></div>
+            <div class="clear"></div>
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    @Html.ActionLink(Resource.Back, MVC.Invoice.AdminInvoiceList(Model.InvoiceHeader.UserId, 1, null, null), new { @class = "btn buton5danger float-left" })
+                    </div>
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-sm btn-success float-right">@Resource.Save</button>
+                    </div>
+                </div>
+            <div class="clear"></div>
+
+            @if (Model.InvoiceHeader.InvoiceLines != null)
+            {
+                <div class="col-md-12">
+                    <div class="line"></div>
+                    <p class="font-danger" style="font-size: 16px">@Resource.Invoice_Lines</p>
+
+                    <div class="sablon">
+                        <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th> @Resource.ProductName</th>
+                                    <th> @Resource.UnityMeasure</th>
+                                    <th> @Resource.Quantity</th>
+                                    <th> @Resource.Price</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @{var i = 0;}
+                                @foreach (InvoiceLine line in Model.InvoiceHeader.InvoiceLines)
+                                {
+                                    i++;
+                                    <tr>
+                                        <td>@i</td>
+                                        <td>@line.LineDescription</td>
+                                        <td>@line.UnitOfMeasurement</td>
+                                        <td>@line.Quantity</td>
+                                        <td>@line.Price</td>
+                                        <td>
+                                            <ul>
+                                                <li><a href="@Url.Action(MVC.Invoice.EditInvoiceLine(line.Id))"><i class="fa fa-pencil"></i></a></li>
+                                                <li><a href="@Url.Action(MVC.Invoice.RemoveInvoiceLine(line.Id))"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                                    }
+        </div>
+    </section>
+
+
+                                    }

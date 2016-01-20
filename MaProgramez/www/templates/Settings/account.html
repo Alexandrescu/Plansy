@@ -1,0 +1,31 @@
+<ion-view>
+    <ion-nav-title>
+        {{'MY_SETTINGS' | translate}}
+    </ion-nav-title>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="menu-dark-content">
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">{{'LAST_NAME' | translate}}</span>
+                <input type="text" ng-model="User.LastName">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">{{'FIRST_NAME' | translate}}</span>
+                <input type="text" ng-model="User.FirstName">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">{{'PHONE' | translate}}</span>
+                <input type="text" ng-model="User.Phone">
+            </label>
+        </div>
+        <div class="padding">
+            <button class="button button-block button-positive" ng-click="SaveUserDetails()">
+                {{'MODIFY' | translate}}
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

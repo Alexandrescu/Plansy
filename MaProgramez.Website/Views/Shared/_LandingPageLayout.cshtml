@@ -1,0 +1,32 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MaProgramez.net</title>
+    <meta name="description" content="La noi nu stai la coada. Programeaza-te." />
+    <meta name="keywords" content="Gata cu asteptatul, gata cu statul la rand. Ma programez pe net." />
+    <meta name="robots" content="index,follow" />
+
+    <meta property="og:title" content="MaProgramez.net - La noi nu stai la coada" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.MaProgramez.net" />
+    <meta property="og:description" content="Aplicatia si site-ul MaProgramez.net te ajuta sa iti faci programare simplu si rapid." />
+
+    @Html.Partial(MVC.Shared.Views.PartialViews._Fonts)
+    @Styles.Render("~/Content/slick")
+    @Styles.Render("~/Content/animate")
+    @Styles.Render("~/Content/landing-page")
+</head>
+<body>
+    @RenderBody()
+    
+    <script type="text/javascript">
+        var pageCulture = '@ViewContext.RouteData.Values["culture"].ToString()';
+    </script>
+</body>
+</html>

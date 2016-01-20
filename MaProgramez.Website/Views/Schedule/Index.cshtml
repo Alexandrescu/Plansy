@@ -1,0 +1,20 @@
+﻿@model List<MaProgramez.Repository.Entities.Category>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h4>@Resource.CreateSchedule</h4>
+        
+        <div class="col-md-12">
+            <ul>
+                @foreach (var c in @Model)
+                {
+                    <li>@c.Name - @c.Description</li>
+                }
+            </ul>
+            
+            
+
+        </div>
+
+    </div>
+</div>

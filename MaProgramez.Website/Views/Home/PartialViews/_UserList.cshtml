@@ -1,0 +1,61 @@
+﻿@using MaProgramez.Resources
+@model IEnumerable<MaProgramez.Repository.Entities.ApplicationUser>
+
+@if (Model != null)
+{
+    var link = string.Empty;
+    var status = ViewBag.Status as string;
+    if (!string.IsNullOrWhiteSpace(status))
+    {
+        switch (status)
+        {
+            case "supplier":
+                link = Url.Action(MVC.UsersAdmin.Users("supplier", null));
+                break;
+            case "best-supplier":
+                link = Url.Action(MVC.UsersAdmin.Users("best-supplier", null));
+                break;
+            case "worst-supplier":
+                link = Url.Action(MVC.UsersAdmin.Users("worst-supplier", null));
+                break;
+            case "service":
+                link = Url.Action(MVC.UsersAdmin.Users("service", null));
+                break;
+            case "best-service":
+                link = Url.Action(MVC.UsersAdmin.Users("best-service", null));
+                break;
+            case "worst-service":
+                link = Url.Action(MVC.UsersAdmin.Users("worst-service", null));
+                break;
+        }
+    }
+    <div class="col-md-12 dashboard-box">
+        <h5>
+            @ViewBag.UserListTitle
+            @if (!string.IsNullOrWhiteSpace(link) && Model.Any())
+            {
+                <a href="@link" class="view-all-button">
+                    @Resource.More
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            }
+        </h5>
+        @if (Model.Any())
+        {
+            <table class="table table-striped table-sm" style="margin-bottom: 0;">
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td class="col-md-10">@user.CompanyName @user.FirstName @user.LastName</td>
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <p>@Resource.NoResults</p>
+        }
+        <hr style="margin-top: 10px;" />
+    </div>
+}
+

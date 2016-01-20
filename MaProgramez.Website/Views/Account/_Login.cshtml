@@ -1,0 +1,47 @@
+﻿@using MaProgramez.Resources
+@using MaProgramez.Website.Models
+@model RegisterViewModel
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#hide-pass").on("click", function (e) {
+            var $this = $(this),
+                $pwInput = $this.prev("input");
+
+            if ($pwInput.attr("type") == "password") {
+                $pwInput.attr("type", "text");
+                $this.text('@Resource.Hide');
+            } else {
+                $pwInput.attr("type", "password");
+                $this.text('@Resource.Show');
+            }
+        });
+
+    });
+</script>
+
+@using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "simform", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="sminputs">
+        <div class="input full">
+            <label class="string optional" for="user-name">@Resource.Email *</label>
+            @Html.TextBoxFor(m => m.Email, new { @class = "string optional", maxlength = "255", id = "user-email", type = "email", size = "50", style = "width: 400px", placeholder = Resource.Email })
+        </div>
+    </div>
+    <div class="sminputs">
+        <div class="input full">
+            <label class="string optional" for="user-pw">@Resource.Password *</label>
+            @Html.PasswordFor(m => m.Password, new { @class = "string optional", type = "password", maxlength = "255", id = "user-pw", size = "50", style = "width: 400px", placeholder = Resource.Password })
+            <span id="hide-pass" class="hide-password" style="margin-top: 25px">@Resource.Show</span>
+        </div>
+    </div>
+    <div class="simform__actions">
+        <input type="submit" class="sumbit" name="commit" value="@Resource.Login.ToUpper()" />
+        <span class="simform__actions-sidetext"><a class="special" role="link" href=@Url.Action(MVC.Account.ForgotPassword())>@Resource.Login_ForgotPassword</a></span>
+    </div>
+    <div class="up-ticket2 login-edit">&nbsp;</div>
+}

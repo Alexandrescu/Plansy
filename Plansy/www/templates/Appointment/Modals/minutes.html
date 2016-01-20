@@ -1,0 +1,19 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center">
+        <h1 class="title text-center">{{'SELECT_MINUTE'| translate}}</h1>
+        <div class="buttons">
+            <button class="button button-icon button-clear button-small ion-close" ng-click="closeMinutesModal()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <label class="item item-radio" ng-repeat="minute in Minutes" ng-click="closeMinutesModal()">
+                <input type="radio" name="minutes" ng-model="Appointment.selectedMinute" value="{{minute}}">
+                <div class="item-content">
+                    {{minute}}
+                </div>
+                <i class="radio-icon ion-checkmark"></i>
+            </label>
+        </div>
+    </ion-content>
+</ion-modal-view>

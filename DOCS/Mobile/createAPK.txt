@@ -1,0 +1,12 @@
+ionic build android
+ionic build --release android
+
+-- IN FOLDERUL BUID
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore MainActivity-release-unsigned.apk alias_name
+zipalign -v 4 MainActivity-release-unsigned.apk MainActivity.apk
+
+-- AFTER UPGRADE
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore android-release-unsigned.apk alias_name
+zipalign -v 4 android-release-unsigned.apk MainActivity.apk
+
+P4ssword!

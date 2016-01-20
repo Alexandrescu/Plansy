@@ -1,0 +1,80 @@
+﻿@using Microsoft.Ajax.Utilities
+@model MaProgramez.Website.ViewModels.ReportViewModel
+@{
+    ViewBag.Title = "DatePicker";
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/bootstrap-datepicker")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.input-group.date').datepicker({
+                format: "dd-mm-yyyy",
+                todayHighlight: true,
+                todayBtn: "linked",
+                autoclose: true
+            });
+        });
+    </script>
+}
+
+@using (Html.BeginForm(MVC.Report.DatePicker(), FormMethod.Post))
+{
+    var count = 0;
+    @Html.AntiForgeryToken()
+
+
+    <section class="filtre">
+
+        <div class="container">
+            <div class="col-lg-6 schedule">
+                <h4>@Resource.PdfSchedule </h4>
+</div><!-- /.col-lg-3 -->
+        </div>
+    </section>
+    <div class="up-toticket">
+        &nbsp;
+    </div>
+
+    <section class="sectiune-cat stilizat-cat">
+        <div class="container stilizat">
+
+            <div class="form-group col-md-12">
+                <label class="col-md-3 form-label" style="padding-top: 5px">@Resource.ScheduleDate <span class="font-danger">&nbsp;*</span></label>
+                <div class="col-md-4 input-group date">
+                    @Html.TextBoxFor(m => m.Date, "{0:dd-MM-yyyy}", new { @class = "form-control", @readonly = "true", @id = "dateTimePicker" })
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                </div>
+            </div>
+
+            <div class="form-group col-md-12">
+
+                @if (User.IsInRole("Slot"))
+                {
+                    <label class="col-md-3 form-label" style="padding-bottom: 10px">Slot: </label>
+                    <label class="col-md-4 form-label" style="padding-bottom: 10px">@(Model.Slots.Where(s => s.Id == Model.SlotId)).Name </label>
+                }
+                else
+                {
+                    <label class="col-md-3 form-label" style="padding-bottom: 10px">@Resource.SelectSlot<span class="font-danger">&nbsp;*</span></label>
+                    @Html.DropDownListFor(m => m.SlotId, new SelectList(Model.Slots, "Id", "Name"), @Resource.SelectSlot, new { @class = "selectpicker col-md-4", @id = "slotPicker" })
+                }
+            </div>
+            <div class="form-group col-md-12">
+                <label class="col-md-4 form-label" style="padding-bottom: 10px">@Resource.ShowClientsPhoneNumber</label>
+                <div class="col-md-6">
+                    <fieldset class="switch switch-two" style="margin: 0">
+                        <input id="ShowPhoneNumberTrue" name="ShowPhoneNumber" type="radio" value="True" @(Model != null && Model.ShowPhoneNumber ? "checked" : string.Empty) />
+                        <label for="ShowPhoneNumberTrue">@Resource.Yes</label>
+                        <input id="ShowPhoneNumberFalse" name="ShowPhoneNumber" type="radio" value="False" @(Model == null || !Model.ShowPhoneNumber ? "checked" : string.Empty) />
+                        <label for="ShowPhoneNumberFalse">@Resource.No</label>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                <button type="submit" id="reportGenerate" class="btn btn-primary float-right" value="reportGenerate">@Resource.Show</button>
+            </div>
+        </div>
+    </section>
+}

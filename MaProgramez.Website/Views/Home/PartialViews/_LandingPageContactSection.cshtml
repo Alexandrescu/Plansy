@@ -1,0 +1,115 @@
+﻿@using MaProgramez.Resources
+@{
+    Layout = null;
+    var contactModel = new MaProgramez.Website.ViewModels.ContactViewModel();
+}
+
+<div class="contact-section" id="Contact">
+    <div class="page-content">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>@Resource.LandingPage_ContactUs</h2>
+                <span class="sub-title">@Resource.LandingPage_ContactTitle</span>
+                @using (Ajax.BeginForm(MVC.Service.LandingPageContact(), new AjaxOptions { OnSuccess = "OnSuccess" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <p class="contact-message sub-title" style="display: none;"></p>
+                    <div class="form-horizontal contact-form">
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                @Html.LabelFor(m => contactModel.FirstName, new { @class = "control-label col-md-12" })
+                                @Html.TextBoxFor(m => contactModel.FirstName, new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(model => contactModel.FirstName, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-6">
+                                @Html.LabelFor(m => contactModel.County, new { @class = "control-label col-md-12" })
+                                @Html.TextBoxFor(m => contactModel.County, new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(model => contactModel.County, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                @Html.LabelFor(m => contactModel.LastName, new { @class = "control-label col-md-12" })
+                                @Html.TextBoxFor(m => contactModel.LastName, new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(model => contactModel.LastName, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-6">
+                                @Html.LabelFor(m => contactModel.Location, new { @class = "control-label col-md-12" })
+                                @Html.TextBoxFor(m => contactModel.Location, new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(model => contactModel.Location, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                @Html.LabelFor(m => contactModel.Company, new { @class = "control-label col-md-12" })
+                                @Html.TextBoxFor(m => contactModel.Company, new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(model => contactModel.Company, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-6">
+                                @Html.LabelFor(m => contactModel.Phone, new { @class = "control-label col-md-12" })
+                                @Html.TextBoxFor(m => contactModel.Phone, new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(model => contactModel.Phone, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-success float-right">@Resource.LandingPage_ContactUs</button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-md-6">
+                <h2 style="margin-bottom: 50px;">
+                    @Resource.LandingPage_AskUs
+                </h2>
+                <span class="sub-title">
+                    @(Resource.LandingPage_AskUs_Text1): <a href="mailto:office@MaProgramez.net">office@MaProgramez.net</a>
+                </span>
+                <span class="sub-title">
+                    @Resource.LandingPage_AskUs_Text2
+                </span>
+                @*<div class="col-sm-4" style="text-align: right; font-size: 38px;">
+                        <a href="https://plus.google.com/111465497857013994000" rel="publisher"><i class="fa fa-google-plus"></i></a>
+                        <a href="https://www.facebook.com/psshro" rel="publisher"><i class="fa fa-facebook"></i></a>
+                    </div>*@
+            </div>
+        </div>
+
+        @*
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="line" style="margin-bottom: 40px;"></div>
+
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-sm-8">
+                            <div class="slider-box">
+                                <div class="slider-block" style="background: #fff;">
+                                    <a href="#" class="slider-image" style="background-image: url(/Content/images/GlobeSSL-Logo.jpg)"></a>
+                                </div>
+
+                               <div class="slider-block" style="background: #fff;">
+                                        <div id="globalssl" style="width: 100%; height: 50px;">
+                                            <script type="text/javascript"> Seal("https://www.MaProgramez.Website.ro/Content/images/GlobeSSL-Logo.jpg", "GSSL", "globalssl"); </script>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clear"></div>
+                            </div>
+                            <div class="col-sm-4" style="text-align: right; font-size: 38px;">
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.MaProgramez.Website.ro" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                                <a href="https://plus.google.com/share?url=https://MaProgramez.Website.ro" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+                            </div>"
+                        </div>
+                    </div>
+
+                </div>
+        *@
+        <div class="row">
+            <div class="col-md-12">
+                @*@Html.Partial(MVC.Shared.Views.PartialViews._Traffic)*@
+            </div>
+        </div>
+    </div>
+</div>

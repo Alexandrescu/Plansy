@@ -1,0 +1,26 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center">
+        <h1 class="title text-center">{{'CHANGE_PHONE_NUMBER' | translate}}</h1>
+        <div class="buttons">
+            <button class="button button-icon button-clear button-small ion-close" ng-click="closeChangePhoneModal()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="changePhoneNumber()">
+            <div class="padding">
+                <p class="subtext">
+                    {{'CHANGE_PHONE_TEXT' | translate}}
+                </p>
+
+                <label class="item item-input">
+                    <input type="text" placeholder="{{'PHONE' | translate}}" ng-model="User.Phone">
+                </label>
+
+                <button class="button button-block button-positive" type="submit">
+                    {{'CHANGE_PHONE_NUMBER' | translate}}
+                </button>
+
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

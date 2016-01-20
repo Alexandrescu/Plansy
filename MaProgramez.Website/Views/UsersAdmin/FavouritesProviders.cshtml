@@ -1,0 +1,100 @@
+﻿@using MaProgramez.Repository.BusinessLogic
+@using MaProgramez.Resources
+@using MaProgramez.Website.Helpers
+@using MvcPaging
+@model MvcPaging.IPagedList<MaProgramez.Repository.Entities.Favorite>
+
+@{
+    ViewBag.Title = Resource.FavouriteProviders;
+
+    var filterBy = ViewBag.FilterBy as string;
+}
+
+<div class="clear"></div>
+
+
+<section class="filtre">
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            <h4>@Resource.FavouriteProviders</h4>
+        </div>
+        @using (Html.BeginForm("FavouritesProviders", "UsersAdmin", FormMethod.Get))
+        {
+            <div class="col-lg-4 float-right">
+                <div class="input-group">
+                    <input type="text" name="filterBy" class="form-control cautare" style="border: none !important;" placeholder="@Resource.Search" value="@filterBy" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default btn-cautare" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        }
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+        <div class="sablon">
+            @if (Model != null && Model.Any())
+            {
+
+                <table class="table table-bordered ">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>@Resource.CompanyName</th>
+                            <th>@Resource.Provider</th>
+                            <th>@Resource.Email</th>
+                            <th>@Resource.PhoneNumber</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            var number = (ViewBag.Page * Model.PageSize) + 1;
+                        }
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@(number++)</td>
+                                <td>@item.FavoriteUser.CompanyDisplayName</td>
+                                @if (item.FavoriteSlotId.HasValue)
+                                {
+                                    <td>@item.FavoriteSlot.Name</td>
+                                    <td>@item.FavoriteSlot.Email</td>
+                                    <td>@item.FavoriteSlot.Phone</td>
+                                    <td><a href="@Url.Action(MVC.Schedule.Add(item.FavoriteUserId, item.FavoriteSlot.CategoryId))" class="float-right"><i class="glyphicon glyphicon-calendar" data-toggle="tooltip" data-placement="right" title="Adauga programare"></i> </a></td>
+                                }
+                                else
+                                {
+                                    <td>-</td>
+                                    <td>@item.FavoriteUser.Email</td>
+                                    <td>@item.FavoriteUser.PhoneNumber</td>
+                                    <td><a href="@Url.Action(MVC.Schedule.Add(item.FavoriteUserId, RetrieveOthers.GetProviderCategories(item.FavoriteUserId).FirstOrDefault()))" class="float-right"><i class="glyphicon glyphicon-calendar" data-toggle="tooltip" data-placement="right" title="Adauga programare"></i> </a></td>
+                                }
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                            }
+                            else
+                            {
+                                <p>@Resource.NoFavouriteProviders</p>
+                            }
+        </div>
+
+        @if ((Model.TotalItemCount) > Model.PageSize)
+            {
+            @Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount).Options(o => o
+                    .DisplayTemplate("Bootstrap3Pagination")
+                    .MaxNrOfPages(14)
+                    .AlwaysAddFirstPageNumber()
+                         .AddRouteValue("filterBy", filterBy)
+                    )
+        }
+    </div>
+</section>

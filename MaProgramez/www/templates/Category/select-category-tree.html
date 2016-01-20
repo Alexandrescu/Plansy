@@ -1,0 +1,25 @@
+<ion-view>
+    <ion-nav-title>
+        {{PageTitle}}
+    </ion-nav-title>
+
+    <filter-modal title="FilterTitle" county-id="SelectedCountyId" city-id="SelectedCityId" filter-text="FilterText" category-id="Id" callback="getFilteredParameters"></filter-modal>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click="filterClick()">
+            <i class="ion-android-search"></i>
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content class="menu-dark-content has-subheader" style="margin-top:18px;">
+        <ul class="list">
+            <li class="item item-icon-right" data-ng-repeat="category in Categories">
+                <a ng-if="category.isLeaf" href="#/app/select-provider/{{category.id}}" class="menu-block-link"></a>
+                <a ng-if="!category.isLeaf" href="#/app/select-category/{{category.id}}" class="menu-block-link"></a>
+
+                <span>{{category.name}}</span>
+                <i class="icon ion-ios-arrow-right"></i>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

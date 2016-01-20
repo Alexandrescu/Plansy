@@ -1,0 +1,15 @@
+﻿@using MaProgramez.Repository.Entities
+@model IEnumerable<Address>
+@{
+    Layout = null;
+}
+
+@if (Model != null)
+{
+    foreach (var address in Model)
+    {
+        <div id="AddressItem-@(address.Id)" class="address-box">
+            @Html.Partial(MVC.UsersAdmin.Views.PartialViews._AddressListItem, address)
+        </div>
+    }
+}

@@ -1,0 +1,44 @@
+﻿@using MaProgramez.Repository.Entities
+@using MaProgramez.Website.Helpers
+@model Notification
+
+@{
+    var style = "";
+    switch (Model.Type)
+    {
+        case NotificationType.SystemAlert:
+        case NotificationType.Cancelation:
+            {
+                style = "td-danger";
+                break;
+            }
+        case NotificationType.Confirmation:
+        case NotificationType.NewSchedule:
+            {
+                style = "td-success";
+                break;
+            }
+
+        case NotificationType.Advertisement:
+        case NotificationType.ReSchedule:
+            {
+                style = "td-warning";
+                break;
+            }
+    }
+
+    <tr class = "clickable-row" data-href=@Url.Action(MVC.Notification.MarkAsReadNotifs(Model.Id))>
+        <td class=@style>@ViewBag.Index</td>
+        <td class=@style>
+            @(@Model.Type.DisplayDescription())
+            @if (Model.IsRead == false)
+            {
+                <i class="glyphicon glyphicon-bullhorn" style="float:right; padding-right: 50px ; margin-top: 3px"></i>
+            }
+        </td>
+        <td class=@style>@Model.Text </td>
+        <td class=@style>
+            <a href=@Url.Action(MVC.Notification.Delete(Model.Id)) style="float: right;padding-right: 10px"><i class="glyphicon glyphicon-remove font-white"></i></a>
+        </td>
+    </tr>
+}

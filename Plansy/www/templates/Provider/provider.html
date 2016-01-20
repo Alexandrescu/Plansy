@@ -1,0 +1,45 @@
+<ion-view>
+    <ion-nav-title>
+        {{PageTitle}}
+    </ion-nav-title>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="menu-dark-content">
+        <div class="list">
+            <div class="item item-icon-right item-text-wrap" ng-class="{'item-avatar': Provider.logoPath != null}">
+                <img ng-src="{{ProviderLogo}}" ng-if="Provider.logoPath != null">
+                <h2>{{Provider.alias}}</h2>
+                <div ng-click="addToFavorite()" class="icon ion-ios-star-outline" ng-class="{'ion-ios-star-outline' : !IsFavorite, 'ion-ios-star': IsFavorite}"></div>
+            </div>
+            <div class="item item-divider" ng-if="Provider.addresses != null && Provider.addresses.length > 0">
+                {{'ADDRESS' | translate}}
+            </div>
+            <div class="item item-text-wrap" ng-if="Provider.addresses != null && Provider.addresses.length > 0">
+                <p>
+                    {{Provider.addresses[0].addressText}}, {{Provider.addresses[0].userCity.name}}, {{Provider.addresses[0].userCity.cityCounty.name}}
+                </p>
+            </div>
+            <div class="item item-divider">
+                {{'DESCRIPTION' | translate}}
+            </div>
+            <div class="item item-text-wrap">
+                <p>
+                    {{Provider.fullDescription}}
+                </p>
+            </div>
+            <div class="item item-divider">
+                {{'ADD_APPOINTMENT' | translate}}
+            </div>
+            <div class="item item-icon-right" ng-repeat="category in ProviderCategories">
+                <p>
+                    {{category.name}}
+                </p>
+                <i class="icon ion-ios-arrow-right"></i>
+                <a href="#/app/appointment/{{Provider.id}}/{{category.id}}" class="menu-block-link"></a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

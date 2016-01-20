@@ -1,0 +1,4 @@
+cordova-plugin-geolocation
+org.apache.cordova.splashscreen
+cordova plugin add org.apache.cordova.statusbar
+cordova plugin add org.apache.cordova.device

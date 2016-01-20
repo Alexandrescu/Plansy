@@ -1,0 +1,1669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="AcceptAllPendingSchedules" xml:space="preserve">
+    <value>Accept all pending schedules</value>
+  </data>
+  <data name="AcceptTermsMessage" xml:space="preserve">
+    <value>I agree to the terms &amp; conditions</value>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>Activate</value>
+  </data>
+  <data name="ActivateAccountConfirmation_Body" xml:space="preserve">
+    <value>Your account has been successfully created</value>
+  </data>
+  <data name="ActivateAccountConfirmation_Title" xml:space="preserve">
+    <value>Account activated</value>
+  </data>
+  <data name="ActivateAccount_Title" xml:space="preserve">
+    <value>Activate account</value>
+  </data>
+  <data name="ActivatedAccount" xml:space="preserve">
+    <value>Account activated</value>
+  </data>
+  <data name="ActivationEmail_Content" xml:space="preserve">
+    <value>Access the link to activate your account</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddNewAddress" xml:space="preserve">
+    <value>Add new address</value>
+  </data>
+  <data name="AddNewAppointment" xml:space="preserve">
+    <value>Add new appointment</value>
+  </data>
+  <data name="AddNewOperation" xml:space="preserve">
+    <value>Add new operation</value>
+  </data>
+  <data name="AddNewUser" xml:space="preserve">
+    <value>Add new user</value>
+  </data>
+  <data name="AddPhoneNumber" xml:space="preserve">
+    <value>Add phone number</value>
+  </data>
+  <data name="AddPhoneSuccess" xml:space="preserve">
+    <value>Phone number successfully added</value>
+  </data>
+  <data name="AddressType_Both" xml:space="preserve">
+    <value>Billing address and workstation</value>
+  </data>
+  <data name="AddressType_InvoiceAddress" xml:space="preserve">
+    <value>Billing address</value>
+  </data>
+  <data name="AddressType_PlaceOfBusinessAddress" xml:space="preserve">
+    <value>Workstation</value>
+  </data>
+  <data name="Address_DeleteMessage" xml:space="preserve">
+    <value>Delete address</value>
+  </data>
+  <data name="AddToFavourites" xml:space="preserve">
+    <value>Add to favourites</value>
+  </data>
+  <data name="Agent" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Alias" xml:space="preserve">
+    <value>Alias</value>
+  </data>
+  <data name="AppointmentsThisWeek" xml:space="preserve">
+    <value>Appointments this week</value>
+  </data>
+  <data name="AppointmentsToday" xml:space="preserve">
+    <value>Appointments today</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="BankDeposit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Benefits" xml:space="preserve">
+    <value>Benefits</value>
+  </data>
+  <data name="Buyer" xml:space="preserve">
+    <value>Buyer</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CancelledByProvider" xml:space="preserve">
+    <value>Cancelled by provider</value>
+  </data>
+  <data name="CancelledByUser" xml:space="preserve">
+    <value>Cancelled by client</value>
+  </data>
+  <data name="CancelSchedule" xml:space="preserve">
+    <value>Cancel Appointment</value>
+  </data>
+  <data name="Card" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Cash" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="ChangeLogo" xml:space="preserve">
+    <value>Change profile photo</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="ChangePasswordSuccess" xml:space="preserve">
+    <value>Pasword successfully changed</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>Choose</value>
+  </data>
+  <data name="Client" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Company name</value>
+  </data>
+  <data name="ConfirmEmailView_Content" xml:space="preserve">
+    <value>Account created successfully. Sign in here:</value>
+  </data>
+  <data name="ConfirmEmailView_Title" xml:space="preserve">
+    <value>Confirm Account</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="ContactMessageConfirm" xml:space="preserve">
+    <value>You're message was sent and someone from Plansy is handling it.</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="ContractDate" xml:space="preserve">
+    <value>Contract Date</value>
+  </data>
+  <data name="ContractNo" xml:space="preserve">
+    <value>Contract No.</value>
+  </data>
+  <data name="ContractNumber" xml:space="preserve">
+    <value>Contract Number</value>
+  </data>
+  <data name="Contracts" xml:space="preserve">
+    <value>Contracts</value>
+  </data>
+  <data name="Cookies" xml:space="preserve">
+    <value>Cookies</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="County" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>Date created</value>
+  </data>
+  <data name="CreateNewRole" xml:space="preserve">
+    <value>Create new role</value>
+  </data>
+  <data name="CreateSchedule" xml:space="preserve">
+    <value>Book an appointment
+</value>
+  </data>
+  <data name="CreateUserView_Title" xml:space="preserve">
+    <value>Create new account</value>
+  </data>
+  <data name="CreateWithSocial" xml:space="preserve">
+    <value>Log in with</value>
+  </data>
+  <data name="CurrentNumber" xml:space="preserve">
+    <value>Current no.</value>
+  </data>
+  <data name="Current_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Date_Error_Message" xml:space="preserve">
+    <value>Date format seems invalid. (dd.mm.yyy)</value>
+  </data>
+  <data name="DayOfWeek" xml:space="preserve">
+    <value>Day of week</value>
+  </data>
+  <data name="DefaultNonWorkingDays" xml:space="preserve">
+    <value>Public holidays</value>
+  </data>
+  <data name="DefaultOperations" xml:space="preserve">
+    <value>Default services</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteAll" xml:space="preserve">
+    <value>Delete All</value>
+  </data>
+  <data name="DeleteSchedule" xml:space="preserve">
+    <value>Delete appointment</value>
+  </data>
+  <data name="Deny" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Disable</value>
+  </data>
+  <data name="DurationMinutes" xml:space="preserve">
+    <value>Duration (minutes)</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EditRole" xml:space="preserve">
+    <value>Edit role</value>
+  </data>
+  <data name="EditSlot" xml:space="preserve">
+    <value>Edit staff member</value>
+  </data>
+  <data name="EditUserView_Title" xml:space="preserve">
+    <value>Edit user details</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="EmailConfirmationView_Content" xml:space="preserve">
+    <value>We've sent you a confirmation email. Check your inbox and click the link to confirm your account</value>
+  </data>
+  <data name="EmailConfirmation_Body" xml:space="preserve">
+    <value>I agree to the terms &amp; conditions</value>
+  </data>
+  <data name="EmailConfirmation_Subject" xml:space="preserve">
+    <value>Plansy - Confirm account</value>
+  </data>
+  <data name="EmailConfirmation_ViewTitle" xml:space="preserve">
+    <value>Confirm email</value>
+  </data>
+  <data name="EmailCredentials_Body" xml:space="preserve">
+    <value>Your account has been successfully created. To activate it, please visit www.plansy.nl You can always change your password</value>
+  </data>
+  <data name="EmailCredentials_Subject" xml:space="preserve">
+    <value>Plansy - Sign in details</value>
+  </data>
+  <data name="Emails" xml:space="preserve">
+    <value>E-mails</value>
+  </data>
+  <data name="Email_ErrorMessage" xml:space="preserve">
+    <value>Wrong email address</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>Activate</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>End time</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Error404_Content" xml:space="preserve">
+    <value>Page not found</value>
+  </data>
+  <data name="Error404_GoBackText" xml:space="preserve">
+    <value>Go back:</value>
+  </data>
+  <data name="Error404_Title" xml:space="preserve">
+    <value>Oops!</value>
+  </data>
+  <data name="ErrorView_Content" xml:space="preserve">
+    <value>Oops! Unexpected error. Please contact us at contact@plansy.nl</value>
+  </data>
+  <data name="ErrorView_Title" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Error_AddSchedule" xml:space="preserve">
+    <value>There is something wrong with the information you filled in, please try again.</value>
+  </data>
+  <data name="Error_ContainsEmailAddress" xml:space="preserve">
+    <value>Error contains detaits</value>
+  </data>
+  <data name="Error_ContainsPhoneNo" xml:space="preserve">
+    <value>Error contains detaits</value>
+  </data>
+  <data name="Error_Description" xml:space="preserve">
+    <value>You must add a description
+</value>
+  </data>
+  <data name="Error_EndBeforeStart" xml:space="preserve">
+    <value>The start time must be before the end time</value>
+  </data>
+  <data name="Error_Height" xml:space="preserve">
+    <value>Invalid height</value>
+  </data>
+  <data name="Error_Length" xml:space="preserve">
+    <value>Invalid length</value>
+  </data>
+  <data name="Error_MandatoryFields" xml:space="preserve">
+    <value>Please fill in all mandatory fields</value>
+  </data>
+  <data name="Error_MinimumOneAddress" xml:space="preserve">
+    <value>At least one address is necessary</value>
+  </data>
+  <data name="Error_NoSchedulesBeforeToday" xml:space="preserve">
+    <value>Unfortunately, you can't book appointments in the past.</value>
+  </data>
+  <data name="Error_Price" xml:space="preserve">
+    <value>Invalid price</value>
+  </data>
+  <data name="Error_Schedule1" xml:space="preserve">
+    <value>You can't have more appointments in the same time</value>
+  </data>
+  <data name="Error_Schedule2" xml:space="preserve">
+    <value>You can't have more appointments for the same place in one day</value>
+  </data>
+  <data name="Error_Terms" xml:space="preserve">
+    <value>In order to use Plansy, you should agree with our terms and conditions</value>
+  </data>
+  <data name="Error_TimeFormat" xml:space="preserve">
+    <value>Time format hh:mm</value>
+  </data>
+  <data name="ExternalLogins" xml:space="preserve">
+    <value>Other accounts (Google, Facebook)</value>
+  </data>
+  <data name="ExternalLogin_AssociateYour" xml:space="preserve">
+    <value>Sign in with</value>
+  </data>
+  <data name="ExternalLogin_FailureText" xml:space="preserve">
+    <value>External account error</value>
+  </data>
+  <data name="ExternalLogin_FailureTitle" xml:space="preserve">
+    <value>Sign in error</value>
+  </data>
+  <data name="ExternalLogin_SuccessMessage1" xml:space="preserve">
+    <value>Successfully signed in using</value>
+  </data>
+  <data name="ExternalLogin_SuccessMessage2" xml:space="preserve">
+    <value>Enter your email address and click the Sign in button</value>
+  </data>
+  <data name="FailedToVerifyCode" xml:space="preserve">
+    <value>The code could not be verified</value>
+  </data>
+  <data name="FavouriteProviders" xml:space="preserve">
+    <value>Favourite businesses</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="FinalizePaymentSuccess_Message" xml:space="preserve">
+    <value>Your payment was successful, thank you.</value>
+  </data>
+  <data name="FinalizePaymentSuccess_Title" xml:space="preserve">
+    <value>Payment accepted</value>
+  </data>
+  <data name="ForgotPasswordConfirmationView_Content" xml:space="preserve">
+    <value>Check your email to reset your password</value>
+  </data>
+  <data name="ForgotPasswordConfirmationView_Title" xml:space="preserve">
+    <value>Confirm reset password</value>
+  </data>
+  <data name="ForgotPasswordEmail_Content" xml:space="preserve">
+    <value>Access the link to reset your password</value>
+  </data>
+  <data name="ForgotPasswordView_ButonText" xml:space="preserve">
+    <value>Reset password</value>
+  </data>
+  <data name="ForgotPasswordView_Title" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="ForgotPasswordView_Title2" xml:space="preserve">
+    <value>Enter your e-mail address</value>
+  </data>
+  <data name="ForgotPassword_Message" xml:space="preserve">
+    <value>You will receive an email to reset your password</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>Hour</value>
+  </data>
+  <data name="InCompleteAccount" xml:space="preserve">
+    <value>Your account is not complete</value>
+  </data>
+  <data name="IncompleteAccountMessage" xml:space="preserve">
+    <value>
+</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>Incorrect password</value>
+  </data>
+  <data name="InvalidValidationCode" xml:space="preserve">
+    <value>Incorrect validation code</value>
+  </data>
+  <data name="Invalid_Phone_Number" xml:space="preserve">
+    <value>Incorrect phone number</value>
+  </data>
+  <data name="Invoice" xml:space="preserve">
+    <value>Invoice</value>
+  </data>
+  <data name="InvoiceAddressDisclaimer" xml:space="preserve">
+    <value>*To modify your invoicing address please access the "Personal Details" section in account settings</value>
+  </data>
+  <data name="InvoiceAmountIncludingVat" xml:space="preserve">
+    <value>Amount - including VAT</value>
+  </data>
+  <data name="InvoiceAmountWithoutVat" xml:space="preserve">
+    <value>Amount - without VAT</value>
+  </data>
+  <data name="InvoiceDate" xml:space="preserve">
+    <value>Invoice date</value>
+  </data>
+  <data name="InvoiceDelegateIdCardDetails" xml:space="preserve">
+    <value>ID Number</value>
+  </data>
+  <data name="InvoiceDelegateName" xml:space="preserve">
+    <value>Delegate name</value>
+  </data>
+  <data name="InvoiceDueDate" xml:space="preserve">
+    <value>Invoice due date</value>
+  </data>
+  <data name="InvoiceNumber" xml:space="preserve">
+    <value>Invoice number</value>
+  </data>
+  <data name="Invoices" xml:space="preserve">
+    <value>Invoices</value>
+  </data>
+  <data name="InvoiceSeries" xml:space="preserve">
+    <value>Invoice series</value>
+  </data>
+  <data name="InvoicesList" xml:space="preserve">
+    <value>Invoices List</value>
+  </data>
+  <data name="InvoicesListView_Title" xml:space="preserve">
+    <value>My invoices</value>
+  </data>
+  <data name="InvoiceStateId" xml:space="preserve">
+    <value>State Id</value>
+  </data>
+  <data name="InvoiceStateNotPaid" xml:space="preserve">
+    <value>Not paid</value>
+  </data>
+  <data name="InvoiceStatePaid" xml:space="preserve">
+    <value>Paid</value>
+  </data>
+  <data name="InvoiceStateTitle" xml:space="preserve">
+    <value>Invoice state</value>
+  </data>
+  <data name="InvoiceTransportationVehicleDetails" xml:space="preserve">
+    <value>Vehicle details</value>
+  </data>
+  <data name="InvoiceType" xml:space="preserve">
+    <value>Invoice type</value>
+  </data>
+  <data name="InvoiceUser" xml:space="preserve">
+    <value>Supplier</value>
+  </data>
+  <data name="InvoiceVat" xml:space="preserve">
+    <value>VAT</value>
+  </data>
+  <data name="Invoice_Add" xml:space="preserve">
+    <value>Add invoice</value>
+  </data>
+  <data name="Invoice_AddLine" xml:space="preserve">
+    <value>Add line</value>
+  </data>
+  <data name="Invoice_AddPayment" xml:space="preserve">
+    <value>Add payment</value>
+  </data>
+  <data name="Invoice_Download" xml:space="preserve">
+    <value>Download invoice</value>
+  </data>
+  <data name="Invoice_Edit" xml:space="preserve">
+    <value>Edit invoice</value>
+  </data>
+  <data name="Invoice_EditLine" xml:space="preserve">
+    <value>Edit line</value>
+  </data>
+  <data name="Invoice_EditPayment" xml:space="preserve">
+    <value>Edit payment</value>
+  </data>
+  <data name="Invoice_Lines" xml:space="preserve">
+    <value>Invoice lines</value>
+  </data>
+  <data name="Invoice_PaymentAmount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="Invoice_PaymentDate" xml:space="preserve">
+    <value>Payment date</value>
+  </data>
+  <data name="Invoice_PaymentDetails" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Invoice_PreviousPayments" xml:space="preserve">
+    <value>Previous payments</value>
+  </data>
+  <data name="Invoice_VatRate" xml:space="preserve">
+    <value>VAT
+</value>
+  </data>
+  <data name="IsAlreadyTaken" xml:space="preserve">
+    <value>is already taken.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent1" xml:space="preserve">
+    <value>Potential customers turn to Plansy to find the service they need in their city. You reach new customers without any costs for you.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent2" xml:space="preserve">
+    <value>Due to the clever agenda, customers book appointments directly into your agenda on a time convenient for them and for you. New appointments are made, even at times your business is closed. Instead of being on the telephone you can focus on your business.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent3" xml:space="preserve">
+    <value>Plansy is synced with your own agenda. You keep all your appointments conveniently in one place.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent4" xml:space="preserve">
+    <value>The automated reminders reduce no shows. Customers receive a reminder on their phone and will not forget their appointments.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent5" xml:space="preserve">
+    <value>There are no monthly service fees. You only pay for results. Only after appointments have been made you pay a small fee. We only charge €25,- just once to set up your profile. Sign up and try it now.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent6" xml:space="preserve">
+    <value>In Plansy, you have all your customers in one place, and you can easily sent individual or group messages or ads for your business. Plansy takes care of the rest, sending notification messages to everyone!</value>
+  </data>
+  <data name="LandingPageNew_BoxContent7" xml:space="preserve">
+    <value>Customers schedule appointments with your business on the go, at work or at home. Plansy is optimized for mobile devices with apps for iPhone, iPad and Android smartphones. Customers can reach your business anywhere, anytime.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent8" xml:space="preserve">
+    <value>Block times and days, so customers can only schedule appointments on times that are convenient for you. You receive a notification when appointments are scheduled. After your approval the customers receives a confirmation of the appointment.</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle1" xml:space="preserve">
+    <value>New customers from your city find your business</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle2" xml:space="preserve">
+    <value>Customers schedule appointments while you are doing other things</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle3" xml:space="preserve">
+    <value>Appointments booked directly into your agenda</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle4" xml:space="preserve">
+    <value>Less no shows</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle5" xml:space="preserve">
+    <value>At Plansy you only pay for results</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle6" xml:space="preserve">
+    <value>Easily advertise to customers</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle7" xml:space="preserve">
+    <value>Mobile ready</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle8" xml:space="preserve">
+    <value>You have full control over your agenda</value>
+  </data>
+  <data name="LandingPageNew_SignUp" xml:space="preserve">
+    <value>Sign up now</value>
+  </data>
+  <data name="LandingPageNew_Sub1" xml:space="preserve">
+    <value>Customers are looking for businesses like yours</value>
+  </data>
+  <data name="LandingPageNew_Sub2" xml:space="preserve">
+    <value>With Plansy more customers find out about your business, and they can easily book appointments.</value>
+  </data>
+  <data name="LandingPageNew_Subtitle3" xml:space="preserve">
+    <value>It's about time</value>
+  </data>
+  <data name="LandingPageNew_Subtitle3bis" xml:space="preserve">
+    <value>And it's free</value>
+  </data>
+  <data name="LandingPageNew_Subtitle4" xml:space="preserve">
+    <value>An innovative appointments and clients management system, suitable for any business, fast and easy to use, which will 'buy' you free time.</value>
+  </data>
+  <data name="LandingPageNew_Subtitle5" xml:space="preserve">
+    <value>Did something unexpected happen?</value>
+  </data>
+  <data name="LandingPageNew_Subtitle5bis" xml:space="preserve">
+    <value>No problem!</value>
+  </data>
+  <data name="LandingPageNew_Subtitle6" xml:space="preserve">
+    <value>You easily reschedule appointments. Your customer receives a notification and confirms the new time. No hassle.</value>
+  </data>
+  <data name="LandingPageNew_Testimonial" xml:space="preserve">
+    <value>Testimonial</value>
+  </data>
+  <data name="LandingPageNew_TestimonialQuote1" xml:space="preserve">
+    <value>“Thanks to Plansy I have much more requests for trial lessons. It has really lifted my business”</value>
+  </data>
+  <data name="LandingPage_AccountSupplierText" xml:space="preserve">
+    <value>Do you want to organize your time or your employees time better?</value>
+  </data>
+  <data name="LandingPage_AccountSupplierText2" xml:space="preserve">
+    <value>Sign in or contact us to set up a new account for you!</value>
+  </data>
+  <data name="LandingPage_AreYouAClient" xml:space="preserve">
+    <value>Are you bored to queue?</value>
+  </data>
+  <data name="LandingPage_AreYouAClientText" xml:space="preserve">
+    <value>Do you want to make appointments fast and easy through this platform ?</value>
+  </data>
+  <data name="LandingPage_AreYouAClientText2" xml:space="preserve">
+    <value>Create a new account or log into your account and find the best provider for the service you need!</value>
+  </data>
+  <data name="LandingPage_AreYouSupplier" xml:space="preserve">
+    <value>Are you a provider who wants to to retain his customers?</value>
+  </data>
+  <data name="LandingPage_AskUs" xml:space="preserve">
+    <value>Ask us</value>
+  </data>
+  <data name="LandingPage_AskUs_Text1" xml:space="preserve">
+    <value>If you have questions about how the platform works do not hesitate to contact us by email</value>
+  </data>
+  <data name="LandingPage_AskUs_Text2" xml:space="preserve">
+    <value>We'll respond in the shortest time</value>
+  </data>
+  <data name="LandingPage_ContactTitle" xml:space="preserve">
+    <value>And we will create a personalized account for you.</value>
+  </data>
+  <data name="LandingPage_ContactUs" xml:space="preserve">
+    <value>Contact us</value>
+  </data>
+  <data name="LandingPage_CookiesMessage" xml:space="preserve">
+    <value>This website uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.</value>
+  </data>
+  <data name="LandingPage_Mobile1" xml:space="preserve">
+    <value>Do you have a smartphone running iOS or Android</value>
+  </data>
+  <data name="LandingPage_Mobile2" xml:space="preserve">
+    <value>Download the application</value>
+  </data>
+  <data name="LandingPage_Mobile3" xml:space="preserve">
+    <value>and create your customer account so you can easily schedule from anywhere at anytime</value>
+  </data>
+  <data name="LandingPage_ReadMore" xml:space="preserve">
+    <value>Read more</value>
+  </data>
+  <data name="LandingPage_RequestOfferInfo" xml:space="preserve">
+    <value>Stats are real time, reflecting today's facts about the website</value>
+  </data>
+  <data name="LandingPage_SignIn" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="LandingPage_SignUp" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+  <data name="LandingPage_Step1" xml:space="preserve">
+    <value>Choose the category of the service you need (auto, medical, sports, beauty, etc.)</value>
+  </data>
+  <data name="LandingPage_Step2" xml:space="preserve">
+    <value>Select your preferred provider</value>
+  </data>
+  <data name="LandingPage_Step3" xml:space="preserve">
+    <value>Choose the services you need and the date and time you wish to book</value>
+  </data>
+  <data name="LandingPage_Step4" xml:space="preserve">
+    <value>Find easily address where you will have to go through navigation</value>
+  </data>
+  <data name="LandingPage_StepsSubTitle" xml:space="preserve">
+    <value>Scheda optimizes your most important resource</value>
+  </data>
+  <data name="LandingPage_StepsSubTitle2" xml:space="preserve">
+    <value>bringing providers according to your availability</value>
+  </data>
+  <data name="LandingPage_StepsTitle" xml:space="preserve">
+    <value>Break up just 4 simple steps to book the service you need</value>
+  </data>
+  <data name="LandingPage_SubTitle" xml:space="preserve">
+    <value>We don't queue</value>
+  </data>
+  <data name="LandingPage_Title" xml:space="preserve">
+    <value>Scheda</value>
+  </data>
+  <data name="LandingPage_Why1" xml:space="preserve">
+    <value>It is an innovative customers and schedules management system, fast and easy to use</value>
+  </data>
+  <data name="LandingPage_Why2" xml:space="preserve">
+    <value>It helps you to save time and to organize better your appointments</value>
+  </data>
+  <data name="LandingPage_Why3" xml:space="preserve">
+    <value>It offers very high mobility beeing accessed from anywhere and anytime via the web and mobile applications (iOS and Android)</value>
+  </data>
+  <data name="LandingPage_Why4" xml:space="preserve">
+    <value>It notifies your clients not to miss their appointments</value>
+  </data>
+  <data name="LandingPage_Why5" xml:space="preserve">
+    <value>Customers can see your availability so you don't need to worry about overlapped schedules or overtime work</value>
+  </data>
+  <data name="LandingPage_Why6" xml:space="preserve">
+    <value>It is an excellent tool for marketing and gaining customers loyalty</value>
+  </data>
+  <data name="LandingPage_WhyTitle" xml:space="preserve">
+    <value>Why use Scheda?</value>
+  </data>
+  <data name="LastFiveAppointments" xml:space="preserve">
+    <value>Last five appointments</value>
+  </data>
+  <data name="Lines" xml:space="preserve">
+    <value>Lines</value>
+  </data>
+  <data name="LockedOutView_Content" xml:space="preserve">
+    <value>This account was blocked. Please try again later or contact us.</value>
+  </data>
+  <data name="LockedOutView_Title" xml:space="preserve">
+    <value>Blocked account</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Login_ExternalLoginHint" xml:space="preserve">
+    <value>Log in using</value>
+  </data>
+  <data name="Login_ExternalLoginTitle" xml:space="preserve">
+    <value>Log in using your existing external account</value>
+  </data>
+  <data name="Login_ForgotPassword" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="Login_InvalidLoginAttempt" xml:space="preserve">
+    <value>Invalid login attempt.</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="ManageLoginsView_AddExternalLogin" xml:space="preserve">
+    <value>Add external login</value>
+  </data>
+  <data name="ManageLoginsView_ConnectUsing" xml:space="preserve">
+    <value>Connect using</value>
+  </data>
+  <data name="ManageLoginsView_RegisteredAccounts" xml:space="preserve">
+    <value>Registered accounts</value>
+  </data>
+  <data name="ManageLoginsView_RemoveButtonHint" xml:space="preserve">
+    <value>Remove account</value>
+  </data>
+  <data name="ManageLoginsView_Title" xml:space="preserve">
+    <value>Manage external logins (connect using Google or Facebook)</value>
+  </data>
+  <data name="ManageView_ChangeYourPassword" xml:space="preserve">
+    <value>Change your password</value>
+  </data>
+  <data name="ManageView_PickAPassword" xml:space="preserve">
+    <value>Pick a password</value>
+  </data>
+  <data name="ManageView_Title" xml:space="preserve">
+    <value>My account</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="Menu_Account" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="Menu_LogOff" xml:space="preserve">
+    <value>Log off</value>
+  </data>
+  <data name="Menu_RolesAdmin" xml:space="preserve">
+    <value>Roles admin</value>
+  </data>
+  <data name="Menu_UsersAdmin" xml:space="preserve">
+    <value>Users admin</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="MessageFromMaProgramez" xml:space="preserve">
+    <value>Message from Scheda</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>months</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="MyClients" xml:space="preserve">
+    <value>My clients</value>
+  </data>
+  <data name="MyInvoices" xml:space="preserve">
+    <value>My invoices</value>
+  </data>
+  <data name="MySchedules" xml:space="preserve">
+    <value>My schedules</value>
+  </data>
+  <data name="NewBusinessesInTown" xml:space="preserve">
+    <value>New businesses in your town</value>
+  </data>
+  <data name="New_Password" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="NextDays" xml:space="preserve">
+    <value>Next days</value>
+  </data>
+  <data name="NextFiveAppointments" xml:space="preserve">
+    <value>Next five appointments</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoAccount" xml:space="preserve">
+    <value>Don't you have a Scheda account yet?</value>
+  </data>
+  <data name="NoContracts" xml:space="preserve">
+    <value>There are no contracts available</value>
+  </data>
+  <data name="NoFavouriteProviders" xml:space="preserve">
+    <value>No favourite providers</value>
+  </data>
+  <data name="NoInvoices" xml:space="preserve">
+    <value>No invoices</value>
+  </data>
+  <data name="NoNewBusinessesInTown" xml:space="preserve">
+    <value>No new businesses in your town</value>
+  </data>
+  <data name="NoNextAppointments" xml:space="preserve">
+    <value>No next appointments</value>
+  </data>
+  <data name="NoNotifications" xml:space="preserve">
+    <value>No notifications</value>
+  </data>
+  <data name="NonWorkingDays" xml:space="preserve">
+    <value>Non working days</value>
+  </data>
+  <data name="NoOperations" xml:space="preserve">
+    <value>No operations</value>
+  </data>
+  <data name="NoPayments" xml:space="preserve">
+    <value>No payments</value>
+  </data>
+  <data name="NoPendingSchedules" xml:space="preserve">
+    <value>No pending schedules</value>
+  </data>
+  <data name="NoPreviousAppointments" xml:space="preserve">
+    <value>No previous appointments</value>
+  </data>
+  <data name="NoReply" xml:space="preserve">
+    <value>Please do not reply to this email</value>
+  </data>
+  <data name="NoResults" xml:space="preserve">
+    <value>No results</value>
+  </data>
+  <data name="NoResultsForSelectedCity" xml:space="preserve">
+    <value>We are sorry. There are no providers in your city.</value>
+  </data>
+  <data name="NoSchedulesOnSelectedDay" xml:space="preserve">
+    <value>You have no appointments today</value>
+  </data>
+  <data name="NoSlots" xml:space="preserve">
+    <value>This provider has no slots</value>
+  </data>
+  <data name="NotificationList" xml:space="preserve">
+    <value>Notification list</value>
+  </data>
+  <data name="NotificationText_Advertisment" xml:space="preserve">
+    <value>You received a promotional offer from Plansy!</value>
+  </data>
+  <data name="NotificationText_SystemAlert" xml:space="preserve">
+    <value>Attention! You received a message by Plansy!</value>
+  </data>
+  <data name="NotificationType" xml:space="preserve">
+    <value>Notification type</value>
+  </data>
+  <data name="NotificationType_Advertisement" xml:space="preserve">
+    <value>Advertisement</value>
+  </data>
+  <data name="NotificationType_Cancelation" xml:space="preserve">
+    <value>Canceled schedule</value>
+  </data>
+  <data name="NotificationType_Confirmation" xml:space="preserve">
+    <value>Confirmed schedule</value>
+  </data>
+  <data name="NotificationType_NewSchedule" xml:space="preserve">
+    <value>New schedule</value>
+  </data>
+  <data name="NotificationType_Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="NotificationType_Reminder" xml:space="preserve">
+    <value>Reminder</value>
+  </data>
+  <data name="NotificationType_ReSchedule" xml:space="preserve">
+    <value>Reschedule</value>
+  </data>
+  <data name="NotificationType_SystemAlert" xml:space="preserve">
+    <value>System alert</value>
+  </data>
+  <data name="Notification_Cancel1" xml:space="preserve">
+    <value>The appointment on</value>
+  </data>
+  <data name="Notification_Cancel2" xml:space="preserve">
+    <value>The appointment at</value>
+  </data>
+  <data name="Notification_Cancel3" xml:space="preserve">
+    <value>was cancelled by the client. You can contact him at the following phone number -</value>
+  </data>
+  <data name="Notification_Cancel4" xml:space="preserve">
+    <value>was cancelled by the provider. You can contact him at the following phone number -</value>
+  </data>
+  <data name="Notification_NewAppointment" xml:space="preserve">
+    <value>A new client just booked one of your services:</value>
+  </data>
+  <data name="Notification_Rescheduled" xml:space="preserve">
+    <value>You were rescheduled to</value>
+  </data>
+  <data name="Notification_Scheduled1" xml:space="preserve">
+    <value>You were scheduled to</value>
+  </data>
+  <data name="Notification_Scheduled2" xml:space="preserve">
+    <value>through Plansy app (available on Android and iOS)</value>
+  </data>
+  <data name="Notification_TodayReminder1" xml:space="preserve">
+    <value>Don't forget! Today at</value>
+  </data>
+  <data name="Notification_TodayReminder2" xml:space="preserve">
+    <value>you have an appointment to</value>
+  </data>
+  <data name="Notification_TomorrowReminder" xml:space="preserve">
+    <value>Don't forget! Tomorrow at</value>
+  </data>
+  <data name="Notification_TwoHoursReminder1" xml:space="preserve">
+    <value>Do not forget! In two hours you have a Plansy schedule to</value>
+  </data>
+  <data name="Notification_TwoHoursReminder2" xml:space="preserve">
+    <value>You can contact the provider at the following phone number -</value>
+  </data>
+  <data name="Notification_Validation1" xml:space="preserve">
+    <value>Your Plansy appointment at </value>
+  </data>
+  <data name="Notification_Validation2" xml:space="preserve">
+    <value>was confirmed. You can contact the provider at the following phone number - </value>
+  </data>
+  <data name="Observations" xml:space="preserve">
+    <value>Observations</value>
+  </data>
+  <data name="Offer_ErrorMessage" xml:space="preserve">
+    <value>We are sorry but this page doesn't exist</value>
+  </data>
+  <data name="Offer_ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Operation" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Operations" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordDigit" xml:space="preserve">
+    <value>The chosen password should contain at least one digit.</value>
+  </data>
+  <data name="PasswordLowerCase" xml:space="preserve">
+    <value>The chosen password should contain at least one lowercase letter.</value>
+  </data>
+  <data name="PasswordNonLetterOrDigit" xml:space="preserve">
+    <value>The chosen password should contain at least one digit or a special character.</value>
+  </data>
+  <data name="PasswordUpperCase" xml:space="preserve">
+    <value>The chosen password should contain at least one uppercase letter.</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>Payment method</value>
+  </data>
+  <data name="Payments" xml:space="preserve">
+    <value>Payments</value>
+  </data>
+  <data name="PdfSchedule" xml:space="preserve">
+    <value>Export your schedules in PDF</value>
+  </data>
+  <data name="PdfTodaySchedule" xml:space="preserve">
+    <value>Export your today schedules in PDF</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="PendingSchedules" xml:space="preserve">
+    <value>Pending schedules</value>
+  </data>
+  <data name="PerSlot" xml:space="preserve">
+    <value>Slot</value>
+  </data>
+  <data name="PerWorkplace" xml:space="preserve">
+    <value>Workplace</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="PhoneNumbers" xml:space="preserve">
+    <value>Phone numbers</value>
+  </data>
+  <data name="PhoneValidation" xml:space="preserve">
+    <value>Validate your phone number</value>
+  </data>
+  <data name="PhoneValidation_Text" xml:space="preserve">
+    <value>In a few moments you will receive a validation code via SMS. Enter the code provided below.</value>
+  </data>
+  <data name="PickTheCity" xml:space="preserve">
+    <value>Choose the city</value>
+  </data>
+  <data name="PickTheProvider" xml:space="preserve">
+    <value>Choose your preferred location</value>
+  </data>
+  <data name="PreviousDays" xml:space="preserve">
+    <value>Previous days</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Product name</value>
+  </data>
+  <data name="ProgrammingPer" xml:space="preserve">
+    <value>Schedules made per</value>
+  </data>
+  <data name="Provider" xml:space="preserve">
+    <value>Provider</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="Ramburs" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+  <data name="ReadAll" xml:space="preserve">
+    <value>Mark all notifications as read</value>
+  </data>
+  <data name="ReadMore" xml:space="preserve">
+    <value>Read more</value>
+  </data>
+  <data name="Receipt" xml:space="preserve">
+    <value>Receipt</value>
+  </data>
+  <data name="RegisterAsANewUser" xml:space="preserve">
+    <value>Register a new account</value>
+  </data>
+  <data name="Register_Button" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Register_NameMessage" xml:space="preserve">
+    <value>The name will be displayed on the website and on invoices issued to you.</value>
+  </data>
+  <data name="Register_Strong" xml:space="preserve">
+    <value>create an account</value>
+  </data>
+  <data name="Register_SubTitle" xml:space="preserve">
+    <value>Register a new account</value>
+  </data>
+  <data name="Register_SupplierMessage" xml:space="preserve">
+    <value>If you are a service provider contact us and we will create you a personalized account as soon as possible.</value>
+  </data>
+  <data name="Register_Text" xml:space="preserve">
+    <value>Enter your personal details to</value>
+  </data>
+  <data name="Register_Title" xml:space="preserve">
+    <value>Stop queueing! Sign up on Scheda and make appointments for free...</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="Remember_This_Browser" xml:space="preserve">
+    <value>Remember this browser</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="RemoveFromFavourites" xml:space="preserve">
+    <value>Remove from favourites</value>
+  </data>
+  <data name="RemoveLoginSuccess" xml:space="preserve">
+    <value>Successfully removed account</value>
+  </data>
+  <data name="RemovePhoneSuccess" xml:space="preserve">
+    <value>Successfully removed phone number</value>
+  </data>
+  <data name="Report_PaymentsStatus" xml:space="preserve">
+    <value>Payment status</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="Reschedule" xml:space="preserve">
+    <value>Reschedule</value>
+  </data>
+  <data name="ResendActivationEmail" xml:space="preserve">
+    <value>Resend activation email</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>View all</value>
+  </data>
+  <data name="ResetPasswordConfirmationView_Body" xml:space="preserve">
+    <value>Your password has been reset. To login click here:</value>
+  </data>
+  <data name="ResetPasswordConfirmationView_Title" xml:space="preserve">
+    <value>Confirm password reset</value>
+  </data>
+  <data name="ResetPasswordView_Title" xml:space="preserve">
+    <value>Reset password</value>
+  </data>
+  <data name="ResetPassword_Body" xml:space="preserve">
+    <value>To reset your password click here:</value>
+  </data>
+  <data name="ResetPassword_Subject" xml:space="preserve">
+    <value>Scheda - Reset password</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="Role_ListOfUsers" xml:space="preserve">
+    <value>List of users in this role</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SaveUserDetailsSuccess" xml:space="preserve">
+    <value>User details saved</value>
+  </data>
+  <data name="SchduledThoughApp" xml:space="preserve">
+    <value>Booked through Scheda</value>
+  </data>
+  <data name="ScheduleDate" xml:space="preserve">
+    <value>Schedule date</value>
+  </data>
+  <data name="SchedulesList" xml:space="preserve">
+    <value>Schedules list</value>
+  </data>
+  <data name="ScheduleState" xml:space="preserve">
+    <value>Schedule state</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SeeTomorrowSchedules" xml:space="preserve">
+    <value>See tomorrow schedules</value>
+  </data>
+  <data name="SeeTutorial" xml:space="preserve">
+    <value>Watch Scheda tutorial</value>
+  </data>
+  <data name="SeeYesterdaySchedules" xml:space="preserve">
+    <value>See yesterday schdules</value>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>Select category</value>
+  </data>
+  <data name="SelectCity" xml:space="preserve">
+    <value>Select city</value>
+  </data>
+  <data name="SelectCounty" xml:space="preserve">
+    <value>Select county</value>
+  </data>
+  <data name="SelectCountyFirst" xml:space="preserve">
+    <value>Select county first</value>
+  </data>
+  <data name="SelectFavouriteSlot" xml:space="preserve">
+    <value>Select your favourite slot</value>
+  </data>
+  <data name="SelectOperation" xml:space="preserve">
+    <value>Select the operation you need (at least one)</value>
+  </data>
+  <data name="SelectPaymentMethod" xml:space="preserve">
+    <value>Select the payment method</value>
+  </data>
+  <data name="SelectSlot" xml:space="preserve">
+    <value>Select slot</value>
+  </data>
+  <data name="SelectSlotFirst" xml:space="preserve">
+    <value>Select slot first</value>
+  </data>
+  <data name="SelectUserRole" xml:space="preserve">
+    <value>Select user role</value>
+  </data>
+  <data name="SelectUserRoles" xml:space="preserve">
+    <value>Select user roles</value>
+  </data>
+  <data name="Semicolon" xml:space="preserve">
+    <value>;</value>
+  </data>
+  <data name="SendAdvertisementToClients" xml:space="preserve">
+    <value>Send an advertisment to your clients</value>
+  </data>
+  <data name="SendNotification" xml:space="preserve">
+    <value>Sent notification</value>
+  </data>
+  <data name="SendValidationCode" xml:space="preserve">
+    <value>Send validation code</value>
+  </data>
+  <data name="SetPasswordSuccess" xml:space="preserve">
+    <value>Password saved</value>
+  </data>
+  <data name="SetPasswordView_CreateLogin" xml:space="preserve">
+    <value>Create local account</value>
+  </data>
+  <data name="SetPasswordView_SaveButtonText" xml:space="preserve">
+    <value>Create account</value>
+  </data>
+  <data name="SetPasswordView_Title" xml:space="preserve">
+    <value>You don't have a local account on this website. Please add a local account.</value>
+  </data>
+  <data name="SetTwoFactorSuccess" xml:space="preserve">
+    <value>Two factor authentication set.</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="ShowClientsPhoneNumber" xml:space="preserve">
+    <value>Show clients phone number</value>
+  </data>
+  <data name="SignIn_Strong" xml:space="preserve">
+    <value>sign in</value>
+  </data>
+  <data name="SignIn_Text" xml:space="preserve">
+    <value>Enter your email and password to</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+  <data name="Slot" xml:space="preserve">
+    <value>Slot</value>
+  </data>
+  <data name="SlotsList" xml:space="preserve">
+    <value>Slots list</value>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+  <data name="SortBy" xml:space="preserve">
+    <value>Sort by</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>Start time</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="SubscriptionPeriod" xml:space="preserve">
+    <value>Subscription period</value>
+  </data>
+  <data name="Supplier" xml:space="preserve">
+    <value>Supplier</value>
+  </data>
+  <data name="SupplierCompany" xml:space="preserve">
+    <value>Supplier complany</value>
+  </data>
+  <data name="TermsAndPrivacy" xml:space="preserve">
+    <value>Terms and privacy conditions</value>
+  </data>
+  <data name="Terms_Link" xml:space="preserve">
+    <value>Terms &amp; Privacy</value>
+  </data>
+  <data name="Terms_Text" xml:space="preserve">
+    <value>By creating an account you agree to our</value>
+  </data>
+  <data name="TheMessageHasBeenSent" xml:space="preserve">
+    <value>The message has been sent</value>
+  </data>
+  <data name="TheMessageHasBeenSentMessage" xml:space="preserve">
+    <value>The message has been sent to the selected list</value>
+  </data>
+  <data name="TheMessageHasNotBeenSent" xml:space="preserve">
+    <value>The message has not been sent</value>
+  </data>
+  <data name="TheMessageHasNotBeenSentMessage" xml:space="preserve">
+    <value>The message has not been sent to the selected list</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>time</value>
+  </data>
+  <data name="Timetable" xml:space="preserve">
+    <value>Timetable</value>
+  </data>
+  <data name="TotalClients" xml:space="preserve">
+    <value>Total clients</value>
+  </data>
+  <data name="TotalProviders" xml:space="preserve">
+    <value>Total service providers</value>
+  </data>
+  <data name="Town" xml:space="preserve">
+    <value>Town</value>
+  </data>
+  <data name="Tutorial" xml:space="preserve">
+    <value>Platform use tutorial</value>
+  </data>
+  <data name="TwoFactorActivated_Text" xml:space="preserve">
+    <value>Two factor authentication activated</value>
+  </data>
+  <data name="TwoFactorDeActivated_Text" xml:space="preserve">
+    <value>Two factor authentication deactivated</value>
+  </data>
+  <data name="UnblockAccount" xml:space="preserve">
+    <value>Unblock account</value>
+  </data>
+  <data name="UnityMeasure" xml:space="preserve">
+    <value>U.M.</value>
+  </data>
+  <data name="UnpayedInvoices" xml:space="preserve">
+    <value>Don't worry - you payed your debts!</value>
+  </data>
+  <data name="UploadImageError" xml:space="preserve">
+    <value>Please upload a valid image (MAX 8MB per image)!</value>
+  </data>
+  <data name="UploadLogo" xml:space="preserve">
+    <value>Upload logo</value>
+  </data>
+  <data name="UseLocalAccountToLogin" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="UserAdminView_Add" xml:space="preserve">
+    <value>Add new user</value>
+  </data>
+  <data name="UserAdminView_AddOperation" xml:space="preserve">
+    <value>Add new opperation</value>
+  </data>
+  <data name="UserAdminView_AddSlot" xml:space="preserve">
+    <value>Add new slot</value>
+  </data>
+  <data name="UserAdminView_EditOperation" xml:space="preserve">
+    <value>Edit operation</value>
+  </data>
+  <data name="UserAdminView_Title" xml:space="preserve">
+    <value>Users admin</value>
+  </data>
+  <data name="User_AcceptsNewRequestNotificationOnEmail" xml:space="preserve">
+    <value>I accept new request notifications</value>
+  </data>
+  <data name="User_AcceptsNotificationOnEmail" xml:space="preserve">
+    <value>I want to receive notifications by email</value>
+  </data>
+  <data name="User_AcceptsNotificationOnSms" xml:space="preserve">
+    <value>I want to receive notifications by SMS</value>
+  </data>
+  <data name="User_AcceptsPushNotification" xml:space="preserve">
+    <value>I want push notifications</value>
+  </data>
+  <data name="User_AccountNumber" xml:space="preserve">
+    <value>Account number</value>
+  </data>
+  <data name="User_AddAddress" xml:space="preserve">
+    <value>Add new address</value>
+  </data>
+  <data name="User_Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="User_Addresses" xml:space="preserve">
+    <value>Addresses</value>
+  </data>
+  <data name="User_Bank" xml:space="preserve">
+    <value>Bank</value>
+  </data>
+  <data name="User_CashPayment" xml:space="preserve">
+    <value>Cash payment</value>
+  </data>
+  <data name="User_ChangePhone" xml:space="preserve">
+    <value>Change phone</value>
+  </data>
+  <data name="User_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="User_Commission" xml:space="preserve">
+    <value>Commission</value>
+  </data>
+  <data name="User_CompanyName" xml:space="preserve">
+    <value>Company name</value>
+  </data>
+  <data name="User_Confirm_Password" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="User_Connect" xml:space="preserve">
+    <value>External accounts</value>
+  </data>
+  <data name="User_ContactPersonName" xml:space="preserve">
+    <value>Contact name</value>
+  </data>
+  <data name="User_Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="User_County" xml:space="preserve">
+    <value>County</value>
+  </data>
+  <data name="User_CUI" xml:space="preserve">
+    <value>CUI / CNP</value>
+  </data>
+  <data name="User_DateOfBirth" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
+  <data name="User_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="User_FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="User_HideInvoices" xml:space="preserve">
+    <value>Hide invoices</value>
+  </data>
+  <data name="User_IdCardNo" xml:space="preserve">
+    <value>Id card no.</value>
+  </data>
+  <data name="User_IdSucursalaFan" xml:space="preserve">
+    <value>Branch FanCourier Id</value>
+  </data>
+  <data name="User_IdSucursalaUrgent" xml:space="preserve">
+    <value>Branch UrgentCourier Id</value>
+  </data>
+  <data name="User_InvoiceCreatedByCnp" xml:space="preserve">
+    <value>Invoicing - CNP</value>
+  </data>
+  <data name="User_InvoiceCreatedByIdCard" xml:space="preserve">
+    <value>Invoicing - Id card no.</value>
+  </data>
+  <data name="User_InvoiceCreatedByName" xml:space="preserve">
+    <value>Invoicing - Invoice created by</value>
+  </data>
+  <data name="User_InvoiceSum" xml:space="preserve">
+    <value>Total invoiced</value>
+  </data>
+  <data name="User_IsCompany" xml:space="preserve">
+    <value>Is company</value>
+  </data>
+  <data name="User_IsProvider" xml:space="preserve">
+    <value>Is provider ?</value>
+  </data>
+  <data name="User_JNO" xml:space="preserve">
+    <value>J no.</value>
+  </data>
+  <data name="User_LogoPath" xml:space="preserve">
+    <value>Logo</value>
+  </data>
+  <data name="User_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="User_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="User_Password_ConfirmErrorMessage" xml:space="preserve">
+    <value>Password and confirmation don't match.</value>
+  </data>
+  <data name="User_Password_ErrorMessage" xml:space="preserve">
+    <value>{0} must contain at least {2} characters.</value>
+  </data>
+  <data name="User_PaymentDelayDays" xml:space="preserve">
+    <value>Payment delay days</value>
+  </data>
+  <data name="User_Personaldetails" xml:space="preserve">
+    <value>Personal details</value>
+  </data>
+  <data name="User_Phone" xml:space="preserve">
+    <value>Mobile phone</value>
+  </data>
+  <data name="User_PostalCode" xml:space="preserve">
+    <value>Postal code</value>
+  </data>
+  <data name="User_Saved" xml:space="preserve">
+    <value>Changes saved.</value>
+  </data>
+  <data name="User_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="User_SupplierInvoiceNumber" xml:space="preserve">
+    <value>Invoice number</value>
+  </data>
+  <data name="User_SupplierInvoiceSeries" xml:space="preserve">
+    <value>Invoice series</value>
+  </data>
+  <data name="User_SupplierProformInvoiceNumber" xml:space="preserve">
+    <value>Proform invoice number</value>
+  </data>
+  <data name="User_SupplierProformInvoiceSeries" xml:space="preserve">
+    <value>Proform invoice series</value>
+  </data>
+  <data name="User_VatRate" xml:space="preserve">
+    <value>VAT rate</value>
+  </data>
+  <data name="Valid" xml:space="preserve">
+    <value>Valid</value>
+  </data>
+  <data name="Verify" xml:space="preserve">
+    <value>Verify</value>
+  </data>
+  <data name="VerifyMobileCode" xml:space="preserve">
+    <value>Verify mobile code</value>
+  </data>
+  <data name="ViewAll" xml:space="preserve">
+    <value>View all</value>
+  </data>
+  <data name="ViewSchedules_Info1" xml:space="preserve">
+    <value>To make a new appointment to a client, CLICK on the calendar spot coresponding to the desired date and time</value>
+  </data>
+  <data name="ViewSchedules_Info2" xml:space="preserve">
+    <value>To edit or delete an existing appointment, CLICK on it</value>
+  </data>
+  <data name="ViewSchedules_Info3" xml:space="preserve">
+    <value>To change the duration of the appointment, CLICK and hold down the bottom edge of the frame and adjust up or down</value>
+  </data>
+  <data name="ViewSchedules_Info4" xml:space="preserve">
+    <value>To change the date or time of the appointment, CLICK on it, hold down and move it where you want</value>
+  </data>
+  <data name="ViewSchedules_InfoClient" xml:space="preserve">
+    <value>To view or and cancel existing appointment, CLICK on it</value>
+  </data>
+  <data name="Why" xml:space="preserve">
+    <value>Why Plansy?</value>
+  </data>
+  <data name="WithReceipt" xml:space="preserve">
+    <value>With receipt?</value>
+  </data>
+  <data name="WorksByWeekly" xml:space="preserve">
+    <value>It works a week in the morning, one in the afternoon</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="YourSecurityCodeIs" xml:space="preserve">
+    <value>Your security code is:</value>
+  </data>
+  <data name="LandingPageNew_TestimonialQuote2" xml:space="preserve">
+    <value>Door Plansy kan ik meer tijd besteden aan knippen, doordat ik minder hoef te telefoneren. Mijn klanten vinden het vooral handig dat ze meteen kunnen zien wanneer er nog tijd vrij is. Op dat tijdstip kunnen zij direct een afspraak inplannen zonder te bellen. Al mijn collega kappers zijn ook al overgestapt.</value>
+  </data>
+</root>

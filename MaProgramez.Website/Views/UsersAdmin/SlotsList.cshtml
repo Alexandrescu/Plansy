@@ -1,0 +1,90 @@
+﻿@using MaProgramez.Repository.Entities
+@model List<Slot>
+
+@{
+    ViewBag.Title = Resource.SlotsList;
+    string providerId = ViewBag.ProviderId;
+}
+
+<div class="clear"></div>
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            @if (User.IsInRole("Provider"))
+            {
+                <h4>@Resource.SlotsList</h4>
+            }
+            else
+            {
+                <h4>@Resource.SlotsList - @ViewBag.Name</h4>
+            }
+        </div>
+        <div class="col-lg-5 float-right">
+            <a href="@Url.Action(MVC.UsersAdmin.CreateSlot(providerId))" class="btn buton5danger float-right">@Resource.UserAdminView_AddSlot</a>
+            <a href="@Url.Action(MVC.UsersAdmin.Index())" class="btn buton5success float-right" style="margin-right: 20px;">@Resource.Back</a>
+        </div>
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+      
+        @if (Model != null && Model.Any())
+        {
+            var number = 1;
+
+            <div class="sablon">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>@Resource.User_Name</th>
+                            <th>@Resource.Email</th>
+                            <th>@Resource.PhoneNumber</th>
+                            <th>@Resource.Category</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var slot in Model)
+                        {
+                            <tr>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.UsersAdmin.EditSlot(slot.Id))">@(number++)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.UsersAdmin.EditSlot(slot.Id))">@(slot.Name)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.UsersAdmin.EditSlot(slot.Id))">@(slot.Email)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.UsersAdmin.EditSlot(slot.Id))">@(slot.Phone)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.UsersAdmin.EditSlot(slot.Id))">@(slot.Category.Name)</td>
+                                <td>
+                                    <ul>
+                                        <li><a href="@Url.Action(MVC.UsersAdmin.SlotOperationsList(slot.Id))"><i class="fa fa-briefcase" data-toggle="tooltip" data-placement="right" title=@Resource.Operations></i> </a></li>
+                                        <li><a href="@Url.Action(MVC.UsersAdmin.CreateSlotNonWorkingDays(slot.Id))"><i class="fa fa-calendar" data-toggle="tooltip" data-placement="right" title="Zile nelucratoare"></i> </a></li>
+                                        <li><a href="@Url.Action(MVC.UsersAdmin.CreateTimetable(slot.Id))"><i class="glyphicon glyphicon-time" data-toggle="tooltip" data-placement="right" title=@Resource.Timetable></i> </a></li>
+                                        <li><a href="@Url.Action(MVC.UsersAdmin.EditSlot(slot.Id))"><i class="fa fa-edit" data-toggle="tooltip" data-placement="right" title=@Resource.Edit></i> </a></li>
+                                        @if (User.IsInRole("Admin") || User.IsInRole("Agent"))
+                                        {
+                                            <li>@*<a href="@Url.Action(MVC.UsersAdmin.DeleteSlot(slot.Id))"><i class="fa fa-trash" data-toggle="tooltip" data-placement="right" title=@Resource.Remove></i> </a>*@</li>
+                                            <li>@Html.ActionLink("Sterge", MVC.UsersAdmin.DeleteSlot(slot.Id), new { onclick = "return confirm('Sigur doriti sa stergeti?');" })</li>
+                                            <li><a href="@Url.Action(MVC.UsersAdmin.CopySlot(slot.Id))"><i class="fa fa-copy" data-toggle="tooltip" data-placement="right" title=@Resource.Copy></i> </a></li>
+                                        }
+                                    </ul>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                </div>
+                }
+                else
+                {
+                <p>@Resource.NoSlots</p>
+                }
+
+            </div>
+</section>
+
+

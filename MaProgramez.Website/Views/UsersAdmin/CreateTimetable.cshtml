@@ -1,0 +1,160 @@
+﻿@using MaProgramez.Website.Helpers
+@model MaProgramez.Website.ViewModels.TimeTableViewModel
+
+@{
+    ViewBag.Title = Resource.Timetable;
+    string providerId = ViewBag.ProviderId;
+}
+
+@section scripts
+{
+@Scripts.Render("~/bundles/bootstrap-datepicker")
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('.input-group.date').datepicker({
+                startDate: $('#dateTimePicker').val(),
+                todayHighlight: true,
+                todayBtn: "linked",
+                autoclose: true
+            });
+        });
+
+    </script>
+}
+
+<div class="clear"></div>
+
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            <h4>@Resource.Timetable - @Model.Slot.Name</h4>
+        </div><!-- /.col-lg-3 -->
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+        @using (Html.BeginForm("CreateTimetable", "UsersAdmin", FormMethod.Post, new { @class = "form-horizontal" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.Slot.Id)
+            @Html.HiddenFor(m => m.Slot.Name)
+            @Html.HiddenFor(m => m.Slot.UserId)
+            @Html.HiddenFor(m => m.Slot.ProviderId)
+
+            if (!Html.ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger form-validation" role="alert">
+                    @Html.ValidationSummary(true, "", new { @class = "text-error" })
+                </div>
+                <div class="clear"></div>
+            }
+
+            <div class="form-group">
+                <label class="col-md-2 form-label">@Resource.DayOfWeek<span class="font-danger">&nbsp;*</span></label>
+                <div class="col-md-10">
+                    @Html.CheckBoxListFor(model => model.WorkingDays, Model.Days)
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 form-label">@Resource.StartTime<span class="font-danger">&nbsp;*</span></label>
+                <div class="col-md-3">
+                    @Html.TextBoxFor(m => m.StartTime, new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.StartTime, "", new { @class = "text-danger" })
+                </div>
+
+                <label class="col-md-3 form-label">@Resource.EndTime<span class="font-danger">&nbsp;*</span></label>
+                <div class="col-md-3">
+                    @Html.TextBoxFor(m => m.EndTime, new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.EndTime, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            
+            @*
+            <div class="form-group">
+                <label class="col-md-5 form-label">Selectati o zi din saptamana in care se lucreaza</label>
+                <div class="col-md-6 input-group date">
+                    @Html.TextBoxFor(m => m.WorkingWeekStartDate, "{0:MM/dd/yyyy}", new { @class = "form-control", @readonly = "true", @id = "dateTimePicker" })
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-1">
+                    @Html.CheckBoxFor(model => model.IsWorkingByWeekly)
+                </div>
+                <label class="col-md-8 form-label">@Resource.WorksByWeekly ?</label>
+            </div>
+                *@
+            <div class="clear"></div>
+            <hr style="margin: 15px 0" />
+
+            <div class="form-group">
+                <div class="col-md-6">
+                    <a href="@Url.Action(MVC.UsersAdmin.SlotsList(Model.Slot.ProviderId))" class="btn buton5danger float-left">@Resource.Back</a>
+                </div>
+                <div class="col-md-6">
+                    <input type="submit" class="btn buton5success float-right" value="@Resource.Save" />
+                </div>
+            </div>
+        }
+
+        @if (Model.Timetable != null && Model.Timetable.Any())
+        {
+            <div class="clear"></div>
+            <hr style="margin: 15px 0" />
+
+            var number = 1;
+
+            <div class="sablon">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>@Resource.DayOfWeek</th>
+                            <th>@Resource.StartTime</th>
+                            <th>@Resource.EndTime</th>
+                            @*<th>@Resource.WorksByWeekly</th>*@
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var timetable in Model.Timetable)
+                    {
+                    <tr>
+                        <td>@(number++)</td>
+                        <td>@timetable.DayOfWeek</td>
+                        <td>@timetable.StarTime.ToShortTimeString()</td>
+                        <td>@timetable.EndTime.ToShortTimeString()</td>
+                        @*
+                        @if (timetable.WorkingWeekStartDate.HasValue)
+                            {
+                            <td> DA, incepand din saptamana cu @timetable.WorkingWeekStartDate.Value.ToString("dd-MM-yyyy")</td>
+                            }
+                            else
+                            {
+                            <td>NU</td>
+                            }*@
+                        <td>
+                            <a href="@Url.Action(MVC.UsersAdmin.DeleteTimetable(timetable.Id))">
+                                <i class="fa fa-trash" data-toggle="tooltip" data-placement="right" title=@Resource.Remove></i>
+                            </a>
+                        </td>
+                    </tr>
+                    }
+                    </tbody>
+                </table>
+                </div>
+                }
+
+            </div>
+</section>
+

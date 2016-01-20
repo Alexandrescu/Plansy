@@ -1,0 +1,25 @@
+<ion-view>
+    <ion-nav-title>
+        {{'PROVIDERS' | translate}}
+    </ion-nav-title>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="menu-dark-content">
+        <ul class="list">
+            <li class="item item-icon-right" ng-repeat="provider in Providers">
+                <h2>{{provider.alias}}</h2>
+                <p>
+                    {{provider.fullDescription}}
+                </p>
+                <i class="icon ion-ios-arrow-right"></i>
+                <a href="#/app/provider/{{provider.id}}" class="menu-block-link"></a>
+            </li>
+            <li class="item" ng-if="Providers.length == 0">
+                <p class="text-center">{{'NO_FAVORITE' | translate}}</p>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

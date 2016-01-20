@@ -1,0 +1,147 @@
+﻿@using MaProgramez.Repository.Entities;
+@using MaProgramez.Resources
+@using MaProgramez.Website.Helpers
+@model InvoicePayment
+
+@{
+    ViewBag.Title = Resource.Invoice_EditPayment;
+}
+
+@section scripts
+{
+    @Scripts.Render("~/Scripts/bootstrap-datepicker.js")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.input-group.date').datepicker({
+                format: "dd-mm-yyyy",
+                todayHighlight: true,
+                todayBtn: "linked"
+            });
+        });
+    </script>
+}
+
+@using (Html.BeginForm(MVC.Invoice.EditInvoicePayment(), FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.InvoiceHeaderId)
+    @Html.HiddenFor(m => m.Id)
+
+
+
+    <section class="filtre">
+
+        <div class="container">
+            <div class="col-lg-3 schedule">
+                <h4 style="margin-bottom: 20px;">@ViewBag.Title</h4>
+            </div><!-- /.col-lg-3 -->
+        </div>
+    </section>
+    <div class="up-toticket">
+        &nbsp;
+    </div>
+
+    <section class="sectiune-cat stilizat-cat">
+        <div class="container stilizat">
+
+
+            @if (!Html.ViewData.ModelState.IsValid)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger form-validation" role="alert">
+                        @Html.ValidationSummary()
+                    </div>
+                </div>
+                <div class="clear"></div>
+            }
+
+            <div class="form-group">
+                @Html.Label(Resource.Invoice_PaymentAmount, new { @class = "form-label col-md-2", style = "margin-top: 5px" })
+                <div class="col-md-3" style="margin-top: 5px">
+                    @Html.TextBoxFor(m => m.Amount, new { @class = "form-control input-sm" })
+                </div>
+
+                @Html.Label(Resource.Date, new { @class = "form-label col-md-2", style = "margin-top: 5px" })
+                <div class="input-group date col-md-4">
+                    @Html.TextBoxFor(m => m.Date, "{0:dd-MM-yyyy}", new { @class = "form-control", @readonly = "readonly" })
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label(Resource.PaymentMethod, new { @class = "form-label col-md-2" })
+                <div class="col-md-3">
+                    @Html.DropDownListFor(m => m.PaymentMethod, typeof(PaymentMethod).GetItems(0), Resource.SelectPaymentMethod, new { @class = "selectpicker", data_class = "btn-default btn-sm", data_width = "100%", data_live_search = "true", data_size = "5" })
+                </div>
+                @Html.Label(Resource.Details, new { @class = "form-label col-md-2" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(m => m.Details, new { @class = "form-control input-sm" })
+                </div>
+                <div class="clear"></div>
+            </div>
+
+
+            <div class="line"></div>
+            <div class="clear"></div>
+
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    @Html.ActionLink(Resource.Back, MVC.Invoice.AdminInvoiceList(Model.InvoiceHeader.UserId, 1, null, null), new { @class = "btn btn-sm btn-primary float-left" })
+                </div>
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-sm btn-success float-right">@Resource.Save</button>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+            @if (ViewBag.PreviousPayments.Count != 0)
+            {
+                <div class="col-md-12">
+                    <div class="line"></div>
+                    <p class="font-danger" style="font-size: 16px">@Resource.Invoice_PreviousPayments</p>
+
+                    <div class="sablon">
+                        <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th> @Resource.Invoice_PaymentAmount</th>
+                                    <th> @Resource.Invoice_VatRate</th>
+                                    <th> @Resource.PaymentMethod</th>
+                                    <th> @Resource.Invoice_PaymentDetails</th>
+                                    <th> @Resource.Invoice_PaymentDate</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @{var i = 0;}
+                                @foreach (InvoicePayment payment in ViewBag.PreviousPayments)
+                                {
+                                    i++;
+                                    var s = payment.Details ?? "-";
+                                    <tr>
+                                        <td>@i</td>
+                                        <td>@payment.Amount</td>
+                                        <td>@payment.PaymentMethod</td>
+                                        <td>@s</td>
+                                        <td>@payment.Date.ToString("dd-MM-yyyy")</td>
+                                        <td>
+                                            <ul>
+                                                <li><a href="@Url.Action(MVC.Invoice.EditInvoicePayment(payment.Id))"><i class="fa fa-pencil"></i></a></li>
+                                                <li><a href="@Url.Action(MVC.Invoice.RemoveInvoicePayment(payment.Id))"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                                    }
+
+        </div>
+    </section>
+                                    }

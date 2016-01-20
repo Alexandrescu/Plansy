@@ -1,0 +1,113 @@
+﻿@using MaProgramez.Repository.BusinessLogic
+@using Microsoft.AspNet.Identity
+@using MvcPaging
+@model IPagedList<MaProgramez.Repository.Entities.ApplicationUser>
+
+@{
+    ViewBag.Title = Resource.MyClients;
+
+    var filterBy = ViewBag.FilterBy as string;
+    var providerId = User.Identity.GetUserId();
+    var slotId = (int?)ViewBag.SlotId;
+}
+
+<div class="clear"></div>
+
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            <h4>@Resource.MyClients</h4>
+        </div>
+
+        @using (Html.BeginForm("ClientsList", "UsersAdmin", FormMethod.Get))
+        {
+            <div class="col-lg-4 float-right">
+                <div class="input-group">
+                    <input type="text" name="filterBy" class="form-control cautare" style="border: none !important;" placeholder="@Resource.Search" value="@filterBy" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default btn-cautare" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        }
+
+        <!--
+        <div class="col-md-5">
+            <a href="Url.Action(MVC.UsersAdmin.SendNotification("broadcast"))" class="btn btn-primary buton5long float-right" style="margin-top:1px">
+                Resource.SendAdvertisementToClients
+            </a>
+        </div>
+      -->
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+        <div class="sablon">
+            @if (Model != null && Model.Any())
+            {
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>@Resource.User_Name</th>
+                            <th>@Resource.PhoneNumber</th>
+                            <th>@Resource.Email</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            var number = (ViewBag.Page * Model.PageSize) + 1;
+                        }
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@(number++)</td>
+                                <td>@item.FirstName @item.LastName</td>
+                                <td>@item.PhoneNumber</td>
+                                <td>@item.Email</td>
+                                @if (slotId.HasValue)
+                                {
+                                    <td>
+                                        <a href="@Url.Action(MVC.Schedule.AddSchedule((int)slotId, item.Id, 0, 0, 0, null, null))" class="float-right">
+                                            <i class="glyphicon glyphicon-calendar" data-toggle="tooltip" data-placement="right" title="Adauga programare"></i>
+                                        </a>
+                                    </td>
+                                }
+                                else
+                                {
+                                    <td>
+                                        <a href="@Url.Action(MVC.UsersAdmin.SendNotification(item.Id))" class="float-right">
+                                            <i class="glyphicon glyphicon-send" data-toggle="tooltip" data-placement="right" title="Trimite mesaj publicitar"></i>
+                                        </a>
+                                    </td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                            }
+                            else
+                            {
+                                <p>@Resource.TotalClients: 0</p>
+                            }
+        </div>
+
+        @if ((Model.TotalItemCount) > Model.PageSize)
+            {
+            @Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount).Options(o => o
+                    .DisplayTemplate("Bootstrap3Pagination")
+                    .MaxNrOfPages(14)
+                    .AlwaysAddFirstPageNumber()
+                         .AddRouteValue("filterBy", filterBy)
+                    )
+        }
+    </div>
+
+</section>

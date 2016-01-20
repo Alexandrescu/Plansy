@@ -1,0 +1,92 @@
+﻿@using MaProgramez.Resources
+@using MvcPaging
+@model IPagedList<MaProgramez.Website.ViewModels.ContractListItemViewModel>
+
+@{
+    ViewBag.Title = Resource.Contracts;
+    var sortBy = ViewBag.SortBy as string;
+    var ascending = (bool)ViewBag.Ascending;
+    var filterBy = ViewBag.FilterBy as string;
+}
+
+<div class="clear"></div>
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+
+            <h4>@Resource.Contracts</h4>
+    </div><!-- /.col-lg-3 -->
+        <div class="col-md-4 col-md-offset-5">
+            <div class="form-group">
+                <input type="search" name="filterBy" style="border:1px dashed #3e3c3c" class="form-control input-sm" placeholder="@Resource.Search" value="@filterBy" />
+            </div>
+        </div>
+</div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+        @using (Html.BeginForm())
+        {
+            <div class="row">
+                
+            </div>
+
+            <input type="submit" style="display: none;" />
+        }
+
+        @if (Model != null && Model.Any())
+        { <div class="sablon">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th><a href="@Url.Action(MVC.Manage.ContractsList(null, "number", filterBy, sortBy != "number" || !ascending))"><i class="fa @MaProgramez.Website.Helpers.TableHelper.GetTableHeaderIcon(sortBy, "number", ascending)"></i> @Resource.ContractNumber</a></th>
+                        <th><a href="@Url.Action(MVC.Manage.ContractsList(null, "clientName", filterBy, sortBy != "clientName" || !ascending))"><i class="fa @MaProgramez.Website.Helpers.TableHelper.GetTableHeaderIcon(sortBy, "clientName", ascending)"></i> @Resource.Provider</a></th>
+                        <th><a href="@Url.Action(MVC.Manage.ContractsList(null, "date", filterBy, sortBy != "date" || !ascending))"><i class="fa @MaProgramez.Website.Helpers.TableHelper.GetTableHeaderIcon(sortBy, "date", ascending)"></i> @Resource.Date</a></th>
+                        <th><a href="@Url.Action(MVC.Manage.ContractsList(null, "address", filterBy, sortBy != "address" || !ascending))"><i class="fa @MaProgramez.Website.Helpers.TableHelper.GetTableHeaderIcon(sortBy, "address", ascending)"></i> @Resource.User_Address</a></th>
+                        <th><a href="@Url.Action(MVC.Manage.ContractsList(null, "agentName", filterBy, sortBy != "agentName" || !ascending))"><i class="fa @MaProgramez.Website.Helpers.TableHelper.GetTableHeaderIcon(sortBy, "agentName", ascending)"></i>@Resource.Agent</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        var number = (ViewBag.Page * Model.PageSize) + 1;
+                    }
+
+                    @foreach (var contract in Model)
+                    {
+                        <tr>
+                            <td>@(number++)</td>
+                            <td>@contract.ContractNo.ToString("D")</td>
+                            <td>@contract.ClientName</td>
+                            <td>@contract.ContractDate.ToString("dd-MM-yyyy")</td>
+                            <td>@contract.Address</td>
+                            <td>@contract.Agent</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+                        if ((Model.TotalItemCount) > Model.PageSize)
+                        {
+                            @Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount).Options(o => o
+                    .DisplayTemplate("Bootstrap3Pagination")
+                    .MaxNrOfPages(14)
+                    .AlwaysAddFirstPageNumber()
+                    .AddRouteValue("sortBy", sortBy)
+                    .AddRouteValue("ascending", ascending)
+                    .AddRouteValue("filterBy", filterBy)
+                    )
+                            }
+                        }
+                        else
+                        {
+                            <p>@Resource.NoContracts</p>
+                        }
+    </div>
+</section>

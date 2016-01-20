@@ -1,0 +1,68 @@
+﻿@model MaProgramez.Website.ViewModels.ManageLoginsViewModel
+@using MaProgramez.Resources
+@using Microsoft.Owin.Security
+@{
+    ViewBag.Title = Resource.ManageLoginsView_Title;
+    Layout = MVC.Shared.Views._MenuLayout;
+}
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h4 style="margin-bottom: 20px;">@Resource.ManageLoginsView_Title</h4>
+        <p class="text-success">@ViewBag.StatusMessage</p>
+        @if (Model.CurrentLogins.Count > 0)
+        {
+            <p style="font-weight: bolder">@Resource.ManageLoginsView_RegisteredAccounts</p>
+            <table class="table" style="border: none;margin-top: 10px">
+                <tbody>
+                    @foreach (var account in Model.CurrentLogins)
+                    {
+                        <tr>
+                            <td class="col-md-8" style="vertical-align: middle">@account.LoginProvider</td>
+                            <td class="col-md-4">
+                                @if (ViewBag.ShowRemoveButton)
+                                {
+                                    using (Html.BeginForm("RemoveLogin", "Manage"))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        <div>
+                                            @Html.Hidden("loginProvider", account.LoginProvider)
+                                            @Html.Hidden("providerKey", account.ProviderKey)
+                                            <input type="submit" class="btn btn-danger btn-sm float-right" value="@Resource.Remove"
+                                                   title="@Resource.ManageLoginsView_RemoveButtonHint @account.LoginProvider" />
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    @: &nbsp;
+                        }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        @if (Model.OtherLogins.Count > 0)
+        {
+            <hr />
+            <h5>@Resource.ManageLoginsView_AddExternalLogin</h5>
+
+            using (Html.BeginForm("LinkLogin", "Manage"))
+            {
+                @Html.AntiForgeryToken()
+                <div id="socialLoginList">
+                    <p>
+                        @foreach (AuthenticationDescription p in Model.OtherLogins)
+                        {
+                            <button type="submit" class="btn buton5" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="@Resource.ManageLoginsView_ConnectUsing @p.Caption">@p.AuthenticationType</button>
+                        }
+                    </p>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+
+

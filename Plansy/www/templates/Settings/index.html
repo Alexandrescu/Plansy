@@ -1,0 +1,28 @@
+<ion-view>
+    <ion-nav-title>
+        {{'MY_SETTINGS' | translate}}
+    </ion-nav-title>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="menu-dark-content">
+        <ul class="list">
+            <li class="item item-icon-right">
+                <span>{{'CHANGE_PERSONAL_DETAILS' | translate}}</span>
+                <i class="icon ion-ios-arrow-right"></i>
+                <a href="#/app/account" class="menu-block-link"></a>
+            </li>
+            <li class="item item-icon-right">
+                <span>{{'CHANGE_PASSWORD' | translate}}</span>
+                <i class="icon ion-ios-arrow-right"></i>
+                <a href="#/app/password" class="menu-block-link"></a>
+            </li>
+            <li class="item item-icon-right" ng-click="logOut()">
+                <span>{{'LOGOUT' | translate}}</span>
+                <i class="icon ion-ios-close-outline"></i>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

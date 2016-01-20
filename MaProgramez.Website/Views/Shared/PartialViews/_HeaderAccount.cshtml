@@ -1,0 +1,57 @@
+﻿@using MaProgramez.Repository.BusinessLogic
+@using MaProgramez.Resources
+@using Microsoft.AspNet.Identity
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">@User.Identity.Name <b class="caret"></b></a>
+    <ul class="dropdown-menu" style="text-align:left;">
+        <li>@Html.ActionLink(Resource.Menu_Account, "Index", "Manage")</li>
+        @if (User.IsInRole("Client") || User.IsInRole("Admin"))
+        {
+            <li>@Html.ActionLink(Resource.CreateSchedule, MVC.Schedule.CategoriesList(), new { @class = "header-link" })</li>
+            <li>@Html.ActionLink(Resource.MySchedules, MVC.Schedule.ClientViewSchedules(), new { @class = "header-link" })</li>
+            <li>@Html.ActionLink(Resource.FavouriteProviders, MVC.UsersAdmin.FavouritesProviders(), new { @class = "header-link" })</li>
+        }
+        @if (User.IsInRole("Accountant"))
+        {
+            <li>@Html.ActionLink(Resource.Invoices, "AdminInvoiceList", "Invoice")</li>
+            <li>@Html.ActionLink(Resource.Contracts, "ContractsList", "Manage")</li>
+        }
+        @if (User.IsInRole("Provider"))
+        {
+            <li>@Html.ActionLink(@Resource.PdfSchedule, "DatePicker", "Report")</li>
+            <li>@Html.ActionLink(Resource.SlotsList, "SlotsList", "UsersAdmin")</li>
+        }
+        @if (User.IsInRole("Employee"))
+        {
+            var slotId = RetrieveOthers.GetSlotIdByUserId(User.Identity.GetUserId());
+            <li>@Html.ActionLink(@Resource.PdfSchedule, "DatePicker", "Report")</li>
+            <li>@Html.ActionLink(Resource.EditSlot, "EditSlot", "UsersAdmin", new { slotId = slotId }, null)</li>
+            <li>@Html.ActionLink(Resource.Operations, "SlotOperationsList", "UsersAdmin", new { slotId = slotId }, null)</li>
+            <li>@Html.ActionLink(Resource.NonWorkingDays, "CreateSlotNonWorkingDays", "UsersAdmin", new { slotId = slotId }, null)</li>
+            <li>@Html.ActionLink(Resource.Timetable, "CreateTimetable", "UsersAdmin", new { slotId = slotId }, null)</li>
+
+        }
+        @if (User.IsInRole("Admin") || User.IsInRole("Agent"))
+        {
+            <li>@Html.ActionLink(Resource.Menu_UsersAdmin, "Index", "UsersAdmin")</li>
+            <li>@Html.ActionLink(Resource.Contracts, "ContractsList", "Manage")</li>
+            <li>@Html.ActionLink(Resource.Invoices, "AdminInvoiceList", "Invoice")</li>
+            <li>@Html.ActionLink(Resource.DefaultOperations, "DefaultOperationsList", "UsersAdmin")</li>
+            <li>@Html.ActionLink(Resource.DefaultNonWorkingDays, "CreateDefaultNonWorkingDays", "UsersAdmin")</li>
+
+        }
+        @if (User.IsInRole("Admin"))
+        {
+            <li>@Html.ActionLink(Resource.Menu_RolesAdmin, "Index", "RolesAdmin")</li>
+            <li>@Html.ActionLink(Resource.SendNotification, "SendNotification", "UsersAdmin", new { id = "broadcast" }, null)</li>
+        }
+        <li class="divider"></li>
+        <li>
+            @using (Html.BeginForm(MVC.Account.LogOff(), FormMethod.Post, new { @id = "HeaderLogoutForm" }))
+            {
+                @Html.AntiForgeryToken()
+            }
+            <a href="javascript:document.getElementById('HeaderLogoutForm').submit()" id="HeaderLogoutButton">@Resource.Menu_LogOff</a>
+        </li>
+    </ul>
+</li>

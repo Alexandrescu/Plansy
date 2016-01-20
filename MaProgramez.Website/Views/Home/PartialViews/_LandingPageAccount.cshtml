@@ -1,0 +1,31 @@
+﻿@using MaProgramez.Website.Utility
+<div class="account-section">
+    <div class="page-content box8">
+
+        <div class="col-md-4 service-section">
+            <h3>@Resource.LandingPage_AreYouAClient</h3>
+            <p>
+                @Resource.LandingPage_AreYouAClientText
+            </p>
+            <p style="margin-bottom: 60px;">
+                @Resource.LandingPage_AreYouAClientText2
+            </p>
+            <div class="clear"></div>
+            <a href="#Contact" class="btn btn-primary float-right">@Resource.LandingPage_ContactUs</a>
+            <a href="@Url.Action(MVC.Account.Login())" class="btn btn-default float-right">@Resource.LandingPage_SignIn</a>
+        </div>
+        <div class="col-md-4 supplier-section">
+            <h3>@Resource.LandingPage_AreYouSupplier</h3>
+            <p>
+                @Resource.LandingPage_AccountSupplierText
+            </p>
+            <p style="margin-bottom: 60px;">
+                @Resource.LandingPage_AccountSupplierText2
+            </p>
+            <div class="clear"></div>
+            <a href="#Contact" class="btn btn-danger float-right">@Resource.LandingPage_ContactUs</a>
+            <a href="@Url.Action(MVC.Account.Login())" class="btn btn-default float-right">@Resource.LandingPage_SignIn</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+﻿@using MaProgramez.Repository.Entities
+@using MaProgramez.Resources
+@model ApplicationUser
+@{
+    ViewBag.Title = Resource.ManageView_Title;
+    Layout = MVC.Shared.Views._MenuLayout;
+    ViewBag.UserId = Model.Id;
+}
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/address")
+    @Scripts.Render("~/bundles/personal-details")
+}
+
+
+<div id="PersonalDetails" class="relative">
+    @Html.Partial(MVC.Manage.Views.PartialViews._PersonalDetails, Model)
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="address-group relative">
+            <h4 style="margin-bottom: 20px;">@Resource.User_Addresses</h4>
+            @if (!User.IsInRole("Provider"))
+            {
+                <i class="fa fa-plus-square-o add-address-button"></i>
+            }
+            <div class="row add-address-box" id="AddAddressBox">
+                @Html.Partial(MVC.Manage.Views.PartialViews._AddAddress)
+            </div>
+
+            <div class="panel-group" id="Addresses">
+                @Html.Partial(MVC.Manage.Views.PartialViews._AddressList, Model.Addresses)
+            </div>
+
+            <div class="loading-box" id="LoadingAddress">
+                <i class="fa fa-spinner fa-spin"></i>
+            </div>
+
+
+            <ul class="address-legend row" style="margin-bottom: 10px; margin-left: 10px">
+                
+                @if (User.IsInRole("Provider"))
+                {
+                    <li class="col-md-5">
+                        <i class="fa fa-file-text-o"></i> - @Resource.AddressType_InvoiceAddress
+                    </li>
+                }
+
+                <li class="col-md-5">
+                    <i class="fa fa-map-marker"></i> - @Resource.AddressType_PlaceOfBusinessAddress
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>

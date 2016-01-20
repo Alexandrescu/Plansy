@@ -1,0 +1,23 @@
+﻿@using MaProgramez.Resources
+@model MaProgramez.Website.ViewModels.DashboardViewModel
+
+@{
+    ViewBag.Title = "Plansy";
+}
+
+    @if (User.IsInRole("Admin") || User.IsInRole("Agent"))
+    {
+        @Html.Partial(MVC.Home.Views.PartialViews._AdminDashboard, Model)
+        @section Scripts {
+            @Scripts.Render("~/bundles/chart")
+            @Scripts.Render("~/bundles/admin-dashboard")
+        }
+    }
+    else if (User.IsInRole("Client"))
+    {
+        @Html.Partial(MVC.Home.Views.PartialViews._ClientDashboard, Model)
+    }
+    else if (User.IsInRole("Provider") || User.IsInRole("Employee"))
+    {
+        @Html.Partial(MVC.Home.Views.PartialViews._SupplierDashboard, Model)
+    }

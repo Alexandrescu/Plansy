@@ -1,0 +1,74 @@
+﻿@model System.Collections.Generic.List<MaProgramez.Repository.Entities.SlotOperation>
+
+@{
+    ViewBag.Title = Resource.SlotsList;
+    int slotId = ViewBag.SlotId;
+    string providerId = ViewBag.ProviderId;
+}
+
+<div class="clear"></div>
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            @Resource.Operations - @ViewBag.Name
+        </div><!-- /.col-lg-3 -->
+
+
+        <a href="@Url.Action(MVC.UsersAdmin.AddSlotOperation(slotId))" class="btn buton5danger float-right" style="margin-right:20px">@Resource.UserAdminView_AddOperation</a>
+        <a href="@Url.Action(MVC.UsersAdmin.SlotsList(providerId))" class="btn buton5success float-right" style="margin-right:20px">@Resource.Back</a>
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+
+        @if (Model != null && Model.Any())
+        {
+            var number = 1;
+
+            <div class="sablon">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>@Resource.Description</th>
+                            <th>@Resource.Category</th>
+                            <th>@Resource.DurationMinutes</th>
+                            <th>@Resource.Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var slotOperation in Model)
+                        {
+                            <tr>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.UsersAdmin.EditSlotOperation(slotOperation.Id))">@(number++)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.UsersAdmin.EditSlotOperation(slotOperation.Id))">@(slotOperation.Operation.Description)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.UsersAdmin.EditSlotOperation(slotOperation.Id))">@(slotOperation.Operation.Category.Name)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.UsersAdmin.EditSlotOperation(slotOperation.Id))">@(slotOperation.DurationMinutes)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.UsersAdmin.EditSlotOperation(slotOperation.Id))">@(slotOperation.Price)</td>
+                                <td>
+                                    <ul>
+                                        <li><a href="@Url.Action(MVC.UsersAdmin.EditSlotOperation(slotOperation.Id))"><i class="fa fa-edit" data-toggle="tooltip" data-placement="right" title=@Resource.Edit></i> </a></li>
+                                        <li><a href="@Url.Action(MVC.UsersAdmin.DeleteSlotOperation(slotOperation.Id))"><i class="fa fa-trash" data-toggle="tooltip" data-placement="right" title=@Resource.Remove></i> </a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                </div>
+                }
+                else
+                {
+                <p>@Resource.NoOperations</p>
+                }
+
+            </div>
+</section>

@@ -1,0 +1,9 @@
+﻿@using MaProgramez.Resources
+@if (ViewBag.AcceptCookies != null && !ViewBag.AcceptCookies)
+{
+    <p class="landingpage-cookie">
+        @(Resource.LandingPage_CookiesMessage).
+        <a href="@Url.Action(MVC.Account.Cookies())">@(Resource.LandingPage_ReadMore)...</a>
+        <i class="fa fa-times-circle accept-cookies"></i>
+    </p>
+}

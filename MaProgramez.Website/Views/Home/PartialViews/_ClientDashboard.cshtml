@@ -1,0 +1,196 @@
+﻿@using MaProgramez.Resources
+@using Microsoft.Ajax.Utilities
+@model MaProgramez.Website.ViewModels.DashboardViewModel
+
+@{
+    var untilDate = DateTime.Now.AddDays(-4).Date;
+    var culture = new System.Globalization.CultureInfo("en-US");
+}
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            <h4>@Resource.Dashboard</h4>
+        </div><!-- /.col-lg-3 -->
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+
+        @if (Model != null)
+            {
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="count-box active-request-count">
+                        @Model.TotalAppointmentsToday
+                    </div>
+                    <p class="count-box-text">
+                        @Resource.AppointmentsToday
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <div class="count-box">
+                        @Model.TotalAppointmentsThisWeek
+                    </div>
+                    <p class="count-box-text">
+                        @Resource.AppointmentsThisWeek
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <div class="count-box">
+                        @Model.FavouriteProviders
+                    </div>
+                    <p class="count-box-text">
+                        @Resource.FavouriteProviders
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="delimiter">
+                    <i class="fa fa-ticket"></i>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+
+                <div class="col-md-6">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            @Resource.LastFiveAppointments
+                        </div>
+
+                        <div class="panel-body">
+                            @if (Model.LastFiveSchedules.Any())
+                            {
+                                <div class="list-group">
+
+                                    @foreach (var s in Model.LastFiveSchedules)
+                                    {
+                                        <a href=@Url.Action(MVC.Schedule.ViewSchedule(s.Id)) class="list-group-item">
+                                            [@s.ScheduleDateTimeStart.ToString("dd-MM-yyyy") @s.ScheduleDateTimeStart.ToShortTimeString()]: <span style="font-weight: bolder">@s.Slot.Provider.CompanyDisplayName</span>
+                                        </a>
+                                    }
+
+                                </div>
+                            }
+                            else
+                            {
+                                <p style="font-style: italic">@Resource.NoPreviousAppointments!</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            @Resource.NextFiveAppointments
+                        </div>
+
+                        <div class="panel-body">
+                            @if (Model.NextFiveSchedules.Any())
+                            {
+                                <div class="list-group">
+
+                                    @foreach (var s in Model.NextFiveSchedules)
+                                    {
+                                        <a href=@Url.Action(MVC.Schedule.ViewSchedule(s.Id)) class="list-group-item">
+                                            [@s.ScheduleDateTimeStart.ToString("dd-MM-yyyy") @s.ScheduleDateTimeStart.ToShortTimeString()]: <span style="font-weight: bolder">@s.Slot.Provider.CompanyDisplayName</span>
+                                        </a>
+                                    }
+
+                                </div>
+                            }
+                            else
+                            {
+                                <p style="font-style: italic">@Resource.NoNextAppointments!</p>
+                            }
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            @Resource.FavouriteProviders
+                        </div>
+
+                        <div class="panel-body">
+                            @if (Model.FavouriteProvidersList !=null && Model.FavouriteProvidersList.Any())
+                            {
+                                <div class="list-group">
+
+                                    @foreach (var s in Model.FavouriteProvidersList)
+                                    {
+                                        if (s.FavoriteSlotId.HasValue)
+                                        {
+                                            <a href=@Url.Action(MVC.Schedule.Add(s.FavoriteUserId, s.FavoriteSlot.CategoryId)) class="list-group-item">
+                                                <span style="font-weight: bolder">@s.FavoriteSlot.Name</span> &nbsp;&nbsp; <i class="fa fa-phone"></i> @s.FavoriteSlot.Phone
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a href=@Url.Action(MVC.Schedule.Add(s.FavoriteUserId, 0)) class="list-group-item">
+                                                <span style="font-weight: bolder">@s.FavoriteUser.CompanyDisplayName</span> &nbsp; &nbsp; <i class="fa fa-phone"></i> @s.FavoriteUser.PhoneNumber
+                                            </a>
+                                        }
+                                    }
+
+                                </div>
+                            }
+                            else
+                            {
+                                <p style="font-style: italic">@Resource.NoFavouriteProviders!</p>
+                            }
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            @Resource.NewBusinessesInTown
+                        </div>
+
+                        <div class="panel-body">
+                            @if(Model.NewProvidersInTown != null && Model.NewProvidersInTown.Any())
+                            {
+                                <div class="list-group">
+
+                                    @foreach (var s in Model.NewProvidersInTown)
+                                    {
+                                        <a href=@Url.Action(MVC.Schedule.Add(s.Id, 0)) class="list-group-item">
+                                            <span style="font-weight: bolder">@s.CompanyDisplayName</span> &nbsp; &nbsp; <i class="fa fa-phone"></i> @s.PhoneNumber
+                                        </a>
+                                    }
+
+                                </div>
+                            }
+                            else
+                            {
+                                <p style="font-style: italic">@Resource.NoNewBusinessesInTown!</p>
+                            }
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        }
+
+    </div>
+</section>

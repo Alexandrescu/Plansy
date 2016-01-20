@@ -1,0 +1,128 @@
+﻿@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/bootstrap-select")
+@Scripts.Render("~/bundles/knob")
+@Scripts.Render("~/bundles/signalr")
+<script src="@Url.Content("~/signalr/hubs")" type="text/javascript"></script>
+@Scripts.Render("~/bundles/notification")
+@Scripts.Render("~/bundles/scripts")
+@Scripts.Render("~/bundles/googleAnalytics")
+@*@Scripts.Render("~/bundles/clickdesk")*@
+
+@Scripts.Render("~/Scripts/custom.js")
+@Scripts.Render("~/Scripts/modernizr.custom.js")
+
+@Scripts.Render("~/Scripts/masonry.pkgd.min.js")
+@Scripts.Render("~/Scripts/imagesloaded.js")
+@Scripts.Render("~/Scripts/classie.js")
+@Scripts.Render("~/Scripts/AnimOnScroll.js")
+
+@Scripts.Render("~/Scripts/tiltfx.js")
+
+<script type="text/javascript">
+    $(function () {
+        var hasBeenTrigged = false;
+        var mobile;
+        if (window.width <= 479) {
+            $(window).scroll(function () {
+
+
+                if ($(this).scrollTop() >= 40) { // if scroll is greater/equal then 100 and hasBeenTrigged is set to false.
+                    $(document).ready(function () {
+
+                        $('.navbar').css({
+                            "position": "fixed",
+                            "top": "0px",
+                            "width": "100%",
+                            "z-index": "999",
+
+
+                            "height": "60px",
+                            "padding-top": "0px",
+                            "border-radius": "0px",
+                            "padding-bottom": "15px"
+
+                        }),
+                        $('.over-bar').css({
+                            "display": "none"
+                        }),
+                        $('.navbar-header').css({
+                            "margin-top": "-5px"
+                        })
+                    });
+
+                }
+                else {
+                    $('.navbar').css({
+                        "position": "absolute", "box-shadow": "0px 0px 0px", "height": "110px",
+                    }),
+                         $('.over-bar').css({
+                             "display": "block"
+                         })
+                }
+
+                if ($(this).scrollTop() <= 250) { // if scroll is greater/equal then 100 and hasBeenTrigged is set to false.
+                    $(document).ready(function () {
+                        $('.slide .content').css({ "opacity": "1" });
+                        $('.prezentare .title h2').css({ "color": "inherit" })
+                    });
+                }
+            });//don't load these scripts 
+        }
+        else {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() >= 350) { // if scroll is greater/equal then 100 and hasBeenTrigged is set to false.
+                    $(document).ready(function () {
+                        $('.slide .content').css({ "opacity": "0" });
+                        $('#team-section').css({ "opacity": "1" });
+                        $('.prezentare .title h2').css({ "color": "#027e62" })
+
+                    });
+
+                }
+
+                if ($(this).scrollTop() >= 40) { // if scroll is greater/equal then 100 and hasBeenTrigged is set to false.
+                    $(document).ready(function () {
+
+                        $('.navbar').css({
+                            "position": "fixed",
+                            "top": "0px",
+                            "width": "100%",
+                            "z-index": "999",
+
+
+                            "height": "60px",
+                            "padding-top": "0px",
+                            "border-radius": "0px",
+                            "padding-bottom": "15px"
+
+                        }),
+                        $('.over-bar').css({
+                            "display": "none"
+                        }),
+                        $('.navbar-header').css({
+                            "margin-top": "-5px"
+                        })
+                    });
+
+                }
+                else {
+                    $('.navbar').css({
+                        "position": "absolute", "box-shadow": "0px 0px 0px", "height": "110px",
+                    }),
+                         $('.over-bar').css({
+                             "display": "block"
+                         })
+                }
+
+                if ($(this).scrollTop() <= 250) { // if scroll is greater/equal then 100 and hasBeenTrigged is set to false.
+                    $(document).ready(function () {
+                        $('.slide .content').css({ "opacity": "1" });
+                        $('.prezentare .title h2').css({ "color": "inherit" })
+                    });
+                }
+            });//load all scripts
+        }
+       
+    });
+</script>

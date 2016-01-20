@@ -1,0 +1,70 @@
+<ion-view>
+    <ion-nav-title>
+        {{Schedule.slot.provider.alias}}
+    </ion-nav-title>
+
+    <ion-nav-buttons side="right">
+        <a href="#/app/provider/{{Schedule.slot.provider.id}}" class="button button-clear">
+            <i class="ion-ios-information"></i>
+        </a>
+    </ion-nav-buttons>
+
+
+    <ion-content class="menu-dark-content">
+        <div class="list">
+            <div class="item">
+                <div class="ticket" style="margin-bottom: 0;">
+                    <div class="ticket-content">
+                        <h1>{{Schedule.slot.provider.alias}}</h1>
+                        <div class="row ticket-row">
+                            <div class="col">
+                                <p>{{'TICKET_DATE' | translate}}</p>
+                                <span>{{Schedule.scheduleDateTimeStart | date:'dd-MMM-yyyy' }}</span>
+                            </div>
+                            <div class="col">
+                                <p>{{'TICKET_TIME' | translate}}</p>
+                                <span>{{Schedule.hour}}:{{Schedule.minutes}}</span>
+                            </div>
+                        </div>
+                        <div class="row ticket-row item-text-wrap">
+                            <div class="col">
+                                <span ng-if="Schedule.slot.provider.programmingPerSlot">{{Schedule.slot.name}}</span>
+                                <p>{{ScheduleAddress}}</p>
+                            </div>
+                        </div>
+                        <div class="ticket-row">
+                            <div class="list">
+                                <div class="item item-icon-right" ng-repeat="operation in Schedule.operationsForSchedule">
+                                    <div class="row">
+                                        <div class="col col-67" style="overflow: hidden;">{{operation.description}}</div>
+                                        <div class="col col">{{operation.price}} Euro</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ticket-row">
+                            <div class="col">
+                                <p>{{'TOTAL' | translate}}</p>
+                            </div>
+                            <div class="col">
+                                <span>{{TotaPrice}} Euro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" ng-if="Schedule.canBeCanceled">
+                <button class="button button-block button-assertive" ng-click="showConfirm()">
+                    {{'CANCEL_APPOINTMENT' | translate}}
+                </button>
+            </div>
+            <div class="item" ng-if="Schedule.canceled">
+                <div class="card">
+                    <div class="item item-text-wrap assertive item-icon-left">
+                        <i class="icon ion-android-warning"></i> {{'CANCEL_SCHEDULE_MESSAGE' | translate}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

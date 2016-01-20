@@ -1,0 +1,47 @@
+﻿@using MaProgramez.Resources
+@using MaProgramez.Website.Models
+@model RegisterViewModel
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "simform", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="sminputs">
+        <div class="input string optional">
+            <label class="string optional" for="user-pw">@Resource.User_FirstName *</label>
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "string optional", maxlength = "255", id = "user-fn", size = "50", placeholder = Resource.User_FirstName })
+        </div>
+        <div class="input string optional">
+            <label class="string optional" for="user-pw-repeat">@Resource.User_Name *</label>
+            @Html.TextBoxFor(m => m.LastName, new { @class = "string optional", maxlength = "255", id = "user-ln", size = "50", placeholder = Resource.User_Name })
+        </div>
+    </div>
+
+    <div class="sminputs">
+        <div class="input string optional">
+            <label class="string optional" for="user-name">@Resource.Email *</label>
+            @Html.TextBoxFor(m => m.Email, new { @class = "string optional", maxlength = "255", id = "user-email", type = "email", size = "50", placeholder = Resource.Email })
+        </div>
+        <div class="input string optional">
+            <label class="string optional" for="user-name">@Resource.PhoneNumber *</label>
+            @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "string optional", maxlength = "255", id = "user-pn", size = "50", placeholder = Resource.PhoneNumber })
+        </div>
+
+    </div>
+    <div class="sminputs">
+        <div class="input string optional">
+            <label class="string optional" for="user-pw">@Resource.Password *</label>
+            @Html.PasswordFor(m => m.Password, new { @class = "string optional", type = "password", maxlength = "255", id = "user-pw", size = "50", placeholder = Resource.Password })
+        </div>
+        <div class="input string optional">
+            <label class="string optional" for="user-pw-repeat">@Resource.User_Confirm_Password *</label>
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "string optional", type = "password", maxlength = "255", id = "user-pw", size = "50", placeholder = Resource.User_Confirm_Password })
+        </div>
+    </div>
+    <div class="simform__actions">
+        <input type="submit" class="sumbit" name="commit" value="@Resource.LandingPage_SignUp.ToUpper()" style="margin-top:25px;"/>
+        <span class="simform__actions-sidetext">@Resource.Terms_Text <br /><a class="special" href="@Url.Action(MVC.Account.Terms())" target="_blank" role="link">@Resource.Terms_Link</a></span>
+    </div>
+    <div class="up-ticket2 login-edit">  &nbsp;</div>
+}

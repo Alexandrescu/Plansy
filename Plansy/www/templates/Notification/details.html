@@ -1,0 +1,22 @@
+<ion-view>
+    <ion-nav-title>
+        {{'NOTIFICATIONS' | translate}}
+    </ion-nav-title>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="menu-dark-content">
+        <div class="list">
+            <div class="item item-text-wrap">
+                {{Notification.text}}
+            </div>
+            <div class="item">
+                <div class="button button-block button-assertive" ng-click="DeleteNotification()">
+                    {{'DELETE_NOTIFICATION' | translate}}
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

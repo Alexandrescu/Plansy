@@ -1,0 +1,1656 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>Accepta</value>
+  </data>
+  <data name="AcceptAllPendingSchedules" xml:space="preserve">
+    <value>Accepta toate programarile de mai sus</value>
+  </data>
+  <data name="AcceptTermsMessage" xml:space="preserve">
+    <value>Sunt de acord cu termenii si conditiile de confidentialitate</value>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>Activare</value>
+  </data>
+  <data name="ActivateAccountConfirmation_Body" xml:space="preserve">
+    <value>Felicitari ! Contul tau a fost activat cu succes.</value>
+  </data>
+  <data name="ActivateAccountConfirmation_Title" xml:space="preserve">
+    <value>Cont activat</value>
+  </data>
+  <data name="ActivateAccount_Title" xml:space="preserve">
+    <value>Activare cont</value>
+  </data>
+  <data name="ActivatedAccount" xml:space="preserve">
+    <value>Cont activat</value>
+  </data>
+  <data name="ActivationEmail_Content" xml:space="preserve">
+    <value>Accesati link-ul pentru a va activa contul</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Adauga</value>
+  </data>
+  <data name="AddNewAddress" xml:space="preserve">
+    <value>Adaugati o adresa noua</value>
+  </data>
+  <data name="AddNewAppointment" xml:space="preserve">
+    <value>Adauga programare</value>
+  </data>
+  <data name="AddNewOperation" xml:space="preserve">
+    <value>Adauga operatiune noua</value>
+  </data>
+  <data name="AddNewUser" xml:space="preserve">
+    <value>Adauga utilizator nou</value>
+  </data>
+  <data name="AddPhoneNumber" xml:space="preserve">
+    <value>Adauga numar de telefon</value>
+  </data>
+  <data name="AddPhoneSuccess" xml:space="preserve">
+    <value>Numarul de telefon a fost adaugat cu succes</value>
+  </data>
+  <data name="AddressType_Both" xml:space="preserve">
+    <value>Adresa de facturare si punct de lucru</value>
+  </data>
+  <data name="AddressType_InvoiceAddress" xml:space="preserve">
+    <value>Adresa de facturare</value>
+  </data>
+  <data name="AddressType_PlaceOfBusinessAddress" xml:space="preserve">
+    <value>Adresa punct de lucru</value>
+  </data>
+  <data name="Address_DeleteMessage" xml:space="preserve">
+    <value>Doriti sa stergeti aceasta adresa?</value>
+  </data>
+  <data name="Agent" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Alias" xml:space="preserve">
+    <value>Alias</value>
+  </data>
+  <data name="AppointmentsThisWeek" xml:space="preserve">
+    <value>Programari in saptamana curenta</value>
+  </data>
+  <data name="AppointmentsToday" xml:space="preserve">
+    <value>Programari azi</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Inapoi</value>
+  </data>
+  <data name="Buyer" xml:space="preserve">
+    <value>Cumparator</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Renunta</value>
+  </data>
+  <data name="CancelledByProvider" xml:space="preserve">
+    <value>Anulata de prestator</value>
+  </data>
+  <data name="CancelledByUser" xml:space="preserve">
+    <value>Anulata de client</value>
+  </data>
+  <data name="CancelSchedule" xml:space="preserve">
+    <value>Anuleaza programarea</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Categorie</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Modifica</value>
+  </data>
+  <data name="ChangeLogo" xml:space="preserve">
+    <value>Schimba logo</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Schimba parola</value>
+  </data>
+  <data name="ChangePasswordSuccess" xml:space="preserve">
+    <value>Parola a fost schimbata cu succes</value>
+  </data>
+  <data name="Client" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Cod</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Denumire societate</value>
+  </data>
+  <data name="ConfirmEmailView_Content" xml:space="preserve">
+    <value>Contul a fost validat. Iti multumim. Logheaza-te aici: </value>
+  </data>
+  <data name="ConfirmEmailView_Title" xml:space="preserve">
+    <value>Confirmare cont</value>
+  </data>
+  <data name="ContactMessageConfirm" xml:space="preserve">
+    <value>Mesajul a fost trimis. In curand veti fi contactat de un reprezentant Ma Programez.net</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continua</value>
+  </data>
+  <data name="ContractDate" xml:space="preserve">
+    <value>Data semnare contract</value>
+  </data>
+  <data name="ContractNo" xml:space="preserve">
+    <value>Nr. contract</value>
+  </data>
+  <data name="ContractNumber" xml:space="preserve">
+    <value>Numar contract</value>
+  </data>
+  <data name="Contracts" xml:space="preserve">
+    <value>Contracte</value>
+  </data>
+  <data name="Cookies" xml:space="preserve">
+    <value>Cookies</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Copiaza</value>
+  </data>
+  <data name="County" xml:space="preserve">
+    <value>Judet</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>Data crearii</value>
+  </data>
+  <data name="CreateNewRole" xml:space="preserve">
+    <value>Creaza role nou</value>
+  </data>
+  <data name="CreateSchedule" xml:space="preserve">
+    <value>Fa-ti o programare!</value>
+  </data>
+  <data name="CreateUserView_Title" xml:space="preserve">
+    <value>Creaza un cont nou</value>
+  </data>
+  <data name="CreateWithSocial" xml:space="preserve">
+    <value>Creaza-ti cont sau logheaza-te cu</value>
+  </data>
+  <data name="CurrentNumber" xml:space="preserve">
+    <value>Nr. crt.</value>
+  </data>
+  <data name="Current_Password" xml:space="preserve">
+    <value>Parola actuala</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Pagina principala</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Date_Error_Message" xml:space="preserve">
+    <value>Format data invalid. Format corect: zz.ll.aaaa</value>
+  </data>
+  <data name="DayOfWeek" xml:space="preserve">
+    <value>Ziua saptamanii</value>
+  </data>
+  <data name="DefaultNonWorkingDays" xml:space="preserve">
+    <value>Zile libere implicite</value>
+  </data>
+  <data name="DefaultOperations" xml:space="preserve">
+    <value>Operatiuni implicite</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Sterge</value>
+  </data>
+  <data name="DeleteAll" xml:space="preserve">
+    <value>Sterge toate notificarile</value>
+  </data>
+  <data name="DeleteSchedule" xml:space="preserve">
+    <value>Sterge programarea</value>
+  </data>
+  <data name="Deny" xml:space="preserve">
+    <value>Anuleaza</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descriere</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detalii</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Dezactiveaza</value>
+  </data>
+  <data name="DurationMinutes" xml:space="preserve">
+    <value>Durata (minute)</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editeaza</value>
+  </data>
+  <data name="EditRole" xml:space="preserve">
+    <value>Editeaza rolul</value>
+  </data>
+  <data name="EditSlot" xml:space="preserve">
+    <value>Editeaza slotul</value>
+  </data>
+  <data name="EditUserView_Title" xml:space="preserve">
+    <value>Modificare detalii utilizator</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailConfirmationView_Content" xml:space="preserve">
+    <value>Un email cu linkul de confirmare a fost trimis pe adresa ta de email. Te rugam sa confirmi contul urmand instructiunile din email.</value>
+  </data>
+  <data name="EmailConfirmation_Body" xml:space="preserve">
+    <value>Prin continuarea activarii contului de maprogramez.net sunteti de acord cu &lt;a href="https://maprogramez.net/ro/Account/Terms"&gt;termenii si conditiile de utilizare.&lt;/a&gt;Pentru confirmarea contului da click pe link:</value>
+  </data>
+  <data name="EmailConfirmation_Subject" xml:space="preserve">
+    <value>MaProgramez.net - Confirmare cont </value>
+  </data>
+  <data name="EmailConfirmation_ViewTitle" xml:space="preserve">
+    <value>Confirmare email</value>
+  </data>
+  <data name="EmailCredentials_Body" xml:space="preserve">
+    <value>Contul dumneavoastra a fost creat. Pentru a il activa, va rugam sa accesati adresa https://www.MaProgramez.net/ro/Account/Login si sa completati datele de mai jos. Parola poate fi schimbata oricand din setari cont.</value>
+  </data>
+  <data name="EmailCredentials_Subject" xml:space="preserve">
+    <value>MaProgramez.net - Date de autentificare</value>
+  </data>
+  <data name="Emails" xml:space="preserve">
+    <value>Email-uri</value>
+  </data>
+  <data name="Email_ErrorMessage" xml:space="preserve">
+    <value>Adresa de email incorecta</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>Activeaza</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Pana in </value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>La ora</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Eroare</value>
+  </data>
+  <data name="Error404_Content" xml:space="preserve">
+    <value>Nu exista pagina:</value>
+  </data>
+  <data name="Error404_GoBackText" xml:space="preserve">
+    <value>Mergeti inapoi la:</value>
+  </data>
+  <data name="Error404_Title" xml:space="preserve">
+    <value>Hopa! </value>
+  </data>
+  <data name="ErrorView_Content" xml:space="preserve">
+    <value>HOPA... A aparut o eroare neasteptata. Va rugam sa ne contactati pentru detalii la contact@plansy.nl</value>
+  </data>
+  <data name="ErrorView_Title" xml:space="preserve">
+    <value>Eroare</value>
+  </data>
+  <data name="Error_ContainsEmailAddress" xml:space="preserve">
+    <value>Este interzisa transmiterea adresei de e-mail.</value>
+  </data>
+  <data name="Error_ContainsPhoneNo" xml:space="preserve">
+    <value>Este interzisa transmiterea numarului de telefon.</value>
+  </data>
+  <data name="Error_Description" xml:space="preserve">
+    <value>Este obligatoriu sa adaugati o descriere!</value>
+  </data>
+  <data name="Error_Height" xml:space="preserve">
+    <value>Inaltime invalida!</value>
+  </data>
+  <data name="Error_Length" xml:space="preserve">
+    <value>Lungime invalida!</value>
+  </data>
+  <data name="Error_MandatoryFields" xml:space="preserve">
+    <value>Va rugam completati corect campurile obligatorii!</value>
+  </data>
+  <data name="Error_MinimumOneAddress" xml:space="preserve">
+    <value>Trebuie completata cel putin o adresa!</value>
+  </data>
+  <data name="Error_Price" xml:space="preserve">
+    <value>Pret invalid!</value>
+  </data>
+  <data name="Error_Schedule1" xml:space="preserve">
+    <value>Nu puteti avea doua programari in acelasi timp!</value>
+  </data>
+  <data name="Error_Schedule2" xml:space="preserve">
+    <value>Nu puteti avea doua programari la acelasi prestator in aceeasi zi!</value>
+  </data>
+  <data name="Error_TimeFormat" xml:space="preserve">
+    <value>Orele de inceput si sfarsit de program trebuie sa fie de forma hh:mm</value>
+  </data>
+  <data name="ExternalLogins" xml:space="preserve">
+    <value>Conturi externe (ex: Google, Facebook)</value>
+  </data>
+  <data name="ExternalLogin_AssociateYour" xml:space="preserve">
+    <value>Asociaza-ti contul de</value>
+  </data>
+  <data name="ExternalLogin_FailureText" xml:space="preserve">
+    <value>Eroare cont extern</value>
+  </data>
+  <data name="ExternalLogin_FailureTitle" xml:space="preserve">
+    <value>Eroare logare cu cont extern</value>
+  </data>
+  <data name="ExternalLogin_SuccessMessage1" xml:space="preserve">
+    <value>V-ati autentificat cu succes  folosind</value>
+  </data>
+  <data name="ExternalLogin_SuccessMessage2" xml:space="preserve">
+    <value>Introduceti mai jos adresa dvs de email si apasati butonul "Inregistreaza-te" pentru a va loga.</value>
+  </data>
+  <data name="FailedToVerifyCode" xml:space="preserve">
+    <value>Codul nu a putut fi verificat</value>
+  </data>
+  <data name="FavouriteProviders" xml:space="preserve">
+    <value>Prestatori favoriti</value>
+  </data>
+  <data name="FinalizePaymentSuccess_Message" xml:space="preserve">
+    <value>Plata cu cardul a fost efectuata cu succes. Va multumim.</value>
+  </data>
+  <data name="FinalizePaymentSuccess_Title" xml:space="preserve">
+    <value>Plata cu cardul acceptata</value>
+  </data>
+  <data name="ForgotPasswordConfirmationView_Content" xml:space="preserve">
+    <value>Verifica-ti casuta de email pentru resetarea parolei.</value>
+  </data>
+  <data name="ForgotPasswordConfirmationView_Title" xml:space="preserve">
+    <value>Confirmare recuperare parola</value>
+  </data>
+  <data name="ForgotPasswordEmail_Content" xml:space="preserve">
+    <value>Accesati link-ul pentru resetarea parolei</value>
+  </data>
+  <data name="ForgotPasswordView_ButonText" xml:space="preserve">
+    <value>Resetare parola</value>
+  </data>
+  <data name="ForgotPasswordView_Title" xml:space="preserve">
+    <value>Mi-am uitat parola...</value>
+  </data>
+  <data name="ForgotPasswordView_Title2" xml:space="preserve">
+    <value>Introdu adresa de email</value>
+  </data>
+  <data name="ForgotPassword_Message" xml:space="preserve">
+    <value>Veti primi prin e-mail link-ul de resetare parola</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>Ora</value>
+  </data>
+  <data name="InCompleteAccount" xml:space="preserve">
+    <value>Contul tau nu este complet</value>
+  </data>
+  <data name="IncompleteAccountMessage" xml:space="preserve">
+    <value>Pentru a face o programare este nevoia sa aveti un numarul de telefon atasat la contul dumneavoastra</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>Parola incorecta.</value>
+  </data>
+  <data name="InvalidValidationCode" xml:space="preserve">
+    <value>Cod de validare incorect</value>
+  </data>
+  <data name="Invalid_Phone_Number" xml:space="preserve">
+    <value>Numar de telefon incorect</value>
+  </data>
+  <data name="Invoice" xml:space="preserve">
+    <value>Factura fiscala</value>
+  </data>
+  <data name="InvoiceAddressDisclaimer" xml:space="preserve">
+    <value>* Pentru a va modifica adresa de facturare va rugam sa accesati sectiunea "Detalii personale" din setarile contului.</value>
+  </data>
+  <data name="InvoiceAmountIncludingVat" xml:space="preserve">
+    <value>Total cu TVA</value>
+  </data>
+  <data name="InvoiceAmountWithoutVat" xml:space="preserve">
+    <value>Total fara TVA</value>
+  </data>
+  <data name="InvoiceDate" xml:space="preserve">
+    <value>Data factura</value>
+  </data>
+  <data name="InvoiceDelegateIdCardDetails" xml:space="preserve">
+    <value>B.I/C.I</value>
+  </data>
+  <data name="InvoiceDelegateName" xml:space="preserve">
+    <value>Numele delegatului</value>
+  </data>
+  <data name="InvoiceDueDate" xml:space="preserve">
+    <value>Scadenta la data</value>
+  </data>
+  <data name="InvoiceNumber" xml:space="preserve">
+    <value>Numar factura</value>
+  </data>
+  <data name="Invoices" xml:space="preserve">
+    <value>Facturi</value>
+  </data>
+  <data name="InvoiceSeries" xml:space="preserve">
+    <value>Serie factura</value>
+  </data>
+  <data name="InvoicesList" xml:space="preserve">
+    <value>Lista facturi fiscale</value>
+  </data>
+  <data name="InvoicesListView_Title" xml:space="preserve">
+    <value>Facturile mele</value>
+  </data>
+  <data name="InvoiceStateId" xml:space="preserve">
+    <value>Id de stare</value>
+  </data>
+  <data name="InvoiceStateNotPaid" xml:space="preserve">
+    <value>Neachitat</value>
+  </data>
+  <data name="InvoiceStatePaid" xml:space="preserve">
+    <value>Achitat</value>
+  </data>
+  <data name="InvoiceStateTitle" xml:space="preserve">
+    <value>Stare factura</value>
+  </data>
+  <data name="InvoiceTransportationVehicleDetails" xml:space="preserve">
+    <value>Mijloc de transport</value>
+  </data>
+  <data name="InvoiceType" xml:space="preserve">
+    <value>Tip factura</value>
+  </data>
+  <data name="InvoiceUser" xml:space="preserve">
+    <value>Furnizor</value>
+  </data>
+  <data name="InvoiceVat" xml:space="preserve">
+    <value>TVA</value>
+  </data>
+  <data name="Invoice_Add" xml:space="preserve">
+    <value>Adauga factura</value>
+  </data>
+  <data name="Invoice_AddLine" xml:space="preserve">
+    <value>Adauga linie</value>
+  </data>
+  <data name="Invoice_AddPayment" xml:space="preserve">
+    <value>Adauga plata</value>
+  </data>
+  <data name="Invoice_Download" xml:space="preserve">
+    <value>Descarca factura</value>
+  </data>
+  <data name="Invoice_Edit" xml:space="preserve">
+    <value>Editeaza factura</value>
+  </data>
+  <data name="Invoice_EditLine" xml:space="preserve">
+    <value>Modifica linia</value>
+  </data>
+  <data name="Invoice_EditPayment" xml:space="preserve">
+    <value>Modifica plata</value>
+  </data>
+  <data name="Invoice_Lines" xml:space="preserve">
+    <value>Liniile factura</value>
+  </data>
+  <data name="Invoice_PaymentAmount" xml:space="preserve">
+    <value>Suma</value>
+  </data>
+  <data name="Invoice_PaymentDate" xml:space="preserve">
+    <value>Data platii</value>
+  </data>
+  <data name="Invoice_PaymentDetails" xml:space="preserve">
+    <value>Detalii</value>
+  </data>
+  <data name="Invoice_PreviousPayments" xml:space="preserve">
+    <value>Plati anterioare - partiale - ale acestei facturi</value>
+  </data>
+  <data name="Invoice_VatRate" xml:space="preserve">
+    <value>Cota TVA</value>
+  </data>
+  <data name="IsAlreadyTaken" xml:space="preserve">
+    <value> e deja luat.</value>
+  </data>
+  <data name="LandingPage_AccountSupplierText" xml:space="preserve">
+    <value>Vrei sa iti organizezi mai bine timpul sau vrei sa organizezi mai bine timpul angajatilor tai?</value>
+  </data>
+  <data name="LandingPage_AccountSupplierText2" xml:space="preserve">
+    <value>Intra in contul tau sau contacteaza-ne pentru a-ti configura in timpul cel mai scurt unul!</value>
+  </data>
+  <data name="LandingPage_AreYouAClient" xml:space="preserve">
+    <value>Esti client si te-ai plictisit de stat la coada?</value>
+  </data>
+  <data name="LandingPage_AreYouAClientText" xml:space="preserve">
+    <value>Doresti sa te programezi rapid si simplu prin intermediul acestei platforme? </value>
+  </data>
+  <data name="LandingPage_AreYouAClientText2" xml:space="preserve">
+    <value>Creaza-ti un cont nou sau intra in contul tau si gaseste prestatorul cel mai potrivit pentru serviciul de care ai nevoie!</value>
+  </data>
+  <data name="LandingPage_AreYouSupplier" xml:space="preserve">
+    <value>Esti prestator si vrei sa iti fidelizezi clientii?</value>
+  </data>
+  <data name="LandingPage_AskUs" xml:space="preserve">
+    <value>Intreaba-ne</value>
+  </data>
+  <data name="LandingPage_AskUs_Text1" xml:space="preserve">
+    <value>Daca ai intrebari sau nu esti lamurit de cum functioneaza platforma Ma Programez.net nu ezita sa ne contactezi la adresa de email</value>
+  </data>
+  <data name="LandingPage_AskUs_Text2" xml:space="preserve">
+    <value>Noi iti vom raspunde in cel mai scurt timp</value>
+  </data>
+  <data name="LandingPage_ContactTitle" xml:space="preserve">
+    <value>Si iti vom crea un cont personalizat.</value>
+  </data>
+  <data name="LandingPage_ContactUs" xml:space="preserve">
+    <value>Contacteaza-ne</value>
+  </data>
+  <data name="LandingPage_CookiesMessage" xml:space="preserve">
+    <value>Acest site foloseste cookies. Prin navigarea pe acest site, va exprimati acordul asupra folosirii cookie-urilor</value>
+  </data>
+  <data name="LandingPage_Mobile1" xml:space="preserve">
+    <value>Aveti un smartphone ce ruleaza iOS sau Android la indemana</value>
+  </data>
+  <data name="LandingPage_Mobile2" xml:space="preserve">
+    <value>Descarcati aplicatia</value>
+  </data>
+  <data name="LandingPage_Mobile3" xml:space="preserve">
+    <value>si creati-va un cont de client pentru a va putea programa cu usurinta de oriunde si oricand</value>
+  </data>
+  <data name="LandingPage_ReadMore" xml:space="preserve">
+    <value>Citeste mai mult</value>
+  </data>
+  <data name="LandingPage_RequestOfferInfo" xml:space="preserve">
+    <value>Statistica este realizata astazi, in timp real</value>
+  </data>
+  <data name="LandingPage_SignIn" xml:space="preserve">
+    <value>Intra in cont</value>
+  </data>
+  <data name="LandingPage_SignUp" xml:space="preserve">
+    <value>Creaza-ti cont</value>
+  </data>
+  <data name="LandingPage_Step1" xml:space="preserve">
+    <value>Alege categoria serviciului pe care il doresti (auto, medical, sport, beauty, etc.)</value>
+  </data>
+  <data name="LandingPage_Step2" xml:space="preserve">
+    <value>Selecteaza prestatorul pe care il preferi</value>
+  </data>
+  <data name="LandingPage_Step3" xml:space="preserve">
+    <value>Alege serviciile de care ai nevoie precum si data si ora la care doresti sa rezervi</value>
+  </data>
+  <data name="LandingPage_Step4" xml:space="preserve">
+    <value>Gaseste usor adresa unde trebuie sa ajungi prin intermediul navigatiei</value>
+  </data>
+  <data name="LandingPage_StepsSubTitle" xml:space="preserve">
+    <value>Ma Programez . net iti optimizeaza cea mai importanta resursa</value>
+  </data>
+  <data name="LandingPage_StepsSubTitle2" xml:space="preserve">
+    <value>punandu-ti la dispozitie prestatori in functie de disponibilitatea ta</value>
+  </data>
+  <data name="LandingPage_StepsTitle" xml:space="preserve">
+    <value>Te despart doar 4 pasi simpli de o programare la serviciul de care ai nevoie</value>
+  </data>
+  <data name="LandingPage_SubTitle" xml:space="preserve">
+    <value>La noi nu stai la coada...</value>
+  </data>
+  <data name="LandingPage_Title" xml:space="preserve">
+    <value>Ma Programez pe Net</value>
+  </data>
+  <data name="LandingPage_Why1" xml:space="preserve">
+    <value>Este un sistem inovativ de management al programarilor si al clientilor serviciului dumneavoastra, rapid si simplu de utilizat</value>
+  </data>
+  <data name="LandingPage_Why2" xml:space="preserve">
+    <value>Ajuta la economisirea timpului si la o mai buna organizare a programarilor</value>
+  </data>
+  <data name="LandingPage_Why3" xml:space="preserve">
+    <value>Ofera o mobilitate foarte mare putand fi accesat de oriunde si oricand prin intermediul aplicatiei web si a aplicatiilor mobile (iOS si Android)</value>
+  </data>
+  <data name="LandingPage_Why4" xml:space="preserve">
+    <value>Notifica in locul dumneavoastra pacientii pentru ca acestia sa nu rateze programarile facute</value>
+  </data>
+  <data name="LandingPage_Why5" xml:space="preserve">
+    <value>Pacientii pot sa vada disponilitatea dumneavoastra, drept pentru care nu veti avea programari suprapuse sau in afara programului</value>
+  </data>
+  <data name="LandingPage_Why6" xml:space="preserve">
+    <value>Este un excelent instrument de marketing si de fidelizare a clientilor</value>
+  </data>
+  <data name="LandingPage_WhyTitle" xml:space="preserve">
+    <value>De ce sa folositi Ma Programez . net?</value>
+  </data>
+  <data name="LastFiveAppointments" xml:space="preserve">
+    <value>Ultimele 5 programari</value>
+  </data>
+  <data name="Lines" xml:space="preserve">
+    <value>Linii</value>
+  </data>
+  <data name="LockedOutView_Content" xml:space="preserve">
+    <value>Acest cont a fost blocat. Va rugam incercati mai tarziu.</value>
+  </data>
+  <data name="LockedOutView_Title" xml:space="preserve">
+    <value>Cont blocat</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Conectare</value>
+  </data>
+  <data name="Login_ExternalLoginHint" xml:space="preserve">
+    <value>Conecteaza-te cu</value>
+  </data>
+  <data name="Login_ExternalLoginTitle" xml:space="preserve">
+    <value>Conecteaza-te cu contul tau de</value>
+  </data>
+  <data name="Login_ForgotPassword" xml:space="preserve">
+    <value>Ti-ai uitat parola?</value>
+  </data>
+  <data name="Login_InvalidLoginAttempt" xml:space="preserve">
+    <value>Conectare nereusita</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Configureaza</value>
+  </data>
+  <data name="ManageLoginsView_AddExternalLogin" xml:space="preserve">
+    <value>Adauga un cont extern nou</value>
+  </data>
+  <data name="ManageLoginsView_ConnectUsing" xml:space="preserve">
+    <value>Conecteaza-te folosind </value>
+  </data>
+  <data name="ManageLoginsView_RegisteredAccounts" xml:space="preserve">
+    <value>Conturi inregistrate</value>
+  </data>
+  <data name="ManageLoginsView_RemoveButtonHint" xml:space="preserve">
+    <value>Nu mai vreau sa ma logez pe site cu </value>
+  </data>
+  <data name="ManageLoginsView_Title" xml:space="preserve">
+    <value>Configureaza conturile externe de conectare (ex: conectare cu Google, Facebook)</value>
+  </data>
+  <data name="ManageView_ChangeYourPassword" xml:space="preserve">
+    <value>Schimba-ti parola</value>
+  </data>
+  <data name="ManageView_PickAPassword" xml:space="preserve">
+    <value>Seteaza o parola</value>
+  </data>
+  <data name="ManageView_Title" xml:space="preserve">
+    <value>Contul meu</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Meniu</value>
+  </data>
+  <data name="Menu_Account" xml:space="preserve">
+    <value>Cont</value>
+  </data>
+  <data name="Menu_LogOff" xml:space="preserve">
+    <value>Iesire</value>
+  </data>
+  <data name="Menu_RolesAdmin" xml:space="preserve">
+    <value>Administrare Roluri</value>
+  </data>
+  <data name="Menu_UsersAdmin" xml:space="preserve">
+    <value>Administrare Utilizatori</value>
+  </data>
+  <data name="MessageFromMaProgramez" xml:space="preserve">
+    <value>Mesaj de la MaProgramez.net</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Mai mult</value>
+  </data>
+  <data name="MyClients" xml:space="preserve">
+    <value>Clientii mei</value>
+  </data>
+  <data name="MyInvoices" xml:space="preserve">
+    <value>Facturile mele</value>
+  </data>
+  <data name="MySchedules" xml:space="preserve">
+    <value>Programarile mele</value>
+  </data>
+  <data name="New_Password" xml:space="preserve">
+    <value>Parola noua</value>
+  </data>
+  <data name="NextDays" xml:space="preserve">
+    <value>Urmatoarele zile</value>
+  </data>
+  <data name="NextFiveAppointments" xml:space="preserve">
+    <value>Urmatoarele 5 programari</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nu</value>
+  </data>
+  <data name="NoAccount" xml:space="preserve">
+    <value>Nu ai cont MaProgramez.net ?</value>
+  </data>
+  <data name="NoContracts" xml:space="preserve">
+    <value>Nu exista contracte disponibile</value>
+  </data>
+  <data name="NoInvoices" xml:space="preserve">
+    <value>Nu exista facturi</value>
+  </data>
+  <data name="NoNextAppointments" xml:space="preserve">
+    <value>Nu exista programari viitoare</value>
+  </data>
+  <data name="NoNotifications" xml:space="preserve">
+    <value>Nu exista notificari!</value>
+  </data>
+  <data name="NonWorkingDays" xml:space="preserve">
+    <value>Zile nelucratoare</value>
+  </data>
+  <data name="NoOperations" xml:space="preserve">
+    <value>Nu exista operatiuni</value>
+  </data>
+  <data name="NoPayments" xml:space="preserve">
+    <value>Nu exista plati efectuate</value>
+  </data>
+  <data name="NoPendingSchedules" xml:space="preserve">
+    <value>Nu exista programari noi!</value>
+  </data>
+  <data name="NoPreviousAppointments" xml:space="preserve">
+    <value>Nu exista programari anterioare</value>
+  </data>
+  <data name="NoReply" xml:space="preserve">
+    <value>Va rugam nu raspundeti la acest email</value>
+  </data>
+  <data name="NoResults" xml:space="preserve">
+    <value>Nu exista rezultate</value>
+  </data>
+  <data name="NoResultsForSelectedCity" xml:space="preserve">
+    <value>Ne pare rau. Nu exista inca prestatori in orasul selectat de dumneavoastra.</value>
+  </data>
+  <data name="NoSchedulesOnSelectedDay" xml:space="preserve">
+    <value>Nu aveti nicio programare in ziua selectata</value>
+  </data>
+  <data name="NoSlots" xml:space="preserve">
+    <value>Nu exista sloturi aferente acestui utilizator</value>
+  </data>
+  <data name="NotificationList" xml:space="preserve">
+    <value>Lista de notificari</value>
+  </data>
+  <data name="NotificationText_Advertisment" xml:space="preserve">
+    <value>Ai o oferta promotionala din partea Ma Programez.net!</value>
+  </data>
+  <data name="NotificationText_SystemAlert" xml:space="preserve">
+    <value>Atentie! Ai un mesaj important de la sistem!</value>
+  </data>
+  <data name="NotificationType" xml:space="preserve">
+    <value>Tipul notificarii</value>
+  </data>
+  <data name="NotificationType_Advertisement" xml:space="preserve">
+    <value>Mesaj publicitar</value>
+  </data>
+  <data name="NotificationType_Cancelation" xml:space="preserve">
+    <value>Programare anulata</value>
+  </data>
+  <data name="NotificationType_Confirmation" xml:space="preserve">
+    <value>Programare confirmata</value>
+  </data>
+  <data name="NotificationType_NewSchedule" xml:space="preserve">
+    <value>Programare noua</value>
+  </data>
+  <data name="NotificationType_Other" xml:space="preserve">
+    <value>Alte notificari</value>
+  </data>
+  <data name="NotificationType_Reminder" xml:space="preserve">
+    <value>Memento</value>
+  </data>
+  <data name="NotificationType_ReSchedule" xml:space="preserve">
+    <value>Reprogramare</value>
+  </data>
+  <data name="NotificationType_SystemAlert" xml:space="preserve">
+    <value>Alerta sistem</value>
+  </data>
+  <data name="Observations" xml:space="preserve">
+    <value>Observatii suplimentare</value>
+  </data>
+  <data name="Offer_ErrorMessage" xml:space="preserve">
+    <value>Ne cerem scuze dar pagina pe care o cauti nu exista</value>
+  </data>
+  <data name="Offer_ErrorTitle" xml:space="preserve">
+    <value>Eroare</value>
+  </data>
+  <data name="Operation" xml:space="preserve">
+    <value>Serviciul</value>
+  </data>
+  <data name="Operations" xml:space="preserve">
+    <value>Operatiuni</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Parola</value>
+  </data>
+  <data name="PasswordDigit" xml:space="preserve">
+    <value>Parola trebuie sa contina cel putin o cifra.</value>
+  </data>
+  <data name="PasswordLowerCase" xml:space="preserve">
+    <value>Parola trebuie sa contina cel putin o litera mica.</value>
+  </data>
+  <data name="PasswordNonLetterOrDigit" xml:space="preserve">
+    <value>Parola trebuie sa contina cel putin o cifra sau un caracter special.</value>
+  </data>
+  <data name="PasswordUpperCase" xml:space="preserve">
+    <value>Parola trebuie sa contina cel putin o litera mare.</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>Metoda de plata</value>
+  </data>
+  <data name="Payments" xml:space="preserve">
+    <value>Plati</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>In asteptare</value>
+  </data>
+  <data name="PendingSchedules" xml:space="preserve">
+    <value>Programari in asteptare</value>
+  </data>
+  <data name="PerSlot" xml:space="preserve">
+    <value>Slot</value>
+  </data>
+  <data name="PerWorkplace" xml:space="preserve">
+    <value>Institutie</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Numar de telefon</value>
+  </data>
+  <data name="PhoneNumbers" xml:space="preserve">
+    <value>Numere de telefon</value>
+  </data>
+  <data name="PhoneValidation" xml:space="preserve">
+    <value>Validare numar de telefon</value>
+  </data>
+  <data name="PhoneValidation_Text" xml:space="preserve">
+    <value>In cateva momente veti primi un cod de validare prin SMS. Introduceti mai jos codul primit.</value>
+  </data>
+  <data name="PickTheCity" xml:space="preserve">
+    <value>Alege orasul</value>
+  </data>
+  <data name="PickTheProvider" xml:space="preserve">
+    <value>Alege locatia preferata</value>
+  </data>
+  <data name="PreviousDays" xml:space="preserve">
+    <value>Zilele precedente</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Pret (RON)</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Denumire produs</value>
+  </data>
+  <data name="ProgrammingPer" xml:space="preserve">
+    <value>Programari efectuate pe</value>
+  </data>
+  <data name="Provider" xml:space="preserve">
+    <value>Prestator</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Cantitate</value>
+  </data>
+  <data name="ReadAll" xml:space="preserve">
+    <value>Marcheaza toate notificarile ca fiind citite</value>
+  </data>
+  <data name="ReadMore" xml:space="preserve">
+    <value>Mai mult...</value>
+  </data>
+  <data name="Receipt" xml:space="preserve">
+    <value>Chitanta</value>
+  </data>
+  <data name="RegisterAsANewUser" xml:space="preserve">
+    <value>Creaza-ti un cont nou</value>
+  </data>
+  <data name="Register_Button" xml:space="preserve">
+    <value>Inregistreaza-te</value>
+  </data>
+  <data name="Register_NameMessage" xml:space="preserve">
+    <value>Numele va fi afisat pe site si pe facturile emise catre dumneavoastra.</value>
+  </data>
+  <data name="Register_SubTitle" xml:space="preserve">
+    <value>Creare cont utilizator nou</value>
+  </data>
+  <data name="Register_SupplierMessage" xml:space="preserve">
+    <value>Daca esti prestator de servicii contacteaza-ne si iti vom crea un cont personalizat.</value>
+  </data>
+  <data name="Register_Title" xml:space="preserve">
+    <value>Nu mai sta la coada! Creaza-ti un cont Maprogramez.net si fa-ti programare...</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Stai logat</value>
+  </data>
+  <data name="Remember_This_Browser" xml:space="preserve">
+    <value>Tine minte acest browser</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Sterge</value>
+  </data>
+  <data name="RemoveLoginSuccess" xml:space="preserve">
+    <value>Conectarea cu contul extern a fost stearsa</value>
+  </data>
+  <data name="RemovePhoneSuccess" xml:space="preserve">
+    <value>Numarul de telefon a fost sters</value>
+  </data>
+  <data name="Report_PaymentsStatus" xml:space="preserve">
+    <value>Raport plati</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>Necesar</value>
+  </data>
+  <data name="Reschedule" xml:space="preserve">
+    <value>Reprogrameaza</value>
+  </data>
+  <data name="ResendActivationEmail" xml:space="preserve">
+    <value>Retrimite email de activare</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Toti</value>
+  </data>
+  <data name="ResetPasswordConfirmationView_Body" xml:space="preserve">
+    <value>Parola a fost resetata.  Da click pe linkul de mai jos pentru a te loga.</value>
+  </data>
+  <data name="ResetPasswordConfirmationView_Title" xml:space="preserve">
+    <value>Confirmare resetare parola</value>
+  </data>
+  <data name="ResetPasswordView_Title" xml:space="preserve">
+    <value>Resetare parola</value>
+  </data>
+  <data name="ResetPassword_Body" xml:space="preserve">
+    <value>Pentru resetarea parolei da click pe link:</value>
+  </data>
+  <data name="ResetPassword_Subject" xml:space="preserve">
+    <value>MaProgramez.net - Resetare parola</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Rol</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roluri</value>
+  </data>
+  <data name="Role_ListOfUsers" xml:space="preserve">
+    <value>Lista de utilizatori cu acest role</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salveaza modificarile</value>
+  </data>
+  <data name="SaveUserDetailsSuccess" xml:space="preserve">
+    <value>Detalii utilizator salvate cu success</value>
+  </data>
+  <data name="SchduledThoughApp" xml:space="preserve">
+    <value>Programat prin aplicatia MaProgramez.net</value>
+  </data>
+  <data name="ScheduleDate" xml:space="preserve">
+    <value>Data programarii</value>
+  </data>
+  <data name="SchedulesList" xml:space="preserve">
+    <value>Lista programari</value>
+  </data>
+  <data name="ScheduleState" xml:space="preserve">
+    <value>Stare programare</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Cauta</value>
+  </data>
+  <data name="SeeTomorrowSchedules" xml:space="preserve">
+    <value>Vezi programarile de maine</value>
+  </data>
+  <data name="SeeTutorial" xml:space="preserve">
+    <value>Vezi tutorialul de utilizare Ma Programez.net</value>
+  </data>
+  <data name="SeeYesterdaySchedules" xml:space="preserve">
+    <value>Vezi programarile de ieri</value>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>Selectati categoria</value>
+  </data>
+  <data name="SelectCity" xml:space="preserve">
+    <value>Selectati orasul</value>
+  </data>
+  <data name="SelectCounty" xml:space="preserve">
+    <value>Selectati judetul</value>
+  </data>
+  <data name="SelectCountyFirst" xml:space="preserve">
+    <value>Alegeti prima data judetul</value>
+  </data>
+  <data name="SelectFavouriteSlot" xml:space="preserve">
+    <value>Selectati slotul favorit</value>
+  </data>
+  <data name="SelectOperation" xml:space="preserve">
+    <value>Selectati serviciul dorit (minim unul)</value>
+  </data>
+  <data name="SelectPaymentMethod" xml:space="preserve">
+    <value>Alegeti metoda de plata</value>
+  </data>
+  <data name="SelectSlot" xml:space="preserve">
+    <value>Selectati prestatorul</value>
+  </data>
+  <data name="SelectSlotFirst" xml:space="preserve">
+    <value>Selectati intai prestatorul</value>
+  </data>
+  <data name="SelectUserRole" xml:space="preserve">
+    <value>Selectati rolul utilizatorului</value>
+  </data>
+  <data name="SelectUserRoles" xml:space="preserve">
+    <value>Selectati rolurile utilizatorului</value>
+  </data>
+  <data name="Semicolon" xml:space="preserve">
+    <value>;</value>
+  </data>
+  <data name="SendAdvertisementToClients" xml:space="preserve">
+    <value>Trimite tuturor clientilor un mesaj publicitar</value>
+  </data>
+  <data name="SendNotification" xml:space="preserve">
+    <value>Trimite notificare</value>
+  </data>
+  <data name="SendValidationCode" xml:space="preserve">
+    <value>Trimite codul de validare</value>
+  </data>
+  <data name="SetPasswordSuccess" xml:space="preserve">
+    <value>Parola a fost salvata</value>
+  </data>
+  <data name="SetPasswordView_CreateLogin" xml:space="preserve">
+    <value>Creaza un cont local</value>
+  </data>
+  <data name="SetPasswordView_SaveButtonText" xml:space="preserve">
+    <value>Creaza cont</value>
+  </data>
+  <data name="SetPasswordView_Title" xml:space="preserve">
+    <value>Nu ai un utilizator/parola pe acest site. Adauga un cont local pentru a te putea conecta fara un cont extern.</value>
+  </data>
+  <data name="SetTwoFactorSuccess" xml:space="preserve">
+    <value>Furnizorul de autentificare cu doi factori a fost salvat</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>Creaza-ti</value>
+  </data>
+  <data name="Slot" xml:space="preserve">
+    <value>Slot</value>
+  </data>
+  <data name="SlotsList" xml:space="preserve">
+    <value>Lista sloturi</value>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>Ordoneaza</value>
+  </data>
+  <data name="SortBy" xml:space="preserve">
+    <value>Sortare dupa</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Din</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>De la ora</value>
+  </data>
+  <data name="SubscriptionPeriod" xml:space="preserve">
+    <value>Durata abonamentului</value>
+  </data>
+  <data name="Supplier" xml:space="preserve">
+    <value>Furnizor</value>
+  </data>
+  <data name="SupplierCompany" xml:space="preserve">
+    <value>Firma prestatoare</value>
+  </data>
+  <data name="TermsAndPrivacy" xml:space="preserve">
+    <value>Termeni si conditii de confidentialitate</value>
+  </data>
+  <data name="TheMessageHasBeenSent" xml:space="preserve">
+    <value>Mesajul a fost trimis</value>
+  </data>
+  <data name="TheMessageHasBeenSentMessage" xml:space="preserve">
+    <value>Mesajul a fost trimis la lista specificata</value>
+  </data>
+  <data name="TheMessageHasNotBeenSent" xml:space="preserve">
+    <value>Mesajul nu a fost trimis</value>
+  </data>
+  <data name="TheMessageHasNotBeenSentMessage" xml:space="preserve">
+    <value>Mesajul nu a fost trimis la lista specificata</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>timpul</value>
+  </data>
+  <data name="Timetable" xml:space="preserve">
+    <value>Orar</value>
+  </data>
+  <data name="TotalClients" xml:space="preserve">
+    <value>Total clienti</value>
+  </data>
+  <data name="TotalProviders" xml:space="preserve">
+    <value>Total prestatori</value>
+  </data>
+  <data name="Town" xml:space="preserve">
+    <value>Localitate</value>
+  </data>
+  <data name="Tutorial" xml:space="preserve">
+    <value>Tutorial de utilizare al platformei</value>
+  </data>
+  <data name="TwoFactorActivated_Text" xml:space="preserve">
+    <value>Autentificarea cu doi factori este activata</value>
+  </data>
+  <data name="TwoFactorDeActivated_Text" xml:space="preserve">
+    <value>Autentificarea cu doi factori este dezactivata</value>
+  </data>
+  <data name="UnblockAccount" xml:space="preserve">
+    <value>Deblocare cont</value>
+  </data>
+  <data name="UnityMeasure" xml:space="preserve">
+    <value>U.M.</value>
+  </data>
+  <data name="UploadImageError" xml:space="preserve">
+    <value>Va rugam incarcati doar imagini (MAX 8 MB / imagine)!</value>
+  </data>
+  <data name="UploadLogo" xml:space="preserve">
+    <value>Incarcati logo</value>
+  </data>
+  <data name="UseLocalAccountToLogin" xml:space="preserve">
+    <value>Conectare.</value>
+  </data>
+  <data name="UserAdminView_Add" xml:space="preserve">
+    <value>Adauga utilizator nou</value>
+  </data>
+  <data name="UserAdminView_AddOperation" xml:space="preserve">
+    <value>Adauga o operatiune noua</value>
+  </data>
+  <data name="UserAdminView_AddSlot" xml:space="preserve">
+    <value>Adauga un slot nou</value>
+  </data>
+  <data name="UserAdminView_EditOperation" xml:space="preserve">
+    <value>Modificare operatiune</value>
+  </data>
+  <data name="UserAdminView_Title" xml:space="preserve">
+    <value>Administrare utilizatori</value>
+  </data>
+  <data name="User_AcceptsNewRequestNotificationOnEmail" xml:space="preserve">
+    <value>Accept notificari cereri noi</value>
+  </data>
+  <data name="User_AcceptsNotificationOnEmail" xml:space="preserve">
+    <value>Vreau sa primesc notificari pe email</value>
+  </data>
+  <data name="User_AcceptsNotificationOnSms" xml:space="preserve">
+    <value>Vreau sa primesc notificari pe SMS</value>
+  </data>
+  <data name="User_AcceptsPushNotification" xml:space="preserve">
+    <value>Accept notificari push </value>
+  </data>
+  <data name="User_AccountNumber" xml:space="preserve">
+    <value>Cont IBAN</value>
+  </data>
+  <data name="User_AddAddress" xml:space="preserve">
+    <value>Adauga adresa</value>
+  </data>
+  <data name="User_Address" xml:space="preserve">
+    <value>Adresa</value>
+  </data>
+  <data name="User_Addresses" xml:space="preserve">
+    <value>Adrese</value>
+  </data>
+  <data name="User_Bank" xml:space="preserve">
+    <value>Banca</value>
+  </data>
+  <data name="User_CashPayment" xml:space="preserve">
+    <value>Plata numerar</value>
+  </data>
+  <data name="User_ChangePhone" xml:space="preserve">
+    <value>Schimba telefonul</value>
+  </data>
+  <data name="User_City" xml:space="preserve">
+    <value>Oras</value>
+  </data>
+  <data name="User_Commission" xml:space="preserve">
+    <value>Comision</value>
+  </data>
+  <data name="User_CompanyName" xml:space="preserve">
+    <value>Denumire firma</value>
+  </data>
+  <data name="User_Confirm_Password" xml:space="preserve">
+    <value>Confirma parola</value>
+  </data>
+  <data name="User_Connect" xml:space="preserve">
+    <value>Conturi externe</value>
+  </data>
+  <data name="User_ContactPersonName" xml:space="preserve">
+    <value>Nume persoana de contact</value>
+  </data>
+  <data name="User_Country" xml:space="preserve">
+    <value>Tara</value>
+  </data>
+  <data name="User_County" xml:space="preserve">
+    <value>Judet</value>
+  </data>
+  <data name="User_CUI" xml:space="preserve">
+    <value>CUI / CNP</value>
+  </data>
+  <data name="User_DateOfBirth" xml:space="preserve">
+    <value>Data nasterii</value>
+  </data>
+  <data name="User_Details" xml:space="preserve">
+    <value>Detalii</value>
+  </data>
+  <data name="User_FirstName" xml:space="preserve">
+    <value>Prenume</value>
+  </data>
+  <data name="User_HideInvoices" xml:space="preserve">
+    <value>Ascunde facturile</value>
+  </data>
+  <data name="User_IdCardNo" xml:space="preserve">
+    <value>C.I.</value>
+  </data>
+  <data name="User_IdSucursalaFan" xml:space="preserve">
+    <value>Id sucursala FanCourier</value>
+  </data>
+  <data name="User_IdSucursalaUrgent" xml:space="preserve">
+    <value>Id sucursala UrgentCourier</value>
+  </data>
+  <data name="User_InvoiceCreatedByCnp" xml:space="preserve">
+    <value>Facturare - CNP</value>
+  </data>
+  <data name="User_InvoiceCreatedByIdCard" xml:space="preserve">
+    <value>Facturare - Serie si nr. CI</value>
+  </data>
+  <data name="User_InvoiceCreatedByName" xml:space="preserve">
+    <value>Facturare - Intocmit de</value>
+  </data>
+  <data name="User_InvoiceSum" xml:space="preserve">
+    <value>Suma facturata</value>
+  </data>
+  <data name="User_IsCompany" xml:space="preserve">
+    <value>Persoana juridica</value>
+  </data>
+  <data name="User_IsProvider" xml:space="preserve">
+    <value>Prestator ?</value>
+  </data>
+  <data name="User_JNO" xml:space="preserve">
+    <value>Nr.Reg.Com(J)</value>
+  </data>
+  <data name="User_LogoPath" xml:space="preserve">
+    <value>Sigla</value>
+  </data>
+  <data name="User_Name" xml:space="preserve">
+    <value>Nume</value>
+  </data>
+  <data name="User_Password" xml:space="preserve">
+    <value>Parola</value>
+  </data>
+  <data name="User_Password_ConfirmErrorMessage" xml:space="preserve">
+    <value>Parola si confirmarea parolei nu sunt la fel.</value>
+  </data>
+  <data name="User_Password_ErrorMessage" xml:space="preserve">
+    <value>{0} trebuie sa contina minim {2} caractere.</value>
+  </data>
+  <data name="User_PaymentDelayDays" xml:space="preserve">
+    <value>Numar de zile in care se va face plata</value>
+  </data>
+  <data name="User_Personaldetails" xml:space="preserve">
+    <value>Detalii personale</value>
+  </data>
+  <data name="User_Phone" xml:space="preserve">
+    <value>Tel.Mobil</value>
+  </data>
+  <data name="User_PostalCode" xml:space="preserve">
+    <value>Cod postal</value>
+  </data>
+  <data name="User_Saved" xml:space="preserve">
+    <value>Modificarile au fost salvate</value>
+  </data>
+  <data name="User_Settings" xml:space="preserve">
+    <value>Setari</value>
+  </data>
+  <data name="User_SupplierInvoiceNumber" xml:space="preserve">
+    <value>Numar factura</value>
+  </data>
+  <data name="User_SupplierInvoiceSeries" xml:space="preserve">
+    <value>Serie factura</value>
+  </data>
+  <data name="User_SupplierProformInvoiceNumber" xml:space="preserve">
+    <value>Numar factura proforma</value>
+  </data>
+  <data name="User_SupplierProformInvoiceSeries" xml:space="preserve">
+    <value>Serie factura proforma</value>
+  </data>
+  <data name="User_VatRate" xml:space="preserve">
+    <value>Cota TVA</value>
+  </data>
+  <data name="Valid" xml:space="preserve">
+    <value>Valida</value>
+  </data>
+  <data name="Verify" xml:space="preserve">
+    <value>Verifica</value>
+  </data>
+  <data name="VerifyMobileCode" xml:space="preserve">
+    <value>Codul primit prin sms</value>
+  </data>
+  <data name="ViewAll" xml:space="preserve">
+    <value>Vezi toate</value>
+  </data>
+  <data name="ViewSchedules_Info1" xml:space="preserve">
+    <value>Pentru a face o noua programare unui client, faceti CLICK pe locul din calendar corespunzator datei si orei dorite</value>
+  </data>
+  <data name="ViewSchedules_Info2" xml:space="preserve">
+    <value>Pentru a edita sau sterge o programare existenta, faceti CLICK pe aceasta</value>
+  </data>
+  <data name="ViewSchedules_Info3" xml:space="preserve">
+    <value>Pentru a modifica durata unei programari, tineti CLICK apasat pe marginea inferioara a chenarului si ajustati in sus sau in jos</value>
+  </data>
+  <data name="ViewSchedules_Info4" xml:space="preserve">
+    <value>Pentru a muta o programare la o alta ora sau intr-o alta zi, tineti CLICK apasat pe aceasta si mutati-o unde doriti</value>
+  </data>
+  <data name="ViewSchedules_InfoClient" xml:space="preserve">
+    <value>Pentru a vizualiza sau anula programare existenta, faceti CLICK pe aceasta</value>
+  </data>
+  <data name="WithReceipt" xml:space="preserve">
+    <value>Chitanta?</value>
+  </data>
+  <data name="WorksByWeekly" xml:space="preserve">
+    <value>Lucreaza o saptamana de dimineata, una de dupa masa</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Da</value>
+  </data>
+  <data name="YourSecurityCodeIs" xml:space="preserve">
+    <value>Codul de securitate MaProgramez.net este:</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Inchideti</value>
+  </data>
+  <data name="SignIn_Strong" xml:space="preserve">
+    <value>autentifica</value>
+  </data>
+  <data name="SignIn_Text" xml:space="preserve">
+    <value>Introduceti adresa de mail si parola pentru a va</value>
+  </data>
+  <data name="Register_Strong" xml:space="preserve">
+    <value>inregistra</value>
+  </data>
+  <data name="Register_Text" xml:space="preserve">
+    <value>Introduceti datele personale pentru a va</value>
+  </data>
+  <data name="Terms_Link" xml:space="preserve">
+    <value>Termeni &amp; Conditii</value>
+  </data>
+  <data name="Terms_Text" xml:space="preserve">
+    <value>Prin crearea acestui cont va dati implicit acordul asupra urmatorilor </value>
+  </data>
+  <data name="AddToFavourites" xml:space="preserve">
+    <value>Adauga prestatorul in lista de favoriti</value>
+  </data>
+  <data name="RemoveFromFavourites" xml:space="preserve">
+    <value>Sterge prestatorul din lista de favoriti</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filtreaza</value>
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>Calificativ</value>
+  </data>
+  <data name="Error_AddSchedule" xml:space="preserve">
+    <value>Datele introduse nu sunt complete sau sunt gresite. Va rugam reincercati</value>
+  </data>
+  <data name="LandingPageNew_BoxContent1" xml:space="preserve">
+    <value>Potentiali clienti folosesc Plansy pentru a descoperi servicii de care au nevoie in zona lor. Mai multa lume afla de dvs, fara costuri de publicitate si cu o mare probabilitate de a se programa.</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle1" xml:space="preserve">
+    <value>Clienti noi descopera afacerea dvs</value>
+  </data>
+  <data name="LandingPageNew_SignUp" xml:space="preserve">
+    <value>Fa-ti cont - GRATUIT</value>
+  </data>
+  <data name="LandingPageNew_Sub1" xml:space="preserve">
+    <value>Clientii sunt mereu in cautarea celor mai bune servicii... precum cele ale dumneavoastra.</value>
+  </data>
+  <data name="LandingPageNew_Sub2" xml:space="preserve">
+    <value>Plansy va ajuta sa aduceti mai multi clienti, sa ii fidelizati pe cei existenti si ajuta clientii noi sa va gaseasca.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent2" xml:space="preserve">
+    <value>Prin intermediul calendarului online, clientii isi pot face programari in agenda dvs 24 de ore pe zi, 7 zile pe saptamana. Desigur, se pot programa in functie de orarul dvs zilnic si celelate programari pe care le aveti.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent3" xml:space="preserve">
+    <value>Programarile aprobate se adauga automat atat in calendarul dvs cat si in cel al clientilor, aducandu-va tot programul in cel mai convenabil loc. De asemenea, il puteti exporta in PDF.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent4" xml:space="preserve">
+    <value>Datorita mementourilor automate, clientii nu uita de programari si primesc instructiuni despre cum sa ajunga la dvs. De asemenea, in cazul in care nu se prezinta la 3 programari facute, contul le este sters.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent5" xml:space="preserve">
+    <value>Uita de taxe de inscriere sau abonamente lunare. Platesti doar pentru rezultate vizibile in afacerea ta. Odata ce clientii noi incep sa apara, percepem un comision mic, doar din programarile finalizate.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent6" xml:space="preserve">
+    <value>Plansy iti permite sa trimiti clientilor tai notificari pe toate caile - pe mail, sms, in platforma web si in aplicatiile mobile. Este un excelent instrument de marketing si de fidelizare a clientilor, dvs putand trimite oricand informatii despre oferte speciale sau servicii noi.</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle2" xml:space="preserve">
+    <value>Sunteti disponibil non stop</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle3" xml:space="preserve">
+    <value>Sincronizarea calendarelor</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle4" xml:space="preserve">
+    <value>Reducerea programarilor neonorate</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle5" xml:space="preserve">
+    <value>Gratuit, fara costuri ascunse</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle6" xml:space="preserve">
+    <value>Posibilitati de marketing</value>
+  </data>
+  <data name="LandingPageNew_Subtitle3" xml:space="preserve">
+    <value>Plansy este despre "timp"</value>
+  </data>
+  <data name="LandingPageNew_Subtitle4" xml:space="preserve">
+    <value>Un sistem inovativ de management al programarilor si al clientilor afacerii dumneavoastra, rapid si simplu de utilizat, ce va ''cumpara" timp liber.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent7" xml:space="preserve">
+    <value>Clientii va pot descoperi si se pot programa direct de pe aplicatiile pentru iOS si Android sau de pe website. Dumneavoastra va puteti ocupa de afacere de pe telefon sau tableta, verificand calendarul dvs si al staffului, acceptand, respingand sau modificand programarile existente.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent8" xml:space="preserve">
+    <value>Pastrati-va timpul liber pentru dumneavoastra, clientii se pot programa singuri in timpul programului de lucru predefinit, fara a se suprapune cu alte programari existente. Aveti 30 de minute in care puteti accepta, refuza, sau reprograma, iar Plansy informeaza clientii.</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle7" xml:space="preserve">
+    <value>Disponibil pe smartphone si tableta</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle8" xml:space="preserve">
+    <value>Tu esti in control</value>
+  </data>
+  <data name="LandingPageNew_Subtitle3bis" xml:space="preserve">
+    <value>Si e gratuit</value>
+  </data>
+  <data name="LandingPageNew_Subtitle5" xml:space="preserve">
+    <value>A intervenit ceva?</value>
+  </data>
+  <data name="LandingPageNew_Subtitle5bis" xml:space="preserve">
+    <value>Nicio problema!</value>
+  </data>
+  <data name="LandingPageNew_Subtitle6" xml:space="preserve">
+    <value>Poti reprograma cu usurinta clientii, iar Plansy ii va informa de indata. Usor si rapid.</value>
+  </data>
+  <data name="LandingPageNew_Testimonial" xml:space="preserve">
+    <value>Ce spun clientii</value>
+  </data>
+  <data name="LandingPageNew_TestimonialQuote1" xml:space="preserve">
+    <value>Plansy m-a ajutat sa am mai multi clienti la cursurile de karate, si am si mai mult timp sa ii antrenez pe cei mici.</value>
+  </data>
+  <data name="Benefits" xml:space="preserve">
+    <value>Avantaje</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Acasa</value>
+  </data>
+  <data name="Why" xml:space="preserve">
+    <value>De ce Plansy?</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>Alege</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Mesaj</value>
+  </data>
+  <data name="Notification_NewAppointment" xml:space="preserve">
+    <value>Un nou client si-a facut o programare la dumneavoastra: </value>
+  </data>
+  <data name="Notification_TodayReminder1" xml:space="preserve">
+    <value>Nu uitati! Astazi la ora </value>
+  </data>
+  <data name="Notification_TodayReminder2" xml:space="preserve">
+    <value>aveti o programare la </value>
+  </data>
+  <data name="Notification_TomorrowReminder" xml:space="preserve">
+    <value>Nu uitati! Maine la ora </value>
+  </data>
+  <data name="Notification_TwoHoursReminder1" xml:space="preserve">
+    <value>Nu uitati! Aveti o programare in doua ore la </value>
+  </data>
+  <data name="Notification_TwoHoursReminder2" xml:space="preserve">
+    <value>Puteti contacta prestatorul la numarul de telefon </value>
+  </data>
+  <data name="Notification_Validation1" xml:space="preserve">
+    <value>Programarea dumneavoastra la</value>
+  </data>
+  <data name="Notification_Validation2" xml:space="preserve">
+    <value>a fost confirmata. Puteti contacta prestatorul la numarul de telefon</value>
+  </data>
+  <data name="Error_EndBeforeStart" xml:space="preserve">
+    <value>Ora inceperii programarii trebuie sa fie inainte de ora terminarii acesteia!</value>
+  </data>
+  <data name="Error_NoSchedulesBeforeToday" xml:space="preserve">
+    <value>Ne pare rau... dar nu puteti face o programare in trecut</value>
+  </data>
+  <data name="Notification_Cancel1" xml:space="preserve">
+    <value>Programarea efectuata pe contul</value>
+  </data>
+  <data name="Notification_Cancel2" xml:space="preserve">
+    <value>Programarea din data de</value>
+  </data>
+  <data name="Notification_Cancel3" xml:space="preserve">
+    <value>a fost anulata de catre client. Il puteti contacta la numarul de telefon </value>
+  </data>
+  <data name="Notification_Cancel4" xml:space="preserve">
+    <value>a fost anulata de catre prestator. Il puteti contacta la numarul de telefon</value>
+  </data>
+  <data name="Notification_Rescheduled" xml:space="preserve">
+    <value>Ati fost reprogramat la</value>
+  </data>
+  <data name="Notification_Scheduled1" xml:space="preserve">
+    <value>Ati fost programat la</value>
+  </data>
+  <data name="Notification_Scheduled2" xml:space="preserve">
+    <value>prin intermediul aplicatiei Plansy (disponibila pe Android si iOS)</value>
+  </data>
+  <data name="Error_Terms" xml:space="preserve">
+    <value>Trebuie sa acceptati termenii si conditiile pentru a utiliza aceasta platforma</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Ascunde</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Arata</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Stare</value>
+  </data>
+  <data name="NoFavouriteProviders" xml:space="preserve">
+    <value>No favourite providers</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>luni</value>
+  </data>
+  <data name="PdfSchedule" xml:space="preserve">
+    <value>Exporta programul in pdf</value>
+  </data>
+  <data name="PdfTodaySchedule" xml:space="preserve">
+    <value>Exporta programul de azi in pdf</value>
+  </data>
+  <data name="ShowClientsPhoneNumber" xml:space="preserve">
+    <value>Afiseaza si numarul de telefon al clientilor</value>
+  </data>
+  <data name="UnpayedInvoices" xml:space="preserve">
+    <value>Nu aveti facturi restante!</value>
+  </data>
+  <data name="NewBusinessesInTown" xml:space="preserve">
+    <value>Prestatori noi in orasul dumneavoastra</value>
+  </data>
+  <data name="NoNewBusinessesInTown" xml:space="preserve">
+    <value>Nu sunt prestatori noi in orasul dumneavoastra</value>
+  </data>
+  <data name="LandingPageNew_TestimonialQuote2" xml:space="preserve">
+    <value>Door Plansy kan ik meer tijd besteden aan knippen, doordat ik minder hoef te telefoneren. Mijn klanten vinden het vooral handig dat ze meteen kunnen zien wanneer er nog tijd vrij is. Op dat tijdstip kunnen zij direct een afspraak inplannen zonder te bellen. Al mijn collega kappers zijn ook al overgestapt.</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+</root>

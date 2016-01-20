@@ -1,0 +1,63 @@
+﻿@using MaProgramez.Resources
+<div class="row">
+    <div class="col-md-12">
+        <div class="delimiter">
+            <i class="fa fa-car"></i>
+        </div>
+    </div>
+
+    <div class="col-md-3" style="margin-top: 20px;">
+        <div class="round-box">
+            <i class="fa fa-plus"></i>
+        </div>
+        <div class="clear"></div>
+        <i class="fa fa-caret-up center-arrow"></i>
+        <div class="intro-box">
+            <p>
+                @*@if (ViewBag.HasAddress == true)
+                {
+                    <a href="@Url.Action(MVC.Request.Add())">@Resource.Dashboard_Intro1</a>
+                }
+                else
+                {
+                    @Resource.Dashboard_Intro1
+                }*@
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3" style="margin-top: 20px;">
+        <div class="round-box">
+            <i class="fa fa-clock-o"></i>
+        </div>
+        <div class="clear"></div>
+        <i class="fa fa-caret-up center-arrow"></i>
+        <div class="intro-box">
+            @*<p>@Resource.Dashboard_Intro2</p>*@
+        </div>
+    </div>
+    <div class="col-md-3" style="margin-top: 20px;">
+        <div class="round-box">
+            <i class="fa fa-money"></i>
+        </div>
+        <div class="clear"></div>
+        <i class="fa fa-caret-up center-arrow"></i>
+        <div class="intro-box">
+            @*<p>@Resource.Dashboard_Intro3</p>*@
+        </div>
+    </div>
+    <div class="col-md-3" style="margin-top: 20px;">
+        <div class="round-box">
+            <i class="fa fa-car"></i>
+        </div>
+        <div class="clear"></div>
+        <i class="fa fa-caret-up center-arrow"></i>
+        <div class="intro-box">
+            @*<p>@Resource.Dashboard_Intro4</p>*@
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="delimiter">
+            <i class="fa fa-car"></i>
+        </div>
+    </div>
+</div>

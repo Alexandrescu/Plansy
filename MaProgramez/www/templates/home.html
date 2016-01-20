@@ -1,0 +1,45 @@
+<ion-view>
+    <ion-nav-title>
+        Plansy
+    	</ion-nav-title>
+    <ion-content class="menu-dark-content">
+        <div class="row menu-block dark-blue-block">
+            <div class="col">
+                <a href="#/app/select-category" class="menu-block-link"></a>
+                <span class="menu-block-icon ion-ios-plus-outline"></span> {{'ADD_APPOINTMENT' | translate}}
+            </div>
+        </div>
+        <div class="row menu-block">
+            <div class="col col-50 light-gray-block">
+                <a href="#/app/appointments" class="menu-block-link"></a>
+                <span class="menu-block-icon ion-ios-list-outline">
+                    <div class="block-point" ng-if="ScheduleNumber != null && ScheduleNumber > 0">{{ScheduleNumber}}</div>
+                </span> {{'MY_APPOINTMENTS' | translate}}
+            </div>
+            <div class="col col-50 red-block">
+                <a href="#/app/settings" class="menu-block-link"></a>
+                <span class="menu-block-icon ion-ios-gear-outline"></span> {{'MY_SETTINGS' | translate}}
+            </div>
+        </div>
+        <div class="row menu-block">
+            <div class="col col-50 purple-block">
+                <a href="#/app/direction" class="menu-block-link"></a>
+                <span class="menu-block-icon ion-ios-location-outline"></span> {{'GO_TO_APPOINTMENT' | translate}}
+            </div>
+            <div class="col col-50 green-block">
+                <a href="#/app/favorite" class="menu-block-link"></a>
+                <span class="menu-block-icon ion-ios-star-outline"></span> {{'FAVORITES' | translate}}
+            </div>
+        </div>
+        <div class="row menu-block">
+            <div class="col col-50 dark-yellow-block">
+                <a href="#/app/notifications" class="menu-block-link"></a>
+                <span class="menu-block-icon ion-ios-bell-outline"></span> {{'NOTIFICATIONS' | translate}}
+            </div>
+            <div class="col col-50 light-blue-block">
+                <a href="#/app/help" class="menu-block-link"></a>
+                <span class="menu-block-icon ion-ios-help-outline"></span> {{'HELP' | translate}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

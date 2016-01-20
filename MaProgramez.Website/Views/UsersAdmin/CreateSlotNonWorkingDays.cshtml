@@ -1,0 +1,203 @@
+﻿@using System.Resources
+@using MaProgramez.Repository.Entities
+@model MaProgramez.Website.ViewModels.AddNonWorkingDayViewModel
+
+@{
+    ViewBag.Title = Resource.NonWorkingDays;
+    var defaultNonWorkingDays = (List<DefaultNonWorkingDay>)ViewBag.DefaultNonWorkingDays;
+    var slotNonWorkingDays = (List<SlotNonWorkingDay>)ViewBag.SlotNonWorkingDays;
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/bootstrap-datepicker")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.input-group.date').datepicker({
+                todayHighlight: true,
+                todayBtn: "linked"
+            });
+        });
+    </script>
+}
+
+<div class="clear"></div>
+
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            <h4>@Resource.Add @Resource.NonWorkingDays</h4>
+        </div><!-- /.col-lg-3 -->
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+        @using (Html.BeginForm("CreateSlotNonWorkingDays", "UsersAdmin", FormMethod.Post, new { @class = "form-horizontal" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.SlotId)
+            @Html.HiddenFor(m => m.Slot.UserId)
+            @Html.HiddenFor(m => m.Slot.ProviderId)
+            @Html.HiddenFor(m => m.IsWorkingDay)
+
+            if (!Html.ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger form-validation" role="alert">
+                    @Html.ValidationSummary(true, "", new { @class = "text-error" })
+                </div>
+                <div class="clear"></div>
+            }
+
+            <div class="form-group col-md-12">
+                <div class="col-md-6">
+                    <label class="col-md-5 form-label">@Resource.StartDate<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-6 input-group date">
+                        @Html.TextBoxFor(m => m.StartDate, "{0:MM/dd/yyyy}", new { @class = "form-control", @readonly = "true" })
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label class="col-md-3 form-label">@Resource.StartTime<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-2">
+                        @Html.TextBoxFor(m => m.StartHour, new { @class = "form-control", style = "padding: 15px !important;" })
+                    </div>
+
+                    <label class="col-md-1 form-label">:</label>
+                    <div class="col-md-2">
+                        @Html.TextBoxFor(m => m.StartMinute, new { @class = "form-control", style = "padding: 15px !important;" })
+                    </div>
+
+                    <label class="col-md-3 form-label">(ex: 8:0)</label>
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                <div class="col-md-6">
+                    <label class="col-md-5 form-label">@Resource.EndDate<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-6 input-group date">
+                        @Html.TextBoxFor(m => m.EndDate, "{0:MM/dd/yyyy}", new { @class = "form-control", @readonly = "true" })
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label class="col-md-3 form-label">@Resource.EndTime<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-2">
+                        @Html.TextBoxFor(m => m.EndHour, new { @class = "form-control", style = "padding: 15px !important;" })
+                    </div>
+                    <label class="col-md-1 form-label">:</label>
+                    <div class="col-md-2">
+                        @Html.TextBoxFor(m => m.EndMinute, new { @class = "form-control", style = "padding: 15px !important;" })
+                    </div>
+
+                    <label class="col-md-3 form-label">(ex: 20:30)</label>
+
+                </div>
+            </div>
+
+
+            <div class="form-group col-md-12">
+                <div class="col-md-12">
+                    <label class="col-md-2 form-label">@Resource.Description<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-8" style="margin-left: 14px">
+                        @Html.TextAreaFor(m => m.Description, new { @class = "form-control input-sm" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+            <hr style="margin: 15px 0" />
+
+            <div class="form-group">
+                <div class="col-md-6">
+                    <a href="@Url.Action(MVC.UsersAdmin.SlotsList(Model.Slot.ProviderId))" class="btn btn-success float-left">@Resource.Back</a>
+                </div>
+                <div class="col-md-6">
+                    <input type="submit" class="btn btn-default col-md-3 float-right" value="@Resource.Save" />
+                </div>
+            </div>
+
+                    <div class="clear"></div>
+        }
+
+        @if (slotNonWorkingDays != null && slotNonWorkingDays.Any())
+        {
+            <div class="clear"></div>
+                        <h4 style="margin-top: 35px">@Resource.NonWorkingDays</h4>
+
+            var number = 1;
+            <div class="sablon">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>@Resource.StartDate</th>
+                            <th>@Resource.EndDate</th>
+                            <th>@Resource.Description</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var date in slotNonWorkingDays)
+                    {
+                    <tr>
+                        <td>@(number++)</td>
+                        <td>@date.StartDateTime.ToString("MM/dd/yyyy") @date.StartDateTime.ToShortTimeString()</td>
+                        <td>@date.EndDateTime.ToString("MM/dd/yyyy") @date.EndDateTime.ToShortTimeString()</td>
+                        <td>@date.Description</td>
+                        <td>
+                            <a href="@Url.Action(MVC.UsersAdmin.DeleteSlotNonWorkingDay(date.Id))">
+                                <i class="fa fa-trash" data-toggle="tooltip" data-placement="right" title=@Resource.Remove></i>
+                            </a>
+                        </td>
+                    </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        }
+
+        @if (defaultNonWorkingDays != null && defaultNonWorkingDays.Any())
+        {
+            <div class="clear"></div>
+
+                        <h4 style="margin-top: 35px">@Resource.DefaultNonWorkingDays</h4>
+
+            var number = 1;
+            <div class="sablon">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>@Resource.Date</th>
+                        <th>@Resource.Description</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var date in defaultNonWorkingDays)
+                    {
+                        <tr>
+                            <td>@(number++)</td>
+                            <td>@date.StartDateTime.ToString("MM/dd/yyyy")</td>
+                            <td>@date.Description</td>
+                            <td>
+                                <a href="@Url.Action(MVC.UsersAdmin.MarkDefaultNonWorkingDayAsWorkingDay(date.Id, Model.SlotId))">
+                                    <i class="fa fa-trash" data-toggle="tooltip" data-placement="right" title=@Resource.Remove></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+                </div>
+        }
+
+    </div>
+</section>

@@ -1,0 +1,18 @@
+﻿@using MaProgramez.Resources
+<div class="well page-box">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>@Resource.InCompleteAccount</h3>
+            <span>@Resource.IncompleteAccountMessage</span>
+        </div>
+        @if (!Model.IsPhoneNumberConfirmed)
+        {
+            <div class="col-md-3 clickable-row" data-href="@Url.Action(MVC.Manage.AddPhoneNumber())">
+                <div class="page-box-button">
+                    <i class="fa fa-phone"></i>
+                </div>
+            </div>
+        }
+        </div>
+</div>
+

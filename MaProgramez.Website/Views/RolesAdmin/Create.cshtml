@@ -1,0 +1,55 @@
+﻿@using MaProgramez.Resources
+@model MaProgramez.Website.ViewModels.RoleViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            <h4>@Resource.CreateNewRole</h4>
+        </div><!-- /.col-lg-3 -->
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true)
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Name, @Resource.Role, new { @class = "form-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.Name)
+                    </div>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <div class="col-md-2">
+                        @Html.ActionLink(@Resource.Back, "Index", null, new { @class = "btn btn-link" })
+                    </div>
+                    <div class="col-md-10">
+                        <input type="submit" value="@Resource.CreateNewRole" class="btn btn-primary float-right" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

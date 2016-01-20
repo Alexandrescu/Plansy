@@ -1,0 +1,1665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>Accepteer</value>
+  </data>
+  <data name="AcceptAllPendingSchedules" xml:space="preserve">
+    <value>Accepteer alle ingeplande afspraken</value>
+  </data>
+  <data name="AcceptTermsMessage" xml:space="preserve">
+    <value>Ik ga akkoord met de algemene voorwaarden</value>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>Activeer</value>
+  </data>
+  <data name="ActivateAccountConfirmation_Body" xml:space="preserve">
+    <value>Uw account is aangemaakt.</value>
+  </data>
+  <data name="ActivateAccountConfirmation_Title" xml:space="preserve">
+    <value>Account geactiveerd</value>
+  </data>
+  <data name="ActivateAccount_Title" xml:space="preserve">
+    <value>Activeer account</value>
+  </data>
+  <data name="ActivatedAccount" xml:space="preserve">
+    <value>Account geactiveerd</value>
+  </data>
+  <data name="ActivationEmail_Content" xml:space="preserve">
+    <value>Klik op de link om uw account te activeren</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Toevoegen</value>
+  </data>
+  <data name="AddNewAddress" xml:space="preserve">
+    <value>Nieuw adres toevoegen</value>
+  </data>
+  <data name="AddNewAppointment" xml:space="preserve">
+    <value>Nieuwe afspraak toevoegen</value>
+  </data>
+  <data name="AddNewOperation" xml:space="preserve">
+    <value>Nieuw dienst toevoegen</value>
+  </data>
+  <data name="AddNewUser" xml:space="preserve">
+    <value>Nieuwe gebruiker toevoegen</value>
+  </data>
+  <data name="AddPhoneNumber" xml:space="preserve">
+    <value>Telefoonnummer toevoegen</value>
+  </data>
+  <data name="AddPhoneSuccess" xml:space="preserve">
+    <value>Telefoonnummer toegevoegd</value>
+  </data>
+  <data name="AddressType_Both" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="AddressType_InvoiceAddress" xml:space="preserve">
+    <value>Factuuradres</value>
+  </data>
+  <data name="AddressType_PlaceOfBusinessAddress" xml:space="preserve">
+    <value>Vestigingsadres</value>
+  </data>
+  <data name="Address_DeleteMessage" xml:space="preserve">
+    <value>Verwijder adres</value>
+  </data>
+  <data name="AddToFavourites" xml:space="preserve">
+    <value>Voeg toe aan favorieten</value>
+  </data>
+  <data name="Agent" xml:space="preserve">
+    <value>Verkoper</value>
+  </data>
+  <data name="Alias" xml:space="preserve">
+    <value>Alias</value>
+  </data>
+  <data name="AppointmentsThisWeek" xml:space="preserve">
+    <value>Afspraken deze week</value>
+  </data>
+  <data name="AppointmentsToday" xml:space="preserve">
+    <value>Afspraken vandaag</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Terug</value>
+  </data>
+  <data name="BankDeposit" xml:space="preserve">
+    <value>Overschrijving</value>
+  </data>
+  <data name="Benefits" xml:space="preserve">
+    <value>Voordelen</value>
+  </data>
+  <data name="Buyer" xml:space="preserve">
+    <value>Koper</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuleer</value>
+  </data>
+  <data name="CancelledByProvider" xml:space="preserve">
+    <value>Geannuleerd door dienstverlener</value>
+  </data>
+  <data name="CancelledByUser" xml:space="preserve">
+    <value>Geannuleerd door klant</value>
+  </data>
+  <data name="CancelSchedule" xml:space="preserve">
+    <value>Afspraak annuleren</value>
+  </data>
+  <data name="Card" xml:space="preserve">
+    <value>PIN</value>
+  </data>
+  <data name="Cash" xml:space="preserve">
+    <value>Contant</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Categorie</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Wijzig</value>
+  </data>
+  <data name="ChangeLogo" xml:space="preserve">
+    <value>Wijzig logo</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Wijzig wachtwoord</value>
+  </data>
+  <data name="ChangePasswordSuccess" xml:space="preserve">
+    <value>Wachtwoord succesvol gewijzigd</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>Kiezen</value>
+  </data>
+  <data name="Client" xml:space="preserve">
+    <value>Klant</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Sluiten?????</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code ???</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Bedrijfsnaam</value>
+  </data>
+  <data name="ConfirmEmailView_Content" xml:space="preserve">
+    <value>Account aangemaakt. Klik om in te loggen:</value>
+  </data>
+  <data name="ConfirmEmailView_Title" xml:space="preserve">
+    <value>Bevestig account</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="ContactMessageConfirm" xml:space="preserve">
+    <value>Bericht verstuurd. Er wordt zo spoedig mogelijk contact met u opgenomen door een Plansy medewerker.</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Verder</value>
+  </data>
+  <data name="ContractDate" xml:space="preserve">
+    <value>Contractdatum</value>
+  </data>
+  <data name="ContractNo" xml:space="preserve">
+    <value>Contractnummer</value>
+  </data>
+  <data name="ContractNumber" xml:space="preserve">
+    <value>Contractnummer</value>
+  </data>
+  <data name="Contracts" xml:space="preserve">
+    <value>Contracten</value>
+  </data>
+  <data name="Cookies" xml:space="preserve">
+    <value>Cookies</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Kopieer</value>
+  </data>
+  <data name="County" xml:space="preserve">
+    <value>Provincie</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>Aanmaakdatum</value>
+  </data>
+  <data name="CreateNewRole" xml:space="preserve">
+    <value>Maak nieuwe rol aan</value>
+  </data>
+  <data name="CreateSchedule" xml:space="preserve">
+    <value>Maak een afspraak</value>
+  </data>
+  <data name="CreateUserView_Title" xml:space="preserve">
+    <value>Maak nieuw account aan</value>
+  </data>
+  <data name="CreateWithSocial" xml:space="preserve">
+    <value>Of meld u aan met:</value>
+  </data>
+  <data name="CurrentNumber" xml:space="preserve">
+    <value>Nr.</value>
+  </data>
+  <data name="Current_Password" xml:space="preserve">
+    <value>Huidig wachtwoord</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Overzicht</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="Date_Error_Message" xml:space="preserve">
+    <value>Datum is verkeerd ingevoerd. (dd.mm.yyy)</value>
+  </data>
+  <data name="DayOfWeek" xml:space="preserve">
+    <value>Dag van de week</value>
+  </data>
+  <data name="DefaultNonWorkingDays" xml:space="preserve">
+    <value>Standaard feestdagen</value>
+  </data>
+  <data name="DefaultOperations" xml:space="preserve">
+    <value>Standaard dienst</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Verwijder</value>
+  </data>
+  <data name="DeleteAll" xml:space="preserve">
+    <value>Verwijder alle meldingen</value>
+  </data>
+  <data name="DeleteSchedule" xml:space="preserve">
+    <value>Afspraak verwijderen</value>
+  </data>
+  <data name="Deny" xml:space="preserve">
+    <value>Afwijzen</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Omschrijving</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Opdracht</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Deactiveer</value>
+  </data>
+  <data name="DurationMinutes" xml:space="preserve">
+    <value>Duur (in minuten)</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Wijzig</value>
+  </data>
+  <data name="EditRole" xml:space="preserve">
+    <value>Wijzig rol</value>
+  </data>
+  <data name="EditSlot" xml:space="preserve">
+    <value>Wijzig personeelslid</value>
+  </data>
+  <data name="EditUserView_Title" xml:space="preserve">
+    <value>Wijzig gebruiker</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="EmailConfirmationView_Content" xml:space="preserve">
+    <value>We hebben een bevestigingsemail gestuurd. Ga naar uw inbox en klik op de link in uw e-mail om uw account te bevestigen.</value>
+  </data>
+  <data name="EmailConfirmation_Body" xml:space="preserve">
+    <value>Ik ga akkoord met de algemene voorwaarden</value>
+  </data>
+  <data name="EmailConfirmation_Subject" xml:space="preserve">
+    <value>Plansy - Bevestig account</value>
+  </data>
+  <data name="EmailConfirmation_ViewTitle" xml:space="preserve">
+    <value>Bevestig e-mail</value>
+  </data>
+  <data name="EmailCredentials_Body" xml:space="preserve">
+    <value>Uw account is aangemaakt. Ga naar www.plansy.nl om uw account te activeren. Hier kunt u ook uw wachtwoord wijzigen</value>
+  </data>
+  <data name="EmailCredentials_Subject" xml:space="preserve">
+    <value>Plansy - Inloggegevens</value>
+  </data>
+  <data name="Emails" xml:space="preserve">
+    <value>E-mails</value>
+  </data>
+  <data name="Email_ErrorMessage" xml:space="preserve">
+    <value>Verkeerd e-mailadres</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>Activeer</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Einddatum</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>Eindtijd</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Fout</value>
+  </data>
+  <data name="Error404_Content" xml:space="preserve">
+    <value>Pagina niet gevonden.</value>
+  </data>
+  <data name="Error404_GoBackText" xml:space="preserve">
+    <value>Ga terug.</value>
+  </data>
+  <data name="Error404_Title" xml:space="preserve">
+    <value>Oeps!</value>
+  </data>
+  <data name="ErrorView_Content" xml:space="preserve">
+    <value>Oeps! Er is iets fout gegaan. Neem contact op met contact@plansy.nl.</value>
+  </data>
+  <data name="ErrorView_Title" xml:space="preserve">
+    <value>Fout</value>
+  </data>
+  <data name="Error_AddSchedule" xml:space="preserve">
+    <value>Er is iets fout gegaan. De gegevens die je hebt ingevoerd lijken niet te kloppen. Probeer het opnieuw.</value>
+  </data>
+  <data name="Error_ContainsEmailAddress" xml:space="preserve">
+    <value>Er is iets mis met je emailadres. Kijk het emailadres na en probeer het opnieuw.</value>
+  </data>
+  <data name="Error_ContainsPhoneNo" xml:space="preserve">
+    <value>Er is iets mis met je telefoonnummer. Controleer het nummer en probeer het opnieuw.</value>
+  </data>
+  <data name="Error_Description" xml:space="preserve">
+    <value>Voeg een beschrijving toe!</value>
+  </data>
+  <data name="Error_EndBeforeStart" xml:space="preserve">
+    <value>De aanvangstijd moet voor de eindtijd zijn.</value>
+  </data>
+  <data name="Error_Height" xml:space="preserve">
+    <value>Ongeldige hoogte.</value>
+  </data>
+  <data name="Error_Length" xml:space="preserve">
+    <value>Ongeldige lengte.</value>
+  </data>
+  <data name="Error_MandatoryFields" xml:space="preserve">
+    <value>Voer a.u.b. alle verplichte velden in.</value>
+  </data>
+  <data name="Error_MinimumOneAddress" xml:space="preserve">
+    <value>Er moet minimaal één adres ingevoerd worden.</value>
+  </data>
+  <data name="Error_NoSchedulesBeforeToday" xml:space="preserve">
+    <value>Helaas, je kunt geen afspraken in het verleden maken.</value>
+  </data>
+  <data name="Error_Price" xml:space="preserve">
+    <value>Ongeldige prijs.</value>
+  </data>
+  <data name="Error_Schedule1" xml:space="preserve">
+    <value>Meerdere afspraken op hetzelfde tijdstip zijn niet mogelijk.</value>
+  </data>
+  <data name="Error_Schedule2" xml:space="preserve">
+    <value>Meerdere afspraken bij hetzelfde bedrijf op één dag zijn niet mogelijk.</value>
+  </data>
+  <data name="Error_Terms" xml:space="preserve">
+    <value>Ik ga akkoord met de algemene voorwaarden van Plansy</value>
+  </data>
+  <data name="Error_TimeFormat" xml:space="preserve">
+    <value>Er is een fout met het tijdstip van de afspraak. Controleer het tijdstip en pas het eventueel aan (uu:mm).</value>
+  </data>
+  <data name="ExternalLogins" xml:space="preserve">
+    <value>Externe accounts (Bijv. Google, Facebook)</value>
+  </data>
+  <data name="ExternalLogin_AssociateYour" xml:space="preserve">
+    <value>Log in met</value>
+  </data>
+  <data name="ExternalLogin_FailureText" xml:space="preserve">
+    <value>Er is iets misgegaan met het externe account</value>
+  </data>
+  <data name="ExternalLogin_FailureTitle" xml:space="preserve">
+    <value>Er is iets misgegaan met inloggen</value>
+  </data>
+  <data name="ExternalLogin_SuccessMessage1" xml:space="preserve">
+    <value>Succesvol ingelogd met</value>
+  </data>
+  <data name="ExternalLogin_SuccessMessage2" xml:space="preserve">
+    <value>Typ uw emailadres in en klik op Inloggen</value>
+  </data>
+  <data name="FailedToVerifyCode" xml:space="preserve">
+    <value>De code kon niet worden geverifieerd</value>
+  </data>
+  <data name="FavouriteProviders" xml:space="preserve">
+    <value>Favoriete bedrijven</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="FinalizePaymentSuccess_Message" xml:space="preserve">
+    <value>Uw betaling is gelukt.</value>
+  </data>
+  <data name="FinalizePaymentSuccess_Title" xml:space="preserve">
+    <value>Betaling geaccepteerd</value>
+  </data>
+  <data name="ForgotPasswordConfirmationView_Content" xml:space="preserve">
+    <value>We hebben u een e-mail gestuurd waarmee u uw wachtwoord kunt wijzigen. Klik op de link in uw e-mail om uw wachtwoord te wijzigen.</value>
+  </data>
+  <data name="ForgotPasswordConfirmationView_Title" xml:space="preserve">
+    <value>Wachtwoord wijzigen</value>
+  </data>
+  <data name="ForgotPasswordEmail_Content" xml:space="preserve">
+    <value>We hebben u een e-mail gestuurd met een link om uw wachtwoord te wijzigen. Ga naar uw e-mailaccount en klik op de link om uw wachtwoord te wijzigen.</value>
+  </data>
+  <data name="ForgotPasswordView_ButonText" xml:space="preserve">
+    <value>Wachtwoord wijzigen</value>
+  </data>
+  <data name="ForgotPasswordView_Title" xml:space="preserve">
+    <value>Bent u uw wachtwoord vergeten?</value>
+  </data>
+  <data name="ForgotPasswordView_Title2" xml:space="preserve">
+    <value>Typ uw emailadres in</value>
+  </data>
+  <data name="ForgotPassword_Message" xml:space="preserve">
+    <value>U ontvangt een e-mail om uw wachtwoord te wijzigen</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Verbergen</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>Uur</value>
+  </data>
+  <data name="InCompleteAccount" xml:space="preserve">
+    <value>Uw account is niet compleet ????</value>
+  </data>
+  <data name="IncompleteAccountMessage" xml:space="preserve">
+    <value>Voeg uw telefoonnummer toe om een afspraak te maken</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>Verkeerd wachtwoord</value>
+  </data>
+  <data name="InvalidValidationCode" xml:space="preserve">
+    <value>Verkeerde validatiecode</value>
+  </data>
+  <data name="Invalid_Phone_Number" xml:space="preserve">
+    <value>Verkeerd telefoonnummer</value>
+  </data>
+  <data name="Invoice" xml:space="preserve">
+    <value>Factuur</value>
+  </data>
+  <data name="InvoiceAddressDisclaimer" xml:space="preserve">
+    <value>* Ga naar Mijn Account om uw factuuradres te wijzigen.</value>
+  </data>
+  <data name="InvoiceAmountIncludingVat" xml:space="preserve">
+    <value>Totaal - inclusief BTW</value>
+  </data>
+  <data name="InvoiceAmountWithoutVat" xml:space="preserve">
+    <value>Totaal - exclusief BTW</value>
+  </data>
+  <data name="InvoiceDate" xml:space="preserve">
+    <value>Factuurdatum</value>
+  </data>
+  <data name="InvoiceDelegateIdCardDetails" xml:space="preserve">
+    <value>????</value>
+  </data>
+  <data name="InvoiceDelegateName" xml:space="preserve">
+    <value>????</value>
+  </data>
+  <data name="InvoiceDueDate" xml:space="preserve">
+    <value>Uiterste betaaldatum</value>
+  </data>
+  <data name="InvoiceNumber" xml:space="preserve">
+    <value>Factuurnummer</value>
+  </data>
+  <data name="Invoices" xml:space="preserve">
+    <value>Facturen</value>
+  </data>
+  <data name="InvoiceSeries" xml:space="preserve">
+    <value>????</value>
+  </data>
+  <data name="InvoicesList" xml:space="preserve">
+    <value>????</value>
+  </data>
+  <data name="InvoicesListView_Title" xml:space="preserve">
+    <value>Mijn facturen</value>
+  </data>
+  <data name="InvoiceStateId" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="InvoiceStateNotPaid" xml:space="preserve">
+    <value>Onbetaald</value>
+  </data>
+  <data name="InvoiceStatePaid" xml:space="preserve">
+    <value>Betaald</value>
+  </data>
+  <data name="InvoiceStateTitle" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="InvoiceTransportationVehicleDetails" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="InvoiceType" xml:space="preserve">
+    <value>Factuurtype</value>
+  </data>
+  <data name="InvoiceUser" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="InvoiceVat" xml:space="preserve">
+    <value>BTW</value>
+  </data>
+  <data name="Invoice_Add" xml:space="preserve">
+    <value>Factuur toevoegen</value>
+  </data>
+  <data name="Invoice_AddLine" xml:space="preserve">
+    <value>Regel toevoegen</value>
+  </data>
+  <data name="Invoice_AddPayment" xml:space="preserve">
+    <value>Betaling toevoegen</value>
+  </data>
+  <data name="Invoice_Download" xml:space="preserve">
+    <value>Factuur downloaden</value>
+  </data>
+  <data name="Invoice_Edit" xml:space="preserve">
+    <value>Factuur wijzigen</value>
+  </data>
+  <data name="Invoice_EditLine" xml:space="preserve">
+    <value>Regel wijzigen</value>
+  </data>
+  <data name="Invoice_EditPayment" xml:space="preserve">
+    <value>Betaling wijzigen</value>
+  </data>
+  <data name="Invoice_Lines" xml:space="preserve">
+    <value>Factuurregels</value>
+  </data>
+  <data name="Invoice_PaymentAmount" xml:space="preserve">
+    <value>Totaal</value>
+  </data>
+  <data name="Invoice_PaymentDate" xml:space="preserve">
+    <value>Betaaldatum</value>
+  </data>
+  <data name="Invoice_PaymentDetails" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Invoice_PreviousPayments" xml:space="preserve">
+    <value>Vorige betalingen</value>
+  </data>
+  <data name="Invoice_VatRate" xml:space="preserve">
+    <value>BTW</value>
+  </data>
+  <data name="IsAlreadyTaken" xml:space="preserve">
+    <value>wordt al gebruikt.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent1" xml:space="preserve">
+    <value>Potentiële klanten gebruiken Plansy om het beste bedrijf te vinden voor de dienst die zij nodig hebben. Door het handige overzicht van bedrijven vinden potentiële klanten u gemakkelijk zonder extra kosten voor u.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent2" xml:space="preserve">
+    <value>Klanten zien wanneer u nog tijd heeft voor een afspraak. Via Plansy plannen zij direct een afspraak in op een tijd die hen en u uitkomt. In plaats van te bellen kunt u zich richten op uw zaak en uw klanten.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent3" xml:space="preserve">
+    <value>De Plansy agenda wordt gekoppeld met uw eigen agendasysteem. Hierdoor hoeft u geen afspraken op verschillende plekken bij te houden. Één handig overzicht voor al uw afspraken.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent4" xml:space="preserve">
+    <value>Door de automatische herinneringen komen vergeten afspraken minder voor. Klanten krijgen een herinnering op hun telefoon en zullen hun afspraak niet meer vergeten.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent5" xml:space="preserve">
+    <value>Er zijn geen maandelijkse servicekosten. U betaalt alleen voor resultaten. Pas als er afspraken zijn gemaakt betaalt u daarvoor een vergoeding. Er worden eenmalig slechts €25,- gerekend om uw profiel aan te maken. Schrijf u in en probeer het uit.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent6" xml:space="preserve">
+    <value>Via het berichtensysteem stuurt u berichten of aanbiedingen naar klanten. Een bericht kan gestuurd worden naar één persoon of naar een groep. Zo blijven uw klanten op de hoogte van uw laatste aanbiedingen.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent7" xml:space="preserve">
+    <value>Klanten boeken hun afspraken via de apps voor iPhone en Android smartphones of via de website. Zo kunnen zij uw bedrijf overal bereiken. Of ze nou thuis zijn of onderweg.</value>
+  </data>
+  <data name="LandingPageNew_BoxContent8" xml:space="preserve">
+    <value>Blokkeer tijden en dagen zodat er alleen afspraken ingepland kunnen worden op tijden dat het u uitkomt. U ontvangt een melding wanneer er afspraken ingepland worden. Nadat u de afspraak goedkeurt krijgt de klant een bevestiging van de afspraak.</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle1" xml:space="preserve">
+    <value>Nieuwe klanten ontdekken uw bedrijf</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle2" xml:space="preserve">
+    <value>Afspraken stromen binnen terwijl u werkt</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle3" xml:space="preserve">
+    <value>Afspraken direct in uw agenda</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle4" xml:space="preserve">
+    <value>Minder klanten die niet op komen dagen</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle5" xml:space="preserve">
+    <value>Bij Plansy betaalt u alleen voor resultaat</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle6" xml:space="preserve">
+    <value>Stuur berichten naar uw klanten</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle7" xml:space="preserve">
+    <value>Mobile ready</value>
+  </data>
+  <data name="LandingPageNew_BoxTitle8" xml:space="preserve">
+    <value>U heeft de controle over uw agenda</value>
+  </data>
+  <data name="LandingPageNew_SignUp" xml:space="preserve">
+    <value>Meld u nu aan</value>
+  </data>
+  <data name="LandingPageNew_Sub1" xml:space="preserve">
+    <value>Klanten zijn op zoek naar bedrijven zoals die van u</value>
+  </data>
+  <data name="LandingPageNew_Sub2" xml:space="preserve">
+    <value>Met Plansy plannen klanten gemakkelijk een afspraak in met uw bedrijf</value>
+  </data>
+  <data name="LandingPageNew_Subtitle3" xml:space="preserve">
+    <value>Mogelijkheden met Plansy</value>
+  </data>
+  <data name="LandingPageNew_Subtitle3bis" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="LandingPageNew_Subtitle4" xml:space="preserve">
+    <value>Een gemakkelijke manier om afspraken en klanten te beheren. Plansy is geschikt voor alle type bedrijven, zowel klein als groot.</value>
+  </data>
+  <data name="LandingPageNew_Subtitle5" xml:space="preserve">
+    <value>Is er iets tussengekomen?</value>
+  </data>
+  <data name="LandingPageNew_Subtitle5bis" xml:space="preserve">
+    <value>Geen probleem!</value>
+  </data>
+  <data name="LandingPageNew_Subtitle6" xml:space="preserve">
+    <value>U past uw afspraken gemakkelijk aan. De klant ontvangt een melding en bevestigt de nieuwe tijd. Zo is alles duidelijk voor iedereen.</value>
+  </data>
+  <data name="LandingPageNew_Testimonial" xml:space="preserve">
+    <value>Testimonial</value>
+  </data>
+  <data name="LandingPageNew_TestimonialQuote1" xml:space="preserve">
+    <value>Een grote drempel voor veel klanten die onze website bezoeken is om te bellen of om een e-mail te sturen voor een proefles. Via Plansy kunnen zij direct in de app een proefles inplannen. We krijgen inmiddels meer aanvragen binnen via Plansy dan via onze eigen website.</value>
+  </data>
+  <data name="LandingPage_AccountSupplierText" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="LandingPage_AccountSupplierText2" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="LandingPage_AreYouAClient" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="LandingPage_AreYouAClientText" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="LandingPage_AreYouAClientText2" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="LandingPage_AreYouSupplier" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="LandingPage_AskUs" xml:space="preserve">
+    <value>Stel een vraag</value>
+  </data>
+  <data name="LandingPage_AskUs_Text1" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_AskUs_Text2" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_ContactTitle" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_ContactUs" xml:space="preserve">
+    <value>Neem contact met ons op</value>
+  </data>
+  <data name="LandingPage_CookiesMessage" xml:space="preserve">
+    <value>Deze site gebruikt cookies. Door de site te gebruiken gaat u akkoord met het plaatsen van cookies.</value>
+  </data>
+  <data name="LandingPage_Mobile1" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="LandingPage_Mobile2" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_Mobile3" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_ReadMore" xml:space="preserve">
+    <value>Meer informatie.</value>
+  </data>
+  <data name="LandingPage_RequestOfferInfo" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_SignIn" xml:space="preserve">
+    <value>Inloggen</value>
+  </data>
+  <data name="LandingPage_SignUp" xml:space="preserve">
+    <value>Account aanmaken</value>
+  </data>
+  <data name="LandingPage_Step1" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_Step2" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_Step3" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_Step4" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_StepsSubTitle" xml:space="preserve">
+    <value>Met Plansy bespaar je op je waardevolste bezit</value>
+  </data>
+  <data name="LandingPage_StepsSubTitle2" xml:space="preserve">
+    <value>Maak een afspraak met een bedrijf wanneer het jou uitkomt!</value>
+  </data>
+  <data name="LandingPage_StepsTitle" xml:space="preserve">
+    <value>In 4 stappen maak je een afspraak met een bedrijf</value>
+  </data>
+  <data name="LandingPage_SubTitle" xml:space="preserve">
+    <value>Nooit meer wachten bij de kapper, garage of schoonheidsspecialist.</value>
+  </data>
+  <data name="LandingPage_Title" xml:space="preserve">
+    <value>Maak gemakkelijk afspraken met bedrijven</value>
+  </data>
+  <data name="LandingPage_Why1" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_Why2" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_Why3" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_Why4" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_Why5" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_Why6" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LandingPage_WhyTitle" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="LastFiveAppointments" xml:space="preserve">
+    <value>Laatste 5 afspraken</value>
+  </data>
+  <data name="Lines" xml:space="preserve">
+    <value>Regels</value>
+  </data>
+  <data name="LockedOutView_Content" xml:space="preserve">
+    <value>Dit account is (tijdelijk) geblokkeerd. Probeer het later nog eens of neem contact op met info@plansy.nl.</value>
+  </data>
+  <data name="LockedOutView_Title" xml:space="preserve">
+    <value>Account geblokkeerd</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="Login_ExternalLoginHint" xml:space="preserve">
+    <value>Log in met</value>
+  </data>
+  <data name="Login_ExternalLoginTitle" xml:space="preserve">
+    <value>Log in met je externe account:</value>
+  </data>
+  <data name="Login_ForgotPassword" xml:space="preserve">
+    <value>Wachtwoord vergeten?</value>
+  </data>
+  <data name="Login_InvalidLoginAttempt" xml:space="preserve">
+    <value>Foutieve inlog</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Beheer</value>
+  </data>
+  <data name="ManageLoginsView_AddExternalLogin" xml:space="preserve">
+    <value>Voeg een extern account toe</value>
+  </data>
+  <data name="ManageLoginsView_ConnectUsing" xml:space="preserve">
+    <value>Log in met</value>
+  </data>
+  <data name="ManageLoginsView_RegisteredAccounts" xml:space="preserve">
+    <value>Verbonden accounts</value>
+  </data>
+  <data name="ManageLoginsView_RemoveButtonHint" xml:space="preserve">
+    <value>Ik wil niet inloggen met mijn externe account ????</value>
+  </data>
+  <data name="ManageLoginsView_Title" xml:space="preserve">
+    <value>Beheer externe inlogaccounts (bijv. Google of Facebook)</value>
+  </data>
+  <data name="ManageView_ChangeYourPassword" xml:space="preserve">
+    <value>Wijzig je wachtwoord</value>
+  </data>
+  <data name="ManageView_PickAPassword" xml:space="preserve">
+    <value>Kies een wachtwoord</value>
+  </data>
+  <data name="ManageView_Title" xml:space="preserve">
+    <value>Mijn account</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="Menu_Account" xml:space="preserve">
+    <value>Mijn account</value>
+  </data>
+  <data name="Menu_LogOff" xml:space="preserve">
+    <value>Uitloggen</value>
+  </data>
+  <data name="Menu_RolesAdmin" xml:space="preserve">
+    <value>Beheer rollen</value>
+  </data>
+  <data name="Menu_UsersAdmin" xml:space="preserve">
+    <value>Beheer gebruikers</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Bericht</value>
+  </data>
+  <data name="MessageFromMaProgramez" xml:space="preserve">
+    <value>Bericht van Plansy</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>maanden</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Meer</value>
+  </data>
+  <data name="MyClients" xml:space="preserve">
+    <value>Mijn klanten</value>
+  </data>
+  <data name="MyInvoices" xml:space="preserve">
+    <value>Mijn facturen</value>
+  </data>
+  <data name="MySchedules" xml:space="preserve">
+    <value>Mijn afspraken</value>
+  </data>
+  <data name="NewBusinessesInTown" xml:space="preserve">
+    <value>?????</value>
+  </data>
+  <data name="New_Password" xml:space="preserve">
+    <value>Nieuw wachtwoord</value>
+  </data>
+  <data name="NextDays" xml:space="preserve">
+    <value>1 week verder</value>
+  </data>
+  <data name="NextFiveAppointments" xml:space="preserve">
+    <value>Volgende 5 afspraken</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nee</value>
+  </data>
+  <data name="NoAccount" xml:space="preserve">
+    <value>Heb je nog geen Plansy account?</value>
+  </data>
+  <data name="NoContracts" xml:space="preserve">
+    <value>Er zijn geen contracten</value>
+  </data>
+  <data name="NoFavouriteProviders" xml:space="preserve">
+    <value>Er zijn nog geen favoriete bedrijven ingesteld</value>
+  </data>
+  <data name="NoInvoices" xml:space="preserve">
+    <value>Er zijn geen facturen</value>
+  </data>
+  <data name="NoNewBusinessesInTown" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="NoNextAppointments" xml:space="preserve">
+    <value>Er zijn geen afspraken</value>
+  </data>
+  <data name="NoNotifications" xml:space="preserve">
+    <value>Er zijn geen meldingen</value>
+  </data>
+  <data name="NonWorkingDays" xml:space="preserve">
+    <value>Gesloten dagen</value>
+  </data>
+  <data name="NoOperations" xml:space="preserve">
+    <value>Er zijn geen diensten</value>
+  </data>
+  <data name="NoPayments" xml:space="preserve">
+    <value>Er zijn geen betalingen</value>
+  </data>
+  <data name="NoPendingSchedules" xml:space="preserve">
+    <value>Er zijn geen afspraken ter goedkeuring</value>
+  </data>
+  <data name="NoPreviousAppointments" xml:space="preserve">
+    <value>Er zijn geen verlopen afspraken</value>
+  </data>
+  <data name="NoReply" xml:space="preserve">
+    <value>Dit is een automatisch gegenereerd bericht. Hier kunt u niet op antwoorden.</value>
+  </data>
+  <data name="NoResults" xml:space="preserve">
+    <value>Geen resultaten beschikbaar</value>
+  </data>
+  <data name="NoResultsForSelectedCity" xml:space="preserve">
+    <value>Helaas, er zijn nog geen bedrijven in jouw stad in deze categorie.</value>
+  </data>
+  <data name="NoSchedulesOnSelectedDay" xml:space="preserve">
+    <value>Er zijn geen afspraken op deze dag</value>
+  </data>
+  <data name="NoSlots" xml:space="preserve">
+    <value>Er zijn geen personeelsleden ingevoerd</value>
+  </data>
+  <data name="NotificationList" xml:space="preserve">
+    <value>Meldingenoverzicht</value>
+  </data>
+  <data name="NotificationText_Advertisment" xml:space="preserve">
+    <value>Dit is een promotioneel bericht van Plansy.</value>
+  </data>
+  <data name="NotificationText_SystemAlert" xml:space="preserve">
+    <value>Bericht van Plansy.</value>
+  </data>
+  <data name="NotificationType" xml:space="preserve">
+    <value>Type melding</value>
+  </data>
+  <data name="NotificationType_Advertisement" xml:space="preserve">
+    <value>Promotioneel bericht</value>
+  </data>
+  <data name="NotificationType_Cancelation" xml:space="preserve">
+    <value>Afspraak geannuleerd</value>
+  </data>
+  <data name="NotificationType_Confirmation" xml:space="preserve">
+    <value>Afspraak bevestigd</value>
+  </data>
+  <data name="NotificationType_NewSchedule" xml:space="preserve">
+    <value>Nieuwe afspraak</value>
+  </data>
+  <data name="NotificationType_Other" xml:space="preserve">
+    <value>Andere meldingen</value>
+  </data>
+  <data name="NotificationType_Reminder" xml:space="preserve">
+    <value>Herinnering</value>
+  </data>
+  <data name="NotificationType_ReSchedule" xml:space="preserve">
+    <value>Afspraak verzetten</value>
+  </data>
+  <data name="NotificationType_SystemAlert" xml:space="preserve">
+    <value>Systeembericht</value>
+  </data>
+  <data name="Notification_Cancel1" xml:space="preserve">
+    <value>De afspraak bij</value>
+  </data>
+  <data name="Notification_Cancel2" xml:space="preserve">
+    <value>De afspraak op</value>
+  </data>
+  <data name="Notification_Cancel3" xml:space="preserve">
+    <value>is geannuleerd door de klant. Je kunt contact met hem/haar opnemen via</value>
+  </data>
+  <data name="Notification_Cancel4" xml:space="preserve">
+    <value>is geannuleerd door het bedrijf. Je kunt contact met hen opnemen via</value>
+  </data>
+  <data name="Notification_NewAppointment" xml:space="preserve">
+    <value>Een nieuwe klant heeft zojuist een afspraak ingepland:</value>
+  </data>
+  <data name="Notification_Rescheduled" xml:space="preserve">
+    <value>Je afspraak is verzet bij:</value>
+  </data>
+  <data name="Notification_Scheduled1" xml:space="preserve">
+    <value>Je hebt een afspraak bij</value>
+  </data>
+  <data name="Notification_Scheduled2" xml:space="preserve">
+    <value>is verzet via de Plansy app (beschikbaar voor Android en iOS)</value>
+  </data>
+  <data name="Notification_TodayReminder1" xml:space="preserve">
+    <value>Niet vergeten! Vandaag om</value>
+  </data>
+  <data name="Notification_TodayReminder2" xml:space="preserve">
+    <value>heb je een afspraak</value>
+  </data>
+  <data name="Notification_TomorrowReminder" xml:space="preserve">
+    <value>Niet vergeten! Morgen om</value>
+  </data>
+  <data name="Notification_TwoHoursReminder1" xml:space="preserve">
+    <value>Niet vergeten! Over twee uur begint je afspraak bij</value>
+  </data>
+  <data name="Notification_TwoHoursReminder2" xml:space="preserve">
+    <value>Je kunt contact opnemen met het bedrijf via</value>
+  </data>
+  <data name="Notification_Validation1" xml:space="preserve">
+    <value>Je Plansy afspraak bij </value>
+  </data>
+  <data name="Notification_Validation2" xml:space="preserve">
+    <value>is bevestigd. Mocht je nog vragen hebben dan kun je contact opnemen met het bedrijf via </value>
+  </data>
+  <data name="Observations" xml:space="preserve">
+    <value>Opmerkingen</value>
+  </data>
+  <data name="Offer_ErrorMessage" xml:space="preserve">
+    <value>Er is iets fout gegaan. Deze pagina werkt niet.</value>
+  </data>
+  <data name="Offer_ErrorTitle" xml:space="preserve">
+    <value>Fout</value>
+  </data>
+  <data name="Operation" xml:space="preserve">
+    <value>Dienst</value>
+  </data>
+  <data name="Operations" xml:space="preserve">
+    <value>Diensten</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Wachtwoord</value>
+  </data>
+  <data name="PasswordDigit" xml:space="preserve">
+    <value>Het wachtwoord moet minimaal één cijfer bevatten.</value>
+  </data>
+  <data name="PasswordLowerCase" xml:space="preserve">
+    <value>Het wachtwoord moet minimaal één kleine letter bevatten.</value>
+  </data>
+  <data name="PasswordNonLetterOrDigit" xml:space="preserve">
+    <value>Het wachtwoord moet minimaal één cijfer of speciaal teken bevatten, zoals !@#$%^&amp;*.</value>
+  </data>
+  <data name="PasswordUpperCase" xml:space="preserve">
+    <value>Het wachtwoord moet minimaal één hoofdletter bevatten.</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>Betalingsmethode</value>
+  </data>
+  <data name="Payments" xml:space="preserve">
+    <value>Betalingen</value>
+  </data>
+  <data name="PdfSchedule" xml:space="preserve">
+    <value>Afspraken PDF</value>
+  </data>
+  <data name="PdfTodaySchedule" xml:space="preserve">
+    <value>???</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>In afwachting</value>
+  </data>
+  <data name="PendingSchedules" xml:space="preserve">
+    <value>Afspraken in afwachting</value>
+  </data>
+  <data name="PerSlot" xml:space="preserve">
+    <value>Personeel</value>
+  </data>
+  <data name="PerWorkplace" xml:space="preserve">
+    <value>Vestiging</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Telefoonnummer</value>
+  </data>
+  <data name="PhoneNumbers" xml:space="preserve">
+    <value>Telefoonnummers</value>
+  </data>
+  <data name="PhoneValidation" xml:space="preserve">
+    <value>Bevestig telefoonnummer</value>
+  </data>
+  <data name="PhoneValidation_Text" xml:space="preserve">
+    <value>Binnen enkele ogenblikken ontvang je een activatiecode per SMS. Voer de code hieronder in.</value>
+  </data>
+  <data name="PickTheCity" xml:space="preserve">
+    <value>Kies je stad</value>
+  </data>
+  <data name="PickTheProvider" xml:space="preserve">
+    <value>Kies een bedrijf</value>
+  </data>
+  <data name="PreviousDays" xml:space="preserve">
+    <value>1 week terug</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Prijs</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Productnummer</value>
+  </data>
+  <data name="ProgrammingPer" xml:space="preserve">
+    <value>Personeelslid gekozen door</value>
+  </data>
+  <data name="Provider" xml:space="preserve">
+    <value>Bedrijf</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Aantal</value>
+  </data>
+  <data name="Ramburs" xml:space="preserve">
+    <value>Rembours</value>
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>Beoordeling</value>
+  </data>
+  <data name="ReadAll" xml:space="preserve">
+    <value>Markeer alle meldingen als gelezen</value>
+  </data>
+  <data name="ReadMore" xml:space="preserve">
+    <value>Toon alles</value>
+  </data>
+  <data name="Receipt" xml:space="preserve">
+    <value>Bon</value>
+  </data>
+  <data name="RegisterAsANewUser" xml:space="preserve">
+    <value>Maak een nieuw account aan</value>
+  </data>
+  <data name="Register_Button" xml:space="preserve">
+    <value>Meld je aan</value>
+  </data>
+  <data name="Register_NameMessage" xml:space="preserve">
+    <value>Je naam wordt weergegeven op</value>
+  </data>
+  <data name="Register_Strong" xml:space="preserve">
+    <value>om een account aan te maken</value>
+  </data>
+  <data name="Register_SubTitle" xml:space="preserve">
+    <value>Meld je nu aan voor een Plansy account</value>
+  </data>
+  <data name="Register_SupplierMessage" xml:space="preserve">
+    <value>Heeft u een bedrijf? Neem dan contact op met bedrijven@plansy.nl om een zakelijk account aan te maken.</value>
+  </data>
+  <data name="Register_Text" xml:space="preserve">
+    <value>Vul je gegevens in</value>
+  </data>
+  <data name="Register_Title" xml:space="preserve">
+    <value>Sta niet meer in de rij. Maak een account aan en plan je afspraken met bedrijven in op een tijdstip dat jou uitkomt!</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Ingelogd blijven</value>
+  </data>
+  <data name="Remember_This_Browser" xml:space="preserve">
+    <value>Blijf ingelogd in deze browser</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Verwijder</value>
+  </data>
+  <data name="RemoveFromFavourites" xml:space="preserve">
+    <value>Verwijder uit favorieten</value>
+  </data>
+  <data name="RemoveLoginSuccess" xml:space="preserve">
+    <value>Je account is verwijderd</value>
+  </data>
+  <data name="RemovePhoneSuccess" xml:space="preserve">
+    <value>Je telefoonnummer is verwijderd</value>
+  </data>
+  <data name="Report_PaymentsStatus" xml:space="preserve">
+    <value>Betalingsstatus</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>Verplicht</value>
+  </data>
+  <data name="Reschedule" xml:space="preserve">
+    <value>Afspraak verzetten</value>
+  </data>
+  <data name="ResendActivationEmail" xml:space="preserve">
+    <value>Verstuur de activeringsemail opnieuw</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Toon alle</value>
+  </data>
+  <data name="ResetPasswordConfirmationView_Body" xml:space="preserve">
+    <value>Je wachtwoord is gewijzigd. Klik hier om opnieuw in te loggen</value>
+  </data>
+  <data name="ResetPasswordConfirmationView_Title" xml:space="preserve">
+    <value>Bevestig dat je je wachtwoord wilt wijzigen.</value>
+  </data>
+  <data name="ResetPasswordView_Title" xml:space="preserve">
+    <value>Wijzig wachtwoord</value>
+  </data>
+  <data name="ResetPassword_Body" xml:space="preserve">
+    <value>Klik hier om je wachtwoord te wijzigen.</value>
+  </data>
+  <data name="ResetPassword_Subject" xml:space="preserve">
+    <value>Plansy - Wijzig wachtwoord</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Rol</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Rollen</value>
+  </data>
+  <data name="Role_ListOfUsers" xml:space="preserve">
+    <value>Lijst van gebruikers met deze rol</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="SaveUserDetailsSuccess" xml:space="preserve">
+    <value>Persoonijke gegevens opgeslagen</value>
+  </data>
+  <data name="SchduledThoughApp" xml:space="preserve">
+    <value>Afspraak ingepland via Plansy</value>
+  </data>
+  <data name="ScheduleDate" xml:space="preserve">
+    <value>Datum van afspraak</value>
+  </data>
+  <data name="SchedulesList" xml:space="preserve">
+    <value>Overzicht van afspraken</value>
+  </data>
+  <data name="ScheduleState" xml:space="preserve">
+    <value>Status van afspraak</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Zoeken</value>
+  </data>
+  <data name="SeeTomorrowSchedules" xml:space="preserve">
+    <value>Bekijk de afspraken van morgen</value>
+  </data>
+  <data name="SeeTutorial" xml:space="preserve">
+    <value>Bekijk de Plansy instructievideo</value>
+  </data>
+  <data name="SeeYesterdaySchedules" xml:space="preserve">
+    <value>Bekijk de afspraken van gisteren</value>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>Selecteer een categorie</value>
+  </data>
+  <data name="SelectCity" xml:space="preserve">
+    <value>Selecteer een stad</value>
+  </data>
+  <data name="SelectCounty" xml:space="preserve">
+    <value>Selecteer een provincie</value>
+  </data>
+  <data name="SelectCountyFirst" xml:space="preserve">
+    <value>Selecteer eerst een provincie</value>
+  </data>
+  <data name="SelectFavouriteSlot" xml:space="preserve">
+    <value>Kies je favoriete medewerker</value>
+  </data>
+  <data name="SelectOperation" xml:space="preserve">
+    <value>Kies een dienst (minimaal 1)</value>
+  </data>
+  <data name="SelectPaymentMethod" xml:space="preserve">
+    <value>Kies je gewenste betaalmethode</value>
+  </data>
+  <data name="SelectSlot" xml:space="preserve">
+    <value>Selecteer een medewerker</value>
+  </data>
+  <data name="SelectSlotFirst" xml:space="preserve">
+    <value>Selecteer eerst een medewerker</value>
+  </data>
+  <data name="SelectUserRole" xml:space="preserve">
+    <value>Selecteer een rol</value>
+  </data>
+  <data name="SelectUserRoles" xml:space="preserve">
+    <value>Selecteer rollen</value>
+  </data>
+  <data name="Semicolon" xml:space="preserve">
+    <value>;</value>
+  </data>
+  <data name="SendAdvertisementToClients" xml:space="preserve">
+    <value>Verstuur een advertentie naar uw klanten</value>
+  </data>
+  <data name="SendNotification" xml:space="preserve">
+    <value>Verstuur Plansy melding</value>
+  </data>
+  <data name="SendValidationCode" xml:space="preserve">
+    <value>Verstuur validatiecode</value>
+  </data>
+  <data name="SetPasswordSuccess" xml:space="preserve">
+    <value>Verstuur bevestigingscode</value>
+  </data>
+  <data name="SetPasswordView_CreateLogin" xml:space="preserve">
+    <value>Maak een lokaal account aan</value>
+  </data>
+  <data name="SetPasswordView_SaveButtonText" xml:space="preserve">
+    <value>Maak een account aan</value>
+  </data>
+  <data name="SetPasswordView_Title" xml:space="preserve">
+    <value>Je hebt geen lokaal Plansy account. Maak een lokaal account aan.</value>
+  </data>
+  <data name="SetTwoFactorSuccess" xml:space="preserve">
+    <value>Tweestapsauthenticatie ingesteld.</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Tonen</value>
+  </data>
+  <data name="ShowClientsPhoneNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SignIn_Strong" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="SignIn_Text" xml:space="preserve">
+    <value>Voer je email en wachtwoord in</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>Meld je aan</value>
+  </data>
+  <data name="Slot" xml:space="preserve">
+    <value>Personeel</value>
+  </data>
+  <data name="SlotsList" xml:space="preserve">
+    <value>Personeelsoverzicht</value>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>Sorteren</value>
+  </data>
+  <data name="SortBy" xml:space="preserve">
+    <value>Sorteren op</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>Starttijd</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Status </value>
+  </data>
+  <data name="SubscriptionPeriod" xml:space="preserve">
+    <value>Abonnementsduur</value>
+  </data>
+  <data name="Supplier" xml:space="preserve">
+    <value>Supplier???</value>
+  </data>
+  <data name="SupplierCompany" xml:space="preserve">
+    <value>Supplier company???</value>
+  </data>
+  <data name="TermsAndPrivacy" xml:space="preserve">
+    <value>Algemene voorwaarden en privacyverklaring</value>
+  </data>
+  <data name="Terms_Link" xml:space="preserve">
+    <value>Algemene voorwaarden en privacyverklaring</value>
+  </data>
+  <data name="Terms_Text" xml:space="preserve">
+    <value>Door een account aan te maken gaat u akkoord met onze</value>
+  </data>
+  <data name="TheMessageHasBeenSent" xml:space="preserve">
+    <value>Het bericht is verstuurd</value>
+  </data>
+  <data name="TheMessageHasBeenSentMessage" xml:space="preserve">
+    <value>Het bericht is verstuurd naar de geselecteerde lijst</value>
+  </data>
+  <data name="TheMessageHasNotBeenSent" xml:space="preserve">
+    <value>Het bericht is niet verstuurd</value>
+  </data>
+  <data name="TheMessageHasNotBeenSentMessage" xml:space="preserve">
+    <value>Het bericht is niet verstuurd naar de geselecteerde lijst</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>tijd</value>
+  </data>
+  <data name="Timetable" xml:space="preserve">
+    <value>Agenda</value>
+  </data>
+  <data name="TotalClients" xml:space="preserve">
+    <value>Aantal klanten</value>
+  </data>
+  <data name="TotalProviders" xml:space="preserve">
+    <value>Bedrijven in Plansy</value>
+  </data>
+  <data name="Town" xml:space="preserve">
+    <value>Stad</value>
+  </data>
+  <data name="Tutorial" xml:space="preserve">
+    <value>Bekijk de instructievideo</value>
+  </data>
+  <data name="TwoFactorActivated_Text" xml:space="preserve">
+    <value>Tweestapsauthenticatie geactiveerd</value>
+  </data>
+  <data name="TwoFactorDeActivated_Text" xml:space="preserve">
+    <value>Tweestapsauthenticatie gedeactiveerd</value>
+  </data>
+  <data name="UnblockAccount" xml:space="preserve">
+    <value>Deblokkeer account</value>
+  </data>
+  <data name="UnityMeasure" xml:space="preserve">
+    <value>Aantal</value>
+  </data>
+  <data name="UnpayedInvoices" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UploadImageError" xml:space="preserve">
+    <value>De afbeelding is te groot. Maximaal 8mb.</value>
+  </data>
+  <data name="UploadLogo" xml:space="preserve">
+    <value>Upload logo</value>
+  </data>
+  <data name="UseLocalAccountToLogin" xml:space="preserve">
+    <value>Log in.</value>
+  </data>
+  <data name="UserAdminView_Add" xml:space="preserve">
+    <value>Gebruiker toevoegen</value>
+  </data>
+  <data name="UserAdminView_AddOperation" xml:space="preserve">
+    <value>Nieuwe dienst toevoegen</value>
+  </data>
+  <data name="UserAdminView_AddSlot" xml:space="preserve">
+    <value>Nieuw personeelslid toevoegen</value>
+  </data>
+  <data name="UserAdminView_EditOperation" xml:space="preserve">
+    <value>Dienst wijzigen</value>
+  </data>
+  <data name="UserAdminView_Title" xml:space="preserve">
+    <value>Beheer gebruikers</value>
+  </data>
+  <data name="User_AcceptsNewRequestNotificationOnEmail" xml:space="preserve">
+    <value>Ik accepteer meldingen van nieuwe verzoeken per email</value>
+  </data>
+  <data name="User_AcceptsNotificationOnEmail" xml:space="preserve">
+    <value>Ik wil herinneringen per e-mail ontvangen</value>
+  </data>
+  <data name="User_AcceptsNotificationOnSms" xml:space="preserve">
+    <value>Ik wil herinneringen per SMS ontvangen</value>
+  </data>
+  <data name="User_AcceptsPushNotification" xml:space="preserve">
+    <value>Ik wil pushberichten ontvangen</value>
+  </data>
+  <data name="User_AccountNumber" xml:space="preserve">
+    <value>Rekeningnummer</value>
+  </data>
+  <data name="User_AddAddress" xml:space="preserve">
+    <value>Adres toevoegen</value>
+  </data>
+  <data name="User_Address" xml:space="preserve">
+    <value>Adres</value>
+  </data>
+  <data name="User_Addresses" xml:space="preserve">
+    <value>Adressen</value>
+  </data>
+  <data name="User_Bank" xml:space="preserve">
+    <value>Bank</value>
+  </data>
+  <data name="User_CashPayment" xml:space="preserve">
+    <value>Contant betalen</value>
+  </data>
+  <data name="User_ChangePhone" xml:space="preserve">
+    <value>Telefoonnummer wijzigen</value>
+  </data>
+  <data name="User_City" xml:space="preserve">
+    <value>Stad</value>
+  </data>
+  <data name="User_Commission" xml:space="preserve">
+    <value>Commissie</value>
+  </data>
+  <data name="User_CompanyName" xml:space="preserve">
+    <value>Bedrijfsnaam</value>
+  </data>
+  <data name="User_Confirm_Password" xml:space="preserve">
+    <value>Bevestig wachtwoord</value>
+  </data>
+  <data name="User_Connect" xml:space="preserve">
+    <value>Externe accounts</value>
+  </data>
+  <data name="User_ContactPersonName" xml:space="preserve">
+    <value>Naam contactpersoon ???</value>
+  </data>
+  <data name="User_Country" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="User_County" xml:space="preserve">
+    <value>Provincie</value>
+  </data>
+  <data name="User_CUI" xml:space="preserve">
+    <value>??</value>
+  </data>
+  <data name="User_DateOfBirth" xml:space="preserve">
+    <value>Geboortedatum</value>
+  </data>
+  <data name="User_Details" xml:space="preserve">
+    <value>Gegevens</value>
+  </data>
+  <data name="User_FirstName" xml:space="preserve">
+    <value>Voornaam</value>
+  </data>
+  <data name="User_HideInvoices" xml:space="preserve">
+    <value>Facturen verbergen</value>
+  </data>
+  <data name="User_IdCardNo" xml:space="preserve">
+    <value>Nummer identiteitskaart</value>
+  </data>
+  <data name="User_IdSucursalaFan" xml:space="preserve">
+    <value>??</value>
+  </data>
+  <data name="User_IdSucursalaUrgent" xml:space="preserve">
+    <value>??</value>
+  </data>
+  <data name="User_InvoiceCreatedByCnp" xml:space="preserve">
+    <value>??</value>
+  </data>
+  <data name="User_InvoiceCreatedByIdCard" xml:space="preserve">
+    <value>??</value>
+  </data>
+  <data name="User_InvoiceCreatedByName" xml:space="preserve">
+    <value>??</value>
+  </data>
+  <data name="User_InvoiceSum" xml:space="preserve">
+    <value>??</value>
+  </data>
+  <data name="User_IsCompany" xml:space="preserve">
+    <value>Is een bedrijf</value>
+  </data>
+  <data name="User_IsProvider" xml:space="preserve">
+    <value>Bedrijf? </value>
+  </data>
+  <data name="User_JNO" xml:space="preserve">
+    <value>??</value>
+  </data>
+  <data name="User_LogoPath" xml:space="preserve">
+    <value>Logo</value>
+  </data>
+  <data name="User_Name" xml:space="preserve">
+    <value>Achternaam</value>
+  </data>
+  <data name="User_Password" xml:space="preserve">
+    <value>Wachtwoord</value>
+  </data>
+  <data name="User_Password_ConfirmErrorMessage" xml:space="preserve">
+    <value>Het wachtwoord en de bevestigingscode komen niet overeen ????</value>
+  </data>
+  <data name="User_Password_ErrorMessage" xml:space="preserve">
+    <value>{0} moet minimaal {2} tekens bevatten.</value>
+  </data>
+  <data name="User_PaymentDelayDays" xml:space="preserve">
+    <value>Aantal dagen te laat</value>
+  </data>
+  <data name="User_Personaldetails" xml:space="preserve">
+    <value>Mijn gegevens</value>
+  </data>
+  <data name="User_Phone" xml:space="preserve">
+    <value>Mobiel nummer</value>
+  </data>
+  <data name="User_PostalCode" xml:space="preserve">
+    <value>Postcode</value>
+  </data>
+  <data name="User_Saved" xml:space="preserve">
+    <value>Wijzigingen opgeslagen</value>
+  </data>
+  <data name="User_Settings" xml:space="preserve">
+    <value>Instellingen</value>
+  </data>
+  <data name="User_SupplierInvoiceNumber" xml:space="preserve">
+    <value>Factuurnummer</value>
+  </data>
+  <data name="User_SupplierInvoiceSeries" xml:space="preserve">
+    <value>Factuurserie</value>
+  </data>
+  <data name="User_SupplierProformInvoiceNumber" xml:space="preserve">
+    <value>Pro forma factuurnummer</value>
+  </data>
+  <data name="User_SupplierProformInvoiceSeries" xml:space="preserve">
+    <value>Pro forma factuurserie</value>
+  </data>
+  <data name="User_VatRate" xml:space="preserve">
+    <value>BTW tarief</value>
+  </data>
+  <data name="Valid" xml:space="preserve">
+    <value>Goedgekeurd</value>
+  </data>
+  <data name="Verify" xml:space="preserve">
+    <value>Controleer</value>
+  </data>
+  <data name="VerifyMobileCode" xml:space="preserve">
+    <value>Controleer de code die je per SMS hebt ontvangen</value>
+  </data>
+  <data name="ViewAll" xml:space="preserve">
+    <value>Toon alles</value>
+  </data>
+  <data name="ViewSchedules_Info1" xml:space="preserve">
+    <value>Klik in het vak op het tijdstip waarop u een afspraak wilt maken.</value>
+  </data>
+  <data name="ViewSchedules_Info2" xml:space="preserve">
+    <value>Klik op een afspraak om deze te wijzigen of te verwijderen.</value>
+  </data>
+  <data name="ViewSchedules_Info3" xml:space="preserve">
+    <value>Klik op de onderste rand van de afspraak en sleep omhoog of omlaag om de duur te wijzigen</value>
+  </data>
+  <data name="ViewSchedules_Info4" xml:space="preserve">
+    <value>Sleep de afspraak naar een andere datum of tijdstip om deze te wijzigen</value>
+  </data>
+  <data name="ViewSchedules_InfoClient" xml:space="preserve">
+    <value>Klik op een afspraak om deze te wijzigen of te verwijderen.</value>
+  </data>
+  <data name="Why" xml:space="preserve">
+    <value>Waarom Plansy?</value>
+  </data>
+  <data name="WithReceipt" xml:space="preserve">
+    <value>Bon?</value>
+  </data>
+  <data name="WorksByWeekly" xml:space="preserve">
+    <value>??</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="YourSecurityCodeIs" xml:space="preserve">
+    <value>Je beveiligingscode is: </value>
+  </data>
+  <data name="LandingPageNew_TestimonialQuote2" xml:space="preserve">
+    <value>Door Plansy kan ik meer tijd besteden aan knippen, doordat ik minder hoef te telefoneren. Mijn klanten vinden het vooral handig dat ze meteen kunnen zien wanneer er nog tijd vrij is. Op dat tijdstip kunnen zij direct een afspraak inplannen zonder te bellen. Al mijn collega kappers zijn ook al overgestapt.</value>
+  </data>
+</root>

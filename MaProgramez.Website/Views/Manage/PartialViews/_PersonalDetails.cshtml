@@ -1,0 +1,278 @@
+﻿@using MaProgramez.Repository.Entities
+@using MaProgramez.Resources
+
+@model ApplicationUser
+
+<div class="panel panel-default" id="PanelReadonly">
+    <div class="panel-body">
+        <h4 style="margin-bottom: 20px;">@Resource.ManageView_Title</h4>
+        <div class="row">
+            <div class="form-group">
+                @Html.LabelFor(m => m.FirstName, new { @class = "form-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control input-sm", disabled = "disabled" })
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.LastName, new { @class = "form-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control input-sm", disabled = "disabled" })
+                </div>
+                <div class="clear"></div>
+            </div>
+            @if (Model.IsCompany)
+            {
+                <div class="form-group">
+                    @Html.LabelFor(m => m.CompanyName, new { @class = "form-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.CompanyName, new { @class = "form-control input-sm", disabled = "disabled" })
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            }
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email, new { @class = "form-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control input-sm", disabled = "disabled" })
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="form-group">
+                @*@Html.LabelFor(m => m.PhoneNumber, new { @class = "form-label col-md-4" })*@
+                <div class="form-label col-md-4">@Resource.PhoneNumber</div>
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control input-sm", disabled = "disabled" })
+                </div>
+                <div class="clear"></div>
+            </div>
+            @if (Model.IsCompany)
+            {
+                <div class="col-md-12">
+                    <div class="line"></div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Cui, new { @class = "form-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Cui, new { @class = "form-control input-sm", disabled = "disabled" })
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Jno, new { @class = "form-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Jno, new { @class = "form-control input-sm", disabled = "disabled" })
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Bank, new { @class = "form-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Bank, new { @class = "form-control input-sm", disabled = "disabled" })
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="line"></div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.LogoPath, new { @class = "form-label col-md-4" })
+                    <div class="col-md-8">
+                        <div id="LogoPreview" class="image-preview">
+                            @if (!string.IsNullOrWhiteSpace(Model.LogoPath))
+                            {
+                                <img src="/Images/Logos/@(Model.LogoPath)" alt="Logo" />
+                            }
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="line"></div>
+                </div>
+            }
+            <div class="form-group">
+                @Html.LabelFor(m => m.AcceptsNotificationOnEmail, new { @class = "form-label col-md-8" })
+                <div class="col-md-3">
+                    <fieldset class="switch switch-two" style="margin: 0">
+                        <input id="" name="AcceptsNotificationOnEmail" type="radio" disabled value="True" @(Model != null && Model.AcceptsNotificationOnEmail ? "checked" : string.Empty) />
+                        <label for="">@Resource.Yes</label>
+                        <input id="" name="AcceptsNotificationOnEmail" type="radio" disabled value="False" @(Model == null || !Model.AcceptsNotificationOnEmail ? "checked" : string.Empty) />
+                        <label for="">@Resource.No</label>
+                    </fieldset>
+                </div>
+                <div class="clear"></div>
+                @Html.LabelFor(m => m.AcceptsNotificationOnSms, new { @class = "form-label col-md-8" })
+                <div class="col-md-3">
+                    <fieldset class="switch switch-two" style="margin: 0">
+                        <input id="" name="AcceptsNotificationOnSms" type="radio" disabled value="True" @(Model != null && Model.AcceptsNotificationOnSms ? "checked" : string.Empty) />
+                        <label for="">@Resource.Yes</label>
+                        <input id="" name="AcceptsNotificationOnSms" type="radio" disabled value="False" @(Model == null || !Model.AcceptsNotificationOnSms ? "checked" : string.Empty) />
+                        <label for="">@Resource.No</label>
+                    </fieldset>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="line"></div>
+        <div class="form-group">
+            <div class="btn buton5 btn-sm float-right hide-panel-button" data-target-show="#PanelEditable" data-target-hide="#PanelReadonly">@Resource.Edit.ToUpper()</div>
+            <div class="clear"></div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="panel panel-default panel-editable" id="PanelEditable">
+    @using (Ajax.BeginForm("UpdatePersonalDetails", "Service", null, new AjaxOptions() { HttpMethod = "Post", OnSuccess = "onUpdatePersonalDetailsSuccess" }, new { @class = "update-personal-details-form", data_loading_target = "#LoadingPersonalDetails" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.Id)
+
+        <div class="panel-body">
+            <h4 style="margin-bottom: 20px;">@Resource.ManageView_Title</h4>
+            <div class="row">
+              <div class="form-group">
+                        @Html.LabelFor(m => m.FirstName, new { @class = "form-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(m => m.FirstName)
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.LastName, new { @class = "form-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(m => m.LastName)
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+              
+                @if (Model.IsCompany)
+                {
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.CompanyName, new { @class = "form-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.CompanyName, new { @class = "form-control input-sm", disabled = "disabled" })
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                }
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "form-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control input-sm", disabled = "disabled" })
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.PhoneNumber, new { @class = "form-label col-md-4" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control input-sm", disabled = "disabled" })
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                @if (Model.IsCompany)
+                {
+                    <div class="col-md-12">
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Cui, new { @class = "form-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.Cui, new { @class = "form-control input-sm", disabled = "disabled" })
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Jno, new { @class = "form-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.Jno, new { @class = "form-control input-sm", disabled = "disabled" })
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Bank, new { @class = "form-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.Bank, new { @class = "form-control input-sm", disabled = "disabled" })
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.LogoPath, new { @class = "form-label col-md-4" })
+                        <div class="col-md-8">
+                            <div id="LogoPreview" class="image-preview">
+                                @if (!string.IsNullOrWhiteSpace(Model.LogoPath))
+                                {
+                                    <img src="/Images/Logos/@(Model.LogoPath)" alt="Logo" />
+                                }
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="line"></div>
+                    </div>
+                }
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.AcceptsNotificationOnEmail, new { @class = "form-label col-md-8" })
+                    <div class="col-md-3">
+                        <fieldset class="switch switch-two" style="margin: 0">
+                            <input id="AcceptsNotificationOnEmailYes" name="AcceptsNotificationOnEmail" type="radio" value="True" @(Model != null && Model.AcceptsNotificationOnEmail ? "checked" : string.Empty) />
+                            <label for="AcceptsNotificationOnEmailYes">@Resource.Yes</label>
+                            <input id="AcceptsNotificationOnEmailNo" name="AcceptsNotificationOnEmail" type="radio" value="False" @(Model == null || !Model.AcceptsNotificationOnEmail ? "checked" : string.Empty) />
+                            <label for="AcceptsNotificationOnEmailNo">@Resource.No</label>
+                        </fieldset>
+                    </div>
+                    <div class="clear"></div>
+                    @Html.LabelFor(m => m.AcceptsNotificationOnSms, new { @class = "form-label col-md-8" })
+                    <div class="col-md-3">
+                        <fieldset class="switch switch-two" style="margin: 0">
+                            <input id="AcceptsNotificationOnSmsYes" name="AcceptsNotificationOnSms" type="radio" value="True" @(Model != null && Model.AcceptsNotificationOnSms ? "checked" : string.Empty) />
+                            <label for="AcceptsNotificationOnSmsYes">@Resource.Yes</label>
+                            <input id="AcceptsNotificationOnSmsNo" name="AcceptsNotificationOnSms" type="radio" value="False" @(Model == null || !Model.AcceptsNotificationOnSms ? "checked" : string.Empty) />
+                            <label for="AcceptsNotificationOnSmsNo">@Resource.No</label>
+                        </fieldset>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div class="line"></div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="btn btn-link btn-sm hide-panel-button" data-target-hide="#PanelEditable" data-target-show="#PanelReadonly">@Resource.Cancel</div>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-danger btn-sm float-right">@Resource.Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<div class="loading-box" id="LoadingPersonalDetails">
+    <i class="fa fa-spinner fa-spin"></i>
+</div>

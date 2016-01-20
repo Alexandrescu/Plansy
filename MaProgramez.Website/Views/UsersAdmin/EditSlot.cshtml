@@ -1,0 +1,148 @@
+﻿@model MaProgramez.Repository.Entities.Slot
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            @Resource.EditSlot
+        </div><!-- /.col-lg-3 -->
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+        @using (Html.BeginForm("EditSlot", "UsersAdmin", FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.Id)
+            @Html.HiddenFor(m => m.UserId)
+            @Html.HiddenFor(m => m.ProviderId)
+
+            if (!Html.ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger form-validation" role="alert">
+                    @Html.ValidationSummary(true, "", new { @class = "text-error" })
+                </div>
+                <div class="clear"></div>
+            }
+
+            <div class="form-group">
+                <label class="col-md-4 form-label">@Resource.User_Name<span class="font-danger">&nbsp;*</span></label>
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 form-label">@Resource.Email<span class="font-danger">&nbsp;*</span></label>
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 form-label">@Resource.PhoneNumber<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Phone, new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 form-label">@Resource.Description<span class="font-danger">&nbsp;</span></label>
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Description, new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.LogoPath, new { @class = "col-md-4 form-label" })
+                    <div class="col-md-8">
+                        <div id="LogoPreview" class="image-preview">
+                            @if (!string.IsNullOrWhiteSpace(Model.LogoPath))
+                            {
+                                <img src="/Images/Logos/@(Model.LogoPath)" alt="Logo" />
+                            }
+                        </div>
+                        <input type="file" name="file" id="File" data-target="#LogoPreview" style="display: none;" />
+                        <div class="btn btn-success btn-sm" id="UploadImage" data-target="#File">@(!string.IsNullOrWhiteSpace(Model.LogoPath) ? Resource.ChangeLogo : Resource.UploadLogo)</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 form-label">@Resource.Category<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-8">
+                        @if (User.IsInRole("Admin") || User.IsInRole("Agent"))
+                        {
+                            @Html.DropDownListFor(m => m.CategoryId, new SelectList(ViewBag.Categories, "key", "value"), new { @class = "selectpicker price-payment-method-select", data_class = "btn-default btn-sm", data_width = "100%", data_live_search = "true", data_size = "5" })
+                        }
+                        else
+                        {
+                            @Html.TextBoxFor(m => m.Category.Name, new { @class = "form-control input-sm", @readonly = "true" })
+                        }
+                    </div>
+                </div>
+
+
+                <hr />
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.AcceptsNotificationOnEmail, new { @class = "form-label col-md-6" })
+                    <div class="col-md-6">
+                        <fieldset class="switch switch-two" style="margin: 0">
+                            <input id="AcceptsNotificationOnEmailYes" name="AcceptsNotificationOnEmail" type="radio" value="True" @(Model != null && Model.AcceptsNotificationOnEmail ? "checked" : string.Empty) />
+                            <label for="AcceptsNotificationOnEmailYes">@Resource.Yes</label>
+                            <input id="AcceptsNotificationOnEmailNo" name="AcceptsNotificationOnEmail" type="radio" value="False" @(Model == null || !Model.AcceptsNotificationOnEmail ? "checked" : string.Empty) />
+                            <label for="AcceptsNotificationOnEmailNo">@Resource.No</label>
+                        </fieldset>
+                    </div>
+                    <div class="clear"></div>
+                    @Html.LabelFor(m => m.AcceptsNotificationOnSms, new { @class = "form-label col-md-6" })
+                    <div class="col-md-6">
+                        <fieldset class="switch switch-two" style="margin: 0">
+                            <input id="AcceptsNotificationOnSmsYes" name="AcceptsNotificationOnSms" type="radio" value="True" @(Model != null && Model.AcceptsNotificationOnSms ? "checked" : string.Empty) />
+                            <label for="AcceptsNotificationOnSmsYes">@Resource.Yes</label>
+                            <input id="AcceptsNotificationOnSmsNo" name="AcceptsNotificationOnSms" type="radio" value="False" @(Model == null || !Model.AcceptsNotificationOnSms ? "checked" : string.Empty) />
+                            <label for="AcceptsNotificationOnSmsNo">@Resource.No</label>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <hr />
+                <div class="form-group" style="padding-right: 15px;padding-right: 30px">
+                    <div class="col-md-12">
+                        @if (string.IsNullOrWhiteSpace(Model.UserId))
+                        {
+                            <a href="@Url.Action(MVC.UsersAdmin.CreateSlotUser(Model.Id))" class="btn btn-default float-right">Creaza user pentru slot</a>
+                        }
+                        else
+                        {
+                            <a href="@Url.Action(MVC.UsersAdmin.Edit(Model.UserId))" class="btn btn-default float-right">Editeaza userul slotului</a>
+                        }
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+                <hr />
+                <div class="form-group" style="padding-left: 15px;padding-right: 30px">
+                    <div class="col-md-6">
+                        <a href="@Url.Action(MVC.UsersAdmin.SlotsList(Model.ProviderId))" class="btn btn-info float-left">@Resource.Back</a>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="submit" class="btn btn-success float-right" value="@Resource.Save" />
+                    </div>
+                </div>
+        }
+    </div>
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval", Html.JsCultureBundle())
+    @Scripts.Render("~/bundles/upload-images")
+}

@@ -1,0 +1,42 @@
+﻿@using MaProgramez.Repository.Entities
+@using MaProgramez.Resources
+@using MaProgramez.Website.Helpers
+
+@model Notification
+
+@{
+    Notification notif = Model;
+}
+
+@switch (notif.Type)
+{
+    case NotificationType.SystemAlert:
+    case NotificationType.Cancelation:
+        {
+            <a href=@Url.Action(MVC.Notification.MarkAsReadNotifs(Model.Id)) class="list-group-item notification-danger">
+                <span class="list-group-item-heading">@(@notif.Type.DisplayDescription())</span>
+                <span class="list-group-item-text">@notif.Text</span>
+            </a>
+            break;
+        }
+
+    case NotificationType.Confirmation:
+    case NotificationType.NewSchedule:
+        {
+            <a href=@Url.Action(MVC.Notification.MarkAsReadNotifs(Model.Id)) class="list-group-item notification-success">
+                <span class="list-group-item-heading">@(@notif.Type.DisplayDescription())</span>
+                <span class="list-group-item-text">@notif.Text</span>
+            </a>
+            break;
+        }
+
+    case NotificationType.Advertisement:
+    case NotificationType.ReSchedule:
+        {
+            <a href=@Url.Action(MVC.Notification.MarkAsReadNotifs(Model.Id)) class="list-group-item notification-warning">
+                <span class="list-group-item-heading">@(@notif.Type.DisplayDescription())</span>
+                <span class="list-group-item-text">@notif.Text</span>
+            </a>
+            break;
+        }
+}

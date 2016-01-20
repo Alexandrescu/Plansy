@@ -1,0 +1,24 @@
+﻿@using MaProgramez.Resources
+@{
+    ViewBag.Title = Resource.Error404_Title;
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+div class="login-container" style="width: 400px;">
+<div class="login-section">
+    <div class="row">
+        <div class="col-md-12" style="">
+            <h1>@Resource.Error404_Title</h1>
+            <p>@Resource.Error404_Content @ViewBag.RequestedUrl</p>
+            @if (ViewBag.ReferrerUrl != null)
+            {
+                <p @Resource.Error404_GoBackText> <a href="@ViewBag.ReferrerUrl"></a></p>
+            }
+
+            @* Error page must be longer than 512 bytes for IE and Chrome to show it.
+                So add padding in case we're short. *@
+            @(new string(' ', 512))
+        </div>
+    </div>
+</div>
+

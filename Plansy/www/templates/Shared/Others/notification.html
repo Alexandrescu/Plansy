@@ -1,0 +1,5 @@
+<div ng-if="NotificationMessage" ng-click="closeNotification()" class="notification-box">
+    <span class="notepad-icon" ng-class="{'success ion-ios-checkmark': NotificationType == 'success', 'error ion-ios-minus': NotificationType == 'error', 'warning ion-ios-information': NotificationType == 'warning'}"></span>
+    <span>{{NotificationMessage}}</span>
+    <span class="icon ion-ios-close-empty"></span>
+</div>

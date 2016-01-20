@@ -1,0 +1,141 @@
+﻿@using MaProgramez.Repository.Entities
+@using MaProgramez.Website.Utility
+@model MaProgramez.Website.ViewModels.InvoiceViewModel
+@{
+    Layout = null;
+    var culture = new System.Globalization.CultureInfo("en-US");
+    var address = Model.Invoice.User.Addresses.Any(m => m.AddressType == AddressType.InvoiceAddress) ? Model.Invoice.User.Addresses.First(m => m.AddressType == AddressType.InvoiceAddress) : Model.Invoice.User.Addresses.First();
+    var userName = !Model.Invoice.User.IsCompany ? Model.Invoice.User.FirstName + " " + Model.Invoice.User.LastName : Model.Invoice.User.CompanyName;
+}
+<itext creationdate="@DateTime.Now.ToString()" producer="RazorPDF">
+
+
+    <table width="100%" cellpadding="3.0" cellspacing="3.0" widths="3;4;3">
+        <row>
+            <cell horizontalalign="center">
+                <chunk color="#1c77a6" style="font-weight:bold" font="Times" size="15.0">@Resource.Supplier</chunk>
+                <newline />
+                <chunk font="Times" size="12.0">SC SPIN IT SRL</chunk>
+            </cell>
+            <cell horizontalalign="center">
+                <image url="@Context.Server.MapPath("~/Content/images/logo.png")" />
+            </cell>
+            <cell horizontalalign="center">
+                <chunk color="#1c77a6" style="font-weight:bold" font="Times" size="15.0">@Resource.Buyer</chunk>
+                <newline />
+                <chunk font="Times" size="12.0">
+                    @userName
+                </chunk>
+            </cell>
+        </row>
+        <row>
+
+            @*FURNIZOR*@
+            <cell>
+                <chunk font="Times" size="10.0" style="font-weight:bold">Nr reg Com: </chunk>
+                <chunk font="Times" size="10.0">J32/250/10.03.2014</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">CUI: </chunk>
+                <chunk font="Times" size="10.0">32902508 </chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Sediu: </chunk>
+                <chunk font="Times" size="10.0">Selimbar, Str.Sabin Balasa Nr.15A, Ap.2</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Capital social: </chunk>
+                <chunk font="Times" size="10.0">200RON</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Cont: </chunk>
+                <chunk font="Times" size="10.0">RO95INGB0000999905179098 </chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Banca: </chunk>
+                <chunk font="Times" size="10.0">ING BANK</chunk>
+                <newline />
+
+                @*<chunk font="Times" size="10.0" style="font-weight:bold">Tel: </chunk>
+                    <chunk font="Times" size="10.0">0744667889</chunk>
+                    <newline />*@
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">E-mail: </chunk>
+                <chunk font="Times" size="10.0">office@spinit.ro</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Web </chunk>
+                <chunk font="Times" size="10.0">www.spinit.ro</chunk>
+                <newline />
+            </cell>
+
+            @*DETALII FACTURA*@
+            <cell horizontalalign="center">
+                <newline />
+                <chunk color="#1c77a6" style="font-weight:bold" font="Times" size="20.0">CHITANTA</chunk>
+                <newline />
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">Numar: </chunk>
+                <newline />
+                <chunk font="Times" size="10.0"> @Model.Invoice.ReceiptNo</chunk>
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">Data: </chunk>
+                <newline />
+                <chunk font="Times" size="10.0">@Model.Invoice.Date.ToString("dd-MM-yyyy") </chunk>
+                <newline />
+            </cell>
+
+            @*CLIENT*@
+            <cell>
+                <chunk font="Times" size="10.0" style="font-weight:bold">Nr reg Com: </chunk>
+                <chunk font="Times" size="10.0">@Model.Invoice.User.Jno</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">CUI/CNP: </chunk>
+                <chunk font="Times" size="10.0">@Model.Invoice.User.Cui</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Adresa: </chunk>
+                <chunk font="Times" size="10.0">
+                    @address.AddressText,
+                    @address.UserCity.Name,
+                    @address.UserCountry.Name
+                </chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Cont: </chunk>
+                <chunk font="Times" size="10.0">@Model.Invoice.User.AccountNumber</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Banca: </chunk>
+                <chunk font="Times" size="10.0">@Model.Invoice.User.Bank</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Tel/Fax: </chunk>
+                <chunk font="Times" size="10.0">@Model.Invoice.User.PhoneNumber</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">E-mail: </chunk>
+                <chunk font="Times" size="10.0">@Model.Invoice.User.Email</chunk>
+                <newline />
+
+            </cell>
+        </row>
+    </table>
+    
+    <paragraph>
+        <newline />
+        <newline />
+        <newline />
+    </paragraph>
+
+
+    <paragraph>
+        Am incasat de la: @userName cui: @Model.Invoice.User.Cui nr. reg. com: @Model.Invoice.User.Jno, avand adresa: @address.AddressText,
+        @address.UserCity.Name, @address.UserCountry.Name suma de: @Model.TotalAmount RON reprezentand contravaloarea facturii @Model.Invoice.Series
+        @Model.Invoice.Number din @Model.Invoice.Date.ToString("dd-MM-yyyy").
+    </paragraph>
+
+</itext>
+
+

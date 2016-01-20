@@ -1,0 +1,68 @@
+﻿@model System.Collections.Generic.List<MaProgramez.Repository.Entities.Schedule>
+
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            <h4>@Resource.PendingSchedules</h4>
+        </div><!-- /.col-lg-3 -->
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+        <div class="clear"></div>
+        @if (Model.Any())
+        {
+            <div class="sablon">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>@Resource.User_Name</th>
+                            <th>@Resource.PhoneNumber</th>
+                            <th>@Resource.Date</th>
+                            <th>@Resource.StartTime</th>
+                            <th>@Resource.EndTime</th>
+                            <th>@Resource.Description</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{ var i = 0; }
+                        @foreach (var item in Model)
+                        {
+                            i++;
+                            <tr>
+                                <td>@i</td>
+                                <td>@item.User.FirstName @item.User.LastName</td>
+                                <td>@item.User.PhoneNumber</td>
+                                <td>@item.ScheduleDateTimeStart.ToString("dd-MM-yyyy")</td>
+                                <td>@item.ScheduleDateTimeStart.ToShortTimeString()</td>
+                                <td>@item.ScheduleDateTimeEnd.ToShortTimeString()</td>
+                                <td>@item.Text</td>
+                                <td>
+                                    <ul>
+                                        <li><a href="@Url.Action(MVC.Schedule.AcceptPendingSchedule(item.Id))" data-toggle="tooltip" data-placement="top" title=@Resource.Accept><i class="glyphicon glyphicon-ok-circle font-success"></i> </a></li>
+                                        <li><a href="@Url.Action(MVC.Schedule.CancelSchedule(item.Id, false))" data-toggle="tooltip" data-placement="top" title=@Resource.Deny><i class="glyphicon glyphicon-remove-circle font-danger"></i> </a></li>
+                                    </ul>
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                </div>
+                <div class="col col-md-6 float-right">
+                    <a href=@Url.Action(MVC.Schedule.AcceptAllPendingSchedules(Model.First().SlotId)) style="float: right" class="btn btn-default">@Resource.AcceptAllPendingSchedules</a>
+                </div>
+                }
+                else
+                {
+                <h3>@Resource.NoPendingSchedules</h3>
+                }
+            </div>
+</section>

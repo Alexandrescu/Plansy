@@ -1,0 +1,346 @@
+﻿@{
+    Layout = null;
+}
+<itext creationdate="@DateTime.Now.ToString()" producer="RazorPDF">
+
+
+    <table width="100%" cellpadding="3.0" cellspacing="3.0" widths="3;4;3">
+        <row>
+            <cell horizontalalign="center">
+                <chunk color="#1c77a6" style="font-weight:bold" font="Times" size="15.0">@Resource.Supplier</chunk>
+                <newline />
+                <chunk font="Times" size="12.0">SC SPIN IT SRL</chunk>
+            </cell>
+            <cell horizontalalign="center">
+                <image url="@Context.Server.MapPath("~/Content/images/logo3.png")" />
+            </cell>
+            <cell horizontalalign="center">
+                <chunk color="#1c77a6" style="font-weight:bold" font="Times" size="15.0">@Resource.Buyer</chunk>
+                <newline />
+                <chunk font="Times" size="12.0">SC SPIN IT SRL</chunk>
+            </cell>
+        </row>
+        <row>
+            <cell>
+                <chunk font="Times" size="10.0" style="font-weight:bold">Nr reg Com: </chunk>
+                <chunk font="Times" size="10.0">J32/250/10.03.2014</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">CUI: </chunk>
+                <chunk font="Times" size="10.0">32902508 </chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Sediu: </chunk>
+                <chunk font="Times" size="10.0">Selimbar, Str.Sabin Balasa Nr.15A, Ap.2</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Capital social: </chunk>
+                <chunk font="Times" size="10.0">200RON</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Cont: </chunk>
+                <chunk font="Times" size="10.0">RO05BTRLRONCRT0248535101 </chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Banca: </chunk>
+                <chunk font="Times" size="10.0">BANCA TRANSILVANIA</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Tel/Fax: </chunk>
+                <chunk font="Times" size="10.0">0744667889</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">E-mail: </chunk>
+                <chunk font="Times" size="10.0">office@spinit.ro</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Web </chunk>
+                <chunk font="Times" size="10.0">www.spinit.ro</chunk>
+                <newline />
+            </cell>
+            <cell horizontalalign="center">
+                <newline />
+                <chunk color="#1c77a6" style="font-weight:bold" font="Times" size="20.0">FACTURA</chunk>
+                <newline />
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">Serie si numar: </chunk>
+                <newline />
+                <chunk font="Times" size="10.0"> SPINF 2014001 </chunk>
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">Data emiterii: </chunk>
+                <newline />
+                <chunk font="Times" size="10.0">@DateTime.Now.ToString("dd-MM-yyyy") </chunk>
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">Data scadentei: </chunk>
+                <newline />
+                <chunk font="Times" size="10.0">@DateTime.Now.AddMonths(1).ToString("dd-MM-yyyy") </chunk>
+
+            </cell>
+            <cell>
+                <chunk font="Times" size="10.0" style="font-weight:bold">Nr reg Com: </chunk>
+                <chunk font="Times" size="10.0">J32/250/10.03.2014</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">CUI/CNP: </chunk>
+                <chunk font="Times" size="10.0">329187239</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Adresa: </chunk>
+                <chunk font="Times" size="10.0">Selimbar, Str.Sabin Balasa Nr.15A, Ap.2</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Cont: </chunk>
+                <chunk font="Times" size="10.0">RO05BTRLRONCRT0248535101 </chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Banca: </chunk>
+                <chunk font="Times" size="10.0">BANCA TRANSILVANIA</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Tel/Fax: </chunk>
+                <chunk font="Times" size="10.0">0744667889</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">E-mail: </chunk>
+                <chunk font="Times" size="10.0">office@spinit.ro</chunk>
+                <newline />
+
+            </cell>
+        </row>
+    </table>
+
+
+    <newline />
+    <newline />
+
+    <table width="100%" cellpadding="1" cellspacing="1" widths="0.5;3;1;1;1.5;1.5;1.5">
+        <row>
+            <cell><newline /><newline /></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+        </row>
+        <row>
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0" style="font-weight:bold">Nr. crt.</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0" style="font-weight:bold">Denumirea produselor sau a serviciilor</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0" style="font-weight:bold">U.M.</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0" style="font-weight:bold">Cantitatea</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0" style="font-weight:bold">Pretul unitar</chunk>
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">-RON-</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0" style="font-weight:bold">Valoarea</chunk>
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">-RON-</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0" style="font-weight:bold">Valoare T.V.A</chunk>
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">-RON-</chunk>
+
+            </cell>
+        </row>
+
+        <row>
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">1</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">Toba Sport BMW</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0"> Buc</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">1</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">200</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">200</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">50</chunk>
+
+            </cell>
+        </row>
+
+
+        <row>
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">2</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">Usa Seat</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0"> Buc</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">1</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">200</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">200</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">50</chunk>
+
+            </cell>
+        </row>
+
+        <row>
+            <cell><newline /><newline /></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+        </row>
+
+    </table>
+
+    <paragraph font="Times" size="12.0">
+        Prezenta factura cuprinde: 1 pagini, 2 linii
+    </paragraph>
+    <paragraph font="Times" size="12.0">
+        Va multumim. In cazul in care nu exista un contract, prezenta tine locul acestuia.
+    </paragraph>
+    <table width="100%" cellpadding="1" cellspacing="1" widths="2.5;4;1.5;2">
+        <row>
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <newline />
+                <newline />
+                <newline />
+                <chunk color="#CCCCCC" font="Times" size="10.0">Semnatura si stampila furnizorului</chunk>
+                <newline />
+                <newline />
+                <newline />
+                <newline />
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0" style="font-weight:bold">Intocmit de: </chunk>
+                <chunk font="Times" size="10.0">Ioan Armenean</chunk>
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">CNP: </chunk>
+                <chunk font="Times" size="10.0">1800528323374</chunk>
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">Numele delegatului: </chunk>
+                <chunk font="Times" size="10.0">Calin Acu </chunk>
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">B.I/C.I: </chunk>
+                <chunk font="Times" size="10.0">-</chunk>
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">Mijloc de transport:</chunk>
+                <chunk font="Times" size="10.0">LUPP</chunk>
+                <newline />
+                <chunk font="Times" size="10.0">Expedierea s-a efectuat in prezenta noastra la data de 13/06/2014</chunk>
+            </cell>
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">Total:</chunk>
+                <newline/>
+                <newline />
+                <newline />
+                <chunk font="Times" size="10.0" >Semnatura de primire:</chunk>
+            </cell>
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">400.00 RON</chunk>
+            </cell>
+        </row>
+    </table>
+
+</itext>
+
+
+@{/*
+    Layout = null;
+
+    <itext creationdate="@DateTime.Now.ToString()" producer="RazorPDF">
+
+
+        <table width="100%" cellpadding="1.0" cellspacing="1.0" widths="5;5">
+            <row>
+                <cell borderwidth="0.5" left="false" right="false" top="false" bottom="true" fo>Factura</cell>
+                <cell borderwidth="0.5" left="false" right="false" top="false" bottom="true" horizontalalign="right"><image horizontalalign="right" url="@Context.Server.MapPath("~/Content/images/logo3.png")" /></cell>
+            </row>
+        </table>
+
+
+        <newline />
+
+        <list numbered="true" symbolindent="15" font="unknown">
+            <listitem leading="18.0" font="Times" size="12.0" align="Default" indentationleft="15.0">
+                <chunk font="Times" size="12.0">List item</chunk>
+            </listitem>
+        </list>
+
+        <anchor fontstyle="normal, underline" red="0" green="0" blue="255" reference="http://nyveldt.com/blog/">
+            My blog
+        </anchor>
+
+        <paragraph leading="18.0" font="unknown" align="Default">
+            Please visit my
+            <anchor leading="18.0" font="Helvetica" size="12.0" fontstyle="normal, underline" red="0" green="0" blue="255" name="top" reference="http://www.lowagie.com/iText/">
+                <chunk font="Helvetica" size="12.0" fontstyle="normal, underline" red="0" green="0" blue="255">website (external reference)</chunk>
+            </anchor>
+        </paragraph>
+        <paragraph leading="18.0" font="unknown" align="Default">
+            These are some special characters: &lt;, &gt;, &amp;, &quot; and &apos;
+        </paragraph>
+        <paragraph leading="18.0" font="unknown" align="Default">
+            some books I really like:
+        </paragraph>
+        <list numbered="true" symbolindent="15" font="unknown">
+            <listitem leading="18.0" font="Times" size="12.0" align="Default" indentationleft="15.0">
+                <chunk font="Times" size="12.0">When Harlie was one</chunk>
+                <chunk font="Times" size="11.0" fontstyle="normal" subsupscript="8.0"> by David Gerrold</chunk>
+            </listitem>
+            <listitem leading="18.0" font="Times" size="12.0" align="Default" indentationleft="15.0">
+                <chunk font="Times" size="12.0">The World according to Garp</chunk>
+                <chunk font="Times" size="11.0" fontstyle="normal" subsupscript="-8.0"> by John Irving</chunk>
+            </listitem>
+            <listitem leading="18.0" font="Times" size="12.0" align="Default" indentationleft="15.0">
+                <chunk font="Times" size="12.0">Decamerone</chunk>
+                <chunk font="Times" size="11.0" fontstyle="normal"> by Giovanni Boccaccio</chunk>
+            </listitem>
+        </list>
+
+  */}

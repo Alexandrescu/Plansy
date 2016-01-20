@@ -1,0 +1,33 @@
+﻿@using MaProgramez.Resources
+@model  MaProgramez.Website.ViewModels.AddPhoneNumberViewModel
+@{
+    ViewBag.Title = Resource.AddPhoneNumber;
+    Layout = MVC.Shared.Views._MenuLayout;
+}
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h4 style="margin-bottom: 20px;">@Resource.AddPhoneNumber</h4>
+        @using (Html.BeginForm("AddPhoneNumber", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(m => m.Number, new { @class = "col-md-4 form-label" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.Number, new { @class = "form-control input-sm" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" style="float: right" class="btn buton5 btn-sm" value="@Resource.SendValidationCode" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

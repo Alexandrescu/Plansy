@@ -1,0 +1,173 @@
+﻿@using MaProgramez.Resources
+@model MaProgramez.Website.ViewModels.DashboardViewModel
+
+@{
+    var untilDate = DateTime.Now.AddDays(-4).Date;
+
+    var culture = new System.Globalization.CultureInfo("en-US");
+}
+
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-4 schedule">
+            <h4>@Resource.Dashboard</h4>
+        </div><!-- /.col-lg-3 -->
+        <div class="col-lg-8">
+            <a data-toggle="modal" data-target="#TutorialModal" class="btn btn-primary buton5long float-right">@Resource.SeeTutorial</a>
+            <a class="btn btn-primary buton5long float-right" style="margin-right: 10px" href="@Url.Action(MVC.Report.TodaySchedulesPdf(Model.SlotId))">@Resource.PdfTodaySchedule</a>
+        </div>
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+        @if (Model != null)
+        {
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="count-box active-request-count">
+                        @Model.TotalAppointmentsToday
+                    </div>
+                    <p class="count-box-text">
+                        @Resource.AppointmentsToday
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <div class="count-box">
+                        @Model.PendingAppointments
+                    </div>
+                    <p class="count-box-text">
+                        @Resource.PendingSchedules
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <div class="count-box">
+                        @Model.TotalClients
+                    </div>
+                    <p class="count-box-text">
+                        @Resource.TotalClients
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="delimiter">
+                    <i class="fa fa-ticket"></i>
+                </div>
+            </div>
+
+
+            <div class="col-md-12">
+
+                <div class="col-md-6">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            @Resource.LastFiveAppointments
+                        </div>
+
+                        <div class="panel-body">
+                            @if (Model.LastFiveSchedules.Any())
+                            {
+                                <div class="list-group">
+
+                                    @foreach (var s in Model.LastFiveSchedules)
+                                    {
+                                        <a href=@Url.Action(MVC.Schedule.ViewSchedule(s.Id)) class="list-group-item">
+                                            [@s.ScheduleDateTimeStart.ToString("dd-MM-yyyy") @s.ScheduleDateTimeStart.ToShortTimeString()]: <span style="font-weight: bolder">@s.User.FirstName @s.User.LastName</span>
+                                        </a>
+                                    }
+
+                                </div>
+                            }
+                            else
+                            {
+                                <p style="font-style: italic">@Resource.NoPreviousAppointments!</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            @Resource.NextFiveAppointments
+                        </div>
+
+                        <div class="panel-body">
+
+                            @if (Model.NextFiveSchedules.Any())
+                            {
+                                <div class="list-group">
+                                    @foreach (var s in Model.NextFiveSchedules)
+                                    {
+                                        <a href=@Url.Action(MVC.Schedule.ViewSchedule(s.Id)) class="list-group-item">
+                                            [@s.ScheduleDateTimeStart.ToString("dd-MM-yyyy") @s.ScheduleDateTimeStart.ToShortTimeString()]: <span style="font-weight: bolder">@s.User.FirstName @s.User.LastName</span>
+                                        </a>
+                                    }
+
+                                </div>
+                            }
+                            else
+                            {
+                                <p style="font-style: italic">@Resource.NoNextAppointments!</p>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+
+                @if (User.IsInRole("Provider"))
+                {
+                    <div class="col-md-6">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                Unpaid invoices
+                            </div>
+
+                            <div class="panel-body">
+
+                                @if (Model.UnpayedInvoices.Any())
+                                {
+                                    <div class="list-group">
+                                        @foreach (var s in Model.UnpayedInvoices)
+                                        {
+                                            <a href=@Url.Action(MVC.Invoice.InvoicePdf(s.Id)) class="list-group-item">
+                                                [@s.DueDate.ToString("dd-MM-yyyy")]: <span style="font-weight: bolder">@s.Series @s.Number - @s.InvoiceLines.Sum(y => y.Price) Euro</span>
+                                            </a>
+                                        }
+                                    </div>
+                                }
+                                else
+                                {
+                                    <p style="font-style: italic">@Resource.UnpayedInvoices</p>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+
+    </div>
+</section>
+
+<div class="modal fade" id="TutorialModal" tabindex="5" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">@Resource.Close</span></button>
+                <h5 class="modal-title">@Resource.Tutorial</h5>
+            </div>
+            <div class="clear"></div>
+            <div style="padding: 10px;">
+                <iframe style="width: 100%; height: 300px;" src="https://fast.wistia.net/embed/iframe/qgogmmu9ip"></iframe>
+            </div>
+        </div>
+    </div>
+</div>

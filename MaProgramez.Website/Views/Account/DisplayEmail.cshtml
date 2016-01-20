@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = Resource.EmailConfirmation_ViewTitle;
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+<div class="login-container" style="width: 400px;">
+    <div class="login-section">
+        <div class="row">
+            <div class="col-md-12" style="">
+                <div class="form-horizontal">
+                    <h4>@ViewBag.Title</h4>
+                    <span style="font-size: 14px; color: #65717f;">@Resource.EmailConfirmationView_Content</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<p class="text-danger">
+    For DEMO only: You can click this link to confirm the email: <a href="@ViewBag.Link">link</a>
+    Please change this code to register an email service in IdentityConfig to send an email.
+</p>*@

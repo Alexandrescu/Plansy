@@ -1,0 +1,44 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center">
+        <h1 class="title text-center">{{title}}</h1>
+        <div class="buttons">
+            <button class="button button-icon button-clear button-small ion-close" ng-click="closeFilterModal()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="{{'SEARCH' | translate}}" ng-model="filterModalParameters.filterText">
+            </label>
+
+            <div class="item item-input item-select">
+                <div class="input-label">
+                    {{'COUNTY' | translate}}
+                </div>
+
+                <select ng-model="filterModalParameters.selectedCountyId" ng-change="getCities()">
+                    <option value="">{{'SELECT_YOUR_COUNTY' | translate}}</option>
+                    <option ng-selected="{{county.id == filterModalParameters.selectedCountyId}}" ng-repeat="county in Counties" value="{{county.id}}">
+                        {{county.name}}
+                    </option>
+                </select>
+            </div>
+
+
+            <div class="item item-input item-select" ng-if='Cities != null || filterModalParameters.filterText != ""'>
+                <div class="input-label">
+                    {{'CITY' | translate}}
+                </div>
+                <select ng-model="filterModalParameters.selectedCityId" ng-options="city.id as city.name for city in Cities" ng-click="getCities()"></select>
+            </div>
+
+            <div class="item" ng-if='Cities != null || filterModalParameters.filterText != ""'>
+                <button class="button button-block button-positive" ng-click="sendParameters()">{{'FILTER' | translate}}</button>
+            </div>
+            <div class="item" ng-if='Cities != null || filterModalParameters.filterText != ""'>
+                <button class="button button-block button-clear button-positive" ng-click="resetParameters()">{{'RESET' | translate}}</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

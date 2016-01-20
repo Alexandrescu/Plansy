@@ -1,0 +1,106 @@
+﻿@model IPagedList<MaProgramez.Repository.Entities.DefaultCategoryOperation>
+
+@{
+    ViewBag.Title = Resource.DefaultOperations;
+    string categoryName = @ViewBag.CategoryName;
+}
+
+<div class="clear"></div>
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+
+            <h4>@Resource.DefaultOperations - @categoryName</h4>
+        </div><!-- /.col-lg-3 -->
+
+        <a href="@Url.Action(MVC.UsersAdmin.CreateDefaultOperation(categoryName))" class="btn btn-primary float-right">@Resource.UserAdminView_AddOperation</a>
+
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+
+        @using (Html.BeginForm("DefaultOperationsList", "UsersAdmin", FormMethod.Get, new { @class = "form-horizontal", role = "form" }))
+        {
+            <div class="row">
+                <label class="col-md-1 form-label">
+                    @Resource.Category:
+                </label>
+                <div class="col-md-11">
+                    <ul class="filter-links" style="margin-bottom: 0px;">
+                        @foreach (var item in (SelectList)ViewBag.Categories)
+                        {
+                            <li class="@(item.Value == ViewBag.CategoryName ? "active" : string.Empty)" style="margin: 1px">
+                                <a href="@Url.Action(MVC.UsersAdmin.DefaultOperationsList(null, item.Value))">@item.Value</a>
+                            </li>
+                        }
+                        <li>
+                            <a href="@Url.Action(MVC.UsersAdmin.DefaultOperationsList(null, string.Empty))">@Resource.ViewAll</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        }
+
+        <hr style="margin: 10px 0" />
+
+        @if (Model != null && Model.Any())
+        {
+            var number = 1;
+
+            <div class="sablon">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>@Resource.Description</th>
+                            <th>@Resource.Category</th>
+                            <th>@Resource.DurationMinutes</th>
+                            <th>@Resource.Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var defaultOperation in Model)
+                        {
+                            <tr>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.UsersAdmin.EditDefaultOperation(defaultOperation.Id))">@(number++)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.UsersAdmin.EditDefaultOperation(defaultOperation.Id))">@(defaultOperation.Operation.Description)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.UsersAdmin.EditDefaultOperation(defaultOperation.Id))">@(defaultOperation.Category.Name)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.UsersAdmin.EditDefaultOperation(defaultOperation.Id))">@(defaultOperation.DefaultDurationMinutes)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.UsersAdmin.EditDefaultOperation(defaultOperation.Id))">@(defaultOperation.DefaultPrice)</td>
+                                <td>
+                                    <ul>
+                                        <li><a href="@Url.Action(MVC.UsersAdmin.EditDefaultOperation(defaultOperation.Id))"><i class="fa fa-edit" data-toggle="tooltip" data-placement="right" title=@Resource.Edit></i> </a></li>
+                                        <li><a href="@Url.Action(MVC.UsersAdmin.DeleteDefaultOperation(defaultOperation.Id))"><i class="fa fa-trash" data-toggle="tooltip" data-placement="right" title=@Resource.Remove></i> </a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <p>@Resource.NoOperations</p>
+        }
+
+        @if ((Model.TotalItemCount) > Model.PageSize)
+        {
+            @Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount).Options(o => o
+                .DisplayTemplate("Bootstrap3Pagination")
+                .MaxNrOfPages(14)
+                .AlwaysAddFirstPageNumber())
+        }
+
+
+    </div>
+</section>

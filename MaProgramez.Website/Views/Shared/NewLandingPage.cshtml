@@ -1,0 +1,417 @@
+﻿@model MaProgramez.Website.ViewModels.LandingPageViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="@MaProgramez.Website.Helpers.CultureHelper.GetCurrentNeutralCulture()">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plansy.nl</title>
+    <meta name="description" content="Met Plansy kun je gemakkelijk afspraken inplannen bij kappers, garages, sportscholen of andere bedrijven zonder te bellen. Probeer het nu uit." />
+    <meta name="keywords" content="Afspraken,Boeken,Reserveren,Agenda,Plannen,Bedrijven,Kapper,Sportschool,Schoonheidsspecialist,Garage" />
+    <meta name="robots" content="index,follow" />
+
+    <meta property="og:title" content="Maak afspraken met bedrijven zonder te bellen via Plansy. " />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.plansy.nl" />
+    <meta property="og:description" content="Nooit meer wachten bij de kapper, de garage, de sportschool of welk ander bedrijf dan ook! Met Plansy plan je gemakkelijk een afspraak in bij een bedrijf in jouw stad. Via de app zie je direct op welke tijden er nog plek is voor jou. Je maakt een afspraak in de app en het bedrijf wordt op de hoogte gesteld van je komst. Je hoeft nooit meer te bellen. Of je nu een afspraak wil maken bij de kapper, de psycholoog, de schoonheidsspecialist of de garage; in Plansy staan ze allemaal." />
+
+    @Html.Partial(MVC.Shared.Views.PartialViews._Fonts)
+    @Html.Partial(MVC.Shared.Views.PartialViews._Style)
+
+</head>
+
+<body style="background-image:none !important;">
+
+    <nav class="navbar navbar-inverse all-header">
+        <div class="over-bar">
+            <div class="container">
+                <div class="col-md-4 con" style="margin-left:-12px;"><span class="glyphicon glyphicon-phone"></span> +(40) 730 58 58 29</div>
+
+                <div class="col-lg-1 language-btn dropdown dropdown-header pull-right" style="margin-top:-3px; margin-right: -40px;">
+                    <img src="@Url.Content("~/Content/images/"+ @MaProgramez.Website.Helpers.CultureHelper.GetCurrentNeutralCulture() + ".png")" alt="" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                        <li>
+                            <a data-value="en">English</a>
+                        </li>
+                        @*<li>
+                                <a data-value="ro">Română</a>
+                            </li>*@
+                        <li>
+                            <a data-value="nl">Dutch</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="con pull-right">
+                    <a href="@Url.Action(MVC.Account.Login())" style="word-spacing: normal;">
+                        @Resource.LandingPage_SignIn
+                    </a>
+                    /
+                    <a href="@Url.Action(MVC.Account.Register())" style="word-spacing: normal; font-weight:bold;">
+                        @Resource.LandingPage_SignUp
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="~/Content/images/logoNew.png" class="img-responsive" alt="logo ma programez"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li class="active"><a href="#">@Resource.Home</a></li>
+                    <li><a href="#benefits">@Resource.Benefits</a></li>
+                    <li><a href="#why">@Resource.Why</a></li>
+                    <li><a href="#testimonial">@Resource.LandingPageNew_Testimonial</a></li>
+                    <li><a href="#contact">@Resource.Contact</a></li>
+
+                    @if (Request.Browser.IsMobileDevice)
+                    {
+                        <li class="divider"></li>
+
+                        <li>
+                            <a href="@Url.Action(MVC.Account.Login())" style="word-spacing: normal;">
+                                @Resource.LandingPage_SignIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action(MVC.Account.Register())" style="word-spacing: normal; font-weight: bold;">
+                                @Resource.LandingPage_SignUp
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div class="navbar-fix">
+        &nbsp;
+    </div>
+    <section id="home">
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <div class="container">
+                <div class="col-md-5">
+                    <h1>Plansy</h1>
+                    <p>
+                        @Resource.LandingPageNew_Sub1
+                    </p>
+                    <p>
+                        @Resource.LandingPageNew_Sub2
+                    </p>
+                    <p>
+                        <a class="btn btn-primary btn-lg butonLanding" href="@Url.Action(MVC.Account.ProviderRegister())" role="button" style="font-weight: bolder">@Resource.LandingPageNew_SignUp</a>
+                    </p>
+                    <p>
+                        <a href="https://itunes.apple.com/us/app/ma-programez/id1016292213" target="_blank" title="Available on the AppStore">
+                            <img src="~/Content/Images/appstore.png" alt="AppStore" style="width: 35%; height: auto;" />
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.spinit.plansynl" target="_blank" title="Android App on Google play">
+                            <img src="~/Content/Images/googleplaystore.png" alt="AppStore" style="width: 35%; height: auto; margin-left:20px" />
+                        </a>
+                    </p>
+
+                </div>
+                <div class="col-md-7 effec col-md-offset-0">
+                    <img src="~/Content/images/phone.png" class="animated shake ip hidden-sm hidden-xs" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="contrast" id="benefits">
+        @if (MaProgramez.Website.Helpers.CultureHelper.GetCurrentNeutralCulture() == "nl")
+        {
+            <h2 class="c-h2" style="font-weight:bold">
+                @Resource.LandingPageNew_Subtitle3
+            </h2>
+        }
+        else
+        {
+            <h2 class="c-h2" style="font-weight:bold">@Resource.LandingPageNew_Subtitle3 - <tag>@Resource.LandingPageNew_Subtitle3bis</tag></h2>}
+        <div class="border5"></div>
+        <p class="sub-heading">
+            @Resource.LandingPageNew_Subtitle4
+        </p>
+        <ul class="grid effect-6 centrat" id="grid">
+            <li>
+                <div class="effec marji">
+                    <h2>@Resource.LandingPageNew_BoxTitle1</h2>
+                    <div class="border2"></div>
+                    <center><img src="~/Content/images/icons/world-stat-icon.png" class="img-responsive"></center>
+                    <p class="centrat" style="margin-bottom: 10px">@Resource.LandingPageNew_BoxContent1 </p>
+                </div>
+            </li>
+            <li>
+                <div class="effec marji">
+                    <h2>@Resource.LandingPageNew_BoxTitle2</h2>
+                    <div class="border2"></div>
+                    <center><img src="~/Content/images/icons/time-icon.png" class="img-responsive"></center>
+                    <p class="centrat" style="margin-bottom: 10px">@Resource.LandingPageNew_BoxContent2 </p>
+                </div>
+            </li>
+            <li>
+                <div class="effec marji">
+                    <h2>@Resource.LandingPageNew_BoxTitle3</h2>
+                    <div class="border2"></div>
+                    <center><img src="~/Content/images/icons/calendar-icon.png" class="img-responsive"></center>
+                    <p class="centrat" style="margin-bottom: 10px">@Resource.LandingPageNew_BoxContent3 </p>
+                </div>
+            </li>
+            <li>
+                <div class="effec marji">
+                    <h2>@Resource.LandingPageNew_BoxTitle4</h2>
+                    <div class="border2"></div>
+                    <center><img src="~/Content/images/icons/timer-icon.png" class="img-responsive"></center>
+                    <p class="centrat" style="margin-bottom: 10px">@Resource.LandingPageNew_BoxContent4 </p>
+                </div>
+            </li>
+            <li>
+                <div class="effec marji">
+                    <h2>@Resource.LandingPageNew_BoxTitle5</h2>
+                    <div class="border2"></div>
+                    <center><img src="~/Content/images/icons/dollar-rotation-icon.png" class="img-responsive"></center>
+                    <p class="centrat" style="margin-bottom: 10px">@Resource.LandingPageNew_BoxContent5 </p>
+                </div>
+            </li>
+            <li>
+                <div class="effec marji">
+                    <h2>@Resource.LandingPageNew_BoxTitle6</h2>
+                    <div class="border2"></div>
+                    <center><img src="~/Content/images/icons/statistics-market-icon.png" class="img-responsive"></center>
+                    <p class="centrat" style="margin-bottom: 10px">@Resource.LandingPageNew_BoxContent6 </p>
+                </div>
+            </li>
+
+        </ul>
+    </section>
+
+    <section id="why">
+        <div class="sectiunea2">
+            <div class="container">
+
+                <h2 class="feature" style="font-weight:bold">@Resource.LandingPageNew_Subtitle5 <tag>@Resource.LandingPageNew_Subtitle5bis</tag></h2>
+                <div class="border5"></div>
+                <p class="sub-heading">@Resource.LandingPageNew_Subtitle6</p>
+                <div class="col-md-7">
+                    <img src="~/Content/images/ipad.png" class="img-responsive " alt="">
+
+
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="h4 dow">@Resource.LandingPageNew_BoxTitle7</h2>
+                    <p class="p-fea">@Resource.LandingPageNew_BoxContent7</p>
+                    <h2 class="h4 dow">@Resource.LandingPageNew_BoxTitle8</h2>
+                    <p class="p-fea">@Resource.LandingPageNew_BoxContent7</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="sectiunea3" id="testimonial">
+        <div class="container">
+            <h2 class="h4"><tag>Lorem Ipsum</tag> Dolor Etsiam</h2>
+            <div class="border4"></div>
+            <h3 class="h5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </h3>
+            <div class="col-md-4 outside-box">
+                <div class="casuta">
+                    <img src="~/Content/images/icons/diamond-icon.png" class="img-responsive img-circle avatar center-block">
+                    <p style="font-weight: bold">Wat is de bijdrage voor mij als dienstverlener?</p>
+                    <p>
+                        Over de afspraken die via Plansy ingepland worden betaalt u een commissie van slechts 5% van de dienstprijs per gemaakte afspraak. U betaalt dus alleen voor resultaat. Bij diensten waarbij van tevoren geen vast bedrag kan worden afgesproken, zoals vaak het geval is bij garages, wordt een vast tarief berekend. Dit tarief is 5% van de gemiddelde prijs van de dienst.
+                    </p><p>
+                        U betaalt geen vaste maandelijkse kosten aan Plansy. U betaalt eenmalig slechts €25,- om uw profielpagina aan te maken waarmee bezoekers u kunnen vinden.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 outside-box">
+                <div class="casuta">
+                    <img src="~/Content/images/icons/diamond-icon.png" class="img-responsive img-circle avatar center-block">
+                    <p style="font-weight: bold">
+                        Wat krijg ik als ik me bij Plansy aansluit?
+                    </p>
+                    <p>
+                        In de eerste plaats krijgt u meer afspraken, doordat u beter te vinden bent. U krijgt een profielpagina binnen Plansy, waarop potentiële klanten informatie over uw bedrijf en uw diensten kunnen vinden. Op deze pagina kunnen zij ook uw agenda inzien en direct een afspraak inplannen zonder te bellen. Hiermee kunnen klanten 24/7 afspraken inplannen.
+                        U bent beter vindbaar in Google. Plansy is een landelijke website die waarschijnlijk beter scoort op belangrijke zoektermen als “Kapper Eindhoven”, “APK Utrecht”, of “Manicure Amsterdam”, dan uw eigen bedrijf. Hierdoor bent u ook beter vindbaar als u zich aansluit bij Plansy.
+                    </p>
+                    <p>
+                        Klanten die via uw eigen website binnen komen zijn vaak klanten die u al kennen. Via Plansy bereikt u gemakkelijk klanten die uw bedrijf nog niet kennen.
+
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 outside-box">
+                <div class="casuta">
+                    <img src="~/Content/images/icons/diamond-icon.png" class="img-responsive img-circle avatar center-block">
+                    <p style="font-weight: bold">
+                        Welke gegevens heeft Plansy van mij nodig om mijn bedrijf aan te melden?
+                        </p><p>
+                        Natuurlijk hebben wij uw bedrijfsnaam, adres en contactgegevens nodig. U vult uw gegevens in in het aanmeldformulier. Hiermee maken wij uw profiel aan. Later vult u zelf de tijden in waarop klanten afspraken kunnen inplannen.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <br />
+    <section class="sectiunea3" id="testimonial" style="background-color: #f3f3f3">
+        <div class="container">
+            <h2 class="h4"><tag>Success</tag> Stories</h2>
+            <div class="border4"></div>
+            <div class="row" style="margin-top: -30px; margin-bottom:30px">
+                <div class="col-md-12" data-wow-delay="0.2s">
+                    <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                        <!-- Bottom Carousel Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#quote-carousel" data-slide-to="0" class="active">
+                                <img class="img-responsive " src="~/Content/images/sander.jpg" alt="">
+                            </li>
+                            <li data-target="#quote-carousel" data-slide-to="1">
+                                <img class="img-responsive" src="~/Content/images/sander.jpg" alt="">
+                            </li>
+                            <li data-target="#quote-carousel" data-slide-to="2">
+                                <img class="img-responsive" src="~/Content/images/sander.jpg" alt="">
+                            </li>
+                        </ol>
+
+                        <!-- Carousel Slides / Quotes -->
+                        <div class="carousel-inner text-center">
+
+                            <!-- Quote 1 -->
+                            <div class="item active" style="color:#333">
+                                <blockquote style="margin-bottom: 150px">
+                                    <div class="row">
+                                        <div class="col-sm-8 col-sm-offset-2">
+
+                                            <p>@Resource.LandingPageNew_TestimonialQuote1!</p>
+                                            <small>Dale Tan, Sportinstituut Dale Tan</small>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+
+                            <!-- Quote 2 -->
+                            <div class="item">
+                                <blockquote style="margin-bottom: 150px">
+                                    <div class="row">
+                                        <div class="col-sm-8 col-sm-offset-2">
+                                            <p>@Resource.LandingPageNew_TestimonialQuote2!</p>
+                                            <small>Michelle Antonissen, Hairdo Kappers</small>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <!-- Quote 3 -->
+                            <div class="item">
+                                <blockquote style="margin-bottom: 150px">
+                                    <div class="row">
+                                        <div class="col-sm-8 col-sm-offset-2">
+                                            <p>@Resource.LandingPageNew_TestimonialQuote1!</p>
+                                            <small>Dale Tan, Sportinstituut Dale Tan</small>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <!-- Carousel Buttons Next/Prev -->
+                        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <footer id="contact">
+        <div class="container">
+            <div class="col-md-3">
+
+                <img src="~/Content/images/logoNew.png">
+                <br />
+                <br />
+                <div class="adress">
+                    <img src="~/Content/images/map.png" width="16" hspace="10" vspace="10"> <span>info@plansy.nl</span>
+                </div>
+                <div class="phone">
+                    <img src="~/Content/images/call.png" width="16" hspace="10" vspace="10"> <span>+(40) 730 58 58 29</span>
+                </div>
+                <hr />
+            </div>
+
+            <div class="col-md-8 col-md-offset-1 marg">
+
+                @using (Html.BeginForm("SendContactMessage", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.TextBoxFor(m => m.Name, new { @class = "feedback-input", placeholder = Resource.User_Name })
+                    @Html.TextBoxFor(m => m.Email, new { @class = "feedback-input", placeholder = Resource.Email })
+                    @Html.TextAreaFor(m => m.Message, new { @class = "feedback-input", placeholder = Resource.Message })
+                    <input type="submit" value="SUBMIT" class="btn btn-primary btn-lg butonLanding" style="float: right;" />
+                }
+            </div>
+        </div>
+        @if (!Request.Browser.IsMobileDevice)
+        {
+            <hr style="margin-left: 180px" />
+        }
+        <div class="copy">
+            &copy; Plansy B.V.
+        </div>
+        <div class="copy2">
+            <a href="#">Home</a>// <a href="@Url.Action(MVC.Account.Login())">Login</a> // <a href="@Url.Action(MVC.Account.Cookies())">Cookies</a> // <a href="@Url.Action(MVC.Account.Disclaimer())">Disclaimer</a> // <a href="@Url.Action(MVC.Account.Terms())">Terms</a> &copy; <a href="@Url.Action(MVC.Account.PrivacyStatement())">Privacy Statement</a>
+        </div>
+
+
+    </footer>
+
+    @Html.Partial(MVC.Shared.Views.PartialViews._Scripts)
+
+    <script type="text/javascript">
+
+        var pageCulture = '@ViewContext.RouteData.Values["culture"].ToString()';
+
+        new AnimOnScroll(document.getElementById('grid'), {
+            minDuration: 0.4,
+            maxDuration: 0.7,
+            viewportFactor: 0.2
+        });
+
+        $(function () {
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

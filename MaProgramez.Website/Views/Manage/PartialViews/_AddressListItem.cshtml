@@ -1,0 +1,111 @@
+﻿@using MaProgramez.Repository.Entities
+@using MaProgramez.Resources
+@model Address
+@{
+    Layout = null;
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading inline-panel-heading" data-toggle="collapse" data-target="#collapse-@(Model.Id)">
+        <div class="row">
+            <p class="panel-title col-md-10">
+                @if (!User.IsInRole("Dezmembrator"))
+                {
+                    <i class="fa fa-caret-down" style="margin-right: 10px; padding: 0 !important;   "></i>
+                }
+                @(Model.AddressText), @(Model.UserCity.Name), @(Model.UserCity.CityCounty.Name), @(Model.PostalCode)
+            </p>
+            @if (Model.AddressType == AddressType.InvoiceAddress)
+            {
+                <div class="col-md-2 address-type-text">
+                    <i class="fa fa-file-text-o" style="padding: 0 !important;"></i>
+                </div>
+            }
+            else
+            {
+                <div class="col-md-2 address-type-text">
+                    <i class="fa fa-map-marker" style="padding: 0 !important;"></i>
+                </div>
+            }
+        </div>
+    </div>
+
+    @if (!User.IsInRole("Dezmembrator"))
+    {
+        <div id="collapse-@(Model.Id)" class="panel-collapse collapse">
+            <div class="panel-body relative">
+                <div class="row">
+                    @using (Ajax.BeginForm("UpdateAddress", "Service", null, new AjaxOptions() { HttpMethod = "Post", OnSuccess = "onUpdateAddressSuccess" }, new { @class = "address-form", data_loading_target = "#LoadingAddress" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(m => m.Id)
+                        @Html.HiddenFor(m => m.AddressType)
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => Model.AddressText, new { @class = "form-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(m => Model.AddressText, new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(m => Model.AddressText)
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="form-group">
+                            @Html.Label(Resource.County, new { @class = "form-label col-md-2" })
+                            <div class="col-md-4">
+                                @Html.DropDownList("CountyId", new SelectList(ViewBag.Counties as IEnumerable<County>, "Id", "Name", Model.UserCity.CountyId), new { @class = "selectpicker county-select", data_select_target = "#city-select-" + Model.Id, data_class = "btn-default btn-sm", data_width = "100%", data_live_search = "true", data_size = "5" })
+                            </div>
+                            @Html.LabelFor(m => Model.CityId, Resource.Town, new { @class = "form-label col-md-2" })
+                            <div class="col-md-4">
+                                @Html.DropDownListFor(m => Model.CityId, new SelectList(Model.UserCity.CityCounty.Cities.OrderBy(x => x.Name), "Id", "Name", Model.CityId), new { @class = "selectpicker", id = "city-select-" + Model.Id + "", data_class = "btn-default btn-sm", data_width = "100%", data_live_search = "true", data_size = "5" })
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0">
+                            @Html.LabelFor(m => Model.PostalCode, new { @class = "form-label col-md-2" })
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => Model.PostalCode, new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(m => Model.PostalCode)
+                            </div>
+                            <div class="clear"></div>
+                            <div class="line"></div>
+                            <div class="col-md-4">
+                                @if (Model.AddressType != AddressType.InvoiceAddress)
+                                {
+                                    <div class="btn btn-link btn-sm inline-delete-button" data-target="#InlineDeleteBox-@(Model.Id)">@Resource.Delete</div>
+                                }
+                            </div>
+                            <div class="col-md-8">
+                                <button type="submit" class="btn btn-sm btn-danger float-right">@Resource.Save</button>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    }
+                </div>
+                @if (Model.AddressType != AddressType.InvoiceAddress)
+                {
+                    using (Ajax.BeginForm("DeleteAddress", "Service", null, new AjaxOptions() { HttpMethod = "Post", OnSuccess = "onDeleteAddressSuccess" }, new { @class = "address-form", data_loading_target = "#LoadingAddress" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="addressId" value="@Model.Id" />
+
+                        <div id="InlineDeleteBox-@(Model.Id)" class="inline-delete-box">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <p>@Resource.Address_DeleteMessage</p>
+                                    <div class="line"></div>
+                                    <div class="row">
+                                        <div class="col-md-8"></div>
+                                        <div class="col-md-4">
+                                            <button class="btn btn-danger btn-sm float-right" style="margin-left: 10px;">@Resource.Yes</button>
+                                            <div class="btn btn-default btn-sm float-right inline-cancel-button">@Resource.No</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    }
+</div>

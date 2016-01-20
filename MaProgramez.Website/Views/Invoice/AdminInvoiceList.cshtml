@@ -1,0 +1,120 @@
+﻿@using MaProgramez.Resources
+@using MvcPaging
+@model IPagedList<MaProgramez.Website.ViewModels.InvoiceListItemViewModel>
+
+@{
+    ViewBag.Title = Resource.Invoices;
+    var sortBy = ViewBag.SortBy as string;
+    var ascending = (bool)ViewBag.Ascending;
+    var filterBy = ViewBag.FilterBy as string;
+
+    var culture = new System.Globalization.CultureInfo("en-US");
+}
+
+<div class="clear"></div>
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+
+            <h4>@Resource.Invoices</h4>
+        </div><!-- /.col-lg-3 -->
+        @using (Html.BeginForm("AdminInvoiceList", "Invoice", FormMethod.Get))
+        {
+            <div class="col-lg-4 float-right">
+                <div class="input-group">
+                    <input type="text" name="filterBy" class="form-control cautare" style="border: none !important;" placeholder="@Resource.Search" value="@filterBy" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default btn-cautare" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        }
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+        @if (Model != null && Model.Any())
+        {
+            var userId = Model.First().UserId;
+
+            <div class="sablon">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th><a href="@Url.Action(MVC.Invoice.AdminInvoiceList(userId, Model.PageNumber, "number", filterBy, sortBy != "number" || !ascending))" data-toggle="tooltip" data-placement="top" title=@Resource.Sort><i class="fa @MaProgramez.Website.Helpers.TableHelper.GetTableHeaderIcon(sortBy, "number", ascending)"></i> @Resource.InvoiceNumber</a></th>
+                            <th><a href="@Url.Action(MVC.Invoice.AdminInvoiceList(userId, Model.PageNumber, "name", filterBy, sortBy != "name" || !ascending))" data-toggle="tooltip" data-placement="top" title=@Resource.Sort><i class="fa @MaProgramez.Website.Helpers.TableHelper.GetTableHeaderIcon(sortBy, "name", ascending)"></i> @Resource.User_Name</a></th>
+                            <th><a href="@Url.Action(MVC.Invoice.AdminInvoiceList(userId, Model.PageNumber, "date", filterBy, sortBy != "date" || !ascending))" data-toggle="tooltip" data-placement="top" title=@Resource.Sort><i class="fa @MaProgramez.Website.Helpers.TableHelper.GetTableHeaderIcon(sortBy, "date", ascending)"></i> @Resource.InvoiceDate</a></th>
+                            <th><a href="@Url.Action(MVC.Invoice.AdminInvoiceList(userId, Model.PageNumber, "duedate", filterBy, sortBy != "duedate" || !ascending))" data-toggle="tooltip" data-placement="top" title=@Resource.Sort><i class="fa @MaProgramez.Website.Helpers.TableHelper.GetTableHeaderIcon(sortBy, "duedate", ascending)"></i> @Resource.InvoiceDueDate</a></th>
+                            <th><a href="@Url.Action(MVC.Invoice.AdminInvoiceList(userId, Model.PageNumber, "amountwithoutvat", filterBy, sortBy != "amountwithoutvat" || !ascending))" data-toggle="tooltip" data-placement="top" title=@Resource.Sort><i class="fa @MaProgramez.Website.Helpers.TableHelper.GetTableHeaderIcon(sortBy, "amountwithoutvat", ascending)"></i> @Resource.InvoiceAmountWithoutVat</a></th>
+                            <th><a href="@Url.Action(MVC.Invoice.AdminInvoiceList(userId, Model.PageNumber, "amountincludingvat", filterBy, sortBy != "amountincludingvat" || !ascending))" data-toggle="tooltip" data-placement="top" title=@Resource.Sort><i class="fa @MaProgramez.Website.Helpers.TableHelper.GetTableHeaderIcon(sortBy, "amountincludingvat", ascending)"></i> @Resource.InvoiceAmountIncludingVat</a></th>
+                            <th><a href="@Url.Action(MVC.Invoice.AdminInvoiceList(userId, Model.PageNumber, "invoicestate", filterBy, sortBy != "invoicestate" || !ascending))" data-toggle="tooltip" data-placement="top" title=@Resource.Sort><i class="fa @MaProgramez.Website.Helpers.TableHelper.GetTableHeaderIcon(sortBy, "invoicestate", ascending)"></i> @Resource.InvoiceStateTitle</a></th>
+                            <th></th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            var number = (ViewBag.Page * Model.PageSize) + 1;
+                        }
+
+                        @foreach (var invoice in Model)
+                        {
+                            <tr>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.Invoice.InvoicePdf(invoice.Id))">@(number++)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.Invoice.InvoicePdf(invoice.Id))">@invoice.Number</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.Invoice.InvoicePdf(invoice.Id))">@invoice.UserName</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.Invoice.InvoicePdf(invoice.Id))">@invoice.Date.ToString("dd-MM-yyyy")</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.Invoice.InvoicePdf(invoice.Id))">@invoice.DueDate.ToString("dd-MM-yyyy")</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.Invoice.InvoicePdf(invoice.Id))">@invoice.AmountWithoutVat.ToString("N2", culture)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.Invoice.InvoicePdf(invoice.Id))">@invoice.AmountWithVat.ToString("N2", culture)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.Invoice.InvoicePdf(invoice.Id))">@invoice.PaymentState</td>
+                                <td>
+                                    <ul>
+                                        @if (User.IsInRole("Admin") || User.IsInRole("Agent"))
+                                        {
+                                            <li><a href="@Url.Action(MVC.Invoice.AddInvoiceLine(invoice.Id))" data-toggle="tooltip" data-placement="top" title=@Resource.Lines><i class="fa fa-th-list"></i></a></li>
+                                            <li><a href="@Url.Action(MVC.Invoice.AddInvoicePayment(invoice.Id))" data-toggle="tooltip" data-placement="top" title=@Resource.Payments><i class="fa fa-money"></i></a></li>
+                                            if (invoice.PaymentState.Equals("Neachitat"))
+                                            {
+                                                <li><a href="@Url.Action(MVC.Invoice.SendPaymentLink(invoice.UserId, invoice.Id))" data-toggle="tooltip" data-placement="top" title="Trimite mail cu link de plata"><i class="fa fa-link"></i></a></li>
+                                            }
+                                            <li><a href="@Url.Action(MVC.Invoice.SendInvoiceLink(invoice.UserId, invoice.Id))" data-toggle="tooltip" data-placement="top" title="Trimite mail cu factura fiscala"><i class="fa fa-envelope-o"></i></a></li>
+                                        }
+                                        @if (invoice.ReceiptNo.HasValue)
+                                        {
+                                            <li><a href="@Url.Action(MVC.Invoice.SendReceiptLink(invoice.UserId, invoice.Id))" data-toggle="tooltip" data-placement="top" title="Trimite mail cu chitanta"><i class="fa fa-envelope"></i></a></li>
+                                            <li><a href="@Url.Action(MVC.Invoice.ReceiptPdf(invoice.Id))" data-toggle="tooltip" data-placement="top" title=@Resource.Receipt><i class="fa fa-file"></i></a></li>
+                                        }
+                                        <li><a href="@Url.Action(MVC.Invoice.InvoicePdf(invoice.Id))" data-toggle="tooltip" data-placement="top" title=@Resource.Invoice><i class="fa fa-file-pdf-o"></i></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+                            if ((Model.TotalItemCount) > Model.PageSize)
+                            {
+                                @Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount).Options(o => o
+                    .DisplayTemplate("Bootstrap3Pagination")
+                    .MaxNrOfPages(14)
+                    .AlwaysAddFirstPageNumber()
+                    .AddRouteValue("sortBy", sortBy)
+                    .AddRouteValue("ascending", ascending)
+                    .AddRouteValue("filterBy", filterBy)
+                    )
+                                }
+                            }
+                            else
+                            {
+                                <p>@Resource.NoInvoices</p>
+                            }
+    </div>
+</section>

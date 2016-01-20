@@ -1,0 +1,122 @@
+﻿@using System.Web.UI.WebControls
+@using MaProgramez.Repository.BusinessLogic
+@using MaProgramez.Repository.Entities
+@using MaProgramez.Resources
+@using MaProgramez.Website.Helpers
+@using MvcPaging
+@model IPagedList<MaProgramez.Repository.Entities.Schedule>
+
+@{
+    ViewBag.Title = Resource.SchedulesList;
+    Layout = MVC.Shared.Views._Layout;
+}
+
+<div class="clear"></div>
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+
+            <h4>@Resource.SchedulesList</h4>
+        </div><!-- /.col-lg-3 -->
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+        @if (Model.Any())
+        {
+            var i = (int)ViewBag.Page * 10;
+
+            <div class="sablon">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>@Resource.ScheduleDate</th>
+                            <th>@Resource.Provider</th>
+                            <th>@Resource.Slot</th>
+                            <th>@Resource.Client</th>
+                            <th>@Resource.Operations</th>
+                            <th>@Resource.ScheduleState</th>
+                            <th>@Resource.Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@(++i)</td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.Schedule.ViewSchedule(item.Id))">@item.ScheduleDateTimeStart.ToString("dd/MM/yyyy HH:mm")</td>
+
+                                <td class="clickable-row" data-href="@Url.Action(MVC.Schedule.ViewSchedule(item.Id))">
+                                    @item.Slot.Provider.CompanyDisplayName
+                                </td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.Schedule.ViewSchedule(item.Id))">
+                                    @item.Slot.Name
+                                </td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.Schedule.ViewSchedule(item.Id))">
+                                    @item.User.FirstName @item.User.LastName
+                                </td>
+
+                                <td class="clickable-row" data-href="@Url.Action(MVC.Schedule.ViewSchedule(item.Id))">
+                                    @foreach (var m in RetrieveLists.GetOperationsBySchedule(item.Id))
+                                    {
+                                        <div>
+                                            <i>@m.Operation.Description</i> <span>&nbsp;(&nbsp;<i class="fa fa-money"></i>&nbsp;@m.Price&nbsp;RON -&nbsp;<i class="glyphicon glyphicon-time"></i> &nbsp;@m.DurationMinutes&nbsp; min.)</span>
+                                        </div>
+                                    }
+                                </td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.Schedule.ViewSchedule(item.Id))">
+                                    @switch (item.State)
+                                    {
+                                        case ScheduleState.Pending:
+                                            <span class="font-warning">@Resource.Pending</span>
+                                            break;
+                                        case ScheduleState.CancelledByProvider:
+                                            <span class="font-danger">@Resource.CancelledByProvider</span>
+                                            break;
+                                        case ScheduleState.CancelledByUser:
+                                            <span class="font-danger">@Resource.CancelledByUser</span>
+                                            break;
+                                        default:
+                                            <span class="font-success">@Resource.Valid</span>
+                                            break;
+                                    }
+                                </td>
+                                <td class="clickable-row" data-href="@Url.Action(MVC.Schedule.ViewSchedule(item.Id))">
+                                    @item.Text
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+
+        else
+        {
+            <div>
+                @Resource.NoResults
+            </div>
+        }
+
+
+
+        @if ((Model.TotalItemCount) > Model.PageSize)
+        {
+            @Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount).Options(o => o
+                    .DisplayTemplate("Bootstrap3Pagination")
+                    .MaxNrOfPages(14)
+                    .AlwaysAddFirstPageNumber()
+
+                    )
+        }
+
+    </div>
+</section>

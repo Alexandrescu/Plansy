@@ -1,0 +1,315 @@
+﻿@using MaProgramez.Repository.Entities
+@using MaProgramez.Website.Utility
+@model MaProgramez.Website.ViewModels.InvoiceViewModel
+@{
+    Layout = null;
+    var userName = string.Empty;
+    var culture = new System.Globalization.CultureInfo("nl-NL");
+    if (!Model.Invoice.User.IsCompany)
+    {
+        userName = Model.Invoice.User.FirstName + " " + Model.Invoice.User.LastName;
+    }
+    else
+    {
+        userName = Model.Invoice.User.CompanyName;
+    }
+}
+<itext creationdate="@DateTime.Now.ToString()" producer="RazorPDF">
+  
+    <table width="100%" cellpadding="3.0" cellspacing="3.0" widths="3;4;3">
+        <row>
+            <cell horizontalalign="center">
+                <chunk color="#1c77a6" style="font-weight:bold" font="Times" size="15.0">@Resource.Supplier</chunk>
+                <newline />
+                <chunk font="Times" size="12.0">SC SPIN IT SRL</chunk>
+            </cell>
+            <cell horizontalalign="center">
+                <image url="@Context.Server.MapPath("~/Content/images/logoNew.png")" />
+            </cell>
+            <cell horizontalalign="center">
+                <chunk color="#1c77a6" style="font-weight:bold" font="Times" size="15.0">@Resource.Buyer</chunk>
+                <newline />
+                <chunk font="Times" size="12.0">
+                    @userName
+                </chunk>
+            </cell>
+        </row>
+        <row>
+
+             <cell>
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.User_JNO: </chunk>
+                <chunk font="Times" size="10.0">J32/250/10.03.2014</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.User_CUI:  </chunk>
+                <chunk font="Times" size="10.0">32902508 </chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.User_Address: </chunk>
+                <chunk font="Times" size="10.0">Selimbar, Str.Sabin Balasa Nr.15A, Ap.2</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Capital social: </chunk>
+                <chunk font="Times" size="10.0">200RON</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.User_AccountNumber: </chunk>
+                <chunk font="Times" size="10.0">RO95INGB0000999905179098 </chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.User_Bank: </chunk>
+                <chunk font="Times" size="10.0">ING BANK</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.Email: </chunk>
+                <chunk font="Times" size="10.0">office@spinit.ro</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Website: </chunk>
+                <chunk font="Times" size="10.0">www.spinit.ro</chunk>
+                <newline />
+            </cell>
+
+            <cell horizontalalign="center">
+                <newline />
+                <chunk color="#1c77a6" style="font-weight:bold" font="Times" size="20.0">@Resource.Invoice</chunk>
+                <newline />
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.InvoiceSeries</chunk>
+                <newline />
+                <chunk font="Times" size="10.0"> @Model.Invoice.Series</chunk>
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.InvoiceNumber: </chunk>
+                <newline />
+                <chunk font="Times" size="10.0">@Model.Invoice.Number</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.InvoiceDate: </chunk>
+                <newline />
+                <chunk font="Times" size="10.0">@Model.Invoice.Date.ToShortDateString() </chunk>
+                <newline />
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.InvoiceDueDate: </chunk>
+                <newline />
+                <chunk font="Times" size="10.0">@Model.Invoice.DueDate.ToShortDateString() </chunk>
+
+            </cell>
+
+             <cell>
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.User_JNO: </chunk>
+                <chunk font="Times" size="10.0">@Model.Invoice.User.Jno</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.User_CUI / @Resource.User_IdCardNo: </chunk>
+                <chunk font="Times" size="10.0">@Model.Invoice.User.Cui</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.User_Address: </chunk>
+                <chunk font="Times" size="10.0">
+                    @Model.Invoice.User.Addresses.First().AddressText,
+                    @Model.Invoice.User.Addresses.First().UserCity.Name,
+                    @Model.Invoice.User.Addresses.First().UserCountry.Name
+                </chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.User_AccountNumber: </chunk>
+                <chunk font="Times" size="10.0">@Model.Invoice.User.AccountNumber</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.User_Bank: </chunk>
+                <chunk font="Times" size="10.0">@Model.Invoice.User.Bank</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.PhoneNumber: </chunk>
+                <chunk font="Times" size="10.0">@Model.Invoice.User.PhoneNumber</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">@Resource.Email </chunk>
+                <chunk font="Times" size="10.0">@Model.Invoice.User.Email</chunk>
+                <newline />
+
+            </cell>
+        </row>
+    </table>
+    
+
+    <newline />
+    <newline />
+
+<table width="100%" cellpadding="1" cellspacing="1" widths="0.5;5;1.5;1.5;1.5">
+    <row>
+        <cell><newline/><newline/></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        @*  <cell></cell>*@
+    </row>
+    <row>
+        <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+            <chunk font="Times" size="10.0" style="font-weight: bold">@Resource.CurrentNumber</chunk>
+        </cell>
+
+        <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+            <chunk font="Times" size="10.0" style="font-weight: bold">@Resource.Description</chunk>
+        </cell>
+
+        <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+            <chunk font="Times" size="10.0" style="font-weight: bold">@Resource.UnityMeasure</chunk>
+        </cell>
+
+        <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+            <chunk font="Times" size="10.0" style="font-weight: bold">@Resource.Quantity</chunk>
+        </cell>
+
+        <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+            <chunk font="Times" size="10.0" style="font-weight: bold">@Resource.Price</chunk>
+            <newline/>
+            <chunk font="Times" size="10.0" style="font-weight: bold">-Euro-</chunk>
+        </cell>
+        @*
+    <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+        <chunk font="Times" size="10.0" style="font-weight:bold">Valoarea</chunk>
+        <newline />
+        <chunk font="Times" size="10.0" style="font-weight:bold">-Euro-</chunk>
+    </cell>
+            *@
+    </row>
+
+    @{ var lineNumber = 0;}
+
+    @foreach (var line in @Model.Invoice.InvoiceLines)
+    {
+        lineNumber++;
+        <row>
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">@lineNumber</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">@line.LineDescription</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0"> @line.UnitOfMeasurement</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">@line.Quantity.ToString("N2", culture)</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0">@line.Price.ToString("N2", culture)</chunk>
+            </cell>
+            @*
+    <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+        <chunk font="Times" size="10.0">@((line.Price * line.Quantity).ToString("N2",culture))</chunk>
+    </cell>*@
+        </row>
+
+    }
+
+    <row>
+        <cell><newline/><newline/></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        @* <cell></cell>*@
+    </row>
+
+</table>
+    
+<paragraph style="font-weight: bold" font="Times" size="14.0">
+    Total: @(InvoiceUtility.GetInvoiceTotalAmount(Model.Invoice.Id).ToString("N2", culture)) Euro
+</paragraph>
+
+
+
+        @*
+            <paragraph font="Times" size="12.0">
+                    Prezenta factura cuprinde: 1 pagini, @lineNumber linii
+                </paragraph>
+                <paragraph font="Times" size="12.0">
+                    Va multumim. In cazul in care nu exista un contract, prezenta tine locul acestuia.
+                </paragraph>
+                <paragraph font="Times" size="12.0">
+                    Conform art. 155 alin. (28) din Legea nr. 571/2003 privind Codul fiscal, factura este valabila fara semnatura si stampila
+                </paragraph>
+            <table width="100%" cellpadding="1" cellspacing="1" widths="2.5;4;1.5;2">
+                <row>
+                    <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                        <newline/>
+                        <newline/>
+                        <newline/>
+                        <chunk color="#CCCCCC" font="Times" size="10.0">Semnatura si stampila furnizorului</chunk>
+                        <newline/>
+                        <newline/>
+                        <newline/>
+                        <newline/>
+                    </cell>
+
+                    <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                        <chunk font="Times" size="10.0" style="font-weight: bold">Intocmit de: </chunk>
+                        <chunk font="Times" size="10.0">Ioan Armenean SB 430208</chunk>
+                        <newline/>
+                        <chunk font="Times" size="10.0" style="font-weight: bold">CNP: </chunk>
+                        <chunk font="Times" size="10.0">1800528323374</chunk>
+                        <newline/>
+                        <chunk font="Times" size="10.0" style="font-weight: bold">Numele delegatului: </chunk>
+                        @{
+                            /*<chunk font="Times" size="10.0">@Model.Invoice.User.FirstName @Model.Invoice.User.LastName</chunk>*/
+                        }
+                        <newline/>
+                        <chunk font="Times" size="10.0" style="font-weight: bold">B.I/C.I: </chunk>
+                        @{
+                            /*<chunk font="Times" size="10.0">@Model.Invoice.User.IdCardNo</chunk>
+                 */
+                        }
+                        <newline/>
+                        <chunk font="Times" size="10.0" style="font-weight: bold">Mijloc de transport:</chunk>
+                        <chunk font="Times" size="10.0">POSTA</chunk>
+                        <newline/>
+                        @{
+                            /*<chunk font="Times" size="10.0">Expedierea s-a efectuat in prezenta noastra la data de @Model.Invoice.Date.ToString(dd-MM-yyyy)</chunk>
+                 */
+                        }
+                    </cell>
+                    <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                        <newline/>
+                        <chunk font="Times" size="10.0" style="font-weight: bold">Total:</chunk>
+                        <newline/>
+                        <newline/>
+                        <newline/>
+                        <chunk font="Times" size="10.0">Semnatura de primire:</chunk>
+                    </cell>
+                    <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                        <newline/>
+                        <chunk font="Times" size="10.0" style="font-weight: bold">@(InvoiceUtility.GetInvoiceTotalAmount(Model.Invoice.Id).ToString("N2", culture)) Euro</chunk>
+                    </cell>
+                </row>
+            </table>
+
+
+
+                @if (!Model.Invoice.InvoicePayments.Any())
+                {
+                    <paragraph font="Times" size="12.0">
+                        @*Factura se achita ramburs.
+                    </paragraph>
+                }
+                else
+                {
+                    if (Model.Invoice.InvoicePayments.First().PaymentMethod == PaymentMethod.Card)
+                    {
+                        <paragraph font="Times" size="12.0">
+                            @*Factura se achita online cu cardul.
+                        </paragraph>
+                    }
+                    else
+                    {
+                        <paragraph font="Times" size="12.0">
+                            @*Factura se achita ramburs.
+                        </paragraph>
+                    }
+                }*@
+</itext>

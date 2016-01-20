@@ -1,0 +1,170 @@
+﻿@using MaProgramez.Repository.Entities
+@model MaProgramez.Website.Models.CreateUserViewModel
+@{
+    ViewBag.Title = @Resource.RegisterAsANewUser;
+    Layout = null;
+    //var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes();
+}
+<head>
+    @Styles.Render("~/Content/normalize.css");
+    @Styles.Render("~/Content/style.css");
+    @Html.Partial(MVC.Shared.Views.PartialViews._Style)
+</head>
+
+<body>
+    <div class="logmod">
+        <div class="logo-menu">
+            <a href="@Url.Action(MVC.Home.New())"><img src="~/Content/images/logo-inline.png" /> </a>
+        </div>
+        <div class="logmod__wrapper" style="max-width: 750px !important;">
+
+            <div class="logmod__container" style="padding: 20px;">
+
+                @using (Html.BeginForm("ProviderRegister", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <h2 style="font-weight: bold">@Resource.RegisterAsANewUser</h2>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Email, new { @class = "col-md-4 form-label" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password, new { @class = "col-md-4 form-label" })
+                        <div class="col-md-8">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-4 form-label" })
+                        <div class="col-md-8">
+                            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control  input-sm" })
+                            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.FirstName, new { @class = "col-md-4 form-label" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.LastName, new { @class = "col-md-4 form-label" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control  input-sm" })
+                            @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.PhoneNumber, new { @class = "col-md-4 form-label" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr />
+
+                    <div class="form-group">
+                        <label class="col-md-4 form-label">@Resource.CompanyName</label>
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.CompanyName, new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.AccountNumber, new { @class = "col-md-4 form-label" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.AccountNumber, new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(model => model.AccountNumber, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.LogoPath, new { @class = "col-md-4 form-label" })
+                            <div class="col-md-8">
+                                <div id="LogoPreview" class="image-preview"></div>
+                                <input type="file" name="file" id="File" data-target="#LogoPreview" style="display: none;" />
+                                <div class="btn buton5success btn-sm" id="UploadImage" data-target="#File">@Resource.UploadLogo</div>
+                            </div>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <div class="line"></div>
+                        <div class="clear"></div>
+
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <a href="@Url.Action(MVC.Account.Terms())" target="_blank" style="font-size: 14px; margin-bottom: 0; color: #333">@Resource.AcceptTermsMessage:</a>
+                                @Html.ValidationMessageFor(m => m.AcceptedTermsFlag, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-4">
+                                <fieldset class="switch switch-two" style="margin: 0">
+                                    <input id="AcceptedTermsFlagYes" name="AcceptedTermsFlag" type="radio" value="True" @(Model != null && Model.AcceptedTermsFlag ? "checked" : string.Empty) />
+                                    <label for="AcceptedTermsFlagYes">@Resource.Yes</label>
+                                    <input id="AcceptedTermsFlagNo" name="AcceptedTermsFlag" type="radio" value="False" @(Model == null || !Model.AcceptedTermsFlag ? "checked" : string.Empty) />
+                                    <label for="AcceptedTermsFlagNo">@Resource.No</label>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <hr />
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <input type="submit" class="btn btn-danger float-right" value="@Resource.Register_Button" />
+                            </div>
+                        </div>
+                }
+            </div>
+        </div>
+        <div class="logmod__wrapper" style="max-width: 750px !important;">
+            <div class="logmod__container" style="padding: 20px;">
+
+                <div class="address-group relative">
+                    <h2 style="font-weight: bold">@Resource.User_Addresses</h2>
+
+                    <i class="fa fa-plus-square-o add-address-button" style="padding: 0 !important;"></i>
+
+                    <div class="line"></div>
+                    <div class="clear" style="margin-bottom: 25px"></div>
+
+                    <div class="row add-address-box" id="AddAddressBox">
+                        @Html.Partial(MVC.UsersAdmin.Views.PartialViews._AddAddress, string.Empty)
+                    </div>
+
+                    <div class="panel-group" id="Addresses">
+                        @Html.Partial(MVC.UsersAdmin.Views.PartialViews._AddressList, Model.Addresses)
+                    </div>
+                    <div class="loading-box" id="LoadingAddress">
+                        <i class="fa fa-spinner fa-spin"></i>
+                    </div>
+
+
+                    <ul class="address-legend col-md-12" style="margin-top: 20px">
+                        <li class="col-md-4">
+                            <i class="fa fa-file-text-o" style="padding: 0 !important;"></i> - @Resource.AddressType_InvoiceAddress
+                        </li>
+                        <li class="col-md-4">
+                            <i class="fa fa-car" style="padding: 0 !important;"></i> - @Resource.AddressType_PlaceOfBusinessAddress
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Html.Partial(MVC.Shared.Views.PartialViews._Scripts)
+    @Scripts.Render("~/bundles/jqueryval", Html.JsCultureBundle())
+    @Scripts.Render("~/bundles/upload-images")
+    @Scripts.Render("~/bundles/add-user")
+    @Scripts.Render("~/bundles/address")
+</body>

@@ -1,0 +1,27 @@
+﻿@model MaProgramez.Website.ViewModels.LandingPageViewModel
+@{
+    Layout = MVC.Shared.Views._LandingPageLayout;
+}
+
+@*<script src="//seal.globessl.com/seal.js"></script>*@
+
+@Html.Partial(MVC.Home.Views.PartialViews._LandingPageCookies)
+@Html.Partial(MVC.Home.Views.PartialViews._LandingPageHeader, Model)
+@Html.Partial(MVC.Home.Views.PartialViews._LandingPageSteps)
+@Html.Partial(MVC.Home.Views.PartialViews._LandingPageAccount)
+@Html.Partial(MVC.Home.Views.PartialViews._LandingPageCountsAndMobileApps)
+@Html.Partial(MVC.Home.Views.PartialViews._LandingPageContactSection)
+@Html.Partial(MVC.Home.Views.PartialViews._LandingPageFooter)
+@*@Html.Partial(MVC.Home.Views.PartialViews._LandingPageContestModal)*@
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/slick")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/waypoints")
+@Scripts.Render("~/bundles/landing-page")
+@Scripts.Render("~/bundles/jqueryval")
+@*@Scripts.Render("~/bundles/googleAnalytics")*@
+@*@Scripts.Render("~/bundles/clickdesk")*@
+
+<a href="https://itunes.apple.com/us/app/ma-programez/id1016292213" class="apple-logo" target="_blank"></a>
+<a href="https://play.google.com/store/apps/details?id=com.spinit.maprogramez" class="android-logo" target="_blank"></a>

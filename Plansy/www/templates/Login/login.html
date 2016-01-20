@@ -1,0 +1,37 @@
+<ion-view class="login-bg">
+    <ion-content scroll="false" class="">
+        <div class="center" style="top: 35% !important;">
+            <div class="login-logo"></div>
+            <div class="padding">
+                <p class="text-center text-shadow light login-paragraph">
+                    {{'LOGIN_TEXT' | translate}}
+                </p>
+                 <p class="text-center text-shadow light login-paragraph">
+                    {{'LOGIN_TEXT_2' | translate}}
+                </p>
+            </div>
+        </div>
+
+        <div class="login-buttons">
+            <div class="row">
+                <div class="col col-50">
+                    <div class="round-button button-white" ng-click="login()">
+                        {{'SIGNIN' | translate}}
+                    </div>
+                </div>
+                <div class="col col-50">
+                    <div class="round-button button-white-opacity" ng-click="register()">
+                        {{'REGISTER' | translate}}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center light">
+                    <div class="button button-clear button-small button-light" ng-click="password()">
+                        {{'FORGOT_PASSWORD' | translate}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

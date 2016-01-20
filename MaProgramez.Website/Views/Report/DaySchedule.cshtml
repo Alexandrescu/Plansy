@@ -1,0 +1,173 @@
+﻿@using MaProgramez.Repository.Entities
+@model List<MaProgramez.Repository.Entities.Schedule>
+
+@{
+    Layout = null;
+    string slotName = ViewBag.SlotName;
+    var phone = (bool)ViewBag.ShowPhoneNumber;
+    var date = "";
+    if (Model != null && Model.Any())
+    {
+        date = Model.First().ScheduleDateTimeStart.ToShortDateString();
+    }
+}
+<itext creationdate="@DateTime.Now.ToString()" producer="RazorPDF">
+
+    @if (date != "")
+    {
+        <h1>@ViewBag.SlotName - @date</h1>
+
+        if (phone)
+        {
+            <table width="100%" cellpadding="1" cellspacing="1" widths="1;2;2;2;3">
+                <row>
+                    <cell><newline /><newline /></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+
+                    <cell></cell>
+
+                </row>
+                <row>
+                    <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                        <chunk font="Times" size="10.0" style="font-weight: bold">@Resource.CurrentNumber</chunk>
+                    </cell>
+                    <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                        <chunk font="Times" size="10.0" style="font-weight: bold">@Resource.Hour</chunk>
+                    </cell>
+
+                    <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                        <chunk font="Times" size="10.0" style="font-weight: bold">@Resource.User_Name</chunk>
+                    </cell>
+
+                    <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                        <chunk font="Times" size="10.0" style="font-weight: bold">@Resource.PhoneNumber</chunk>
+                    </cell>
+
+                    <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                        <chunk font="Times" size="10.0" style="font-weight: bold">@Resource.Details</chunk>
+                    </cell>
+
+                </row>
+                @{ var line = 0; }
+                @foreach (var m in Model)
+                {
+                    line++;
+                    <row>
+                        <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                            <chunk font="Times" size="10.0">@line</chunk>
+                        </cell>
+                        <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                            <chunk font="Times" size="10.0">@m.ScheduleDateTimeStart.ToShortTimeString() - @m.ScheduleDateTimeEnd.ToShortTimeString()</chunk>
+                        </cell>
+
+                        <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                            <chunk font="Times" size="10.0">@m.User.FirstName @m.User.LastName</chunk>
+                        </cell>
+
+
+                        <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                            <chunk font="Times" size="10.0">@m.User.PhoneNumber </chunk>
+                        </cell>
+
+                        <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+
+                            <chunk font="Times" size="10.0">@m.Text</chunk>
+
+                        </cell>
+
+                    </row>
+
+                }
+
+                <row>
+                    <cell><newline /><newline /></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+
+                    <cell></cell>
+
+                </row>
+
+            </table>
+        }
+
+        else
+        {
+            <table width="100%" cellpadding="1" cellspacing="1" widths="1;2;3;4">
+                <row>
+                    <cell><newline /><newline /></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+
+
+                </row>
+                <row>
+                    <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                        <chunk font="Times" size="10.0" style="font-weight: bold">@Resource.CurrentNumber</chunk>
+                    </cell>
+                    <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                        <chunk font="Times" size="10.0" style="font-weight: bold">@Resource.Hour</chunk>
+                    </cell>
+
+                    <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                        <chunk font="Times" size="10.0" style="font-weight: bold">@Resource.User_Name</chunk>
+                    </cell>
+
+                    <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                        <chunk font="Times" size="10.0" style="font-weight: bold">@Resource.Details</chunk>
+                    </cell>
+
+                </row>
+                @{ var line = 0; }
+                @foreach (var m in Model)
+                {
+                    line++;
+                    <row>
+                        <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                            <chunk font="Times" size="10.0">@line</chunk>
+                        </cell>
+                        <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                            <chunk font="Times" size="10.0">@m.ScheduleDateTimeStart.ToShortTimeString() - @m.ScheduleDateTimeEnd.ToShortTimeString()</chunk>
+                        </cell>
+
+                        <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                            <chunk font="Times" size="10.0">@m.User.FirstName @m.User.LastName</chunk>
+                        </cell>
+
+
+                        <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                            @if (m.AddedByProvider)
+                            {
+                                <chunk font="Times" size="10.0">@m.Text</chunk>
+                            }
+                            else
+                            {
+                                <chunk font="Times" size="10.0">@Resource.SchduledThoughApp</chunk>
+                            }
+                        </cell>
+
+                    </row>
+
+                }
+
+                <row>
+                    <cell><newline /><newline /></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+
+                </row>
+
+            </table>
+        }
+    }
+
+    else
+    {
+        <h1>@ViewBag.SlotName - @Resource.NoSchedulesOnSelectedDay!</h1>
+    }
+</itext>

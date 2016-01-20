@@ -1,0 +1,23 @@
+<ion-view>
+    <ion-nav-title>
+        {{'NOTIFICATIONS' | translate}}
+    </ion-nav-title>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="menu-dark-content">
+        <div class="list">
+            <div class="item item-icon-right" ng-repeat="notification in Notifications">
+                {{notification.text}}
+                <i class="icon ion-ios-arrow-right"></i>
+                <a href="#/app/notification/{{notification.id}}" class="menu-block-link"></a>
+            </div>
+
+            <div class="item text-center" ng-if="Notifications == null || Notifications.length == 0">
+                <p>{{'NO_RESULTS' | translate}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

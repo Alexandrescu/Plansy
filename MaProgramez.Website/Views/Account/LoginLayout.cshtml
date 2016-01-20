@@ -1,0 +1,108 @@
+﻿@using MaProgramez.Resources
+@using MaProgramez.Website.Helpers
+@using MaProgramez.Website.Models
+@model RegisterViewModel
+
+@{
+    ViewBag.Title = Resource.Login;
+    Layout = null;
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@Resource.Login / @Resource.SignUp</title>
+
+    @Styles.Render("~/Content/normalize.css");
+    @Styles.Render("~/Content/style.css");
+    @Styles.Render("~/Content/custom.css");
+    @Styles.Render("~/Content/font-awesome.min.css")
+
+    @Scripts.Render("~/Scripts/jquery-2.1.4.min.js");
+    @Scripts.Render("~/Scripts/index.js");
+    @Scripts.Render("~/bundles/jqueryval", Html.JsCultureBundle())
+    @Scripts.Render("~/bundles/add-user")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var type = '@ViewBag.Type';
+            if (type == "register") {
+
+                var headerLogIn = document.getElementById("head-lgm-2");
+                removeClass(headerLogIn, 'current');
+                var headerSignUp = document.getElementById("head-lgm-1");
+                addClass(headerSignUp, 'current');
+
+                var tabLogIn = document.getElementById("tab-lgm-2");
+                removeClass(tabLogIn, 'show');
+                var tabSignUp = document.getElementById("tab-lgm-1");
+                addClass(tabSignUp, 'show');
+            }
+        });
+
+        function addClass(el, className) {
+            if (el.classList)
+                el.classList.add(className);
+            else if (!hasClass(el, className)) el.className += " " + className;
+        }
+
+        function removeClass(el, className) {
+            if (el.classList)
+                el.classList.remove(className);
+            else if (hasClass(el, className)) {
+                var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
+                el.className = el.className.replace(reg, ' ');
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div class="logmod">
+        <div class="logo-menu"><a href="@Url.Action(MVC.Home.New())"><img src="~/Content/images/logo-inline.png" /> </a> </div>
+        <div class="logmod__wrapper">
+
+            <div class="logmod__container">
+                <ul class="logmod__tabs">
+                    <li data-tabtar="lgm-2" id="head-lgm-2"><a href="#">@Resource.LandingPage_SignIn</a></li>
+                    <li data-tabtar="lgm-1" id="head-lgm-1"><a href="#">@Resource.LandingPage_SignUp</a></li>
+                </ul>
+                <div class="logmod__tab-wrapper">
+                    <div class="logmod__tab lgm-1" id="tab-lgm-1">
+                        <div class="logmod__heading">
+                            @if (CultureHelper.GetCurrentNeutralCulture() == "nl")
+                            {
+                                <span class="logmod__heading-subtitle">@Resource.Register_Text @Resource.Register_Strong</span>
+                            }
+                            else
+                            {
+                                <span class="logmod__heading-subtitle">@Resource.Register_Text <strong>@Resource.Register_Strong</strong></span>
+                            }
+                        </div>
+                        <div class="logmod__form">
+                            @Html.Partial("_Register", Model)
+                        </div>
+                        @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+                    </div>
+                    <div class="logmod__tab lgm-2" id="tab-lgm-2">
+                        <div class="logmod__heading">
+                            @if (CultureHelper.GetCurrentNeutralCulture() == "nl")
+                            {
+                                <span class="logmod__heading-subtitle">@Resource.SignIn_Text @Resource.SignIn_Strong</span>
+                            }
+                            else
+                            {
+                                <span class="logmod__heading-subtitle">@Resource.SignIn_Text <strong>@Resource.SignIn_Strong</strong></span>
+                            }
+                        </div>
+                        <div class="logmod__form">
+                            @Html.Partial("_Login", Model)
+                        </div>
+                        @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

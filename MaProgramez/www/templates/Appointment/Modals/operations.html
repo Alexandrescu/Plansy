@@ -1,0 +1,21 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center">
+        <h1 class="title text-center">{{ 'SELECT_OPERATIONS' | translate }}</h1>
+        <div class="buttons">
+            <button class="button button-icon button-clear button-small button-balanced ion-checkmark" ng-click="closeOperationsModal()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <ul class="list">
+            <li class="item item-checkbox" ng-repeat="operation in Operations">
+                {{operation.description}}
+                <label class="checkbox" ng-click="operationClick()">
+                    <input type="checkbox" ng-model="operation.selected">
+                </label>
+            </li>
+        </ul>
+    </ion-content>
+    <ion-footer-bar align-title="left" class="bar-balanced" ng-click="closeOperationsModal()">
+        <div class="title">{{ 'SELECT_OPERATIONS' | translate }}</div>
+    </ion-footer-bar>
+</ion-modal-view>

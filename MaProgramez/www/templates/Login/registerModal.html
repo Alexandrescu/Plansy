@@ -1,0 +1,45 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center">
+        <h1 class="title text-center">{{'REGISTER' | translate}}</h1>
+        <div class="buttons">
+            <button class="button button-icon button-clear button-small ion-close" ng-click="closeRegister()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="doRegister()">
+            <div class="padding">
+                <label class="item item-input">
+                    <input type="text" placeholder="{{'LAST_NAME' | translate}}" ng-model="registration.lastName">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="{{'FIRST_NAME' | translate}}" ng-model="registration.firstName">
+                </label>
+                <label class="item item-input">
+                    <input type="email" placeholder="{{'EMAIL' | translate}}" ng-model="registration.userName">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="{{'PHONE' | translate}}" ng-model="registration.phone">
+                </label>
+            </div>
+
+            <div class="padding">
+                <p class="subtext">
+                    {{'REGISTER_TEXT' | translate}}
+                </p>
+                
+                <label class="item item-input">
+                    <input type="password" placeholder="{{'PASSWORD' | translate}}" ng-model="registration.password">
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="{{'CONFIRM_PASSWORD' | translate}}" ng-model="registration.confirmPassword">
+                </label>
+
+                <button class="button button-block button-assertive" type="submit">{{'CREATE_ACCOUNT' | translate}}</button>
+
+                <div data-ng-hide="message == ''" data-ng-class="(savedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
+                    {{message}}
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

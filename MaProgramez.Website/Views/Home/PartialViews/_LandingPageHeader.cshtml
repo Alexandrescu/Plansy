@@ -1,0 +1,130 @@
+﻿@using MaProgramez.Resources
+@using MaProgramez.Website.Utility
+<div id="header" style="margin-bottom: 40px;">
+    <div class="page-content">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="login-logo" style="opacity: 0.7; filter: alpha(opacity=70)">
+                    <a href="/" id="header-logo" style="margin: 15px auto;" ></a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <ul class="header-link float-right">
+                    <li style="border: 0;">
+                        <div class="dropdown">
+                            <button class="btn btn-default btn-sm dropdown-toggle" style="text-transform: uppercase;" type="button" id="LanguageDropdownMenu" data-toggle="dropdown" aria-expanded="true">
+                                <i class="fa fa-globe"></i> @MaProgramez.Website.Helpers.CultureHelper.GetCurrentNeutralCulture()
+                            </button>
+                            <ul class="dropdown-menu language-btn" role="menu" aria-labelledby="LanguageDropdownMenu">
+                                <li>
+                                    <a data-value="en">English</a>
+                                </li>
+                                <li>
+                                    <a data-value="nl">Dutch</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="@Url.Action(MVC.Account.Login())" style="color:#2C3E50">@Resource.LandingPage_SignIn</a>
+                    </li>
+                    @if (Common.GetDbConfig("EnableAccountRegistration") == "Y")
+                    {
+                        <li>
+                            <a href="@Url.Action(MVC.Account.Register())" style="color:#2C3E50"><b>@Resource.LandingPage_SignUp</b></a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 130px">
+            <div class="col-md-12 text-center">
+                <h2 style="color:#f6e4da">
+                    @Resource.LandingPage_Title
+                </h2>
+                <span class="sub-title">
+                    @Resource.LandingPage_SubTitle
+                    <br />
+                </span>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block-section only-desktop">
+        <div class="page-content">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="count-box">
+                       68
+                    </div>
+                    <p class="count-box-text">
+                        @Resource.TotalProviders
+                    </p>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="count-box">
+                        532
+                    </div>
+                    <p class="count-box-text">
+                        @Resource.TotalClients
+                    </p>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="count-box">
+                        21
+                    </div>
+                    <p class="count-box-text">
+                        @Resource.AppointmentsToday
+                    </p>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="count-box">
+                        48
+                    </div>
+                    <p class="count-box-text">
+                        @Resource.AppointmentsThisWeek
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="text-center" style="position: absolute; bottom: 40px; left: 0; right: 0;">
+        <a class="header-down-button" id="go-to-video">
+            <i class="fa fa-angle-down"></i>
+        </a>
+    </div>
+</div>
+
+<div class="page-content" id="video-section">
+    <div class="row">
+        <div class="col-sm-12 relative">
+            <img class="video-box" src="~/Content/images/laptop.png" alt="Video" />
+            <div class="video-box-button">
+                <a data-toggle="modal" data-target="#VideoModal">
+                    <i class="fa fa-play-circle-o"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="VideoModal" tabindex="5" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h5 class="modal-title">@Resource.Register_Title</h5>
+            </div>
+            <div class="clear"></div>
+            <div style="padding: 10px;">           
+                <iframe style="width: 100%; height: 300px;" src="https://fast.wistia.net/embed/iframe/90hn8920md"></iframe>
+            </div>
+        </div>
+    </div>
+</div>

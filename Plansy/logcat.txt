@@ -1,0 +1,1528 @@
+--------- beginning of system
+E/ConnectivityService(  724): EVENT_NETWORK_INFO_CHANGED from unknown NetworkAgent
+E/ActivityThread(14721): Failed to find provider info for com.google.android.wearable.settings
+E/ActivityThread(14721): Failed to find provider info for com.google.android.wearable.settings
+E/ConnectivityService(  724): Unexpected mtu value: 0, wlan0
+E/ActivityThread(14721): Failed to find provider info for com.google.android.wearable.settings
+E/ActivityThread(14721): Failed to find provider info for com.google.android.wearable.settings
+E/WindowManager(  724): Performed 6 layouts in a row. Skipping
+E/ConnectivityService(  724): RemoteException caught trying to send a callback msg for NetworkRequest [ id=125, legacyType=-1, [ Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+--------- beginning of main
+E/LocationReceiver( 1397): Received bad location: null
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-54
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocationReceiver( 1397): Received bad location: null
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-54
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-54
+E/LocationReceiver( 1397): Received bad location: null
+E/LocationReceiver( 1397): Received bad location: null
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/FitnessApp(27124): Could not connect to Google Play API. Error code: 16
+F/Adjust  (28515): PRODUCTION: Adjust is running in Production mode. Use this setting only for the build that you want to publish. Set the environment to `sandbox` if you want to test your app!
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-54
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/SQLiteLog(28803): (283) recovered 67 frames from WAL file /data/data/com.google.android.calendar/databases/timelydata.db-wal
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/SQLiteLog(30930): (284) automatic index on sqlite_sq_A2C21BF0(STAT_DATA_ID)
+E/SQLiteLog(30930): (284) automatic index on sqlite_sq_A2C21B50(STAT_DATA_ID)
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/native  (  724): do suspend false
+E/WifiStateMachine(  724): scanCount==0 - aborting
+E/native  (  724): do suspend true
+E/WifiStateMachine(  724): WifiStateMachine: Leaving Connected state
+E/LocationReceiver( 1397): Received bad location: null
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-54
+E/LocationReceiver( 1397): Received bad location: null
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/Fitness (14741): No default data source found for DataType{com.google.android.apps.fitness.calories.baseline{calories(f)}}, creating a fake one
+E/FitnessApp(27124): Could not connect to Google Play API. Error code: 16
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-54
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-54
+E/LocationReceiver( 1397): Received bad location: null
+E/LocationReceiver( 1397): Received bad location: null
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-54
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-54
+E/GooglePlayServicesUtil( 1760): The Google Play services resources were not found. Check your project configuration to ensure that the resources are included.
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): cancelDelayedScan -> 3824
+E/native  (  724): do suspend false
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/ACDB-LOADER(  188): Error: ACDB AudProc vol returned = -19
+E/PhotosPlugin(30397): Loading PhotosPlugin
+E/SQLiteLog(30397): (283) recovered 101 frames from WAL file /data/data/com.google.android.apps.docs/databases/DocList.db-wal
+E/SQLiteLog(29277): (284) automatic index on SyncRequest128(entryId)
+E/SQLiteLog(30457): (284) automatic index on SyncRequest128(entryId)
+E/SQLiteLog(30512): (284) automatic index on SyncRequest128(entryId)
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-51
+E/ViewRootImpl(30397): Attempting to destroy the window while drawing!
+E/ViewRootImpl(30397):   window=android.view.ViewRootImpl@88462c0, title=PopupWindow:6a77985
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-51
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+I/CordovaLog(30788): Changing log level to DEBUG(3)
+E/SysUtils(30788): ApplicationContext is null in ApplicationStatus
+E/Launcher.Model( 1240): Widget ComponentInfo{com.devhd.feedly/com.devhd.feedly.widget.FeedlyWidgetProvider_4_1} has invalid dimensions (0, 0)
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+F/Adjust  (31066): PRODUCTION: Adjust is running in Production mode. Use this setting only for the build that you want to publish. Set the environment to `sandbox` if you want to test your app!
+E/SysUtils(31227): ApplicationContext is null in ApplicationStatus
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/SQLiteLog(31337): (284) automatic index on artist_track(track_id)
+E/SQLiteLog(31337): (1) table disliked already exists
+E/a       (31337): Error while upgrading database: 
+E/a       (31337): java.lang.RuntimeException: Error while creating the database!
+E/a       (31337): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       (31337): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       (31337): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       (31337): 	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:163)
+E/a       (31337): 	at com.shazam.n.a.ad.g.a(SourceFile:18)
+E/a       (31337): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       (31337): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       (31337): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       (31337): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       (31337): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       (31337): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       (31337): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       (31337): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       (31337): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       (31337): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       (31337): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       (31337): 	at android.os.Looper.loop(Looper.java:135)
+E/a       (31337): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       (31337): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       (31337): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       (31337): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       (31337): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       (31337): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       (31337): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       (31337): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       (31337): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       (31337): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       (31337): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       (31337): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       (31337): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       (31337): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       (31337): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       (31337): 	... 21 more
+E/SQLiteLog(31337): (284) automatic index on artist_track(track_id)
+E/SQLiteLog(31337): (1) table disliked already exists
+E/a       (31337): Error while upgrading database: 
+E/a       (31337): java.lang.RuntimeException: Error while creating the database!
+E/a       (31337): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       (31337): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       (31337): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       (31337): 	at android.database.sqlite.SQLiteOpenHelper.getReadableDatabase(SQLiteOpenHelper.java:187)
+E/a       (31337): 	at com.shazam.n.a.ad.g.b(SourceFile:29)
+E/a       (31337): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       (31337): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       (31337): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       (31337): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       (31337): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       (31337): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       (31337): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       (31337): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       (31337): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       (31337): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       (31337): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       (31337): 	at android.os.Looper.loop(Looper.java:135)
+E/a       (31337): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       (31337): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       (31337): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       (31337): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       (31337): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       (31337): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       (31337): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       (31337): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       (31337): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       (31337): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       (31337): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       (31337): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       (31337): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       (31337): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       (31337): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       (31337): 	... 21 more
+E/MDM     (14741): [10472] b.run: Couldn't connect to Google API client: ConnectionResult{statusCode=API_UNAVAILABLE, resolution=null}
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-54
+E/RichInputConnection( 1103): Unable to connect to the editor to retrieve text.
+E/RichInputConnection( 1103): Unable to connect to the editor to retrieve text.
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/SQLiteLog(31675): (283) recovered 1 frames from WAL file /data/user/0/com.android.providers.media/databases/external.db-wal
+E/SQLiteLog(31675): (283) recovered 91 frames from WAL file /data/user/0/com.android.providers.media/databases/internal.db-wal
+D/CordovaLog(30788): file:///android_asset/www/js/controllers/loginController.js: Line 84 : Doing login
+D/CordovaLog(30788): file:///android_asset/www/js/controllers/loginController.js: Line 84 : Doing login
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-42
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): cancelDelayedScan -> 3831
+E/native  (  724): do suspend true
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-37
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3830, 3831 -> obsolete
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): cancelDelayedScan -> 3832
+E/native  (  724): do suspend false
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-44
+E/ACDB-LOADER(  188): Error: ACDB AudProc vol returned = -19
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-44
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+D/CordovaLog(30788): file:///android_asset/www/js/controllers/loginController.js: Line 84 : Doing login
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-54
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-48
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-49
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-57
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-50
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-40
+E/WifiStateMachine(  724): cancelDelayedScan -> 3840
+E/native  (  724): do suspend true
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-40
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3839, 3840 -> obsolete
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 2 level: 12
+E/fb4a(:<default>):MqttOperationManager(28556): Unexpected duplicate message ID -1 for operation PINGRESP.
+E/WifiStateMachine(  724): cancelDelayedScan -> 3841
+E/native  (  724): do suspend false
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/ACDB-LOADER(  188): Error: ACDB AudProc vol returned = -19
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-52
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-40
+I/CordovaLog(32756): Changing log level to DEBUG(3)
+E/SysUtils(32756): ApplicationContext is null in ApplicationStatus
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-61
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-57
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): cancelDelayedScan -> 3847
+E/native  (  724): do suspend true
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): cancelDelayedScan -> 3848
+E/native  (  724): do suspend false
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-53
+E/ACDB-LOADER(  188): Error: ACDB AudProc vol returned = -19
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-53
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-62
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3846, 3850 -> obsolete
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-59
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-60
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-34
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-50
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-40
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-40
+E/WifiStateMachine(  724): cancelDelayedScan -> 3856
+E/native  (  724): do suspend true
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/libsuspend(  724): Error writing to /sys/power/state: Device or resource busy
+E/WifiStateMachine(  724): cancelDelayedScan -> 3857
+E/native  (  724): do suspend false
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-47
+E/ACDB-LOADER(  188): Error: ACDB AudProc vol returned = -19
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-47
+E/Coffee - BluetoothTrustlet(14741): Illegal Bluetooth address.null
+E/Coffee - BluetoothTrustlet(14741): Illegal Bluetooth address.null
+E/Coffee - BluetoothTrustlet(14741): Illegal Bluetooth address.null
+E/Coffee - BluetoothTrustlet(14741): Illegal Bluetooth address.null
+E/Coffee - BluetoothTrustlet(14741): Illegal Bluetooth address.null
+E/BluetoothDevice(14741): BT not enabled. Cannot get Remote Device Alias
+E/BluetoothDevice(14741): BT not enabled. Cannot get Remote Device name
+E/BluetoothDevice(14741): BT not enabled. Cannot get bond state
+E/Coffee - BluetoothTrustlet(14741): Illegal Bluetooth address.null
+E/Coffee - BluetoothTrustlet(14741): Illegal Bluetooth address.null
+E/Coffee - BluetoothTrustlet(14741): Illegal Bluetooth address.null
+E/Coffee - BluetoothTrustlet(14741): Illegal Bluetooth address.null
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/PhotosPlugin( 1695): Loading PhotosPlugin
+E/SQLiteLog( 1695): (283) recovered 5 frames from WAL file /data/data/com.google.android.apps.docs/databases/DocList.db-wal
+E/ACDB-LOADER(  188): Error: ACDB AudProc vol returned = -19
+E/SQLiteLog( 1835): (283) recovered 67 frames from WAL file /data/user/0/com.google.android.apps.docs.editors.slides/databases/DocList.db-wal
+E/SQLiteLog( 1835): (284) automatic index on SyncRequest128(entryId)
+E/SQLiteLog( 1928): (284) automatic index on SyncRequest128(entryId)
+E/SQLiteLog( 1992): (284) automatic index on SyncRequest128(entryId)
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-51
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-52
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3855, 3859 -> obsolete
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/Launcher.Model( 1240): Widget ComponentInfo{com.devhd.feedly/com.devhd.feedly.widget.FeedlyWidgetProvider_4_1} has invalid dimensions (0, 0)
+I/CordovaLog( 2313): Changing log level to DEBUG(3)
+E/SysUtils( 2313): ApplicationContext is null in ApplicationStatus
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-51
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+F/Adjust  ( 2598): PRODUCTION: Adjust is running in Production mode. Use this setting only for the build that you want to publish. Set the environment to `sandbox` if you want to test your app!
+E/SysUtils( 2702): ApplicationContext is null in ApplicationStatus
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/SQLiteLog( 2802): (284) automatic index on artist_track(track_id)
+E/SQLiteLog( 2802): (1) table disliked already exists
+E/a       ( 2802): Error while upgrading database: 
+E/a       ( 2802): java.lang.RuntimeException: Error while creating the database!
+E/a       ( 2802): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       ( 2802): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:163)
+E/a       ( 2802): 	at com.shazam.n.a.ad.g.a(SourceFile:18)
+E/a       ( 2802): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       ( 2802): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       ( 2802): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       ( 2802): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       ( 2802): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       ( 2802): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       ( 2802): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       ( 2802): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       ( 2802): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       ( 2802): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       ( 2802): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       ( 2802): 	at android.os.Looper.loop(Looper.java:135)
+E/a       ( 2802): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       ( 2802): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       ( 2802): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       ( 2802): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       ( 2802): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       ( 2802): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       ( 2802): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       ( 2802): 	... 21 more
+E/SQLiteLog( 2802): (284) automatic index on artist_track(track_id)
+E/SQLiteLog( 2802): (1) table disliked already exists
+E/a       ( 2802): Error while upgrading database: 
+E/a       ( 2802): java.lang.RuntimeException: Error while creating the database!
+E/a       ( 2802): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       ( 2802): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteOpenHelper.getReadableDatabase(SQLiteOpenHelper.java:187)
+E/a       ( 2802): 	at com.shazam.n.a.ad.g.b(SourceFile:29)
+E/a       ( 2802): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       ( 2802): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       ( 2802): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       ( 2802): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       ( 2802): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       ( 2802): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       ( 2802): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       ( 2802): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       ( 2802): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       ( 2802): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       ( 2802): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       ( 2802): 	at android.os.Looper.loop(Looper.java:135)
+E/a       ( 2802): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       ( 2802): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       ( 2802): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       ( 2802): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       ( 2802): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       ( 2802): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       ( 2802): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       ( 2802): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       ( 2802): 	... 21 more
+E/MDM     (14741): [10465] b.run: Couldn't connect to Google API client: ConnectionResult{statusCode=API_UNAVAILABLE, resolution=null}
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-32
+E/SQLiteLog( 3016): (283) recovered 1 frames from WAL file /data/user/0/com.android.providers.media/databases/external.db-wal
+E/SQLiteLog( 3016): (283) recovered 91 frames from WAL file /data/user/0/com.android.providers.media/databases/internal.db-wal
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-32
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): cancelDelayedScan -> 3863
+E/native  (  724): do suspend true
+E/LocationReceiver( 1734): Received bad location: null
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-32
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3862, 3863 -> obsolete
+E/SQLiteLog( 3145): (283) recovered 67 frames from WAL file /data/data/com.google.android.calendar/databases/timelydata.db-wal
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/ACDB-LOADER(  188): Error: ACDB AudProc vol returned = -19
+E/WifiStateMachine(  724): cancelDelayedScan -> 3864
+E/native  (  724): do suspend false
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-45
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-35
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-36
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-34
+E/WifiStateMachine(  724): cancelDelayedScan -> 3869
+E/native  (  724): do suspend true
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-34
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3868, 3869 -> obsolete
+E/WifiStateMachine(  724): cancelDelayedScan -> 3870
+E/native  (  724): do suspend false
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-41
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-41
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-47
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-48
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/Launcher.Model( 1240): Widget ComponentInfo{com.devhd.feedly/com.devhd.feedly.widget.FeedlyWidgetProvider_4_1} has invalid dimensions (0, 0)
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-43
+E/PhotosPlugin( 3937): Loading PhotosPlugin
+E/SQLiteLog( 3937): (283) recovered 5 frames from WAL file /data/data/com.google.android.apps.docs/databases/DocList.db-wal
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+F/Adjust  ( 4117): PRODUCTION: Adjust is running in Production mode. Use this setting only for the build that you want to publish. Set the environment to `sandbox` if you want to test your app!
+E/MDM     (14741): [10488] b.run: Couldn't connect to Google API client: ConnectionResult{statusCode=API_UNAVAILABLE, resolution=null}
+E/BackupManagerService(  724): Required metadata but got 
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/Launcher.Model( 1240): Widget ComponentInfo{com.devhd.feedly/com.devhd.feedly.widget.FeedlyWidgetProvider_4_1} has invalid dimensions (0, 0)
+I/CordovaLog( 4504): Changing log level to DEBUG(3)
+E/SysUtils( 4504): ApplicationContext is null in ApplicationStatus
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-43
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-42
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+D/CordovaLog( 4504): file:///android_asset/www/js/controllers/loginController.js: Line 84 : Doing login
+D/CordovaLog( 4504): file:///android_asset/www/js/controllers/loginController.js: Line 84 : Doing login
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+D/CordovaLog( 4504): file:///android_asset/www/js/controllers/loginController.js: Line 84 : Doing login
+E/RichInputConnection( 1103): Unable to connect to the editor to retrieve text.
+E/RichInputConnection( 1103): Unable to connect to the editor to retrieve text.
+E/RichInputConnection( 1103): Unable to connect to the editor to retrieve text.
+E/RichInputConnection( 1103): Unable to connect to the editor to retrieve text.
+E/RichInputConnection( 1103): Unable to connect to the editor to retrieve text.
+E/RichInputConnection( 1103): Unable to connect to the editor to retrieve text.
+D/CordovaLog( 4504): file:///android_asset/www/js/controllers/loginController.js: Line 84 : Doing login
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-44
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): cancelDelayedScan -> 3880
+E/native  (  724): do suspend true
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-44
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3879, 3880 -> obsolete
+E/MDM     (14741): [10469] b.run: Couldn't connect to Google API client: ConnectionResult{statusCode=API_UNAVAILABLE, resolution=null}
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-44
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): cancelDelayedScan -> 3881
+E/native  (  724): do suspend false
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-52
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-47
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/Launcher.Model( 1240): Widget ComponentInfo{com.devhd.feedly/com.devhd.feedly.widget.FeedlyWidgetProvider_4_1} has invalid dimensions (0, 0)
+F/Adjust  ( 5792): PRODUCTION: Adjust is running in Production mode. Use this setting only for the build that you want to publish. Set the environment to `sandbox` if you want to test your app!
+I/CordovaLog( 5870): Changing log level to DEBUG(3)
+E/SysUtils( 5870): ApplicationContext is null in ApplicationStatus
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-51
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/GooglePlayServicesUtil( 1760): The Google Play services resources were not found. Check your project configuration to ensure that the resources are included.
+E/SysUtils( 5982): ApplicationContext is null in ApplicationStatus
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/SQLiteLog( 6080): (284) automatic index on artist_track(track_id)
+E/SQLiteLog( 6080): (1) table disliked already exists
+E/a       ( 6080): Error while upgrading database: 
+E/a       ( 6080): java.lang.RuntimeException: Error while creating the database!
+E/a       ( 6080): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       ( 6080): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:163)
+E/a       ( 6080): 	at com.shazam.n.a.ad.g.a(SourceFile:18)
+E/a       ( 6080): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       ( 6080): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       ( 6080): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       ( 6080): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       ( 6080): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       ( 6080): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       ( 6080): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       ( 6080): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       ( 6080): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       ( 6080): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       ( 6080): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       ( 6080): 	at android.os.Looper.loop(Looper.java:135)
+E/a       ( 6080): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       ( 6080): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       ( 6080): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       ( 6080): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       ( 6080): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       ( 6080): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       ( 6080): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       ( 6080): 	... 21 more
+E/SQLiteLog( 6080): (284) automatic index on artist_track(track_id)
+E/SQLiteLog( 6080): (1) table disliked already exists
+E/a       ( 6080): Error while upgrading database: 
+E/a       ( 6080): java.lang.RuntimeException: Error while creating the database!
+E/a       ( 6080): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       ( 6080): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteOpenHelper.getReadableDatabase(SQLiteOpenHelper.java:187)
+E/a       ( 6080): 	at com.shazam.n.a.ad.g.b(SourceFile:29)
+E/a       ( 6080): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       ( 6080): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       ( 6080): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       ( 6080): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       ( 6080): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       ( 6080): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       ( 6080): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       ( 6080): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       ( 6080): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       ( 6080): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       ( 6080): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       ( 6080): 	at android.os.Looper.loop(Looper.java:135)
+E/a       ( 6080): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       ( 6080): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       ( 6080): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       ( 6080): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       ( 6080): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       ( 6080): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       ( 6080): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       ( 6080): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       ( 6080): 	... 21 more
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocationReceiver( 1734): Received bad location: null
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-45
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocationReceiver( 1734): Received bad location: null
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-45
+E/WifiStateMachine(  724): cancelDelayedScan -> 3886
+E/native  (  724): do suspend true
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3885, 3886 -> obsolete
+E/MediaPlayer(  909): Should have subtitle controller already set
+E/MediaPlayer(  909): Should have subtitle controller already set
+E/WifiStateMachine(  724): cancelDelayedScan -> 3887
+E/native  (  724): do suspend false
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-47
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-47
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-45
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/Launcher.Model( 1240): Widget ComponentInfo{com.devhd.feedly/com.devhd.feedly.widget.FeedlyWidgetProvider_4_1} has invalid dimensions (0, 0)
+I/CordovaLog( 7110): Changing log level to DEBUG(3)
+E/SysUtils( 7110): ApplicationContext is null in ApplicationStatus
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-44
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/PhotosPlugin( 7241): Loading PhotosPlugin
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/SysUtils( 7417): ApplicationContext is null in ApplicationStatus
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/SQLiteLog( 7541): (284) automatic index on artist_track(track_id)
+E/SQLiteLog( 7541): (1) table disliked already exists
+E/a       ( 7541): Error while upgrading database: 
+E/a       ( 7541): java.lang.RuntimeException: Error while creating the database!
+E/a       ( 7541): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       ( 7541): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:163)
+E/a       ( 7541): 	at com.shazam.n.a.ad.g.a(SourceFile:18)
+E/a       ( 7541): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       ( 7541): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       ( 7541): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       ( 7541): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       ( 7541): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       ( 7541): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       ( 7541): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       ( 7541): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       ( 7541): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       ( 7541): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       ( 7541): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       ( 7541): 	at android.os.Looper.loop(Looper.java:135)
+E/a       ( 7541): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       ( 7541): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       ( 7541): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       ( 7541): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       ( 7541): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       ( 7541): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       ( 7541): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       ( 7541): 	... 21 more
+E/SQLiteLog( 7541): (284) automatic index on artist_track(track_id)
+E/SQLiteLog( 7541): (1) table disliked already exists
+E/a       ( 7541): Error while upgrading database: 
+E/a       ( 7541): java.lang.RuntimeException: Error while creating the database!
+E/a       ( 7541): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       ( 7541): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteOpenHelper.getReadableDatabase(SQLiteOpenHelper.java:187)
+E/a       ( 7541): 	at com.shazam.n.a.ad.g.b(SourceFile:29)
+E/a       ( 7541): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       ( 7541): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       ( 7541): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       ( 7541): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       ( 7541): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       ( 7541): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       ( 7541): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       ( 7541): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       ( 7541): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       ( 7541): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       ( 7541): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       ( 7541): 	at android.os.Looper.loop(Looper.java:135)
+E/a       ( 7541): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       ( 7541): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       ( 7541): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       ( 7541): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       ( 7541): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       ( 7541): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       ( 7541): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       ( 7541): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       ( 7541): 	... 21 more
+E/MDM     (14741): [10470] b.run: Couldn't connect to Google API client: ConnectionResult{statusCode=API_UNAVAILABLE, resolution=null}
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-43
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-43
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): cancelDelayedScan -> 3893
+E/native  (  724): do suspend true
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-42
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3892, 3893 -> obsolete
+E/LocationReceiver( 1734): Received bad location: null
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-42
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocationReceiver( 1734): Received bad location: null
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/Launcher.Model( 1240): Widget ComponentInfo{com.devhd.feedly/com.devhd.feedly.widget.FeedlyWidgetProvider_4_1} has invalid dimensions (0, 0)
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): cancelDelayedScan -> 3894
+E/native  (  724): do suspend false
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-45
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-45
+I/CordovaLog( 8531): Changing log level to DEBUG(3)
+E/SysUtils( 8531): ApplicationContext is null in ApplicationStatus
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/SysUtils( 8792): ApplicationContext is null in ApplicationStatus
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/SQLiteLog( 8898): (284) automatic index on artist_track(track_id)
+E/SQLiteLog( 8898): (1) table disliked already exists
+E/a       ( 8898): Error while upgrading database: 
+E/a       ( 8898): java.lang.RuntimeException: Error while creating the database!
+E/a       ( 8898): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       ( 8898): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:163)
+E/a       ( 8898): 	at com.shazam.n.a.ad.g.a(SourceFile:18)
+E/a       ( 8898): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       ( 8898): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       ( 8898): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       ( 8898): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       ( 8898): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       ( 8898): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       ( 8898): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       ( 8898): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       ( 8898): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       ( 8898): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       ( 8898): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       ( 8898): 	at android.os.Looper.loop(Looper.java:135)
+E/a       ( 8898): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       ( 8898): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       ( 8898): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       ( 8898): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       ( 8898): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       ( 8898): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       ( 8898): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       ( 8898): 	... 21 more
+E/SQLiteLog( 8898): (284) automatic index on artist_track(track_id)
+E/SQLiteLog( 8898): (1) table disliked already exists
+E/a       ( 8898): Error while upgrading database: 
+E/a       ( 8898): java.lang.RuntimeException: Error while creating the database!
+E/a       ( 8898): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       ( 8898): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteOpenHelper.getReadableDatabase(SQLiteOpenHelper.java:187)
+E/a       ( 8898): 	at com.shazam.n.a.ad.g.b(SourceFile:29)
+E/a       ( 8898): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       ( 8898): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       ( 8898): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       ( 8898): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       ( 8898): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       ( 8898): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       ( 8898): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       ( 8898): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       ( 8898): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       ( 8898): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       ( 8898): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       ( 8898): 	at android.os.Looper.loop(Looper.java:135)
+E/a       ( 8898): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       ( 8898): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       ( 8898): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       ( 8898): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       ( 8898): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       ( 8898): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       ( 8898): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       ( 8898): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       ( 8898): 	... 21 more
+E/WifiStateMachine(  724): cancelDelayedScan -> 3897
+E/native  (  724): do suspend true
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-45
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): cancelDelayedScan -> 3898
+E/native  (  724): do suspend false
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-43
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3896, 3900 -> obsolete
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-43
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-42
+D/CordovaLog( 8531): file:///android_asset/www/js/controllers/scheduleController.js: Line 42 : You are not sure
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-40
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-42
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-42
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-42
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-42
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-44
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+I/CordovaLog( 9661): Changing log level to DEBUG(3)
+E/SysUtils( 9661): ApplicationContext is null in ApplicationStatus
+E/ThermalEngine(  199): override action 7500
+E/ThermalEngine(  199): Thermal-Server: Thermal received msg override 7500
+E/ThermalEngine(  199): override_notify : SS mode 1 override 7500
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-40
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-41
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-42
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-41
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-44
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): cancelDelayedScan -> 3908
+E/native  (  724): do suspend true
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/GooglePlayServicesUtil( 1760): The Google Play services resources were not found. Check your project configuration to ensure that the resources are included.
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-45
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3907, 3908 -> obsolete
+E/FitnessApp( 9065): Could not connect to Google Play API. Error code: 16
+E/WifiStateMachine(  724): cancelDelayedScan -> 3909
+E/native  (  724): do suspend false
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-45
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/Launcher.Model( 1240): Widget ComponentInfo{com.devhd.feedly/com.devhd.feedly.widget.FeedlyWidgetProvider_4_1} has invalid dimensions (0, 0)
+I/CordovaLog(10464): Changing log level to DEBUG(3)
+E/SysUtils(10464): ApplicationContext is null in ApplicationStatus
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-44
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/SysUtils(10750): ApplicationContext is null in ApplicationStatus
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/SQLiteLog(10857): (284) automatic index on artist_track(track_id)
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/SQLiteLog(10857): (1) table disliked already exists
+E/a       (10857): Error while upgrading database: 
+E/a       (10857): java.lang.RuntimeException: Error while creating the database!
+E/a       (10857): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       (10857): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       (10857): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       (10857): 	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:163)
+E/a       (10857): 	at com.shazam.n.a.ad.g.a(SourceFile:18)
+E/a       (10857): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       (10857): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       (10857): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       (10857): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       (10857): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       (10857): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       (10857): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       (10857): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       (10857): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       (10857): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       (10857): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       (10857): 	at android.os.Looper.loop(Looper.java:135)
+E/a       (10857): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       (10857): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       (10857): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       (10857): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       (10857): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       (10857): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       (10857): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       (10857): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       (10857): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       (10857): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       (10857): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       (10857): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       (10857): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       (10857): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       (10857): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       (10857): 	... 21 more
+E/SQLiteLog(10857): (284) automatic index on artist_track(track_id)
+E/SQLiteLog(10857): (1) table disliked already exists
+E/a       (10857): Error while upgrading database: 
+E/a       (10857): java.lang.RuntimeException: Error while creating the database!
+E/a       (10857): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       (10857): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       (10857): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       (10857): 	at android.database.sqlite.SQLiteOpenHelper.getReadableDatabase(SQLiteOpenHelper.java:187)
+E/a       (10857): 	at com.shazam.n.a.ad.g.b(SourceFile:29)
+E/a       (10857): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       (10857): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       (10857): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       (10857): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       (10857): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       (10857): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       (10857): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       (10857): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       (10857): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       (10857): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       (10857): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       (10857): 	at android.os.Looper.loop(Looper.java:135)
+E/a       (10857): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       (10857): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       (10857): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       (10857): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       (10857): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       (10857): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       (10857): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       (10857): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       (10857): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       (10857): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       (10857): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       (10857): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       (10857): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       (10857): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       (10857): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       (10857): 	... 21 more
+E/LocationReceiver( 1734): Received bad location: null
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-50
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-47
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocationReceiver( 1734): Received bad location: null
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-47
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): cancelDelayedScan -> 3915
+E/native  (  724): do suspend true
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3914, 3915 -> obsolete
+E/SQLiteLog(11268): (283) recovered 67 frames from WAL file /data/data/com.google.android.calendar/databases/timelydata.db-wal
+E/native  (  724): do suspend false
+E/WifiStateMachine(  724): scanCount==0 - aborting
+E/native  (  724): do suspend true
+E/WifiStateMachine(  724): WifiStateMachine: Leaving Connected state
+E/WifiStateMachine(  724): cancelDelayedScan -> 3916
+E/native  (  724): do suspend false
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-50
+E/WifiStateMachine(  724): cancelDelayedScan -> 3919
+E/native  (  724): do suspend true
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-45
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-45
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3918, 3919 -> obsolete
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/Launcher.Model( 1240): Widget ComponentInfo{com.devhd.feedly/com.devhd.feedly.widget.FeedlyWidgetProvider_4_1} has invalid dimensions (0, 0)
+E/WifiStateMachine(  724): cancelDelayedScan -> 3920
+E/native  (  724): do suspend false
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-47
+I/CordovaLog(11692): Changing log level to DEBUG(3)
+E/SysUtils(11692): ApplicationContext is null in ApplicationStatus
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/SysUtils(11954): ApplicationContext is null in ApplicationStatus
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/SQLiteLog(12072): (284) automatic index on artist_track(track_id)
+E/SQLiteLog(12072): (1) table disliked already exists
+E/a       (12072): Error while upgrading database: 
+E/a       (12072): java.lang.RuntimeException: Error while creating the database!
+E/a       (12072): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       (12072): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       (12072): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       (12072): 	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:163)
+E/a       (12072): 	at com.shazam.n.a.ad.g.a(SourceFile:18)
+E/a       (12072): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       (12072): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       (12072): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       (12072): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       (12072): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       (12072): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       (12072): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       (12072): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       (12072): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       (12072): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       (12072): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       (12072): 	at android.os.Looper.loop(Looper.java:135)
+E/a       (12072): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       (12072): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       (12072): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       (12072): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       (12072): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       (12072): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       (12072): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       (12072): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       (12072): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       (12072): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       (12072): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       (12072): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       (12072): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       (12072): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       (12072): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       (12072): 	... 21 more
+E/SQLiteLog(12072): (284) automatic index on artist_track(track_id)
+E/SQLiteLog(12072): (1) table disliked already exists
+E/a       (12072): Error while upgrading database: 
+E/a       (12072): java.lang.RuntimeException: Error while creating the database!
+E/a       (12072): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       (12072): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       (12072): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       (12072): 	at android.database.sqlite.SQLiteOpenHelper.getReadableDatabase(SQLiteOpenHelper.java:187)
+E/a       (12072): 	at com.shazam.n.a.ad.g.b(SourceFile:29)
+E/a       (12072): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       (12072): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       (12072): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       (12072): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       (12072): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       (12072): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       (12072): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       (12072): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       (12072): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       (12072): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       (12072): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       (12072): 	at android.os.Looper.loop(Looper.java:135)
+E/a       (12072): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       (12072): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       (12072): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       (12072): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       (12072): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       (12072): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       (12072): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       (12072): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       (12072): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       (12072): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       (12072): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       (12072): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       (12072): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       (12072): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       (12072): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       (12072): 	... 21 more
+E/MDM     (14741): [10472] b.run: Couldn't connect to Google API client: ConnectionResult{statusCode=API_UNAVAILABLE, resolution=null}
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-51
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-51
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): cancelDelayedScan -> 3924
+E/native  (  724): do suspend true
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-48
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3923, 3924 -> obsolete
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): cancelDelayedScan -> 3925
+E/native  (  724): do suspend false
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-49
+D/CordovaLog(11692): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(11692):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(11692):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(11692):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(11692):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(11692):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(11692):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(11692):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(11692):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+D/CordovaLog(11692): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(11692):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(11692):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(11692):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(11692):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(11692):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(11692):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(11692):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(11692):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+D/CordovaLog(11692): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(11692):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(11692):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(11692):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(11692):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(11692):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(11692):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(11692):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(11692):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-48
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-50
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): cancelDelayedScan -> 3929
+E/native  (  724): do suspend true
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-48
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3928, 3929 -> obsolete
+E/WifiStateMachine(  724): cancelDelayedScan -> 3930
+E/native  (  724): do suspend false
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-52
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/Launcher.Model( 1240): Widget ComponentInfo{com.devhd.feedly/com.devhd.feedly.widget.FeedlyWidgetProvider_4_1} has invalid dimensions (0, 0)
+I/CordovaLog(12871): Changing log level to DEBUG(3)
+E/SysUtils(12871): ApplicationContext is null in ApplicationStatus
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/SysUtils(13138): ApplicationContext is null in ApplicationStatus
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-49
+E/SQLiteLog(13243): (284) automatic index on artist_track(track_id)
+E/SQLiteLog(13243): (1) table disliked already exists
+E/a       (13243): Error while upgrading database: 
+E/a       (13243): java.lang.RuntimeException: Error while creating the database!
+E/a       (13243): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       (13243): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       (13243): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       (13243): 	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:163)
+E/a       (13243): 	at com.shazam.n.a.ad.g.a(SourceFile:18)
+E/a       (13243): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       (13243): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       (13243): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       (13243): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       (13243): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       (13243): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       (13243): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       (13243): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       (13243): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       (13243): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       (13243): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       (13243): 	at android.os.Looper.loop(Looper.java:135)
+E/a       (13243): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       (13243): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       (13243): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       (13243): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       (13243): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       (13243): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       (13243): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       (13243): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       (13243): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       (13243): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       (13243): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       (13243): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       (13243): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       (13243): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       (13243): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       (13243): 	... 21 more
+E/SQLiteLog(13243): (284) automatic index on artist_track(track_id)
+E/SQLiteLog(13243): (1) table disliked already exists
+E/a       (13243): Error while upgrading database: 
+E/a       (13243): java.lang.RuntimeException: Error while creating the database!
+E/a       (13243): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       (13243): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       (13243): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       (13243): 	at android.database.sqlite.SQLiteOpenHelper.getReadableDatabase(SQLiteOpenHelper.java:187)
+E/a       (13243): 	at com.shazam.n.a.ad.g.b(SourceFile:29)
+E/a       (13243): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       (13243): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       (13243): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       (13243): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       (13243): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       (13243): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       (13243): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       (13243): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       (13243): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       (13243): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       (13243): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       (13243): 	at android.os.Looper.loop(Looper.java:135)
+E/a       (13243): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       (13243): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       (13243): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       (13243): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       (13243): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       (13243): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       (13243): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       (13243): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       (13243): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       (13243): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       (13243): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       (13243): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       (13243): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       (13243): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       (13243): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       (13243): 	... 21 more
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-51
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+D/CordovaLog(12871): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(12871):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(12871):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(12871):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(12871):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(12871):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(12871):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+D/CordovaLog(12871): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(12871):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(12871):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(12871):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(12871):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(12871):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(12871):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+D/CordovaLog(12871): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(12871):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(12871):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(12871):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(12871):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(12871):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(12871):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+D/CordovaLog(12871): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(12871):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(12871):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(12871):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(12871):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(12871):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(12871):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+D/CordovaLog(12871): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(12871):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(12871):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(12871):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(12871):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(12871):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(12871):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+D/CordovaLog(12871): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(12871):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(12871):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(12871):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(12871):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(12871):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(12871):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+D/CordovaLog(12871): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(12871):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(12871):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(12871):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(12871):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(12871):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(12871):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+D/CordovaLog(12871): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(12871):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(12871):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(12871):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(12871):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(12871):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(12871):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+D/CordovaLog(12871): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(12871):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(12871):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(12871):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(12871):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(12871):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(12871):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+D/CordovaLog(12871): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(12871):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(12871):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(12871):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(12871):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(12871):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(12871):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+D/CordovaLog(12871): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(12871):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(12871):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(12871):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(12871):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(12871):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(12871):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+D/CordovaLog(12871): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(12871):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(12871):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(12871):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(12871):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(12871):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(12871):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+D/CordovaLog(12871): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(12871):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(12871):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(12871):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(12871):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(12871):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(12871):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+D/CordovaLog(12871): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(12871):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(12871):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(12871):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(12871):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(12871):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(12871):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(12871):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): cancelDelayedScan -> 3936
+E/native  (  724): do suspend true
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3935, 3936 -> obsolete
+E/WifiStateMachine(  724): cancelDelayedScan -> 3937
+E/native  (  724): do suspend false
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-49
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-48
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/Launcher.Model( 1240): Widget ComponentInfo{com.devhd.feedly/com.devhd.feedly.widget.FeedlyWidgetProvider_4_1} has invalid dimensions (0, 0)
+I/CordovaLog(13889): Changing log level to DEBUG(3)
+E/SysUtils(13889): ApplicationContext is null in ApplicationStatus
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-47
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/PhotosPlugin(14022): Loading PhotosPlugin
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/SysUtils(14245): ApplicationContext is null in ApplicationStatus
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/SQLiteLog(14346): (284) automatic index on artist_track(track_id)
+E/SQLiteLog(14346): (1) table disliked already exists
+E/a       (14346): Error while upgrading database: 
+E/a       (14346): java.lang.RuntimeException: Error while creating the database!
+E/a       (14346): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       (14346): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       (14346): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       (14346): 	at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase(SQLiteOpenHelper.java:163)
+E/a       (14346): 	at com.shazam.n.a.ad.g.a(SourceFile:18)
+E/a       (14346): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       (14346): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       (14346): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       (14346): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       (14346): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       (14346): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       (14346): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       (14346): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       (14346): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       (14346): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       (14346): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       (14346): 	at android.os.Looper.loop(Looper.java:135)
+E/a       (14346): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       (14346): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       (14346): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       (14346): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       (14346): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       (14346): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       (14346): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       (14346): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       (14346): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       (14346): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       (14346): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       (14346): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       (14346): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       (14346): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       (14346): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       (14346): 	... 21 more
+E/SQLiteLog(14346): (284) automatic index on artist_track(track_id)
+E/SQLiteLog(14346): (1) table disliked already exists
+E/a       (14346): Error while upgrading database: 
+E/a       (14346): java.lang.RuntimeException: Error while creating the database!
+E/a       (14346): 	at com.shazam.android.persistence.i.a.a(SourceFile:158)
+E/a       (14346): 	at com.shazam.android.persistence.i.a.onUpgrade(SourceFile:85)
+E/a       (14346): 	at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked(SQLiteOpenHelper.java:256)
+E/a       (14346): 	at android.database.sqlite.SQLiteOpenHelper.getReadableDatabase(SQLiteOpenHelper.java:187)
+E/a       (14346): 	at com.shazam.n.a.ad.g.b(SourceFile:29)
+E/a       (14346): 	at com.shazam.n.a.ad.e.a.a(SourceFile:22)
+E/a       (14346): 	at com.shazam.n.a.ad.i.a(SourceFile:32)
+E/a       (14346): 	at com.shazam.android.persistence.providers.ImportTagsContentProvider.onCreate(SourceFile:79)
+E/a       (14346): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1696)
+E/a       (14346): 	at android.content.ContentProvider.attachInfo(ContentProvider.java:1671)
+E/a       (14346): 	at android.app.ActivityThread.installProvider(ActivityThread.java:4999)
+E/a       (14346): 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:4594)
+E/a       (14346): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4534)
+E/a       (14346): 	at android.app.ActivityThread.access$1500(ActivityThread.java:151)
+E/a       (14346): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1364)
+E/a       (14346): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/a       (14346): 	at android.os.Looper.loop(Looper.java:135)
+E/a       (14346): 	at android.app.ActivityThread.main(ActivityThread.java:5254)
+E/a       (14346): 	at java.lang.reflect.Method.invoke(Native Method)
+E/a       (14346): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/a       (14346): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+E/a       (14346): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+E/a       (14346): Caused by: android.database.sqlite.SQLiteException: table disliked already exists (code 1): , while compiling: CREATE TABLE disliked (key STRING PRIMARY KEY)
+E/a       (14346): 	at android.database.sqlite.SQLiteConnection.nativePrepareStatement(Native Method)
+E/a       (14346): 	at android.database.sqlite.SQLiteConnection.acquirePreparedStatement(SQLiteConnection.java:889)
+E/a       (14346): 	at android.database.sqlite.SQLiteConnection.prepare(SQLiteConnection.java:500)
+E/a       (14346): 	at android.database.sqlite.SQLiteSession.prepare(SQLiteSession.java:588)
+E/a       (14346): 	at android.database.sqlite.SQLiteProgram.<init>(SQLiteProgram.java:58)
+E/a       (14346): 	at android.database.sqlite.SQLiteStatement.<init>(SQLiteStatement.java:31)
+E/a       (14346): 	at android.database.sqlite.SQLiteDatabase.executeSql(SQLiteDatabase.java:1674)
+E/a       (14346): 	at android.database.sqlite.SQLiteDatabase.execSQL(SQLiteDatabase.java:1605)
+E/a       (14346): 	at com.shazam.android.persistence.i.a.a(SourceFile:137)
+E/a       (14346): 	... 21 more
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocationReceiver( 1734): Received bad location: null
+E/MDM     (14741): [10465] b.run: Couldn't connect to Google API client: ConnectionResult{statusCode=API_UNAVAILABLE, resolution=null}
+D/CordovaLog(13889): file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js: Line 133 : ReferenceError: $window is not defined
+D/CordovaLog(13889):     at l.$scope.openGeo (file:///android_asset/www/js/controllers/mapController.js:60:9)
+D/CordovaLog(13889):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:229:303
+D/CordovaLog(13889):     at file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2760
+D/CordovaLog(13889):     at l.$eval (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:156:305)
+D/CordovaLog(13889):     at l.$apply (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:157:6)
+D/CordovaLog(13889):     at HTMLAnchorElement.<anonymous> (file:///android_asset/www/lib/ionic/js/ionic.bundle.min.js:386:2742)
+D/CordovaLog(13889):     at HTMLAnchorElement.m.event.dispatch (file:///android_asset/www/js/vendors/jquery.js:3:8549)
+D/CordovaLog(13889):     at HTMLAnchorElement.r.handle (file:///android_asset/www/js/vendors/jquery.js:3:5259)
+E/StrictMode(14455): A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+E/StrictMode(14455): java.lang.Throwable: Explicit termination method 'close' not called
+E/StrictMode(14455): 	at dalvik.system.CloseGuard.open(CloseGuard.java:184)
+E/StrictMode(14455): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:127)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.an.a(PG:2662)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.an.a(PG:714)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.bz.b(PG:403)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.bz.a(PG:390)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.ci.a(PG:118)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.ag.c(PG:202)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.q.run(PG:865)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.cv.run(PG:125)
+E/StrictMode(14455): A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+E/StrictMode(14455): java.lang.Throwable: Explicit termination method 'close' not called
+E/StrictMode(14455): 	at dalvik.system.CloseGuard.open(CloseGuard.java:184)
+E/StrictMode(14455): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:127)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.an.a(PG:2662)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.an.a(PG:714)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.bz.b(PG:403)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.bz.a(PG:390)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.ci.a(PG:118)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.q.run(PG:863)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.cv.run(PG:125)
+E/StrictMode(14455): A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+E/StrictMode(14455): java.lang.Throwable: Explicit termination method 'close' not called
+E/StrictMode(14455): 	at dalvik.system.CloseGuard.open(CloseGuard.java:184)
+E/StrictMode(14455): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:127)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.an.a(PG:2662)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.an.a(PG:714)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.al.<init>(PG:81)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.d.f.run(PG:6106)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.shared.h.a.o.run(PG:29)
+E/StrictMode(14455): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
+E/StrictMode(14455): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
+E/StrictMode(14455): 	at java.lang.Thread.run(Thread.java:818)
+E/StrictMode(14455): A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+E/StrictMode(14455): java.lang.Throwable: Explicit termination method 'close' not called
+E/StrictMode(14455): 	at dalvik.system.CloseGuard.open(CloseGuard.java:184)
+E/StrictMode(14455): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:127)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.an.a(PG:2662)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.an.a(PG:714)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.bz.b(PG:403)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.bz.a(PG:390)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.ci.a(PG:118)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.q.run(PG:863)
+E/StrictMode(14455): A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+E/StrictMode(14455): java.lang.Throwable: Explicit termination method 'close' not called
+E/StrictMode(14455): 	at dalvik.system.CloseGuard.open(CloseGuard.java:184)
+E/StrictMode(14455): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:127)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.an.a(PG:2662)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.an.a(PG:714)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.bz.b(PG:403)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.bz.a(PG:390)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.ci.a(PG:118)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.q.run(PG:863)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.cv.run(PG:125)
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/StrictMode(14455): A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+E/StrictMode(14455): java.lang.Throwable: Explicit termination method 'close' not called
+E/StrictMode(14455): 	at dalvik.system.CloseGuard.open(CloseGuard.java:184)
+E/StrictMode(14455): 	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:127)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.an.a(PG:2662)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.an.a(PG:714)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.bz.b(PG:403)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.bz.a(PG:390)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.ci.a(PG:118)
+E/StrictMode(14455): 	at com.google.android.apps.gmm.map.internal.d.q.run(PG:863)
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocationReceiver( 1734): Received bad location: null
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-47
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-50
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source 10007 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-51
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/LocSvc_eng(  724): E/int loc_eng_inject_location(loc_eng_data_s_type&, double, double, float): log_eng state error: instance not initialized
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): cancelDelayedScan -> 3943
+E/native  (  724): do suspend true
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-47
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3942, 3943 -> obsolete
+E/ExternalAccountType( 6655): Unsupported attribute readOnly
+E/Launcher.Model( 1240): Widget ComponentInfo{com.devhd.feedly/com.devhd.feedly.widget.FeedlyWidgetProvider_4_1} has invalid dimensions (0, 0)
+E/WifiStateMachine(  724): cancelDelayedScan -> 3944
+E/native  (  724): do suspend false
+E/ANDR-PERF-LOCK( 2314): Failed to reset optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-51
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid parameter app
+E/NetworkScheduler.SchedulerReceiver(14493): Invalid package name : Perhaps you didn't include a PendingIntent in the extras?
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-46
+E/WifiStateMachine(  724): WifiStateMachine starting scan for "www.onezone.ro"WPA_PSK with 2432
+E/WifiStateMachine(  724): cancelDelayedScan -> 3948
+E/native  (  724): do suspend true
+E/ANDR-PERF-LOCK( 2314): Failed to apply optimization for resource: 4 level: 0
+E/WifiStateMachine(  724): WifiStateMachine CMD_START_SCAN source -2 txSuccessRate=0.00 rxSuccessRate=0.00 targetRoamBSSID=f8:1a:67:5c:80:e8 RSSI=-45
+E/WifiStateMachine(  724): WifiStateMachine L2Connected CMD_START_SCAN source -2 3947, 3948 -> obsolete

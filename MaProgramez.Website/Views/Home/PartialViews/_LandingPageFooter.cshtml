@@ -1,0 +1,68 @@
+﻿@using MaProgramez.Resources
+@using MaProgramez.Website.Utility
+@{
+    var language = string.Empty;
+    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+    switch (culture)
+    {
+        case "en":
+            language = "English";
+            break;
+        case "nl":
+            language = "Dutch";
+            break;
+        //case "hu":
+        //    language = "Magyar";
+        //    break;
+        default:
+            language = "Dutch";
+            break;
+    }
+}
+
+<div class="landing-page-content" style="margin-top: 0px;">
+    <div class="page-content">
+        <div class="row" style="padding-bottom: 15px; padding-top: 15px;">
+            <div class="col-sm-9">
+                <ul class="footer-link float-left">
+                    <li>
+                        <a href="@Url.Action(MVC.Account.Login())">@Resource.LandingPage_SignIn</a>
+                    </li>
+                   @if (Common.GetDbConfig("EnableAccountRegistration") == "Y")
+                   {
+                       <li>
+                           <a href="@Url.Action(MVC.Account.Register())"><b>@Resource.LandingPage_SignUp</b></a>
+                       </li>
+                   }
+                   <li style="font-size: 14px; font-weight: 300;">
+                       &copy; 2014-@DateTime.Now.Year <a href="http://spinit.ro" target="_blank">Spin IT</a>, CUI: 32902508, Reg.Com.: J32/250/2014
+                   </li>
+                    <li>
+                        <a href="http://www.anpc.gov.ro" target="_blank">ANPC</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <div class="language-btn float-right">
+                    <div class="btn-group dropup pull-right">
+                        <div class="dropdown-toggle" data-toggle="dropdown">
+                            @language <i class="fa fa-caret-down"></i>
+                        </div>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a data-value="en">English</a>
+                            </li>@*
+    <li>
+        <a data-value="ro">Română</a>
+    </li>*@
+                            <li>
+                                <a data-value="nl">Dutch</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

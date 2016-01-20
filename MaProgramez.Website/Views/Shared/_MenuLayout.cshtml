@@ -1,0 +1,87 @@
+﻿@using MaProgramez.Resources
+@using MaProgramez.Website.ViewModels
+@{
+    var menuLinks = ViewBag.SubMenu as List<MenuLink>;
+}
+
+<!DOCTYPE html>
+<html lang="@MaProgramez.Website.Helpers.CultureHelper.GetCurrentNeutralCulture()">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Html.MetaAcceptLanguage()
+
+    <title>@ViewBag.Title</title>
+
+    @Html.Partial(MVC.Shared.Views.PartialViews._Style)
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    @Html.Partial("PartialViews/_Header")
+    <div id="page">
+
+        <section class="filtre">
+
+            <div class="container">
+                <div class="col-lg-3 schedule">
+                    <h4>@Resource.ManageView_Title</h4>
+                </div>
+            </div>
+        </section>
+        <div class="up-toticket">
+            &nbsp;
+        </div>
+        <section class="sectiune-cat stilizat-cat">
+            <div class="container stilizat">
+                <div class="center-content-with-menu">
+                    <div class="vertical-menu only-desktop">
+                        <ul>
+                            @if (menuLinks != null && menuLinks.Any())
+                            {
+                                foreach (var menuLink in menuLinks)
+                                {
+                                    var isActive = ViewBag.CurrentController.ToLower() == menuLink.Controller.ToLower() && menuLink.Code.Contains(ViewBag.CurrentAction.ToLower());
+                                    <li class="@(isActive ? "active" : string.Empty)"><a href="@Url.Action(menuLink.Action, menuLink.Controller)"><i class="@menuLink.IconClass"></i> @menuLink.Title</a></li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="only-mobile" style="margin-bottom: 20px;">
+                            <div class="dropdown">
+                                <div id="dLabel" type="button" class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                                    @Resource.Menu
+                                    <span class="caret"></span>
+                                </div>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    @if (menuLinks != null && menuLinks.Any())
+                                    {
+                                        foreach (var menuLink in menuLinks)
+                                        {
+                                            <li><a href="@Url.Action(menuLink.Action, menuLink.Controller)"><span class="@menuLink.IconClass"></span> @menuLink.Title</a></li>
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        @RenderBody()
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="clear"></div>
+    </div>
+    <div id="page-footer">
+            @Html.Partial("PartialViews/_Footer")
+            <div class="clear"></div>
+      </div>
+
+    @Html.Partial(MVC.Shared.Views.PartialViews._Scripts)
+    @RenderSection("scripts", required: false)
+</body>
+</html>

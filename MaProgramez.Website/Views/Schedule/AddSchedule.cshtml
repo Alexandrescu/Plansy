@@ -1,0 +1,303 @@
+﻿@using System.Data.Entity.ModelConfiguration.Conventions
+@using DayPilot.Web.Mvc
+@using DayPilot.Web.Mvc.Enums
+@using DayPilot.Web.Mvc.Enums.Calendar
+@model MaProgramez.Website.ViewModels.AddEventViewModel
+
+@{
+    ViewBag.Title = Resource.MySchedules;
+}
+
+@section Scripts{
+    @Scripts.Render("~/bundles/bootstrap-datepicker")
+
+    <script type="text/javascript">
+
+        $('#StartHour').on('change', function () {
+            $(".spinner-box").show();
+
+            var date = $('#dateTimePicker').val();
+            var sId = $('#slotId').val();
+            var pId = $('#providerId').val();
+            var cId = $('#categoryId').val();
+            var hour = $('#StartHour').val();
+            var checked = [$('#operationId').val()];
+
+            $.post("/Service/GetMinutes", { providerId: pId, categoryId: cId, dateString: date, operationIds: checked, slotId: sId, selectedHour: hour, ignoreTimetable: true }, function (data) {
+                //UPDATE MINUTES
+                $("#StartMinute").empty();
+                for (var i = 0; i < data.availableMinutes.length; i++) {
+                    var divData = "<option value=" + parseInt(data.availableMinutes[i]) + ">" + parseInt(data.availableMinutes[i]) + "</option>";
+                    $(divData).appendTo("#StartMinute");
+                }
+                $("#StartMinute").selectpicker("refresh");
+                $("#StartMinute").change();
+
+                $(".spinner-box").hide();
+            },
+                    'json').
+                fail(function (error) {
+                    $(".spinner-box").hide();
+                });
+        });
+
+        $('#EndHour').on('change', function () {
+            $(".spinner-box").show();
+
+            var date = $('#dateTimePicker').val();
+            var sId = $('#slotId').val();
+            var pId = $('#providerId').val();
+            var cId = $('#categoryId').val();
+            var hour = $('#EndHour').val();
+            var checked = [$('#operationId').val()];
+
+            $.post("/Service/GetMinutes", { providerId: pId, categoryId: cId, dateString: date, operationIds: checked, slotId: sId, selectedHour: hour, ignoreTimetable: true }, function (data) {
+                //UPDATE MINUTES
+                $("#EndMinute").empty();
+                for (var i = 0; i < data.availableMinutes.length; i++) {
+                    var divData = "<option value=" + parseInt(data.availableMinutes[i]) + ">" + parseInt(data.availableMinutes[i]) + "</option>";
+                    $(divData).appendTo("#EndMinute");
+                }
+                $("#EndMinute").selectpicker("refresh");
+                $("#EndMinute").change();
+
+                $(".spinner-box").hide();
+            },
+                    'json').
+                fail(function (error) {
+                    $(".spinner-box").hide();
+                });
+
+        });
+
+        $('#dateTimePicker').on('change', function () {
+            $(".spinner-box").show();
+
+            var date = $('#dateTimePicker').val();
+            var sId = $('#slotId').val();
+            var pId = $('#providerId').val();
+            var cId = $('#categoryId').val();
+            var checked = [$('#operationId').val()];
+
+            $.post("/Service/GetHours", { providerId: pId, categoryId: cId, dateString: date, operationIds: checked, slotId: sId, ignoreTimetable: true }, function (data) {
+
+                $("#dateTimePicker").val(data.firstAvailableDate);
+
+                //UPDATE HOURS
+                $("#StartHour").empty();
+                $("#EndHour").empty();
+                for (var i = 0; i < data.availableHours.length; i++) {
+                    var divData = "<option value=" + parseInt(data.availableHours[i]) + ">" + parseInt(data.availableHours[i]) + "</option>";
+                    $(divData).appendTo("#StartHour");
+                    $(divData).appendTo("#EndHour");
+                }
+                $("#StartHour").selectpicker("refresh");
+                $("#EndHour").selectpicker("refresh");
+                $("#StartHour").change();
+                $("#EndHour").change();
+
+                //UPDATE MINUTES
+                $("#StartMinute").empty();
+                $("#EndMinute").empty();
+                for (var i = 0; i < data.availableMinutes.length; i++) {
+                    var divData = "<option value=" + parseInt(data.availableMinutes[i]) + ">" + parseInt(data.availableMinutes[i]) + "</option>";
+                    $(divData).appendTo("#StartMinute");
+                    $(divData).appendTo("#EndMinute");
+                }
+                $("#StartMinute").selectpicker("refresh");
+                $("#EndMinute").selectpicker("refresh");
+                $("#StartMinute").change();
+                $("#EndMinute").change();
+
+                $(".spinner-box").hide();
+            },
+                    'json').
+                fail(function (error) {
+                    $(".spinner-box").hide();
+                });
+        });
+
+        $(document).ready(function () {
+            $('.input-group.date').datepicker({
+                format: "dd-mm-yyyy",
+                todayHighlight: true,
+                todayBtn: "linked",
+                autoclose: true
+            });
+        });
+    </script>
+
+    @Scripts.Render("~/bundles/bootstrap-datepicker")
+    @Scripts.Render("~/bundles/add-user")
+    @Scripts.Render("~/bundles/address")
+}
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            @if (User.IsInRole("Provider"))
+            {
+                <h4>@Resource.Add - @Model.Schedule.Slot.Name</h4>
+            }
+            else
+            {
+                <h4>@Resource.Add</h4>
+            }
+        </div><!-- /.col-lg-3 -->
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+
+
+
+        @using (Html.BeginForm("AddSchedule", "Schedule", FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.Schedule.SlotId, new { @id = "slotId" })
+            //@Html.HiddenFor(m => m.Schedule.ScheduleDateTimeStart, new { @id = "dateTimePicker" })
+            @Html.HiddenFor(m => m.Schedule.Slot.Name)
+            @Html.HiddenFor(m => m.ShortestOperationId, new { @id = "operationId" })
+            @Html.HiddenFor(m => m.CategoryId, new { @id = "categoryId" })
+            @Html.HiddenFor(m => m.UserId)
+            @Html.HiddenFor(m => m.ProviderId, new { @id = "providerId" })
+
+            if (!Html.ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger form-validation" role="alert">
+                    @Html.ValidationSummary(true, "", new { @class = "text-error" })
+                </div>
+                <div class="clear"></div>
+            }
+
+
+            <div class="form-group col-md-12">
+
+                <div class="spinner-box" id="Loading" style="display: none">
+                    <i class="fa fa-spinner fa-spin"></i>
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="form-group col-md-12">
+                        <label class="col-md-5 form-label" style="padding-top: 5px">@Resource.ScheduleDate <span class="font-danger">&nbsp;*</span></label>
+                        <div class="col-md-7 input-group date">
+                            @Html.TextBoxFor(m => m.Schedule.ScheduleDateTimeStart, "{0:dd-MM-yyyy}", new { @class = "form-control", @readonly = "true", @id = "dateTimePicker" })
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                        </div>
+                    </div>
+
+                    <label class="col-md-4 form-label">@Resource.StartTime<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-8">
+                        <div class="col-md-5" style="width: 100px">
+                            @Html.DropDownListFor(m => m.StartHour, new SelectList(Model.AvailableHours), new { @class = "selectpicker form-control input-sm" })
+                        </div>
+                        <div class="col-md-2">
+                            :
+                        </div>
+                        <div class="col-md-5" style="width: 100px">
+                            @Html.DropDownListFor(m => m.StartMinute, new SelectList(Model.AvailableMinutes), new { @class = "selectpicker form-control input-sm" })
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+
+                    <label class="col-md-4 form-label">@Resource.EndTime<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-8">
+                        <div class="col-md-5" style="width: 100px">
+                            @Html.DropDownListFor(m => m.EndHour, new SelectList(Model.AvailableHours), new { @class = "selectpicker form-control input-sm" })
+                        </div>
+                        <div class="col-md-2">
+                            :
+                        </div>
+                        <div class="col-md-5" style="width: 100px">
+                            @Html.DropDownListFor(m => m.EndMinute, new SelectList(Model.AvailableMinutes), new { @class = "selectpicker form-control input-sm" })
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <label class="col-md-12 form-label">@Resource.Description@*<span class="font-danger">&nbsp;*</span>*@</label>
+                    <div class="col-md-12">
+                        @Html.TextAreaFor(m => m.Schedule.Text, new { @class = "form-control input-sm", @style = "height: 71px" })
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <label class="col-md-5 form-label">@Resource.User_FirstName<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control input-sm" })
+                    </div>
+                    <div class="clear"></div>
+
+                    <label class="col-md-5 form-label">@Resource.User_Name<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control input-sm" })
+                    </div>
+                    <div class="clear"></div>
+
+                    <label class="col-md-5 form-label">@Resource.PhoneNumber<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control input-sm" })
+                    </div>
+                    <div class="clear"></div>
+
+                    <label class="col-md-5 form-label">@Resource.Email</label>
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control input-sm" })
+                    </div>
+
+                </div>
+
+                <div class="clear"></div>
+                <hr />
+
+                <div class="col-md-12">
+                    <div class="col-md-8 float-left">
+                        <a href="@Url.Action(MVC.Schedule.ViewSchedules(Model.Schedule.SlotId, Model.Schedule.ScheduleDateTimeStart))" class="btn btn-default">@Resource.Back</a>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="submit" class="btn btn-success float-right" value="@Resource.Add" />
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="clear"></div>
+    </div>
+</section>
+@*
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="address-group relative">
+                    <h4 style="margin-bottom: 20px;">Adaugati adresele clientului dumneavoastra</h4>
+                    <i class="fa fa-plus-square-o add-address-button"></i>
+                    <div class="row add-address-box" id="AddAddressBox">
+                        @Html.Partial(MVC.UsersAdmin.Views.PartialViews._AddAddress, string.Empty)
+                    </div>
+
+                    <div class="panel-group" id="Addresses">
+                        @Html.Partial(MVC.UsersAdmin.Views.PartialViews._AddressList, Model.Addresses)
+                    </div>
+                    <div class="loading-box" id="LoadingAddress">
+                        <i class="fa fa-spinner fa-spin"></i>
+                    </div>
+
+                    <div class="line" style="margin-bottom: 10px; margin-top: 10px;"></div>
+
+                    <ul class="address-legend row">
+                        <li class="col-md-4">
+                            <i class="fa fa-file-text-o"></i> - @Resource.AddressType_InvoiceAddress
+                        </li>
+                        <li class="col-md-4">
+                            <i class="fa fa-home"></i> - @Resource.AddressType_PlaceOfBusinessAddress
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+*@

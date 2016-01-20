@@ -1,0 +1,60 @@
+﻿@using MaProgramez.Resources
+@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            <h4>@Resource.Roles</h4>
+        </div><!-- /.col-lg-3 -->
+
+        @Html.ActionLink(@Resource.CreateNewRole, MVC.RolesAdmin.Create(), new { @class = "btn btn-primary float-right" })
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+        <div class="table-responsive">
+
+            <div class="sablon">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>@Html.DisplayNameFor(model => model.Name)</th>
+                            <th class="col-sm-2"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            var count = 1;
+                        }
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td data-href="@Url.Action(MVC.RolesAdmin.Edit(item.Id))" class="clickable-row">@count</td>
+                                <td data-href="@Url.Action(MVC.RolesAdmin.Edit(item.Id))" class="clickable-row">
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li><a href="@Url.Action(MVC.RolesAdmin.Edit(item.Id))" data-toggle="tooltip" data-placement="top" title=@Resource.Edit><i class="fa fa-pencil"></i></a></li>
+                                        <li><a href="@Url.Action(MVC.RolesAdmin.Delete(item.Id))" data-toggle="tooltip" data-placement="top" title=@Resource.Delete><i class="fa fa-trash"></i></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+
+                            count++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</section>

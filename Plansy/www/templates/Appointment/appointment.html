@@ -1,0 +1,94 @@
+<ion-view>
+    <ion-nav-title>
+        {{PageTitle}}
+    </ion-nav-title>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="menu-dark-content">
+        <div class="list">
+            <div class="item item-icon-right" ng-class="{'item-avatar': Provider.logoPath != null}">
+                <img ng-src="{{ProviderLogo}}" ng-if="Provider.logoPath != null">
+                <h2>{{Provider.alias}}</h2>
+                <p>
+                    {{Provider.fullDescription}}
+                </p>
+                <a href="#/app/provider/{{Provider.id}}" class="icon ion-ios-information-outline"></a>
+            </div>
+
+            <div class="item">
+                <button class="button button-outline button-block" ng-click="openOperationsModal()">{{'SELECT_OPERATIONS' | translate}}</button>
+            </div>
+
+            <div class="item" ng-if="(Operations | filter: {selected:true}).length > 0 && Provider.programmingPerSlot">
+                <div class="button button-outline button-block icon-right ion-ios-arrow-down" ng-click="openSlotsModal()">{{SelectedSlotName}}</div>
+            </div>
+
+            <div class="item" ng-if="(Operations | filter: {selected:true}).length > 0">
+                <ionic-datepicker idate="Appointment.selectedDate" select-only-from-today-on="true" selected-date-changed="selectedDateChanged">
+                    <div class="button button-outline icon-left button-block ion-android-calendar">
+                        {{ Appointment.selectedDate | date:'dd-MMM-yyyy' }}
+                    </div>
+                </ionic-datepicker>
+            </div>
+            <div class="item" ng-if="(Operations | filter: {selected:true}).length > 0">
+                <div class="button-bar">
+                    <div class="button button-outline icon-right ion-ios-arrow-down" ng-click="openHoursModal()">{{Appointment.selectedHour}} u</div>
+                    <div class="button button-outline icon-right ion-ios-arrow-down" ng-click="openMinutesModal()">{{Appointment.selectedMinute}} min</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="padding" ng-if="(Operations | filter: {selected:true}).length > 0">
+            <div class="ticket">
+                <div class="ticket-content">
+                    <h1>{{Provider.alias}}</h1>
+                    <div class="row ticket-row">
+                        <div class="col">
+                            <p>{{'TICKET_DATE' | translate}}</p>
+                            <span>{{Appointment.selectedDate | date:'dd-MMM-yyyy' }}</span>
+                        </div>
+                        <div class="col">
+                            <p>{{'TICKET_TIME' | translate}}</p>
+                            <span>{{Appointment.selectedHour}}:{{Appointment.selectedMinute}}</span>
+                        </div>
+                    </div>
+                    <div class="row ticket-row">
+                        <div class="col">
+                            <span ng-if="Provider.programmingPerSlot">{{SelectedSlotName}}</span>
+                            <p>{{Appointment.address}}</p>
+                        </div>
+                    </div>
+                    <div class="ticket-row">
+                        <div class="list">
+                            <div class="item item-icon-right" ng-repeat="operation in Operations | filter: {selected:true}">
+                                <div class="row">
+                                    <div class="col col-67" style="overflow: hidden;">{{operation.description}}</div>
+                                    <div class="col col">{{operation.price}} Euro</div>
+                                </div>
+
+                                <i class="icon ion-ios-close-empty" ng-click="unselect(operation)"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ticket-row" ng-if="(Operations | filter: {selected:true}).length > 0">
+                        <div class="col">
+                            <p>{{'TOTAL' | translate}}</p>
+                        </div>
+                        <div class="col">
+                            <span>{{Appointment.totalPrice}} Euro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="list" ng-if="(Operations | filter: {selected:true}).length > 0">
+            <div class="item">
+                <button class="button button-block button-positive" ng-click="saveSchedule()">{{'FINISH' | translate}}</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

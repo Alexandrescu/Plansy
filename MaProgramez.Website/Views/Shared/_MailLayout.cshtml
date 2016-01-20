@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,400italic,500,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        * {
+            outline: 0;
+            padding: 0;
+            margin: 0;
+            border: 0 none;
+            text-decoration: none;
+            font-family: 'Roboto', Arial, sans-serif;
+            color: #475869;
+        }
+
+        html, body {
+            background-color: #253443;
+        }
+
+        .email-content a {
+            color: #18BC9C;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container" style="background-color: #253443; width: 100%; padding-top: 25px; padding-bottom: 25px;">
+        <a class="email-logo" style="background: url(https://MaProgramez.net/Content/images/logo-radius.png) no-repeat; width: 72px; height: 72px; display: block; margin-left: auto; margin-right: auto; margin-bottom: 20px;" href="https://www.MaProgramez.Website.ro"></a>
+        @RenderBody()
+    </div>
+</body>
+</html>

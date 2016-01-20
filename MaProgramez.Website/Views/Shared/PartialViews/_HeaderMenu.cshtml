@@ -1,0 +1,127 @@
+﻿@using System.Web.UI.WebControls
+@using MaProgramez.Repository.BusinessLogic
+@using MaProgramez.Repository.Entities
+@using MaProgramez.Resources
+@using Microsoft.AspNet.Identity
+
+
+<ul class="nav navbar-nav navbar-right">
+
+    @if (Request.Browser.IsMobileDevice)
+    {
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">@User.Identity.Name<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink(Resource.Menu_Account, "Index", "Manage")</li>
+                @if (User.IsInRole("Client") || User.IsInRole("Admin"))
+            {
+            <li>@Html.ActionLink(Resource.CreateSchedule, MVC.Schedule.CategoriesList(), new {@class = "header-link"})</li>
+            <li>@Html.ActionLink(Resource.MySchedules, MVC.Schedule.ClientViewSchedules(), new {@class = "header-link"})</li>
+            <li>@Html.ActionLink(Resource.FavouriteProviders, MVC.UsersAdmin.FavouritesProviders(), new {@class = "header-link"})</li>
+            }
+                @if (User.IsInRole("Accountant"))
+            {
+            <li>@Html.ActionLink(Resource.Invoices, "AdminInvoiceList", "Invoice")</li>
+            <li>@Html.ActionLink(Resource.Contracts, "ContractsList", "Manage")</li>
+            }
+                @if (User.IsInRole("Provider"))
+            {
+            <li>@Html.ActionLink("Program PDF", "DatePicker", "Report")</li>
+            <li>@Html.ActionLink(Resource.SlotsList, "SlotsList", "UsersAdmin")</li>
+            }
+                @if (User.IsInRole("Employee"))
+            {
+                var slotId = RetrieveOthers.GetSlotIdByUserId(User.Identity.GetUserId());
+            <li>@Html.ActionLink("Program PDF", "DatePicker", "Report")</li>
+            <li>@Html.ActionLink(Resource.EditSlot, "EditSlot", "UsersAdmin", new {slotId = slotId}, null)</li>
+            <li>@Html.ActionLink(Resource.Operations, "SlotOperationsList", "UsersAdmin", new {slotId = slotId}, null)</li>
+            <li>@Html.ActionLink(Resource.NonWorkingDays, "CreateSlotNonWorkingDays", "UsersAdmin", new {slotId = slotId}, null)</li>
+            <li>@Html.ActionLink(Resource.Timetable, "CreateTimetable", "UsersAdmin", new {slotId = slotId}, null)</li>
+
+            }
+                @if (User.IsInRole("Admin") || User.IsInRole("Agent"))
+            {
+            <li>@Html.ActionLink(Resource.Menu_UsersAdmin, "Index", "UsersAdmin")</li>
+            <li>@Html.ActionLink(Resource.Contracts, "ContractsList", "Manage")</li>
+            <li>@Html.ActionLink(Resource.Invoices, "AdminInvoiceList", "Invoice")</li>
+            <li>@Html.ActionLink(Resource.DefaultOperations, "DefaultOperationsList", "UsersAdmin")</li>
+            <li>@Html.ActionLink(Resource.DefaultNonWorkingDays, "CreateDefaultNonWorkingDays", "UsersAdmin")</li>
+
+            }
+                @if (User.IsInRole("Admin"))
+            {
+            <li>@Html.ActionLink(Resource.Menu_RolesAdmin, "Index", "RolesAdmin")</li>
+            <li>@Html.ActionLink(Resource.SendNotification, "SendNotification", "UsersAdmin", new {id = "broadcast"}, null)</li>
+            }
+                <li class="divider"></li>
+                <li>
+                    @using (Html.BeginForm(MVC.Account.LogOff(), FormMethod.Post, new {@id = "HeaderLogoutForm"}))
+                {
+                @Html.AntiForgeryToken()
+                }
+                    <a href="javascript:document.getElementById('HeaderLogoutForm').submit()" id="HeaderLogoutButton">@Resource.Menu_LogOff</a>
+                </li>
+            </ul>
+        </li>
+    }
+
+    @if (User.IsInRole("Client"))
+    {
+        <li>@Html.ActionLink(Resource.CreateSchedule, MVC.Schedule.CategoriesList(), new { @class = "header-link" })</li>
+        <li>@Html.ActionLink(Resource.MySchedules, MVC.Schedule.ClientViewSchedules(), new { @class = "header-link" })</li>
+        <li>@Html.ActionLink(Resource.FavouriteProviders, MVC.UsersAdmin.FavouritesProviders(), new { @class = "header-link" })</li>
+    }
+    else if (User.IsInRole("Agent") || User.IsInRole("Admin"))
+    {
+        <li>@Html.ActionLink(Resource.Menu_UsersAdmin, MVC.UsersAdmin.Index(), new { @class = "header-link" })</li>
+        <li>@Html.ActionLink(Resource.SchedulesList, MVC.Schedule.SchedulesList(), new { @class = "header-link" })</li>
+        <li>@Html.ActionLink(Resource.Invoices, MVC.Invoice.AdminInvoiceList(null, null, null, null), new { @class = "header-link" })</li>
+    }
+    else if (User.IsInRole("Accountant"))
+    {
+        <li>@Html.ActionLink(Resource.Invoices, MVC.Invoice.AdminInvoiceList(null, null, null, null), new { @class = "header-link" })</li>
+        <li>@Html.ActionLink(Resource.Contracts, MVC.Manage.ContractsList(null, null, null), new { @class = "header-link" })</li>
+    }
+    else if (User.IsInRole("Employee"))
+    {
+        <li>@Html.ActionLink(Resource.MySchedules, MVC.Schedule.ViewSchedules((int)ViewBag.SlotId), new { @class = "header-link" })</li>
+        <li>@Html.ActionLink(Resource.MyClients, MVC.UsersAdmin.ClientsList((int)ViewBag.SlotId, null, null), new { @class = "header-link" })</li>
+
+    }
+    else if (User.IsInRole("Provider"))
+    {
+        if (((List<Slot>)ViewBag.Slots).Count == 1)
+        {
+            <li>@Html.ActionLink(Resource.MySchedules, MVC.Schedule.ViewSchedules(((List<Slot>)ViewBag.Slots).First().Id), new { @class = "header-link" })</li>
+            <li>@Html.ActionLink(Resource.MyClients, MVC.UsersAdmin.ClientsList(((List<Slot>)ViewBag.Slots).First().Id, null, null), new { @class = "header-link" })</li>
+        }
+        else
+        {
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Resource.MySchedules <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink(Resource.ViewAll, MVC.Schedule.ViewAllSlotsSchedules())</li>
+                    @foreach (var m in (List<Slot>)ViewBag.Slots)
+                    {
+                        var text = m.Name + " (" + ViewBag.SlotSchedulesCount[m.Id] + ")";
+                        <li>@Html.ActionLink((string)text, MVC.Schedule.ViewSchedules(m.Id))</li>
+                    }
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Resource.MyClients <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Vezi toti", MVC.UsersAdmin.ClientsList(null, null, null))</li>
+                    @foreach (var m in (List<Slot>)ViewBag.Slots)
+                    {
+                        var text = m.Name + " (" + ViewBag.SlotClientsCount[m.Id] + ")";
+                        <li>@Html.ActionLink((string)text, MVC.UsersAdmin.ClientsList(m.Id, null, null))</li>
+                    }
+                </ul>
+            </li>
+        }
+    }
+
+    @Html.Partial("PartialViews/_HeaderNotifications")
+</ul>

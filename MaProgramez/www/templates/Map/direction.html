@@ -1,0 +1,25 @@
+<ion-view>
+    <ion-nav-title>
+        {{Provider.alias}}
+    </ion-nav-title>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+
+    <ion-content scroll="false" class="menu-dark-content">
+        <div class="mapWrap" data-tap-disabled="true">
+            <map center="current-position" zoom="15">
+                <directions origin="{{MyLocation}}" destination="{{DestinationLatitude}},{{DestinationLongitude}}">
+                </directions>
+            </map>
+
+            <div class="map-button-content">
+                <a ng-href="geo:{{DestinationLatitude}},{{DestinationLongitude}}?z=11&q={{DestinationLatitude}},{{DestinationLongitude}}(Treasure)" class="button button-block button-positive">
+                    {{'NAVIGATE' | translate}}
+                </a>
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

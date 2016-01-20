@@ -1,0 +1,270 @@
+﻿@using MaProgramez.Repository.Entities
+@using MaProgramez.Website.Utility
+@model MaProgramez.Website.ViewModels.InvoiceViewModel
+@{
+    Layout = null;
+    var userName = string.Empty;
+    var culture = new System.Globalization.CultureInfo("nl-NL");
+    if (!Model.Invoice.User.IsCompany)
+    {
+        userName = Model.Invoice.User.FirstName + " " + Model.Invoice.User.LastName;
+    }
+    else
+    {
+        userName = Model.Invoice.User.CompanyName;
+    }
+}
+<itext creationdate="@DateTime.Now.ToString()" producer="RazorPDF">
+
+    <table width="100%" cellpadding="3.0" cellspacing="3.0" widths="3;4;3">
+        <row>
+            <cell horizontalalign="center">
+                <chunk color="#1c77a6" style="font-weight:bold" font="Times" size="15.0">Plansy B.V.</chunk>
+                <newline />
+                <chunk font="Times" size="10.0">Wapperslaan 3</chunk>
+                <newline />
+                <chunk font="Times" size="10.0">5645 EV Eindhoven</chunk>
+                <newline />
+            </cell>
+            <cell horizontalalign="center">
+                <image url="@Context.Server.MapPath("~/Content/images/logoNew.png")" />
+            </cell>
+            <cell horizontalalign="center">
+                <chunk color="#1c77a6" style="font-weight:bold" font="Times" size="15.0">@userName</chunk>
+                <newline />
+                <chunk font="Times" size="10.0">@Model.Invoice.User.Addresses.First().AddressText</chunk>
+                <newline />
+                <chunk font="Times" size="10.0"> @Model.Invoice.User.Addresses.First().PostalCode @Model.Invoice.User.Addresses.First().UserCity.Name </chunk>
+                <newline />
+            </cell>
+        </row>
+        <row>
+
+            @*FURNIZOR*@
+            <cell>
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">KvK nummer: </chunk>
+                <chunk font="Times" size="10.0">64754774</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">BTW nummer: </chunk>
+                <chunk font="Times" size="10.0">NL855819959B01</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Bank: </chunk>
+                <chunk font="Times" size="10.0">NL34 SNSB 0927 5347 89</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">E-mail: </chunk>
+                <chunk font="Times" size="10.0">info@plansy.nl</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Web: </chunk>
+                <chunk font="Times" size="10.0">www.plansy.nl</chunk>
+                <newline />
+            </cell>
+
+            @*DETALII FACTURA*@
+            <cell horizontalalign="center">
+                <newline />
+                <chunk color="#1c77a6" style="font-weight:bold" font="Times" size="20.0">Factuur</chunk>
+                <newline />
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Factuurdatum: </chunk>
+                <newline />
+                <chunk font="Times" size="10.0">@Model.Invoice.Date.ToString("dd-MM-yyyy") </chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Vervaldatum: </chunk>
+                <newline />
+                <chunk font="Times" size="10.0">@Model.Invoice.DueDate.ToString("dd-MM-yyyy") </chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Factuurnummer: </chunk>
+                <newline />
+                <chunk font="Times" size="10.0">@Model.Invoice.Number</chunk>
+                <newline />
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Betalingsmethode: </chunk>
+                <newline />
+                <chunk font="Times" size="10.0">Automatische incasso binnen 14 dagen</chunk>
+                <newline />
+
+
+            </cell>
+
+            @*CLIENT*@
+            <cell>
+
+                <chunk font="Times" size="10.0" style="font-weight:bold">Contact: </chunk>
+                <chunk font="Times" size="10.0">@Model.Invoice.User.FirstName @Model.Invoice.User.LastName</chunk>
+                <newline />
+
+            </cell>
+        </row>
+    </table>
+
+    <newline />
+    <newline />
+    <newline />
+
+    <paragraph>
+        Geachte heer/mevrouw,
+
+        <newline />
+        <newline />
+        Hierbij ontvangt u de factuur voor onderstaande diensten. Het totaalbedrag wordt binnen 14
+
+        dagen van uw rekeningnummer afgeschreven.
+
+        <newline />
+        <newline />
+        Met vriendelijke groet,
+
+        <newline />
+        <newline />
+        Sander Tan
+
+        <newline />
+        Directeur Plansy
+
+    </paragraph>
+
+    <table width="100%" cellpadding="1" cellspacing="1" widths="6;1;1.5;1.5">
+        <row>
+            <cell><newline /><newline /></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            @*  <cell></cell>*@
+        </row>
+        <row>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0" style="font-weight: bold">Omschrijving</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0" style="font-weight: bold">Aantal</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0" style="font-weight: bold">Prijs</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="10.0" style="font-weight: bold">Totaal</chunk>
+            </cell>
+
+        </row>
+
+
+        @foreach (var line in @Model.Invoice.InvoiceLines)
+        {
+            <row>
+
+                <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                    <chunk font="Times" size="10.0">@line.LineDescription</chunk>
+                </cell>
+
+                <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                    <chunk font="Times" size="10.0">@line.Quantity.ToString("N2", culture)</chunk>
+                </cell>
+
+                <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                    <chunk font="Times" size="10.0">€@line.Price.ToString("N2", culture)</chunk>
+                </cell>
+
+                <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                    <chunk font="Times" size="10.0">€@line.Price.ToString("N2", culture)</chunk>
+                </cell>
+
+            </row>
+
+        }
+
+        <row>
+
+            <cell horizontalalign="center" borderwidth="1" left="true" top="true" bottom="true">
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="1" top="true" bottom="true">
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="1" right="true" top="true" bottom="true">
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="1" left="true" right="true" top="true" bottom="true">
+            </cell>
+
+        </row>
+
+
+        <row>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" top="true" bottom="true">
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" top="true" bottom="true">
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" right="true" top="true" bottom="true">
+                <chunk font="Times" size="11.0">Subtotaal: </chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="11.0">
+                    €@(InvoiceUtility.GetInvoiceAmountWithoutVat(Model.Invoice.Id).ToString("N2", culture))
+                </chunk>
+            </cell>
+
+        </row>
+
+        <row>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" top="true" bottom="true">
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" top="true" bottom="true">
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" right="true" top="true" bottom="true">
+                <chunk font="Times" size="11.0">BTW (21%):</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="11.0">€@(InvoiceUtility.GetInvoiceVat(Model.Invoice.Id).ToString("N2", culture))</chunk>
+            </cell>
+
+        </row>
+        <row>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" top="true" bottom="true">
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" top="true" bottom="true">
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" right="true" top="true" bottom="true">
+                <chunk font="Times" size="11.0" style="font-weight: bold">Totaal:</chunk>
+            </cell>
+
+            <cell horizontalalign="center" borderwidth="0.5" left="true" right="true" top="true" bottom="true">
+                <chunk font="Times" size="11.0" style="font-weight: bold">
+                    €@(InvoiceUtility.GetInvoiceTotalAmount(Model.Invoice.Id).ToString("N2", culture))
+                </chunk>
+            </cell>
+
+        </row>
+
+        <row>
+            <cell><newline /><newline /></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+        </row>
+
+    </table>
+
+</itext>

@@ -1,0 +1,8 @@
+﻿@using MaProgramez.Resources
+@model IPagedList<MaProgramez.Website.ViewModels.InvoiceListItemViewModel>
+
+@{
+    ViewBag.Title = Resource.InvoicesListView_Title;
+}
+
+@Html.Partial(MVC.Invoice.Views.PartialViews._InvoiceList)

@@ -1,0 +1,62 @@
+﻿@using MaProgramez.Resources
+@model MaProgramez.Website.Models.ExternalLoginConfirmationViewModel
+@{
+    ViewBag.Title = Resource.Register_Button;
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<div class="login-container" style="width: 400px;">
+    <div class="login-section">
+        <div class="row">
+            <div class="col-md-12" style="">
+
+                <h3>@ViewBag.Title.</h3>
+                <p>@Resource.ExternalLogin_AssociateYour @ViewBag.LoginProvider.</p>
+
+                @using (Html.BeginForm("ExternalLoginConfirmation", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <p class="well well-sm">
+                        @Resource.ExternalLogin_SuccessMessage1 <strong>@ViewBag.LoginProvider</strong>.
+                        @Resource.ExternalLogin_SuccessMessage2
+                    </p>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-8">
+                            <a href="@Url.Action(MVC.Account.Terms())" style="font-size: 14px; margin-bottom: 0;">@Resource.AcceptTermsMessage:</a>
+                            @Html.ValidationMessageFor(m => m.AcceptedTermsFlag, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-4">
+                            <fieldset class="switch switch-two" style="margin: 0">
+                                <input id="AcceptedTermsFlagYes" name="AcceptedTermsFlag" type="radio" value="True" @(Model != null && Model.AcceptedTermsFlag ? "checked" : string.Empty) />
+                                <label for="AcceptedTermsFlagYes">@Resource.Yes</label>
+                                <input id="AcceptedTermsFlagNo" name="AcceptedTermsFlag" type="radio" value="False" @(Model == null || !Model.AcceptedTermsFlag ? "checked" : string.Empty) />
+                                <label for="AcceptedTermsFlagNo">@Resource.No</label>
+                            </fieldset>
+                        </div>
+                    </div>
+                    
+                    <div class="line"></div>
+                    
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-default" value="@Resource.Register_Button" />
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

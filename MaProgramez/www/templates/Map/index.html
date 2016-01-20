@@ -1,0 +1,42 @@
+<ion-view>
+    <ion-nav-title>
+        {{'GO_TO_APPOINTMENT' | translate}}
+    </ion-nav-title>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="menu-dark-content">
+        <div class="list">
+            <div class="item" ng-repeat="ticket in Schedules">
+                <div class="ticket" style="margin-bottom: 0;">
+                    <div class="ticket-content">
+                        <h1>{{ticket.slot.provider.alias}}</h1>
+                        <div class="row ticket-row">
+                            <div class="col">
+                                <p>{{'TICKET_DATE' | translate}}</p>
+                                <span>{{ticket.scheduleDateTimeStart | date:'dd-MMM-yyyy' }}</span>
+                            </div>
+                            <div class="col">
+                                <p>{{'TICKET_TIME' | translate}}</p>
+                                <span>{{ticket.hour}}:{{ticket.minutes}}</span>
+                            </div>
+                        </div>
+                        <div class="row ticker-row">
+                            <div class="col">
+                                <a href="#/app/direction/{{ticket.slot.provider.id}}" class="button button-block button-dark button-outline icon-right ion-ios-arrow-right">
+                                    {{'GO_TO_APPOINTMENT' | translate}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item" ng-if="Schedules == null || Schedules.length == 0">
+                <p class="text-center">{{'NO_RESULTS' | translate}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

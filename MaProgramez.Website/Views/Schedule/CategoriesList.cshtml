@@ -1,0 +1,82 @@
+﻿@using MaProgramez.Repository.Entities
+@model MaProgramez.Repository.Models.CategoryParameters
+
+@{
+    ViewBag.Title = Resource.CreateSchedule;
+    var cities = (List<City>)ViewBag.Cities;
+    var categories = (List<Category>)ViewBag.Categories;
+}
+
+@section Scripts {
+
+    <script>
+        new AnimOnScroll(document.getElementById('grid'), {
+            minDuration: 0.4,
+            maxDuration: 0.7,
+            viewportFactor: 0.2
+        });
+    </script>
+}
+
+@using (Html.BeginForm("CategoriesList", "Schedule", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.ParentCategoryId)
+
+    <section class="filtre">
+        <div class="container">
+            <div class="col-lg-4">
+                <div class="input-group" style="margin-top:3px;">
+                    @Html.TextBoxFor(m => m.SearchText, new { @class = "form-control cautare", style = "border: none !important;", placeholder = @Resource.Search })
+                    <span class="input-group-btn">
+                        <button class="btn btn-default btn-cautare" type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-3 pasi" style="margin-top:2px;">
+                <div class="cerc unu bifat">1</div><div class="arrow">-</div><div class="cerc">2</div><div class="arrow">-</div><div class="cerc">3</div>
+            </div>
+            <div class="col-lg-3" style="margin-top:10px;">
+                @Html.DropDownListFor(m => m.CityId, new SelectList(cities, "Id", "Name"), Resource.ViewAll, new { @class = "selectpicker", placeholder = Resource.SelectCity })
+            </div>
+            <div class="col-md-2">
+                <input type="submit" class="btn btn-primary float-right" style="margin-top:6px" value=@Resource.Filter />
+            </div>
+        </div>
+
+    </section>
+    <div class="up-toticket">
+        &nbsp;
+    </div>
+}
+
+<section class="sectiune-cat">
+    <div class="container">
+        <h1 class="h3">@Resource.SelectCategory</h1>
+        <ul class="grid effect-6 centrat-cat" id="grid">
+            @for (var i = 0; i < categories.Count; i++)
+            {
+                <li>
+                    <div class="effec marji-cat">
+                        <h2>@categories[i].Name</h2>
+                        <div class="border2"></div>
+                        <div class="category-icon">
+                            @if (categories[i].CssIcon != null)
+                            {
+                                <i class="@categories[i].CssIcon"></i>
+                            }
+                            else
+                            {
+                                <i class="@ViewBag.CssIcon"></i>
+                            }
+                        </div>
+                        <p class="centrat-cat">@categories[i].Description</p>
+                        <p class="centrat-cat"><a class="btn btn-primary btn-lg buton2" href="@Url.Action(MVC.Schedule.CategoriesList(categories[i].Id))" role="button">@Resource.Choose</a></p>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</section>

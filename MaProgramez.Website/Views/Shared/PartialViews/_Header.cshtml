@@ -1,0 +1,69 @@
+﻿@{
+    var language = string.Empty;
+    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+    switch (culture)
+    {
+        case "en":
+            language = "~/Content/images/en.png";
+            break;
+            @*       case "ro":
+                language = "~/Content/images/ro.png";
+                break;*@
+    case "nl":
+        language = "~/Content/images/nl.png";
+        break;
+    default:
+        language = "~/Content/images/nl.png";
+        break;
+}
+}
+
+<nav class="navbar navbar-inverse all-header">
+
+    <div style="" class="over-bar">
+
+        <div class="container">
+            <div class="col-lg-4 con" style="margin-left: -12px"><span class="glyphicon glyphicon-phone"></span>&nbsp;@Resource.LandingPage_ContactUs:&nbsp; +(40) 735 53 20  20</div>
+
+            <div class="pull-right log list-unstyled" style="margin-right: -12px">
+                @Html.Partial("PartialViews/_HeaderAccount")
+            </div>
+
+            <div class="col-lg-1 float-right language-btn dropdown dropdown-header" style="margin-top:-3px">
+                <img src="@Url.Content(language)" alt="" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                    <li>
+                        <a data-value="en">English</a>
+                    </li>
+                    @*
+                        <li>
+                            <a data-value="ro">Română</a>
+                        </li>*@
+                    <li>
+                        <a data-value="nl">Dutch</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="@Url.Action(MVC.Home.Index())"><img src="~/Content/images/logoNew.png" class="img-responsive" alt="logo ma programez"></a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            @Html.Partial("PartialViews/_HeaderMenu")
+        </div>
+    </div>
+</nav>
+
+<div class="navbar-fix">
+    &nbsp;
+</div>

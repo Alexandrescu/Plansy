@@ -1,0 +1,50 @@
+﻿@using MaProgramez.Resources
+@model MaProgramez.Website.ViewModels.IndexViewModel
+@{
+    ViewBag.Title = Resource.ManageView_Title;
+    Layout = MVC.Shared.Views._MenuLayout;
+}
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h4 style="margin-bottom: 20px;">@Resource.ManageView_Title</h4>
+
+        <p class="text-info">@ViewBag.StatusMessage</p>
+        <div class="row">
+            <div class="col-md-8">
+                <p>
+                    @if (Model.HasPassword)
+                    {
+                        @Html.ActionLink(Resource.ManageView_ChangeYourPassword, "ChangePassword", new { @class = "text-info" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink(Resource.ManageView_PickAPassword, "SetPassword")
+                    }
+                </p>
+                <p>
+                    @Resource.PhoneNumber: @(Model.PhoneNumber ?? "") [
+                    @if (Model.PhoneNumber != null)
+                    {
+                        @Html.ActionLink(Resource.Change, "AddPhoneNumber")
+                        @: &nbsp;|&nbsp;
+                        @Html.ActionLink(Resource.Remove, "RemovePhoneNumber")
+                    }
+                    else
+                    {
+                        @Html.ActionLink(Resource.Add, "AddPhoneNumber")
+                    }
+                    ]
+                </p>
+                <p>
+                    @Resource.ExternalLogins: @Model.Logins.Count
+                    @Html.ActionLink("[" + Resource.Manage + "]", "ManageLogins")
+                </p>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+

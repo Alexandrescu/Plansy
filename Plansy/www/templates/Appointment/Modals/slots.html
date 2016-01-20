@@ -1,0 +1,20 @@
+<ion-modal-view>
+    <ion-header-bar align-title="center">
+        <h1 class="title text-center">{{'SELECT_SLOT'| translate}}</h1>
+        <div class="buttons">
+            <button class="button button-icon button-clear button-small ion-close" ng-click="closeSlotsModal()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <label class="item item-radio" ng-repeat="slot in Slots" ng-click="slotClick()">
+                <input type="radio" name="slots" ng-model="Appointment.selectedSlotId" value="{{slot.id}}">
+                <div class="item-content">
+                    {{slot.name}}
+                    <p ng-if="slot.fullAddress != null && slot.fullAddress != ''">{{slot.fullAddress}}</p>
+                </div>
+                <i class="radio-icon ion-checkmark"></i>
+            </label>
+        </div>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,49 @@
+﻿@{
+    var language = string.Empty;
+    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+    switch (culture)
+    {
+        case "en":
+            language = "English";
+            break;
+        @*case "ro":
+    language = "Română";
+    break;*@
+    case "nl":
+        language = "Dutch";
+        break;
+    default:
+        language = "Dutch";
+        break;
+}
+}
+
+<div class="all-footer">
+    <div class="bottom-ticket-footer-all"> &nbsp; </div>
+    <div class="container">
+        <div class="language-btn dropup dropup-footer" style="margin-right: 30px;margin-left: 15px;">
+            <button class="btn dropdown-toggle inv fara-numar" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                @language
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                <li>
+                    <a data-value="en">English</a>
+                </li>
+                @*
+    <li>
+        <a data-value="ro">Română</a>
+    </li>*@
+                <li>
+                    <a data-value="nl">Dutch</a>
+                </li>
+            </ul>
+        </div>
+            &copy; 2014-@DateTime.Now.Year <a href="http://spinit.ro" target="_blank">Spin IT</a>, CUI: 32902508, Reg.Com.: J32/250/2014 | <a href="http://www.anpc.gov.ro" target="_blank">ANPC</a>
+        </div>
+
+</div>
+
+<script>
+    var pageCulture = '@ViewContext.RouteData.Values["culture"].ToString()';
+</script>

@@ -1,0 +1,45 @@
+﻿@using MaProgramez.Resources
+@model MaProgramez.Website.ViewModels.GenericViewModel
+
+@if (Model != null)
+{
+    <div class="panel panel-default">
+        <div class="panel-body">
+            @*@switch (Model.Status)
+            {
+                case "supplier":
+                    <h4>@Resource.Suppliers</h4>
+                    break;
+                case "service":
+                <h4>@Resource.Services</h4>
+                    break;
+            }*@
+
+            @if (Model.Users != null && Model.Users.Any())
+            {
+
+                <div class="sablon">
+                    <table class="table table-striped table-sm" style="margin-bottom: 0;">
+                        @foreach (var user in Model.Users)
+                    {
+                            <tr>
+                                <td class="col-md-10">@user.CompanyName @user.FirstName @user.LastName</td>
+                            </tr>
+                        }
+                    </table>
+                    </div>
+                    if (Model.Total > Model.PageSize)
+                    {
+                    @Html.Pager(Model.PageSize, Model.Page, Model.Total).Options(o => o
+                    .DisplayTemplate("Bootstrap3Pagination")
+                    .MaxNrOfPages(4)
+                    .AlwaysAddFirstPageNumber()
+                    .AddRouteValue("status", Model.Status)
+                    )
+                    }
+                    }
+                </div>
+    </div>
+}
+
+

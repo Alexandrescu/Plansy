@@ -1,0 +1,83 @@
+﻿@model MaProgramez.Website.ViewModels.SlotOperationViewModel
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            <h4>@Resource.UserAdminView_AddOperation</h4>
+        </div><!-- /.col-lg-3 -->
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+
+        @using (Html.BeginForm("AddSlotOperation", "UsersAdmin", FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.SlotId)
+            @Html.HiddenFor(m => m.CategoryId)
+            @Html.HiddenFor(m => m.Operations)
+
+            if (!Html.ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger form-validation" role="alert">
+                    @Html.ValidationSummary(true, "", new { @class = "text-error" })
+                </div>
+                    <div class="clear"></div>
+            }
+
+            <div class="form-group">
+                <label class="col-md-4 form-label">@Resource.Operation<span class="font-danger">&nbsp;*</span></label>
+                <div class="col-md-4">
+                    @Html.DropDownListFor(m => m.OperationId, new SelectList(Model.Operations, "Id", "Description"), new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.OperationId, "", new { @class = "text-danger" })
+                </div>
+                @if (User.IsInRole("Admin") || User.IsInRole("Agent") || User.IsInRole("Provider"))
+                {
+                    <div class="col-md-4">
+                        <a href="@Url.Action(MVC.UsersAdmin.CreateOperation(Model.SlotId))" class="btn buton5success float-left">@Resource.AddNewOperation</a>
+                    </div>
+                }
+            </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 form-label">@Resource.Price</label>
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Price, new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 form-label">@Resource.DurationMinutes<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.DurationMinutes, new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.DurationMinutes, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 form-label">@Resource.Category</label>
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.CategoryName, new { @class = "form-control input-sm", @readonly = "true" })
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+                <hr />
+
+                <div class="form-group" style="padding-left: 15px;padding-right: 30px">
+                    <div class="col-md-6">
+                        <a href="@Url.Action(MVC.UsersAdmin.SlotOperationsList(Model.SlotId))" class="btn buton5danger float-left">@Resource.Back</a>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="submit" class="btn buton5success float-right" value="@Resource.Save" />
+                    </div>
+                </div>
+        }
+    </div>
+</section>

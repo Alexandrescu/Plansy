@@ -1,0 +1,50 @@
+﻿@using MaProgramez.Repository.Entities
+@using MaProgramez.Resources
+
+@if (ViewBag.Notifications != null)
+{
+    <li id="NotificationHeaderBox" class="header-notification dropdown only-desktop">
+        <div class="dropdown-toggle" data-toggle="dropdown">
+            @if (ViewBag.Notifications.Count > 0)
+            {
+                <i class="fa fa-bell notificari-activ"></i>
+                <div class="count notification-count" style="display: @(ViewBag.Notifications.Count > 0 ? "block" : "none")">@ViewBag.Notifications.Count</div>
+            }
+            else
+            {
+                <i class="fa fa-bell"></i>
+            }
+        </div>
+        <div class="notification-bar dropdown-menu" role="menu">
+            <p style="text-align: center; margin-top: 10px;">@Resource.NotificationList</p>
+            <hr style="margin-top: 0;" />
+            <div class="nano" style="height: 200px;">
+                <div class="nano-content">
+                    <div class="col-md-12">
+                        <div class="list-group notification-list" style="margin-bottom: 0;">
+                            @if (ViewBag.Notifications.Count > 0)
+                            {
+                                foreach (Notification notification in ViewBag.Notifications)
+                                {
+                                    @Html.Partial("PartialViews/_Notification", notification)
+
+                                }
+                            }
+                            else
+                            {
+                                /*
+                                <p class="font-success" style="margin-top: 5px; text-align: center; font-weight: bold">
+                                    @Resource.NoNewNotifications
+                                </p>*/
+                            }
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <hr style="margin-bottom: 10px;" />
+            <a href="@Url.Action(MVC.Notification.List())" style="text-align: center; display: block; width: 100%; margin-bottom: 10px;">@Resource.ReadMore</a>
+        </div>
+    </li>
+}

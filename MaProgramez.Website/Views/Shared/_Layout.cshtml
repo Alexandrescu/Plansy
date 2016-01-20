@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="@MaProgramez.Website.Helpers.CultureHelper.GetCurrentNeutralCulture()">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plansy.nl</title>
+    @Html.MetaAcceptLanguage()
+
+    @Html.Partial(MVC.Shared.Views.PartialViews._Style)
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    @Html.Partial("PartialViews/_Header")
+    <div id="page">
+        @RenderBody()
+        <div class="clear"></div>
+    </div>
+    <div>
+        @Html.Partial("PartialViews/_Footer")
+    </div>
+
+    @Html.Partial(MVC.Shared.Views.PartialViews._Scripts)
+    @RenderSection("scripts", required: false)
+</body>
+</html>

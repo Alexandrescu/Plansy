@@ -1,0 +1,3 @@
+adb logcat Cordova:D DroidGap:D CordovaLog:D *:S -d > logcat.txt
+
+adb uninstall your.package.name

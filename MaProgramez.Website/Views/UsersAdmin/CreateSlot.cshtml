@@ -1,0 +1,137 @@
+﻿@model MaProgramez.Website.ViewModels.SlotViewModel
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            <h4>@Resource.UserAdminView_AddSlot</h4>
+        </div><!-- /.col-lg-3 -->
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+        @using (Html.BeginForm("CreateSlot", "UsersAdmin", FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.Slot.ProviderId)
+            @Html.HiddenFor(m => m.Slot.UserId)
+
+            if (!Html.ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger form-validation" role="alert">
+                    @Html.ValidationSummary(true, "", new { @class = "text-error" })
+                </div>
+                <div class="clear"></div>
+            }
+
+            <div class="form-group">
+                <label class="col-md-4 form-label">@Resource.User_Name<span class="font-danger">&nbsp;*</span></label>
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.Slot.Name, new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.Slot.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 form-label">@Resource.Email<span class="font-danger">&nbsp;*</span></label>
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.Slot.Email, new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.Slot.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 form-label">@Resource.PhoneNumber<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Slot.Phone, new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.Slot.Phone, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 form-label">@Resource.Category<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-8">
+                        @Html.DropDownListFor(m => m.Slot.CategoryId, new SelectList(ViewBag.Categories, "key", "value"), new { @class = "selectpicker price-payment-method-select", data_class = "btn-default btn-sm", data_width = "100%", data_live_search = "true", data_size = "5" })
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Slot.AcceptsNotificationOnEmail, new { @class = "form-label col-md-6" })
+                    <div class="col-md-6">
+                        <fieldset class="switch switch-two" style="margin: 0">
+                            <input id="AcceptsNotificationOnEmailYes" name="AcceptsNotificationOnEmail" type="radio" value="True" @(Model != null && Model.Slot.AcceptsNotificationOnEmail ? "checked" : string.Empty) />
+                            <label for="AcceptsNotificationOnEmailYes">@Resource.Yes</label>
+                            <input id="AcceptsNotificationOnEmailNo" name="AcceptsNotificationOnEmail" type="radio" value="False" @(Model == null || !Model.Slot.AcceptsNotificationOnEmail ? "checked" : string.Empty) />
+                            <label for="AcceptsNotificationOnEmailNo">@Resource.No</label>
+                        </fieldset>
+                    </div>
+                    <div class="clear"></div>
+                    @Html.LabelFor(m => m.Slot.AcceptsNotificationOnSms, new { @class = "form-label col-md-6" })
+                    <div class="col-md-6">
+                        <fieldset class="switch switch-two" style="margin: 0">
+                            <input id="AcceptsNotificationOnSmsYes" name="AcceptsNotificationOnSms" type="radio" value="True" @(Model != null && Model.Slot.AcceptsNotificationOnSms ? "checked" : string.Empty) />
+                            <label for="AcceptsNotificationOnSmsYes">@Resource.Yes</label>
+                            <input id="AcceptsNotificationOnSmsNo" name="AcceptsNotificationOnSms" type="radio" value="False" @(Model == null || !Model.Slot.AcceptsNotificationOnSms ? "checked" : string.Empty) />
+                            <label for="AcceptsNotificationOnSmsNo">@Resource.No</label>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <hr />
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.CreateSlotUser, new { @class = "col-md-4 form-label" })
+
+                    <div class="col-md-6">
+                        <fieldset class="switch switch-two" style="margin: 0; font-size: 14px;">
+                            <input id="CreateSlotUserYes" name="CreateSlotUser" type="radio" value="True" @(Model != null && Model.CreateSlotUser ? "checked" : string.Empty) />
+                            <label for="CreateSlotUserYes">@Resource.Yes</label>
+                            <input id="CreateSlotUserNo" name="CreateSlotUser" type="radio" value="False" @(Model == null || !Model.CreateSlotUser ? "checked" : string.Empty) />
+                            <label for="CreateSlotUserNo">@Resource.No</label>
+                        </fieldset>
+                    </div>
+                </div>
+            /*
+                <div class="slot-box" style="@(!Model.CreateSlotUser ? "display: none;" : string.Empty)">
+                    <div class="form-group">
+                        <label class="col-md-3 form-label">@Resource.Password</label>
+                        <div class="col-md-4">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 form-label">@Resource.User_Confirm_Password</label>
+                        <div class="col-md-4">
+                            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            */
+            <div class="clear"></div>
+            <hr />
+                <div class="form-group" style="padding-left: 15px;padding-right: 30px">
+                    <div class="col-md-6">
+                        <a href="@Url.Action(MVC.UsersAdmin.SlotsList(Model.Slot.ProviderId))" class="btn btn-success float-left">@Resource.Back</a>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="submit" class="btn btn-default float-right" value="@Resource.Save" />
+                    </div>
+                </div>
+        }
+    </div>
+</section>
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/add-user")
+}

@@ -1,0 +1,70 @@
+﻿@using MaProgramez.Resources
+@model MaProgramez.Website.ViewModels.NotificationViewModel
+
+@using (Html.BeginForm(MVC.UsersAdmin.SendNotification(), FormMethod.Post))
+{
+    var count = 0;
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.User)
+
+
+
+    <section class="filtre">
+
+        <div class="container">
+            <div class="col-lg-3 schedule">
+                <h4>@Resource.SendNotification</h4>
+            </div><!-- /.col-lg-3 -->
+        </div>
+    </section>
+    <div class="up-toticket">
+        &nbsp;
+    </div>
+
+    <section class="sectiune-cat stilizat-cat">
+        <div class="container stilizat">
+
+
+
+            @if (!Html.ViewData.ModelState.IsValid)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger form-validation" role="alert">
+                        @Html.ValidationSummary()
+                    </div>
+                </div>
+                <div class="clear"></div>
+            }
+
+
+            <div class="form-group">
+                <label class="col-md-12 form-label">@Resource.Description<span class="font-danger">&nbsp;*</span></label>
+                <div class="col-md-12">
+                    @Html.TextAreaFor(m => m.Text, new { @class = "form-control input-sm", style = "height: 200px; resize: none;" })
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6" style="margin-top: 20px">
+
+                    @if (User.IsInRole("Admin") || User.IsInRole("Agent"))
+                    {
+                        <fieldset class="switch switch-two" style="margin: 0">
+                            @foreach (var r in Model.NotificationTypes)
+                            {
+                                <input id="Result-@(r.Key)" name="Result" type="radio" value="@(r.Key)" @(count == 0 ? "checked" : string.Empty) />
+                                <label for="Result-@(r.Key)">@r.Value</label>
+                                count++;
+                            }
+                        </fieldset>
+                    }
+                </div>
+
+                <div class="col-md-6" style="margin-top: 20px">
+                    <button type="submit" id="sendNotification" class="btn btn-primary float-right" value="sentNotification">@Resource.SendNotification</button>
+                </div>
+            </div>
+        </div>
+    </section>
+}

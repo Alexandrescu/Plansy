@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <meta name="copyright" content="MaProgramez.net made by SPIN IT SRL" />
+    <meta name="description" content="@ViewBag.PageDescription" />
+    <meta name="keywords" content="@ViewBag.PageKeyword" />
+    <meta name="robots" content="index,follow" />
+
+    <meta property="og:title" content="@ViewBag.Title" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="@ViewBag.PageImage" />
+    <meta property="og:url" content="@ViewBag.PageUrl" />
+    <meta property="og:description" content="@ViewBag.PageDescription" />
+
+    @Html.Partial("PartialViews/_Fonts")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("styles", required: false)
+</head>
+<body class="login-body">
+    <div id="page">
+        <div class="center-content">
+            <div class="login-logo">
+                <a href="/" id="header-logo-2" style="margin: 25px auto;"></a>
+            </div>
+            @RenderBody()
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div id="page-footer">
+        <div class="center-content">
+            @Html.Partial("PartialViews/_Footer")
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/googleAnalytics")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

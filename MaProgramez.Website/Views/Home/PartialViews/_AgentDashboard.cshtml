@@ -1,0 +1,167 @@
+﻿@using MaProgramez.Resources
+@model MaProgramez.Website.ViewModels.DashboardViewModel
+
+@{
+    var untilDate = DateTime.Now.AddDays(-4).Date;
+
+    var culture = new System.Globalization.CultureInfo("en-US");
+}
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h4>@Resource.Dashboard</h4>
+
+        @if (Model != null)
+        {
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="count-box active-request-count">
+                        @Model.TotalAppointmentsToday
+                    </div>
+                    <p class="count-box-text">
+                        @Resource.AppointmentsToday
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <div class="count-box">
+                        @Model.TotalClients
+                    </div>
+                    <p class="count-box-text">
+                        @Resource.TotalClients
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <div class="count-box">
+                        @Model.TotalProviders
+                    </div>
+                    <p class="count-box-text">
+                        @Resource.TotalProviders
+                    </p>
+                </div>
+
+                <div class="clear"></div>
+                @*<div class="col-md-12">
+        <div class="delimiter">
+            <i class="fa fa-car"></i>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="col-md-6">
+        <h5>
+            @Resource.TotalSumReceived
+            <i class="fa fa-info-circle" data-toggle="popover" data-placement="right" data-content="@(Resource.AdminDashboard_AgentMessage)"></i>
+        </h5>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <div class="col-md-6">
+        <h5>
+            @Resource.TotalSumPaid
+            <i class="fa fa-info-circle" data-toggle="popover" data-placement="right" data-content="@(Resource.AdminDashboard_AgentMessage)"></i>
+        </h5>
+        <canvas id="myChart2"></canvas>
+    </div>
+
+    <div class="clear"></div>
+    <div class="col-md-12">
+        @if (Model.Agents != null && Model.Agents.Any())
+        {
+            <div class="delimiter">
+                <i class="fa fa-car"></i>
+            </div>
+            <div class="clear"></div>
+
+            <h5>
+                @Resource.Agents
+                <i class="fa fa-info-circle" data-toggle="popover" data-placement="right" data-content="@(Resource.AdminDashboard_AgentMessage)"></i>
+            </h5>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>@Resource.Agent</th>
+                            <th>@Resource.TotalSuppliers</th>
+                            <th>@Resource.TotalServices</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var agent in Model.Agents)
+                        {
+                            <tr>
+                                <td>@(agent.FirstName) @(agent.LastName)</td>
+                                <td>@(MaProgramez.Website.Helpers.AgentHelper.GetTotalUsersByRole(agent.Id, "Dezmembrator", untilDate))</td>
+                                <td>@(MaProgramez.Website.Helpers.AgentHelper.GetTotalUsersByRole(agent.Id, "Service Auto", untilDate))</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>*@
+            </div>
+        }
+    </div>
+</div>
+
+@*@{
+    var content = string.Empty;
+    var contentResult = string.Empty;
+    var contentSecondResult = string.Empty;
+}
+
+@if (Model != null && Model.Statistics != null)
+{
+
+    for (var i = untilDate; i <= DateTime.Now.Date; )
+    {
+        content += "'" + i.Day + "',";
+
+        if (Model.Statistics.ContainsKey(i.Day.ToString()))
+        {
+            contentResult += Model.Statistics[i.Day.ToString()].ToString() + ",";
+        }
+        else
+        {
+            contentResult += "0,";
+        }
+
+        i = i.AddDays(1);
+    }
+}
+
+@if (Model != null && Model.SecondStatistics != null)
+{
+    content = string.Empty;
+
+    for (var i = untilDate; i <= DateTime.Now.Date; )
+    {
+        content += "'" + i.Day + "',";
+
+        if (Model.SecondStatistics.ContainsKey(i.Day.ToString()))
+        {
+            contentSecondResult += Model.SecondStatistics[i.Day.ToString()].ToString() + ",";
+        }
+        else
+        {
+            contentSecondResult += "0,";
+        }
+
+        i = i.AddDays(1);
+    }
+}
+
+@{
+    content = content.TrimEnd(',');
+    contentResult = contentResult.TrimEnd(',');
+    contentSecondResult = contentSecondResult.TrimEnd(',');
+}
+
+<script type="text/javascript">
+    var suppliersText = "@(Resource.Suppliers)";
+    var servicesText = "@(Resource.Services)";
+
+    var graphicLabels = [@Html.Raw(content)];
+    var graphicResult = [@Html.Raw(contentResult)];
+    var graphicSecondResult = [@Html.Raw(contentSecondResult)];
+</script>*@

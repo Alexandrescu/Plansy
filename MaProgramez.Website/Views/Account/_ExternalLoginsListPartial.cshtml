@@ -1,0 +1,55 @@
+﻿@using MaProgramez.Resources
+@using MaProgramez.Website.Models
+@model ExternalLoginListViewModel
+@using Microsoft.Owin.Security
+
+@{
+    var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes();
+    if (!loginProviders.Any())
+    {
+        <div>
+            <p>
+                There are no external authentication services configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=313242">this article</a>
+                for details on setting up this ASP.NET application to support logging in via external services.
+            </p>
+        </div>
+    }
+    else
+    {
+        using (Html.BeginForm("ExternalLogin", "Account", FormMethod.Post, new {@style="margin:0px;", ReturnUrl = Model.ReturnUrl }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="logmod__alter">
+                <div class="logmod__alter-container">
+                    <button type="submit" id="Facebook" name="provider" value="Facebook" class="connect facebook">
+                        <div class="connect__icon">
+                            <i class="fa fa-facebook"></i>
+                        </div>
+                        <div class="connect__context">
+                            <span>@Resource.Login_ExternalLoginTitle <strong>Facebook</strong></span>
+                        </div>
+                    </button>
+                    <button type="submit" id="Google" name="provider" value="Google" class="connect googleplus">
+                        <div class="connect__icon">
+                            <i class="fa fa-google-plus"></i>
+                        </div>
+                        <div class="connect__context">
+                            <span>@Resource.Login_ExternalLoginTitle <strong>Google+</strong></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            @*
+                <div id="socialLoginList">
+                    <p>
+                    @foreach (AuthenticationDescription p in loginProviders)
+                    {
+                        <button type="submit" class="btn btn-default" style="margin-bottom: 10px;" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="@Resource.Login_ExternalLoginHint @p.Caption">@p.AuthenticationType</button>
+                    }
+                    </p>
+                </div>
+            *@
+        }
+    }
+}

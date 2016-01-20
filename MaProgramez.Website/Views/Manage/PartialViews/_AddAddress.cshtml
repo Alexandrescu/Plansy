@@ -1,0 +1,49 @@
+﻿@using MaProgramez.Repository.Entities
+@using MaProgramez.Resources
+@{
+    var newAddress = new Address() { UserId = ViewBag.UserId, AddressType = AddressType.PlaceOfBusinessAddress, CityId = 0, CountryId = 1};
+    var pageGuild = Guid.NewGuid().ToString();
+}
+
+@using (Ajax.BeginForm("AddAddress", "Service", null, new AjaxOptions() { HttpMethod = "Post", OnSuccess = "onAddAddressSuccess" }, new { @class = "address-form", data_loading_target = "#LoadingAddress" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => newAddress.UserId)
+    @Html.HiddenFor(m => newAddress.AddressType)
+
+    <div class="form-group">
+        @Html.LabelFor(m => newAddress.AddressText, new { @class = "form-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => newAddress.AddressText, new { @class = "form-control input-sm" })
+            @Html.ValidationMessageFor(m => newAddress.AddressText)
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="form-group">
+        @Html.Label(Resource.County, new { @class = "form-label col-md-2" })
+        <div class="col-md-4">
+            @Html.DropDownList("CountyId", new SelectList(ViewBag.Counties as IEnumerable<County>, "Id", "Name"), Resource.SelectCounty, new { @class = "selectpicker county-select", data_select_target = "#city-select-" + pageGuild, data_class = "btn-default btn-sm", data_width = "100%", data_live_search = "true", data_size = "5" })
+        </div>
+        @Html.LabelFor(m => newAddress.CityId, Resource.Town, new { @class = "form-label col-md-2" })
+        <div class="col-md-4">
+            @Html.DropDownListFor(m => newAddress.CityId, new SelectList(new List<SelectListItem> { new SelectListItem { Value = "0", Text = Resource.SelectCountyFirst } }, "Value", "Text"), new { @class = "selectpicker", id = "city-select-" + pageGuild + "", data_class = "btn-default btn-sm", data_width = "100%", data_live_search = "true", data_size = "5" })
+            @Html.ValidationMessageFor(m => newAddress.CityId)
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="form-group" style="margin-bottom: 0">
+        @Html.LabelFor(m => newAddress.PostalCode, new { @class = "form-label col-md-2" })
+        <div class="col-md-4">
+            @Html.TextBoxFor(m => newAddress.PostalCode, new { @class = "form-control input-sm" })
+            @Html.ValidationMessageFor(m => newAddress.PostalCode)
+        </div>
+        <div class="clear"></div>
+        <div class="col-md-12">
+            <div class="line"></div>
+            <div class="clear"></div>
+            <button type="submit" class="btn btn-sm btn-danger float-right">@Resource.Save</button>
+        </div>
+        <div class="clear"></div>
+        <div class="line"></div>
+    </div>
+}

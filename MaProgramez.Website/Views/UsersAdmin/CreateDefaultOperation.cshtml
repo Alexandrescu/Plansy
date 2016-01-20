@@ -1,0 +1,75 @@
+﻿@model MaProgramez.Website.ViewModels.SlotOperationViewModel
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            <h4>@Resource.UserAdminView_AddOperation</h4>
+
+        </div><!-- /.col-lg-3 -->
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+        @using (Html.BeginForm("CreateDefaultOperation", "UsersAdmin", FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.CategoryName)
+
+            if (!Html.ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger form-validation" role="alert">
+                    @Html.ValidationSummary(true, "", new { @class = "text-error" })
+                </div>
+                    <div class="clear"></div>
+            }
+
+            <div class="form-group">
+                <label class="col-md-4 form-label">@Resource.Description<span class="font-danger">&nbsp;*</span></label>
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.Description, new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 form-label">@Resource.Price<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Price, new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 form-label">@Resource.DurationMinutes<span class="font-danger">&nbsp;*</span></label>
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.DurationMinutes, new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.DurationMinutes, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.CategoryName, new { @class = "col-md-4 form-label" })
+                    <div class="col-md-8">
+                        @Html.DropDownListFor(m => m.CategoryId, new SelectList(ViewBag.Categories, "key", "value"), new { @class = "selectpicker price-payment-method-select", data_class = "btn-default btn-sm", data_width = "100%", data_live_search = "true", data_size = "5" })
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+                <hr />
+
+                <div class="form-group" style="padding-left: 15px;padding-right: 30px">
+                    <div class="col-md-6">
+                        <a href="@Url.Action(MVC.UsersAdmin.SlotOperationsList(Model.SlotId))" class="btn btn-success float-left">@Resource.Back</a>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="submit" class="btn btn-default float-right" value="@Resource.Save" />
+                    </div>
+                </div>
+        }
+    </div>
+</section>

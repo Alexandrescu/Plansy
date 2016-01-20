@@ -1,0 +1,242 @@
+﻿@using System.Web.UI.WebControls
+@using DayPilot.Web.Mvc
+@using DayPilot.Web.Mvc.Enums.Calendar
+@using MaProgramez.Repository.Entities
+@using Microsoft.Ajax.Utilities
+@using Microsoft.AspNet.Identity
+@model MaProgramez.Repository.Entities.Schedule
+
+@{
+    ViewBag.Title = Resource.MySchedules;
+    var address = (Address)ViewBag.Address;
+    var operations = (List<SlotOperation>)ViewBag.Operations;
+    var ratingValue = (int)ViewBag.Rating;
+    var dateTimeNow = DateTime.Now;
+    bool isClient = User.IsInRole("Client");
+}
+
+@section scripts
+{
+    <script type="text/javascript">
+
+        $("#ratingObj").change(function () {
+
+            var score = $(this).val();
+            var slotId = @Model.SlotId;
+
+            $.get("/Service/AddOrUpdateRating", { slotId: slotId, providerId: null, score: score }, function(data) { }, 'json')
+                .fail(function(error) { });
+        });
+    </script>
+
+    <script src="/scripts/bootstrap-rating-input.min.js" type="text/javascript"></script>
+}
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+           <h4> @Resource.ScheduleState </h4>
+        </div><!-- /.col-lg-3 -->
+
+        @if (isClient || User.IsInRole("Admin") || User.IsInRole("Agent"))
+        {
+            if (!ViewBag.IsFavourite)
+            {
+                <a href=@Url.Action(MVC.Schedule.AddToFavourites(Model.SlotId, Model.Id)) class="btn btn-primary buton5long float-right" style="margin-top:1px; margin-right:18px;">@Resource.AddToFavourites</a>
+            }
+            else
+            {
+                <a href=@Url.Action(MVC.Schedule.DeleteFromFavourites(Model.SlotId, Model.Id)) class="btn btn-primary buton5long float-right" style="margin-top:1px; margin-right:18px;"> @Resource.RemoveFromFavourites</a>
+            }
+        }
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+
+
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+        <div class="table-responsive">
+
+            <div class="sablon">
+                <div class="overflownone">
+                    <table class="table">
+
+                        <tbody>
+                            <tr>
+                                <td class="col-lg-3">
+                                    @Resource.ScheduleState:
+                                </td>
+                                <td class="col-lg-9">
+                                    @switch (Model.State)
+                                    {
+                                        case ScheduleState.Pending:
+                                            <span class="font-warning">@Resource.Pending</span>
+                                            break;
+                                        case ScheduleState.CancelledByProvider:
+                                            <span class="font-danger">@Resource.CancelledByProvider</span>
+                                            break;
+                                        case ScheduleState.CancelledByUser:
+                                            <span class="font-danger">@Resource.CancelledByUser</span>
+                                            break;
+                                        default:
+                                            <span class="font-success">@Resource.Valid</span>
+                                            break;
+                                    }
+                                </td>
+                            </tr>
+                            @if (User.IsInRole("Client"))
+                            {
+                                <tr>
+                                    <td class="col-lg-3">
+                                        @Resource.SupplierCompany
+                                    </td>
+                                    <td class="col-lg-9">
+                                        <b>@Model.Slot.Provider.CompanyDisplayName</b> &nbsp;-&nbsp; @Model.Slot.Category.Name
+                                    </td>
+                                </tr>
+
+                                if (Model.Slot.Provider.ProgrammingPerSlot)
+                                {
+                                    <tr>
+                                        <td class="col-lg-3">
+                                            @Resource.Provider
+                                        </td>
+                                        <td class="col-lg-9">
+                                            <b>@Model.Slot.Name</b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-lg-3">
+                                            @Resource.PhoneNumber
+                                        </td>
+                                        <td class="col-lg-9">
+                                            @Model.Slot.Phone
+                                        </td>
+                                    </tr>
+                                }
+                                <tr>
+                                    <td class="col-lg-3">
+                                        @Resource.User_Address
+                                    </td>
+                                    <td class="col-lg-9">
+                                        <a href=@string.Concat("http://maps.google.com/?q=", address.ToLinkString()) target="blank">@address.ToString()</a>
+                                    </td>
+                                </tr>
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td class="col-lg-3">
+                                        @Resource.Client
+                                    </td>
+                                    <td class="col-lg-9">
+                                        <b>@Model.User.FirstName&nbsp;@Model.User.LastName</b> &nbsp;-&nbsp; @Model.User.PhoneNumber
+                                    </td>
+                                </tr>
+                            }
+                            <tr>
+                                <td class="col-lg-3">
+                                    @Resource.Date
+                                </td>
+                                <td class="col-lg-9">
+                                    @Model.ScheduleDateTimeStart.ToLongDateString() &nbsp; (@Model.ScheduleDateTimeStart.ToShortTimeString() &nbsp;-&nbsp; @Model.ScheduleDateTimeEnd.ToShortTimeString())
+                                </td>
+                            </tr>
+                            @if (operations != null && operations.Any())
+                            {
+                                <tr>
+                                    <td class="col-lg-3">
+                                        @Resource.Price
+                                    </td>
+                                    <td class="col-lg-9">
+                                        €@operations.Sum(m => m.Price)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-lg-3">
+                                        @Resource.Operations
+                                    </td>
+                                    <td class="col-lg-9">
+                                        @foreach (var m in operations)
+                                        {
+                                            <div>
+                                                <i>@m.Operation.Description</i> <span>&nbsp;(€@m.Price&nbsp;-&nbsp;<i class="glyphicon glyphicon-time"></i> &nbsp;@m.DurationMinutes&nbsp; min.)</span>
+                                            </div>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                            <tr>
+                                <td class="col-lg-3">@Resource.Observations</td>
+                                @if (Model.Text.IsNullOrWhiteSpace())
+                                {
+                                    <td class="col-lg-9">-</td>
+                                }
+                                else
+                                {
+                                    <td class="col-lg-9">@Model.Text</td>
+                                }
+                            </tr>
+
+                            @if (Model.ScheduleDateTimeEnd < dateTimeNow)
+                            {
+                                <tr>
+                                    <td class="col-lg-3">@Resource.Rating</td>
+                                    <td class="col-lg-9"><input class="rating" data-max="5" data-min="1" id="ratingObj" type="number" value=@ratingValue /></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group col-lg-12">
+            <div class="col-lg-3">
+
+                @if (User.IsInRole("Admin") || User.IsInRole("Agent")) { }
+                else if (!isClient)
+                {
+                    <a href="@Url.Action(MVC.Schedule.ViewSchedules(Model.SlotId))" class="btn btn-primary float-left", style = "margin-left:-11px;">@Resource.Back</a>
+                }
+                else
+                {
+                    <a href="@Url.Action(MVC.Schedule.ClientViewSchedules())" class="btn btn-primary float-left", style = "margin-left:-11px;">@Resource.Back</a>
+                }
+
+
+          </div>
+            <div class="col-lg-9">
+                @if ((Model.State == ScheduleState.Valid || Model.State == ScheduleState.Pending) &&
+Model.ScheduleDateTimeStart > DateTime.Now)
+                {
+                    @*<a href="@Url.Action(MVC.Schedule.CancelSchedule(Model.Id, true))" class="btn btn-danger float-right">@Resource.CancelSchedule</a>*@
+
+                    @Html.ActionLink(@Resource.CancelSchedule,
+                                              MVC.Schedule.CancelSchedule(Model.Id, isClient),
+                                              new { @class = "btn btn-primary buton5danger float-right", style = "margin-right:-27px;"/*, onclick = "return confirm('Sigur doriti sa anulati?');" */})
+
+                }
+
+                @if ((Model.State == ScheduleState.Pending || Model.State == ScheduleState.Valid) && (User.IsInRole("Provider") || User.IsInRole("Employee")))
+                {
+                    @Html.ActionLink(@Resource.Reschedule, MVC.Schedule.EditSchedule(Model.Id), new { @class = "btn btn-primary buton5 float-right", style = "margin-right:10px;" })
+                    if (Model.State == ScheduleState.Pending)
+                    {
+                        @Html.ActionLink(@Resource.Accept, MVC.Schedule.AcceptPendingSchedule(Model.Id), new { @class = "btn btn-primary buton5success float-right", style = "margin-right:10px;" })
+                    }
+                }
+            </div>
+        </div>
+        <div class="clear"></div>
+
+
+    </div>
+
+</section>

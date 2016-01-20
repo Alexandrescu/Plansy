@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = Resource.TermsAndPrivacy;
+    Layout = null;
+}
+<head>
+    @Styles.Render("~/Content/normalize.css");
+    @Styles.Render("~/Content/style.css");
+    @Html.Partial(MVC.Shared.Views.PartialViews._Style)
+    @RenderSection("styles", required: false)
+</head>
+
+<body>
+    <div class="logmod">
+        <div class="logo-menu">
+            <a href="@Url.Action(MVC.Home.New())"><img src="~/Content/images/logo-inline.png" /> </a>
+        </div>
+        <div class="logmod__wrapper">
+            <div class="logmod__container" style="padding: 20px;">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    @Html.Partial(MVC.Shared.Views.PartialViews._Scripts)
+    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/jqueryval", Html.JsCultureBundle())
+    @Scripts.Render("~/bundles/upload-images")
+    @Scripts.Render("~/bundles/add-user")
+    @Scripts.Render("~/bundles/address")
+</body>

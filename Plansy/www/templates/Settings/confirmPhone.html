@@ -1,0 +1,40 @@
+<ion-view>
+    <ion-content class="menu-dark-content">
+        <div class="padding text-right no-padding-bottom">
+            <div class="button button-clear button-text-large" ng-click="logOut()">
+                <span class="ion-ios-close-outline"></span>
+            </div>
+        </div>
+
+        <div class="padding no-padding-top">
+            <div class="page-icon">
+                <i class="icon yellow ion-ios-locked-outline"></i>
+            </div>
+        </div>
+        <div class="padding text-center white">
+            <p style="margin: 0;">{{'INSERT_CODE' | translate}}</p>
+        </div>
+
+        <div class="list list-inset">
+            <label class="item item-input" style="padding-right: 16px;">
+                <input type="number" class="text-center no-padding text-uppercase" ng-model="User.Code">
+            </label>
+        </div>
+
+        <div class="padding no-padding-bottom">
+            <button class="button button-block button-positive" ng-click="confirmPhone()">
+                {{'CONFIRM_PHONE' | translate}}
+            </button>
+
+            <button class="button button-block button-clear" ng-click="sendCode()">
+                {{'RESEND_CODE' | translate}}
+            </button>
+        </div>
+
+        <div class="list">
+            <div class="item" ng-click="openChangePhoneModal()">
+                <p class="text-center">{{'CHANGE_PHONE_NUMBER' | translate}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

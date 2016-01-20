@@ -1,0 +1,68 @@
+﻿@using MaProgramez.Repository.Entities
+@using MaProgramez.Resources
+@model System.Collections.Generic.List<Notification>
+
+@{
+    ViewBag.Title = Resource.NotificationList;
+}
+
+
+<section class="filtre">
+
+    <div class="container">
+        <div class="col-lg-3 schedule">
+            @Resource.NotificationList
+        </div><!-- /.col-lg-3 -->
+
+        @if (Model.Any())
+        {
+            <div class="col-lg-9 sch">
+                <a class="btn btn-primary btn-lg buton5 float-right" href="@Url.Action(MVC.Notification.DeleteAll())" role="button">@Resource.DeleteAll</a>
+                <a class="btn btn-primary btn-lg buton5 float-right" style="margin-right:5px" href="@Url.Action(MVC.Notification.ReadAll())" role="button">@Resource.ReadAll</a>
+            </div><!-- /.col-lg-3 -->
+        }
+    </div>
+</section>
+<div class="up-toticket">
+    &nbsp;
+</div>
+<section class="sectiune-cat stilizat-cat">
+    <div class="container stilizat">
+
+        @if (Model.Any())
+        {
+
+            <div class="sablon">
+                <table class="table middle-align-table">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1">#</th>
+                            <th class="col-md-3">@Resource.NotificationType</th>
+                            <th class="col-md-7">@Resource.Description</th>
+                            <th class="col-md-1"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            var i = 0;
+                        }
+                        @foreach (var item in Model)
+                        {
+                            i++;
+                            ViewBag.Notification = item;
+                            ViewBag.Index = i;
+
+                            @Html.Partial("_NotificationRow", item);
+                        }
+                    </tbody>
+                </table>
+            </div>
+                            }
+                            else
+                            {
+                                <p style="margin-top: 5px;">
+                                    @Resource.NoNotifications
+                                </p>
+                            }
+    </div>
+</section>

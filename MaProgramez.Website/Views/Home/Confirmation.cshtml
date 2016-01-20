@@ -1,0 +1,49 @@
+﻿@using MaProgramez.Repository.Entities
+@model MaProgramez.Website.ViewModels.ConfirmationViewModel
+
+@if (Model != null)
+{
+    ViewBag.Title = Model.Title;
+    var messageType = "fa-check-circle-o";
+    switch (Model.Type)
+    {
+        case ConfirmationType.Success:
+            messageType = "fa-check-circle-o text-success";
+            break;
+        case ConfirmationType.Error:
+            messageType = "fa-times-circle-o text-danger";
+            break;
+        case ConfirmationType.Warning:
+            messageType = "fa-exclamation-triangle text-warning";
+            break;
+    }
+
+
+
+    <section class="filtre">
+
+        <div class="container">
+            <div class="col-lg-3 schedule">
+                <i class="fa @messageType" style="font-size: 20px; margin-right: 5px;"></i>
+                @Model.Title
+            </div><!-- /.col-lg-3 -->
+        </div>
+    </section>
+    <div class="up-toticket">
+        &nbsp;
+    </div>
+
+    <section class="sectiune-cat stilizat-cat">
+        <div class="container stilizat">
+
+            <p style="margin-bottom: 0;">
+                @Html.Raw(Model.Message)
+            </p>
+            <hr />
+            <div class="clear"></div>
+            <a href="@Model.Link" title="Redirect" class="btn btn-primary float-right">@Resource.Continue</a>
+            <div class="clear"></div>
+        </div>
+    </section>
+}
+
