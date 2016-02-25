@@ -1,11 +1,18 @@
 {
   "name": "Plansy",
   "version": "1.0.0",
-  "description": "",
+  "description": "Plansy",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^2.12.0",
+    "gulp-watch": "^4.3.5",
+    "merge2": "^1.0.1"
+  }
 }
