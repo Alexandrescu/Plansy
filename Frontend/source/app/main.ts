@@ -1,5 +1,1 @@
-console.log(andrei());
-
-function test(): string {
-    return andrei();
-}
+var plansy = angular.module('plansy',[]);
