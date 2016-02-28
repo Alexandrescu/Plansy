@@ -59,7 +59,13 @@ gulp.task('clean', ['clean-typescript']);
 // Building tasks
 gulp.task('build', function() {
   moveIndex();
-  gulp.src('node_modules/angular/angular.js')
+  gulp.src([
+    'node_modules/angular/angular.js',
+    'node_modules/angular-animate/angular-animate.js',
+    'node_modules/angular-aria/angular-aria.js',
+    'node_modules/angular-material/angular-material.js',
+    'node_modules/angular-material/angular-material.css'
+  ])
     .pipe(gulp.dest('build/resources'));
 });
 

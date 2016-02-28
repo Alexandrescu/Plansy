@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.5.0",
+    "angular-material": "^1.0.5",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-livereload": "^3.8.1",
